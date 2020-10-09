@@ -41,12 +41,12 @@ this larger namespace.
 
 
 ## Element List (current)
-
 - **\<podcast:imageLarge>**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size.
 - **\<podcast:imageMedium>**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size.
 - **\<podcast:imageSmall>**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size.
 - **\<podcast:category>**[Category Name]**\</podcast:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
 - **\<podcast:location>**[CountryCode|Locality]**\</podcast:location>** - The country code and locality name given with a pipe as a separator.
+
 - **\<podcast:locked>**[yes|no]**\</podcast:locked>** - This is a channel-level element.  This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
    feed transfer lock on or off.
@@ -56,7 +56,10 @@ this larger namespace.
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 - **\<podcast:newFeedUrl>**[url this feed was imported from]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element can specify the new location.
 - **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
+
 - **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
+- **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
+- **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
 
 
 ## Element List (proposed)

@@ -47,13 +47,14 @@
             <guid isPermaLink="true">http://podcastindex.org/ep0003</guid>
             <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
-            <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0003/artMd.jpg</itunes:image>
             <podcast:imageLarge>https://podcastindex.org/ep0003/artLg.jpg</podcast:imageLarge>
             <podcast:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0003/transcript.txt</podcast:transcript>
+            <podcast:host>Adam Curry</podcast:host>
+            <podcast:guest>Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
         </item>
 
@@ -64,13 +65,14 @@
             <guid isPermaLink="true">http://podcastindex.org/ep0002</guid>
             <pubDate>Thu, 08 Oct 2020 04:30:38 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
-            <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0002/artMd.jpg</itunes:image>
             <podcast:imageLarge>https://podcastindex.org/ep0002/artLg.jpg</podcast:imageLarge>
             <podcast:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0002/transcript.txt</podcast:transcript>
+            <podcast:host>Adam Curry</podcast:host>
+            <podcast:guest>Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
         </item>
 
@@ -81,13 +83,14 @@
             <guid isPermaLink="true">http://podcastindex.org/ep0001</guid>
             <pubDate>Wed, 07 Nov 2020 04:29:49 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
-            <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0001/artMd.jpg</itunes:image>
             <podcast:imageLarge>https://podcastindex.org/ep0001/artLg.jpg</podcast:imageLarge>
             <podcast:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0001/transcript.txt</podcast:transcript>
+            <podcast:host>Adam Curry</podcast:host>
+            <podcast:guest>Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
         </item>
     </channel>
