@@ -1,4 +1,4 @@
-# podcastindex-namespace
+# The "podcast" namespace
 
 A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create one namespace
 to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the indie podcast industry now and in the future.
