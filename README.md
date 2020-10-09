@@ -60,6 +60,7 @@ this larger namespace.
 
 ## Element List (proposed)
 - **\<podcastindex:captions>** - This is an item-level element to contain information about closed captions within the episode.
+- **\<podcastindex:transcripts>** - This is an item-level element to contain a transcript of an episode.
 - **\<podcastindex:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" [live]>**[uri of media asset]**\</podcastindex:alternateEnclosure>** - This is an item-level element that is meant to provide alternate versions of an enclosure, such as low or
   high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.
 
