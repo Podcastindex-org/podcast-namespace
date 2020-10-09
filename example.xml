@@ -53,6 +53,7 @@
             <podcast:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
+            <podcast:transcript>https://podcastindex.org/ep0003/transcript.txt</podcast:transcript>
             <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
         </item>
 
@@ -69,6 +70,7 @@
             <podcast:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
+            <podcast:transcript>https://podcastindex.org/ep0002/transcript.txt</podcast:transcript>
             <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
         </item>
 
@@ -85,6 +87,7 @@
             <podcast:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
+            <podcast:transcript>https://podcastindex.org/ep0001/transcript.txt</podcast:transcript>
             <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
         </item>
     </channel>
