@@ -15,20 +15,20 @@ system and audience the metadata they need in the way they want it delivered.
 ## Goal #2 - Avoid Attributes
 
 Attributes in xml elements should be used only where absolutely needed.  The preference is to create a new element type, rather than reuse the same element with
-different attributes.  For example, instead of using **\<podcastindex:image type="Large">**, we would use **\<podcastindex:imageLarge>**.  This makes the corresponding
+different attributes.  For example, instead of using **\<podcast:image type="Large">**, we would use **\<podcast:imageLarge>**.  This makes the corresponding
 aggregator code easier and more linear.
 
 
 ## Goal #3 - Use RSS Native Elements
 
-The RSSv2.0 specification already has a robust set of defined elements.  We should aim to use those instead of creating new ones.  Instead of creating a **\<podcastindex:owner>**
+The RSSv2.0 specification already has a robust set of defined elements.  We should aim to use those instead of creating new ones.  Instead of creating a **\<podcast:owner>**
 element, we can use the already existing **\<managingEditor>** element that contains both name and email address.  In situations like item-level images, where the RSS
 spec never defined that element, it is appropriate to define new ones.
 
 
 ## Goal #4 - Keep Exisiting Conventions
 
-Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, it would make sense to turn **\<podcastindex:explicit>** into
+Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, it would make sense to turn **\<podcast:explicit>** into
 a unary element, where it's existence is taken as a "yes" and it's absence as a "no".  But, that has never been the standard.  And, given as how this namespace will probably
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
@@ -42,26 +42,26 @@ this larger namespace.
 
 ## Element List (current)
 
-- **\<podcastindex:imageLarge>**[url to a large image file]**\</podcastindex:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size
-- **\<podcastindex:imageMedium>**[url to a medium image file]**\</podcastindex:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size
-- **\<podcastindex:imageSmall>**[url to a small image file]**\</podcastindex:imageSmall>** - This is assumed to point to an image that is 299px or less in size
-- **\<podcastindex:category>**[Category Name]**\</podcastindex:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
-- **\<podcastindex:location>**[CountryCode|Locality]**\</podcastindex:location>** - The country code and locality name given with a pipe as a separator
-- **\<podcastindex:locked>**[yes|no]**\</podcastindex:locked>** - This is a channel-level element.  This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
+- **\<podcast:imageLarge>**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size
+- **\<podcast:imageMedium>**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size
+- **\<podcast:imageSmall>**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size
+- **\<podcast:category>**[Category Name]**\</podcast:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
+- **\<podcast:location>**[CountryCode|Locality]**\</podcast:location>** - The country code and locality name given with a pipe as a separator
+- **\<podcast:locked>**[yes|no]**\</podcast:locked>** - This is a channel-level element.  This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
    feed transfer lock on or off.
-- **\<podcastindex:email>**[email address]**\</podcastindex:email>** - This is a channel-level element.  An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
+- **\<podcast:email>**[email address]**\</podcast:email>** - This is a channel-level element.  An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
    virtual email address at the hosting provider that redirects to the owner's true email address.
-- **\<podcastindex:previousUrl>**[url this feed was imported from]**\</podcastindex:previousUrl>** - This is a channel-level element.  Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcastindex:previousUrl>** element
+- **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>** - This is a channel-level element.  Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
-- **\<podcastindex:newFeedUrl>**[url this feed was imported from]**\</podcastindex:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element can specify the new location.
-- **\<podcastindex:id platform="[host slug]">**[the id string]**\</podcastindex:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
+- **\<podcast:newFeedUrl>**[url this feed was imported from]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element can specify the new location.
+- **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
 
 
 ## Element List (proposed)
-- **\<podcastindex:captions>** - This is an item-level element to contain information about closed captions within the episode.
-- **\<podcastindex:transcripts>** - This is an item-level element to contain a transcript of an episode.
-- **\<podcastindex:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" [live]>**[uri of media asset]**\</podcastindex:alternateEnclosure>** - This is an item-level element that is meant to provide alternate versions of an enclosure, such as low or
+- **\<podcast:captions>** - This is an item-level element to contain information about closed captions within the episode.
+- **\<podcast:transcripts>** - This is an item-level element to contain a transcript of an episode.
+- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is an item-level element that is meant to provide alternate versions of an enclosure, such as low or
   high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.
 
 
@@ -79,18 +79,18 @@ avoiding ampersands makes xml encoding errors less likely.
 
 ## Verification, importing and moving
 
-If the "locked" element is present and set to "yes", podcasting hosts and platforms should not allow importing of this feed until the **\<podcastindex:email>** or other defined feed owner (such as **\<managingEditor>**) is
+If the "locked" element is present and set to "yes", podcasting hosts and platforms should not allow importing of this feed until the **\<podcast:email>** or other defined feed owner (such as **\<managingEditor>**) is
 contacted and subsequently sets the "locked" element to "no" or removes it from the feed.
 
-The **\<podcastindex:previousUrl>** element acts like a relay header in an email envelope.  Each time a feed is imported, an additional **\<podcastindex:previousUrl>** should be added, and all previous ones preserved.
+The **\<podcast:previousUrl>** element acts like a relay header in an email envelope.  Each time a feed is imported, an additional **\<podcast:previousUrl>** should be added, and all previous ones preserved.
 
-Once a successful import has taken place, the **\<podcastindex:newFeedUrl>** element can be put in the old feed as a pointer to the new location.
+Once a successful import has taken place, the **\<podcast:newFeedUrl>** element can be put in the old feed as a pointer to the new location.
 
 
 
 ## ID's
 
-Their can be multiple **\<podcastindex:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  If no "platform" attribute is given, the id string in the element is
+Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  If no "platform" attribute is given, the id string in the element is
 considered to be the registered Podcastindex.org ID.  If the "platform" attribute is present, the element's value is taken as the ID of this podcast on that respective platform.  The following slugs
 can be used:
 

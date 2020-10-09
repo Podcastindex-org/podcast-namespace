@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:podcastindex="https://github.com/Podcastindex-org/podcastindex-namespace" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss xmlns:podcast="https://github.com/Podcastindex-org/podcastindex-namespace" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Podcast Feed Template</title>
         <description>This is a fake show that exists only as an example of the "podcastindex" namespace.</description>
@@ -19,26 +19,26 @@
         <itunes:author>Dave Jones</itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:type>episodic</itunes:type>
-        <podcastindex:location>US|Washington</podcastindex:location>
+        <podcast:location>US|Washington</podcast:location>
 
         <itunes:image>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</itunes:image>
-        <podcastindex:imageLarge>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageLarge>
-        <podcastindex:imageMedium>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageMedium>
-        <podcastindex:imageSmall>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageSmall>
+        <podcast:imageLarge>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageLarge>
+        <podcast:imageMedium>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageMedium>
+        <podcast:imageSmall>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageSmall>
 
-        <podcastindex:category>News</podcastindex:category>
-        <podcastindex:category>Commentary</podcastindex:category>
-        <podcastindex:category>Technology</podcastindex:category>
+        <podcast:category>News</podcast:category>
+        <podcast:category>Commentary</podcast:category>
+        <podcast:category>Technology</podcast:category>
         <itunes:category text="News"/>
         <itunes:category text="Technology"/>
 
-        <podcastindex:locked>yes</podcastindex:locked>
-        <podcastindex:email>podcast83043423@blubrry.com</podcastindex:email>
-        <podcastindex:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcastindex:previousUrl>
-        <podcastindex:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcastindex:previousUrl>
-        <podcastindex:id>1348299</podcastindex:id>
-        <podcastindex:id platform="itunes">39423340445</podcastindex:id>
-        <podcastindex:id platform="blubrry">83043423</podcastindex:id>
+        <podcast:locked>yes</podcast:locked>
+        <podcast:email>podcast83043423@blubrry.com</podcast:email>
+        <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
+        <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
+        <podcast:id>1348299</podcast:id>
+        <podcast:id platform="itunes">39423340445</podcast:id>
+        <podcast:id platform="blubrry">83043423</podcast:id>
 
         <item>
             <title>Episode 3 - The Future</title>
@@ -49,9 +49,9 @@
             <author>adam@podcastindex.org (Adam Curry)</author>
             <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0003/artMd.jpg</itunes:image>
-            <podcastindex:imageLarge>https://podcastindex.org/ep0003/artLg.jpg</podcastindex:imageLarge>
-            <podcastindex:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcastindex:imageMedium>
-            <podcastindex:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcastindex:imageSmall>
+            <podcast:imageLarge>https://podcastindex.org/ep0003/artLg.jpg</podcast:imageLarge>
+            <podcast:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcast:imageMedium>
+            <podcast:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
         </item>
@@ -65,9 +65,9 @@
             <author>adam@podcastindex.org (Adam Curry)</author>
             <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0002/artMd.jpg</itunes:image>
-            <podcastindex:imageLarge>https://podcastindex.org/ep0002/artLg.jpg</podcastindex:imageLarge>
-            <podcastindex:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcastindex:imageMedium>
-            <podcastindex:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcastindex:imageSmall>
+            <podcast:imageLarge>https://podcastindex.org/ep0002/artLg.jpg</podcast:imageLarge>
+            <podcast:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcast:imageMedium>
+            <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
         </item>
@@ -81,9 +81,9 @@
             <author>adam@podcastindex.org (Adam Curry)</author>
             <author>dave@podcastindex.org (Dave Jones)</author>
             <itunes:image>https://podcastindex.org/ep0001/artMd.jpg</itunes:image>
-            <podcastindex:imageLarge>https://podcastindex.org/ep0001/artLg.jpg</podcastindex:imageLarge>
-            <podcastindex:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcastindex:imageMedium>
-            <podcastindex:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcastindex:imageSmall>
+            <podcast:imageLarge>https://podcastindex.org/ep0001/artLg.jpg</podcast:imageLarge>
+            <podcast:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcast:imageMedium>
+            <podcast:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
         </item>
