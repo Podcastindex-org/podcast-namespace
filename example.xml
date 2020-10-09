@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:podcastindex="https://github.com/Podcastindex-org/podcastindex-namespace" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>Podcast Feed Template</title>
+        <description>This is a fake show that exists only as an example of the "podcastindex" namespace.</description>
+        <link>http://podcastindex.org</link>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <language>en-US</language>
+        <generator>Freedom Controller</generator>
+        <pubDate>Thu, 08 Oct 2020 18:51:15 +0000</pubDate>
+        <lastBuildDate>Thu, 08 Oct 2020 18:51:15 +0000</lastBuildDate>
+        <managingEditor>dave@podcastindex.org (Dave Jones)</managingEditor>
+        <webMaster>support@podcastindex.org (Tech Support)</webMaster>
+        <image>
+            <url>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</url>
+            <title>Podcast Feed Template</title>
+            <link>https://podcastindex.org</link>
+        </image>
+        <itunes:author>Dave Jones</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:type>episodic</itunes:type>
+        <podcastindex:location>US|Washington</podcastindex:location>
+
+        <itunes:image>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</itunes:image>
+        <podcastindex:imageLarge>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageLarge>
+        <podcastindex:imageMedium>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageMedium>
+        <podcastindex:imageSmall>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcastindex:imageSmall>
+
+        <podcastindex:category>News</podcastindex:category>
+        <podcastindex:category>Commentary</podcastindex:category>
+        <podcastindex:category>Technology</podcastindex:category>
+        <itunes:category text="News"/>
+        <itunes:category text="Technology"/>
+
+        <podcastindex:locked>yes</podcastindex:locked>
+        <podcastindex:email>podcast83043423@blubrry.com</podcastindex:email>
+        <podcastindex:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcastindex:previousUrl>
+        <podcastindex:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcastindex:previousUrl>
+        <podcastindex:id>1348299</podcastindex:id>
+        <podcastindex:id platform="itunes">39423340445</podcastindex:id>
+        <podcastindex:id platform="blubrry">83043423</podcastindex:id>
+
+        <item>
+            <title>Episode 3 - The Future</title>
+            <description>&lt;p&gt;Everything at this level will become the rss description text for this item.&lt;/p&gt;</description>
+            <link>https://podcastindex.org/ep0003</link>
+            <guid isPermaLink="true">http://podcastindex.org/ep0003</guid>
+            <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
+            <author>adam@podcastindex.org (Adam Curry)</author>
+            <author>dave@podcastindex.org (Dave Jones)</author>
+            <itunes:image>https://podcastindex.org/ep0003/artMd.jpg</itunes:image>
+            <podcastindex:imageLarge>https://podcastindex.org/ep0003/artLg.jpg</podcastindex:imageLarge>
+            <podcastindex:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcastindex:imageMedium>
+            <podcastindex:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcastindex:imageSmall>
+            <itunes:explicit>no</itunes:explicit>
+            <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
+        </item>
+
+        <item>
+            <title>Episode 2 - The Return</title>
+            <description>&lt;p&gt;Everything at this level will become the rss description text for this item.&lt;/p&gt;</description>
+            <link>https://podcastindex.org/ep0002</link>
+            <guid isPermaLink="true">http://podcastindex.org/ep0002</guid>
+            <pubDate>Thu, 08 Oct 2020 04:30:38 GMT</pubDate>
+            <author>adam@podcastindex.org (Adam Curry)</author>
+            <author>dave@podcastindex.org (Dave Jones)</author>
+            <itunes:image>https://podcastindex.org/ep0002/artMd.jpg</itunes:image>
+            <podcastindex:imageLarge>https://podcastindex.org/ep0002/artLg.jpg</podcastindex:imageLarge>
+            <podcastindex:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcastindex:imageMedium>
+            <podcastindex:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcastindex:imageSmall>
+            <itunes:explicit>no</itunes:explicit>
+            <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
+        </item>
+
+        <item>
+            <title>Episode 1 - The Beginning</title>
+            <description>&lt;p&gt;Everything at this level will become the rss description text for this item.&lt;/p&gt;</description>
+            <link>http://podcastindex.org/ep0001</link>
+            <guid isPermaLink="true">http://podcastindex.org/ep0001</guid>
+            <pubDate>Wed, 07 Nov 2020 04:29:49 GMT</pubDate>
+            <author>adam@podcastindex.org (Adam Curry)</author>
+            <author>dave@podcastindex.org (Dave Jones)</author>
+            <itunes:image>https://podcastindex.org/ep0001/artMd.jpg</itunes:image>
+            <podcastindex:imageLarge>https://podcastindex.org/ep0001/artLg.jpg</podcastindex:imageLarge>
+            <podcastindex:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcastindex:imageMedium>
+            <podcastindex:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcastindex:imageSmall>
+            <itunes:explicit>no</itunes:explicit>
+            <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
+        </item>
+    </channel>
+</rss>
