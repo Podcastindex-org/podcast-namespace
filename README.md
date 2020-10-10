@@ -57,7 +57,8 @@ this larger namespace.
    virtual email address at the hosting provider that redirects to the owner's true email address.
 - **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>** - This is a channel-level element.  Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
-- **\<podcast:newFeedUrl>**[url this feed was imported from]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element can specify the new location.
+- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
+   to itself as a confirmation to aggregators that they now have the most current url.
 - **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
 
 - **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
