@@ -40,6 +40,8 @@
         <podcast:id platform="itunes">39423340445</podcast:id>
         <podcast:id platform="blubrry">83043423</podcast:id>
 
+        <podcast:alternateEnclosure type="video/mp4" length="11540076" bitrate="512" title="Trailer">https://example.com/pc20trailer.mp4</podcast:alternateEnclosure>
+
         <item>
             <title>Episode 3 - The Future</title>
             <description>&lt;p&gt;Everything at this level will become the rss description text for this item.&lt;/p&gt;</description>
