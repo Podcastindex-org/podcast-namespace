@@ -66,8 +66,11 @@ this larger namespace.
 
 - **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
 - **\<podcast:closedCaptions>**[url to a file]**\</podcast:closedCaptions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is an item-level element that is meant to provide alternate versions of an enclosure, such as low or
-  high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.
+- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is a channel or item-level element that is meant to provide alternate versions of an enclosure, such as low or
+   high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  The title attribute is optional.  The "live" attribute is unary.  Its presence indicates
+   the url refers to a live stream.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the
+   channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
+   introduction or preface.
 
 
 ## Categories
