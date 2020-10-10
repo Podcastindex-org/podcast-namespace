@@ -40,10 +40,13 @@ to the broadest set of apps, publishers, platforms and aggregators.  Individual 
 this larger namespace.
 
 
-## Element List (current)
-- **\<podcast:imageLarge>**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size.
-- **\<podcast:imageMedium>**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size.
-- **\<podcast:imageSmall>**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size.
+## Element List
+- **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size.
+   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
+- **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size.
+   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
+- **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size.
+   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
 - **\<podcast:category>**[Category Name]**\</podcast:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
 - **\<podcast:location>**[CountryCode|Locality]**\</podcast:location>** - The country code and locality name given with a pipe as a separator.
 
@@ -57,12 +60,11 @@ this larger namespace.
 - **\<podcast:newFeedUrl>**[url this feed was imported from]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element can specify the new location.
 - **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
 
-- **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
 - **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
 - **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>** - This is a channel, or item-level element specifying a generally accepted rating letter of G, PG, PG-13, R or X.
 
-## Element List (proposed)
+- **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
 - **\<podcast:closedCaptions>**[url to a file]**\</podcast:closedCaptions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is an item-level element that is meant to provide alternate versions of an enclosure, such as low or
   high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.
