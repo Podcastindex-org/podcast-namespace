@@ -65,8 +65,9 @@ this larger namespace.
 - **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>** - This is a channel, or item-level element specifying a generally accepted rating letter of G, PG, PG-13, R or X.
 
-- **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
-- **\<podcast:closedCaptions>**[url to a file]**\</podcast:closedCaptions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
+- **\<podcast:transcript type="[mime type]">**[url to a file or website]**\</podcast:transcript>** - This is an item-level element.  Links to an external file containing a transcript.  The
+   mime type of the file should be given - such as text/plain, text/html, etc.
+- **\<podcast:captions type="text/srt">**[url to a SRT captions file]**\</podcast:captions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is a channel or item-level
    element that is meant to provide alternate versions of an enclosure, such as low or
    high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  The title attribute is optional.  The "live" attribute is unary - its presence indicates that
