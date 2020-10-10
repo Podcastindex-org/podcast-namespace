@@ -60,7 +60,7 @@ this larger namespace.
 - **\<podcast:transcript>**[url to a file]**\</podcast:transcript>** - This is an item-level element.  Links to a text file containing a transcript.
 - **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
 - **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
-
+- **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>** - This is a channel, or item-level element specifying a generally accepted rating letter of G, PG, PG-13, R or X.
 
 ## Element List (proposed)
 - **\<podcast:closedCaptions>**[url to a file]**\</podcast:closedCaptions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
