@@ -48,7 +48,7 @@ this larger namespace.
 - **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
 - **\<podcast:category>**[Category Name]**\</podcast:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
-- **\<podcast:location>**[CountryCode|Locality]**\</podcast:location>** - The country code and locality name given with a pipe as a separator.
+- **\<podcast:location>**[CountryCode|Locality]**\</podcast:location>** - This is a channel or item-level element.  The country code and locality name given with a pipe as a separator.
 
 - **\<podcast:locked>**[yes|no]**\</podcast:locked>** - This is a channel-level element.  This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
