@@ -82,6 +82,8 @@ this larger namespace.
 ### Phase 2 (Open)
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>** (optional|multiple) - This is a channel-level
    element listing possibly multiple social media accounts for this podcast.  The service slugs should be community written in the accompanying serviceslugs.txt file.
+- **\<podcast:funding platform="[service slug]" url="[url for the show at the platform]">**[podcast handle at the platform]**\</podcast:funding>** - (optional|multiple) - This is a
+   channel-level element listing multiple possible donation/funding links for the podcast.
 
 
 ## Categories
