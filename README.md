@@ -1,9 +1,9 @@
 # The "podcast" namespace
 
 A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create one namespace
-to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the indie podcast industry now and in the future.
+to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
 The large podcast platforms have shown virtually no interest in extending their namespaces for new functionality in many years.  Our hope is that this namespace
-will become the framework that the indie podcast community needs to deliver new functionality to apps and aggregators.
+will become the framework that the independent podcast community needs to deliver new functionality to apps and aggregators.
 
 
 ## Goal #1 - Eliminate Redundancy
@@ -49,7 +49,9 @@ this larger namespace.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
 - **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>** - This is assumed to point to an image that is 299px or less in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
+
 - **\<podcast:category>**[Category Name]**\</podcast:category>** - This is a channel-level element.  See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
+
 - **\<podcast:location osm_id="[place ID]">**[CountryCode|Locality]**\</podcast:location>** - The ISO 3166-1 alpha-2 country code; a pipe as separator; then a humanly-readable place name as preferred by the publisher.
    The (mandatory) parameter osm_id is the OpenStreetMap ID for that place, using OpenStreetMap's API.
 - **\<podcast:locked>**[yes|no]**\</podcast:locked>** - This is a channel-level element.  This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
