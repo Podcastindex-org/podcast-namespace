@@ -40,7 +40,9 @@ to the broadest set of apps, publishers, platforms and aggregators.  Individual 
 this larger namespace.
 
 
-## Element List - Phase 1 (Open)
+## Element List
+
+### Phase 1 (Open)
 - **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
 - **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size.
@@ -59,7 +61,7 @@ this larger namespace.
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
    to itself as a confirmation to aggregators that they now have the most current url.
-- **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** (optional) - This is a channel-level element.  See "ID's" in this document for an explanation.
+- **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>** (optional|multiple) - This is a channel-level element.  See "ID's" in this document for an explanation.
 
 - **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
 - **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
@@ -75,6 +77,11 @@ this larger namespace.
    channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
    introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be
    played.
+
+
+### Phase 2 (Open)
+- **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>** (optional|multiple) - This is a channel-level
+   element listing possibly multiple social media accounts for this podcast.  The service slugs should be community written in the accompanying serviceslugs.txt file.
 
 
 ## Categories
