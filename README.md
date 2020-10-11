@@ -40,7 +40,7 @@ to the broadest set of apps, publishers, platforms and aggregators.  Individual 
 this larger namespace.
 
 
-## Element List
+## Element List - Phase 1 (Open)
 - **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>** - This is assumed to point to an image that is 1000px or larger in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
 - **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>** - This is assumed to point to an image that is 300px to 999px in size.
@@ -59,15 +59,15 @@ this larger namespace.
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>** - This is a channel-level element.  If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
    to itself as a confirmation to aggregators that they now have the most current url.
-- **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** - This is a channel-level element.  See "ID's" in this document for an explanation.
+- **\<podcast:id platform="[host slug]">**[the id string]**\</podcast:id>** (optional) - This is a channel-level element.  See "ID's" in this document for an explanation.
 
 - **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
 - **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>** - This is a channel, or item-level element specifying a generally accepted rating letter of G, PG, PG-13, R or X.
 
-- **\<podcast:transcript type="[mime type]">**[url to a file or website]**\</podcast:transcript>** - This is an item-level element.  Links to an external file containing a transcript.  The
+- **\<podcast:transcript language="[language code]" type="[mime type]">**[url to a file or website]**\</podcast:transcript>** - This is an item-level element.  Links to an external file containing a transcript.  The
    mime type of the file should be given - such as text/plain, text/html, etc.
-- **\<podcast:captions type="text/srt">**[url to a SRT captions file]**\</podcast:captions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
+- **\<podcast:captions language="[language code]" type="text/srt">**[url to a SRT captions file]**\</podcast:captions>** - This is an item-level element.  Links to an industry standard closed-caption/subtitle file format.
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>** - This is a channel or item-level
    element that is meant to provide alternate versions of an enclosure, such as low or
    high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  The title attribute is optional.  The "live" attribute is unary - its presence indicates that
@@ -102,12 +102,12 @@ Once a successful import has taken place, the **\<podcast:newFeedUrl>** element 
 
 ## ID's
 
-Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  If no "platform" attribute is given, the id string in the element is
-considered to be the registered Podcastindex.org ID.  If the "platform" attribute is present, the element's value is taken as the ID of this podcast on that respective platform.  The following slugs
-can be used:
+Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
+representing the platform, directory, host, app or service. The slugs will look like this:
 
 - blubrry
 - captivate
+- podcastindex
 - fireside
 - transistor
 - libsyn
@@ -115,8 +115,9 @@ can be used:
 - google
 - spotify
 - anchor
+- overcast
 
-More should be added over time by the community as needed.  This is just a starter list.
+More should be added by the community as needed.  This is just a starter list.
 
 
 ## Example feed
