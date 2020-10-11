@@ -12,11 +12,11 @@ There is significant overlap amongst the many existing podcast namespaces.  Each
 system and audience the metadata they need in the way they want it delivered.
 
 
-## Goal #2 - Avoid Attributes
+## Goal #2 - Avoid Attributes and sub-elements
 
 Attributes in xml elements should be used only where absolutely needed.  The preference is to create a new element type, rather than reuse the same element with
 different attributes.  For example, instead of using **\<podcast:image type="Large">**, we would use **\<podcast:imageLarge>**.  This makes the corresponding
-aggregator code easier and more linear.
+aggregator code easier and more linear.  Sub-elements should be avoided if at all possible.
 
 
 ## Goal #3 - Use RSS Native Elements
@@ -63,8 +63,10 @@ this larger namespace.
    to itself as a confirmation to aggregators that they now have the most current url.
 - **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>** (optional|multiple) - This is a channel-level element.  See "ID's" in this document for an explanation.
 
-- **\<podcast:host>**[A person's name]**\</podcast:host>** - This is an item-level element.  It gives the name of a person hosting this episode if appropriate.  Multiple of these can be specified.
-- **\<podcast:guest>**[A person's name]**\</podcast:guest>** - This is an item-level element.  It gives the name of a person who is a guest on an episode.  Multiple of these can be specified.
+- **\<podcast:host href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:host>** (optional|multiple) - This is an item-level element.  It identifies a host
+   of a podcast episode.  All other attributes are optional but recommended for disambiguation and good meta-data for apps.
+- **\<podcast:guest href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:guest>** (optional|multiple) - This is an item-level element.  It identifies a guest
+   in a podcast episode.  All other attributes are optional but recommended for disambiguation and good meta-data for apps.
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>** - This is a channel, or item-level element specifying a generally accepted rating letter of G, PG, PG-13, R or X.
 
 - **\<podcast:transcript language="[language code]" type="[mime type]">**[url to a file or website]**\</podcast:transcript>** - This is an item-level element.  Links to an external file containing a transcript.  The

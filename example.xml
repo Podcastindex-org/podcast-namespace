@@ -55,8 +55,8 @@
             <podcast:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0003/transcript.txt</podcast:transcript>
-            <podcast:host>Adam Curry</podcast:host>
-            <podcast:guest>Dave Jones</podcast:guest>
+            <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
+            <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0003/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0003/audio/podnews201009.mp3</podcast:alternateEnclosure>
@@ -75,8 +75,8 @@
             <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0002/transcript.txt</podcast:transcript>
-            <podcast:host>Adam Curry</podcast:host>
-            <podcast:guest>Dave Jones</podcast:guest>
+            <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
+            <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0002/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0002/audio/podnews201009.mp3</podcast:alternateEnclosure>
@@ -96,8 +96,8 @@
             <podcast:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript>https://podcastindex.org/ep0001/transcript.txt</podcast:transcript>
-            <podcast:host>Adam Curry</podcast:host>
-            <podcast:guest>Dave Jones</podcast:guest>
+            <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
+            <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0001/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0001/audio/podnews201009.mp3</podcast:alternateEnclosure>
