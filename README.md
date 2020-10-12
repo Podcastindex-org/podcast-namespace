@@ -37,7 +37,7 @@ sit alongside at least one other namespace, it makes sense to keep existing conv
 
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
-this larger namespace.
+this larger namespace.  But, we don't want to be so general that the spec becomes overly complicated.  A beautiful, "perfect" spec is not important.  Solving real problems is.
 
 
 ## Element List
