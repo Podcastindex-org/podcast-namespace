@@ -304,6 +304,7 @@ representing the platform, directory, host, app or service. The slugs will look 
 - fireside
 - transistor
 - libsyn
+- buzzsprout
 - itunes
 - google
 - spotify
