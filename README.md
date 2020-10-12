@@ -121,22 +121,11 @@ this larger namespace.
 
    Item
 
-   (optional | single)
+   (optional | multiple)
 
-   Links to an external file containing a transcript.  The mime type of the file should be given - such as text/plain, text/html, etc.
+   Links to an external file containing a transcript.  The mime type of the file should be given - such as `text/plain`, `text/html`, `application/srt`, `application/json`.
 
-   All attributes are required.
-
-
-- **\<podcast:captions language="[language code]" type="text/srt">**[url to a SRT captions file]**\</podcast:captions>**
-
-   Item
-
-   (optional | single)
-
-   Links to an industry standard closed-caption/subtitle file format.
-
-   All attributes are required.
+   The language of the transcript can be overwritten by providing the optional language attribute. All other attributes are required.
 
 
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
