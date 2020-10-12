@@ -254,7 +254,7 @@ this larger namespace.
    This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
 
 
-- **\<podcast:funding platform="[service slug]" url="[url for the show at the platform]">**[podcast handle at the platform]**\</podcast:funding>**
+- **\<podcast:funding platform="[service slug]" title="[user provided note]">**[url for the show at the platform]**\</podcast:funding>**
 
    Channel or Item
 
