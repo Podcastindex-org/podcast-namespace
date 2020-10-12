@@ -84,7 +84,7 @@ this larger namespace.
    feed transfer lock on or off.
 
 
-- **\<podcast:ownerVerification>**[email address]**\</podcast:ownerVerification>
+- **\<podcast:ownerVerification>**[email address]**\</podcast:ownerVerification>**  
 
    Channel
 
