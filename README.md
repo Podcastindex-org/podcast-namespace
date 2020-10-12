@@ -61,18 +61,6 @@ this larger namespace.
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
 
-- **\<podcast:location osm_id="[place ID]">**[CountryCode|Locality]**\</podcast:location>**
-
-   Channel or Item
-
-   (required | single)
-
-   The ISO 3166-1 alpha-2 country code; a pipe as separator; then a humanly-readable place name as preferred by the publisher.
-   The (mandatory) parameter osm_id is the OpenStreetMap ID for that place, using OpenStreetMap's API.
-
-   All attributes are required.
-
-
 - **\<podcast:locked>**[yes or no]**\</podcast:locked>**
 
    Channel
