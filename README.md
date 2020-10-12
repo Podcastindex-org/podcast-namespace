@@ -48,18 +48,18 @@ this larger namespace.
 
    Channel or Item
 
-   (required|single)
+   (required | single)
 
    The ISO 3166-1 alpha-2 country code; a pipe as separator; then a humanly-readable place name as preferred by the publisher.
    The (mandatory) parameter osm_id is the OpenStreetMap ID for that place, using OpenStreetMap's API.
 
    All attributes are required.
 
-- **\<podcast:locked>**[yes|no]**\</podcast:locked>**
+- **\<podcast:locked>**[yes or no]**\</podcast:locked>**
 
    Channel
 
-   (required|single)
+   (required | single)
 
    This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
@@ -70,7 +70,7 @@ this larger namespace.
 
    Channel
 
-   (required|single)
+   (required | single)
 
    An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
    virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
@@ -82,7 +82,7 @@ this larger namespace.
 
    Channel
 
-   (optional|multiple)
+   (optional | multiple)
 
    Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
@@ -110,7 +110,7 @@ this larger namespace.
    All attributes are required.
 
 
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [stream]>**[uri of media asset]**\</podcast:alternateEnclosure>**
+- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
 
    Channel (optional | single)
 
@@ -128,7 +128,7 @@ this larger namespace.
 
    Channel or Item
 
-   (optional|single)
+   (optional | single)
 
    This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in
    the feed where appropriate.
@@ -140,7 +140,7 @@ this larger namespace.
 
    Channel or Item
 
-   (optional|single)
+   (optional | single)
 
    This is assumed to point to an image that is 300px to 999px in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
@@ -152,7 +152,7 @@ this larger namespace.
 
    Channel or Item
 
-   (optional|single)
+   (optional | single)
 
    This is assumed to point to an image that is 299px or less in size.
    The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
@@ -160,11 +160,11 @@ this larger namespace.
    All attributes are required.
 
 
-- **\<podcast:category>**[Category Name]**\</podcast:category>**
+- **\<podcast:category>**[category Name]**\</podcast:category>**
 
    Channel
 
-   (optional|single)
+   (optional | multiple)
 
    See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
 
@@ -173,7 +173,7 @@ this larger namespace.
 
    Channel
 
-   (optional|multiple)
+   (optional | multiple)
 
    See "ID's" in this document for an explanation.
 
@@ -184,9 +184,9 @@ this larger namespace.
 
    Channel or Item
 
-   (optional|multiple)
+   (optional | multiple)
 
-   It identifies a host of a podcast episode or entire podcast.
+   It identifies a host of a podcast episode if in the Item, or an entire podcast if in the Channel.
 
    All attributes are optional but recommended for disambiguation and good meta-data for apps.
 
@@ -195,7 +195,7 @@ this larger namespace.
 
    Item
 
-   (optional|multiple)
+   (optional | multiple)
 
    It identifies a guest in a podcast episode.
 
@@ -206,7 +206,7 @@ this larger namespace.
 
    Channel or Item
 
-   (optional|single)
+   (optional | single)
 
    Specifies the generally accepted rating letter of G, PG, PG-13, R or X.
 
@@ -215,7 +215,7 @@ this larger namespace.
 
    Channel
 
-   (optional|single)
+   (optional | single)
 
    If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
    to itself as a confirmation to aggregators that they now have the most current url.
@@ -224,31 +224,43 @@ this larger namespace.
 
 ### Phase 2 (Open)
 
-- **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>** (optional|multiple) - This is a channel-level
-   element listing possibly multiple social media accounts for this podcast.  The service slugs should be community written in the accompanying serviceslugs.txt file.
+- **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
-- **\<podcast:funding platform="[service slug]" url="[url for the show at the platform]">**[podcast handle at the platform]**\</podcast:funding>** - (optional|multiple) - This is a
-   channel-level element listing multiple possible donation/funding links for the podcast.
+   Channel or Item
+
+   (optional | multiple)
+
+   This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
+
+
+- **\<podcast:funding platform="[service slug]" url="[url for the show at the platform]">**[podcast handle at the platform]**\</podcast:funding>**
+
+   Channel or Item
+
+   (optional | multiple)
+
+   This element lists multiple possible donation/funding links for the podcast.
 
 
 ## Categories
 
 There can be a maximum of 9 category elements defined in a feed.  Any number greater than that should be discarded.
 
-Category names are defined in the accompanying "categories.json" file
-in this repository.  They should be referenced in the element by their textual name.  The characters can be in any case.  This list of categories aims to replicate the current
-standard but also eliminate as much as possible compound, heirarchical naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.
-And, "Religion & Spirituality" becomes two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And,
-avoiding ampersands makes xml encoding errors less likely.
+Category names are defined in the accompanying "categories.json" file in this repository.  They should be referenced in the element by their textual name.
+The characters can be in any case.  This list of categories aims to replicate the current standard but also eliminate as much as possible compound, heirarchical
+naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.  And, "Religion & Spirituality" becomes
+two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
+ampersands makes xml encoding errors less likely.
 
 
 
 ## Verification, importing and moving
 
-If the "locked" element is present and set to "yes", podcasting hosts and platforms should not allow importing of this feed until the **\<podcast:email>** or other defined feed owner (such as **\<managingEditor>**) is
-contacted and subsequently sets the "locked" element to "no" or removes it from the feed.
+If the "locked" element is present and set to "yes", podcasting hosts and platforms should not allow importing of this feed until the **\<podcast:verificationEmail>** or other
+defined feed owner (such as **\<managingEditor>**) is contacted and subsequently sets the "locked" element to "no" or removes it from the feed.
 
-The **\<podcast:previousUrl>** element acts like a relay header in an email envelope.  Each time a feed is imported, an additional **\<podcast:previousUrl>** should be added, and all previous ones preserved.
+The **\<podcast:previousUrl>** element acts like a relay header in an email envelope.  Each time a feed is imported, an additional **\<podcast:previousUrl>** should be
+added, and all previous ones preserved.
 
 Once a successful import has taken place, the **\<podcast:newFeedUrl>** element can be put in the old feed as a pointer to the new location.
 
