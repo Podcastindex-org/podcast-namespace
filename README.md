@@ -72,6 +72,7 @@ this larger namespace.
 
    All attributes are required.
 
+
 - **\<podcast:locked>**[yes or no]**\</podcast:locked>**
 
    Channel
@@ -83,7 +84,7 @@ this larger namespace.
    feed transfer lock on or off.
 
 
-- **\<podcast:verificationEmail>**[email address]**\</podcast:verificationEmail>**
+- **\<podcast:ownerVerification>**[email address]**\</podcast:ownerVerification>
 
    Channel
 
@@ -93,6 +94,17 @@ this larger namespace.
    virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
    hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
    it is to have this be a valid, working email address.
+
+
+- **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
+
+   Channel
+
+   (optional | multiple)
+
+   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.
+
+   All attributes are required.
 
 
 - **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**

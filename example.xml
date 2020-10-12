@@ -32,8 +32,12 @@
         <itunes:category text="News"/>
         <itunes:category text="Technology"/>
 
+        <podcast:contact type="feedback" method="link">https://podcastindex.social</podcast:contact>
+        <podcast:contact type="advertising" method="email">adbuy@podcastindex.org</podcast:contact>
+        <podcast:contact type="abuse" method="email">abuse@podcastindex.org</podcast:contact>
+
         <podcast:locked>yes</podcast:locked>
-        <podcast:emailVerification>podcast83043423@blubrry.com</podcast:emailVerification>
+        <podcast:ownerVerification>podcast83043423@blubrry.com</podcast:ownerVerification>
         <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
         <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
         <podcast:id>1348299</podcast:id>
