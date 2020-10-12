@@ -19,7 +19,7 @@
         <itunes:author>Dave Jones</itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:type>episodic</itunes:type>
-        <podcast:location>US|Washington</podcast:location>
+        <podcast:location latlon="39.9622,83.0007" osmid="R182706">US|Columbus, OH</podcast:location>
 
         <itunes:image>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</itunes:image>
         <podcast:imageLarge>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageLarge>

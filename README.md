@@ -44,6 +44,23 @@ this larger namespace.
 
 ### Phase 1 (Open)
 
+
+- **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
+
+   Channel (required | single)
+
+   Item (optional | multiple)
+
+   This element is required at the channel level.  And, it MUST contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.
+
+    - latlon: (required) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which features in the podcast.
+    - osmid: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
+        - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
+        - osm id: The ID of the OpenStreetMap feature that is described. This may be a city or a building. While OSM IDs are not considered permanent, cities rarely disappear.
+    - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
+    - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
+
+
 - **\<podcast:location osm_id="[place ID]">**[CountryCode|Locality]**\</podcast:location>**
 
    Channel or Item
