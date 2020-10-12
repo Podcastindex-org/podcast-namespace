@@ -1,10 +1,12 @@
-James Cridland
-Daniel J. Lewis
 Todd Cochrane
-Dave Jones
+James Cridland
 Guilherme Dellagustin
+Kevin Finn
+Dave Jones
+Daniel J. Lewis
 Andreas Hubel
 Christopher Isene
+Tom Rossi
 @PhoneBoy
 
 ... add your name as you contribute!
