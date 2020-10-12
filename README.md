@@ -44,34 +44,6 @@ this larger namespace.
 
 ### Phase 1 (Open)
 
-- **\<podcast:transcript language="[language code]" type="[mime type]">**[url to a file or website]**\</podcast:transcript>**
-
-   Item
-
-   (optional|single)
-
-   Links to an external file containing a transcript.  The mime type of the file should be given - such as text/plain, text/html, etc.
-
-- **\<podcast:captions language="[language code]" type="text/srt">**[url to a SRT captions file]**\</podcast:captions>**
-
-   Item
-
-   (optional|single)
-
-   Links to an industry standard closed-caption/subtitle file format.
-
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [live]>**[uri of media asset]**\</podcast:alternateEnclosure>**
-
-   Channel (optional|single)
-
-   Item (optional|multiple)
-
-   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  The title attribute is optional.  The "live" attribute is unary - its presence indicates that
-   the uri refers to a live stream.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the
-   channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
-   introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be
-   played.
-
 - **\<podcast:location osm_id="[place ID]">**[CountryCode|Locality]**\</podcast:location>**
 
    Channel or Item
@@ -80,6 +52,8 @@ this larger namespace.
 
    The ISO 3166-1 alpha-2 country code; a pipe as separator; then a humanly-readable place name as preferred by the publisher.
    The (mandatory) parameter osm_id is the OpenStreetMap ID for that place, using OpenStreetMap's API.
+
+   All attributes are required.
 
 - **\<podcast:locked>**[yes|no]**\</podcast:locked>**
 
@@ -91,49 +65,18 @@ this larger namespace.
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
    feed transfer lock on or off.
 
+
 - **\<podcast:verificationEmail>**[email address]**\</podcast:verificationEmail>**
 
    Channel
 
    (required|single)
 
-   This is a channel-level element.  An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
-   virtual email address at the hosting provider that redirects to the owner's true email address.
+   An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
+   virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
+   hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
+   it is to have this be a valid, working email address.
 
-- **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
-
-   Channel or Item
-
-   (optional|single)
-
-   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in
-   the feed where appropriate.  The "size" attribute is mandatory.
-
-- **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>**
-
-   Channel or Item
-
-   (optional|single)
-
-   This is assumed to point to an image that is 300px to 999px in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
-
-- **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>**
-
-   Channel or Item
-
-   (optional|single)
-
-   This is assumed to point to an image that is 299px or less in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.  The "size" attribute is mandatory.
-
-- **\<podcast:category>**[Category Name]**\</podcast:category>**
-
-   Channel
-
-   (optional|single)
-
-   See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
 
 - **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**
 
@@ -144,14 +87,87 @@ this larger namespace.
    Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
-- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
+
+- **\<podcast:transcript language="[language code]" type="[mime type]">**[url to a file or website]**\</podcast:transcript>**
+
+   Item
+
+   (optional | single)
+
+   Links to an external file containing a transcript.  The mime type of the file should be given - such as text/plain, text/html, etc.
+
+   All attributes are required.
+
+
+- **\<podcast:captions language="[language code]" type="text/srt">**[url to a SRT captions file]**\</podcast:captions>**
+
+   Item
+
+   (optional | single)
+
+   Links to an industry standard closed-caption/subtitle file format.
+
+   All attributes are required.
+
+
+- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" [stream]>**[uri of media asset]**\</podcast:alternateEnclosure>**
+
+   Channel (optional | single)
+
+   Item (optional | multiple)
+
+   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the
+   channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
+   introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be
+   played.
+
+   All attributes are required except for "stream".  "stream" is a boolean attribute that indicates the uri points to a streaming media that is not downloadable.
+
+
+- **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
+
+   Channel or Item
+
+   (optional|single)
+
+   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in
+   the feed where appropriate.
+
+   All attributes are required.
+
+
+- **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>**
+
+   Channel or Item
+
+   (optional|single)
+
+   This is assumed to point to an image that is 300px to 999px in size.
+   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
+
+   All attributes are required.
+
+
+- **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>**
+
+   Channel or Item
+
+   (optional|single)
+
+   This is assumed to point to an image that is 299px or less in size.
+   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
+
+   All attributes are required.
+
+
+- **\<podcast:category>**[Category Name]**\</podcast:category>**
 
    Channel
 
    (optional|single)
 
-   If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
-   to itself as a confirmation to aggregators that they now have the most current url.
+   See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
+
 
 - **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
 
@@ -161,13 +177,19 @@ this larger namespace.
 
    See "ID's" in this document for an explanation.
 
+   All attributes are required.
+
+
 - **\<podcast:host href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:host>**
 
    Channel or Item
 
    (optional|multiple)
 
-   It identifies a host of a podcast episode or entire podcast.  All attributes are optional but recommended for disambiguation and good meta-data for apps.
+   It identifies a host of a podcast episode or entire podcast.
+
+   All attributes are optional but recommended for disambiguation and good meta-data for apps.
+
 
 - **\<podcast:guest href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:guest>**
 
@@ -175,7 +197,10 @@ this larger namespace.
 
    (optional|multiple)
 
-   It identifies a guest in a podcast episode.  All attributes are optional but recommended for disambiguation and good meta-data for apps.
+   It identifies a guest in a podcast episode.
+
+   All attributes are optional but recommended for disambiguation and good meta-data for apps.
+
 
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>**
 
@@ -184,6 +209,16 @@ this larger namespace.
    (optional|single)
 
    Specifies the generally accepted rating letter of G, PG, PG-13, R or X.
+
+
+- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
+
+   Channel
+
+   (optional|single)
+
+   If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
+   to itself as a confirmation to aggregators that they now have the most current url.
 
 
 
