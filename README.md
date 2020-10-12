@@ -105,15 +105,16 @@ this larger namespace.
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
 
-- **\<podcast:transcript language="[language code]" type="[mime type]">**[url to a file or website]**\</podcast:transcript>**
+- **\<podcast:transcript type="[mime type]" rel="captions" language="[language code]">**[url to a file or website]**\</podcast:transcript>**
 
    Item
 
    (optional | multiple)
 
-   Links to an external file containing a transcript.  The mime type of the file should be given - such as `text/plain`, `text/html`, `application/srt`, `application/json`.
-
-   The language of the transcript can be overwritten by providing the optional language attribute. All other attributes are required.
+   Links to an external file containing a transcript or closed captions file, which may actually be the same file.  The mime type of the file should be given - such
+   as `text/plain`, `text/html`, `application/srt`, `application/json`.  If there is no language attribute given, the linked file is assumed to be the same language that is
+   specified by the RSS \<language> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
+   mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
 
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**

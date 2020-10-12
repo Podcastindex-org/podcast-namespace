@@ -77,7 +77,7 @@
             <podcast:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcast:imageMedium>
             <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
             <itunes:explicit>no</itunes:explicit>
-            <podcast:transcript type="application/json">https://podcastindex.org/ep0002/transcript.json</podcast:transcript>
+            <podcast:transcript type="application/json" language="es" rel="captions">https://podcastindex.org/ep0002/transcript_es.json</podcast:transcript>
             <podcast:transcript type="application/srt">https://podcastindex.org/ep0002/transcript.srt</podcast:transcript>
             <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
             <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
