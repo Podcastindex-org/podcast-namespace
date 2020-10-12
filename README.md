@@ -1,4 +1,4 @@
-# The "podcast" namespace
+# The "podcast" Namespace
 
 A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create one namespace
 to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
@@ -12,7 +12,7 @@ There is significant overlap amongst the many existing podcast namespaces.  Each
 system and audience the metadata they need in the way they want it delivered.
 
 
-## Goal #2 - Avoid Attributes and sub-elements
+## Goal #2 - Minimize Attributes and Sub-elements
 
 Attributes in xml elements should be used only where absolutely needed.  The preference is to create a new element type, rather than reuse the same element with
 different attributes.  For example, instead of using **\<podcast:image type="Large">**, we would use **\<podcast:imageLarge>**.  This makes the corresponding
@@ -33,7 +33,7 @@ a unary element, where it's existence is taken as a "yes" and it's absence as a 
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
 
-## Goal #5 - Be General
+## Goal #5 - Be General... to a point
 
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
@@ -189,14 +189,6 @@ this larger namespace.
    All attributes are required.
 
 
-- **\<podcast:category>**[category Name]**\</podcast:category>**
-
-   Channel
-
-   (optional | multiple)
-
-   See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
-
 
 - **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
 
@@ -271,15 +263,21 @@ this larger namespace.
    This element lists multiple possible donation/funding links for the podcast.
 
 
-## Categories
+- **\<podcast:category>**[category Name]**\</podcast:category>**
 
-There can be a maximum of 9 category elements defined in a feed.  Any number greater than that should be discarded.
+   Channel
 
-Category names are defined in the accompanying "categories.json" file in this repository.  They should be referenced in the element by their textual name.
-The characters can be in any case.  This list of categories aims to replicate the current standard but also eliminate as much as possible compound, heirarchical
-naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.  And, "Religion & Spirituality" becomes
-two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
-ampersands makes xml encoding errors less likely.
+   (optional | multiple)
+
+   See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
+
+   There can be a maximum of 9 category elements defined in a feed.  Any number greater than that should be discarded.
+
+   Category names are defined in the accompanying "categories.json" file in this repository.  They should be referenced in the element by their textual name.
+   The characters can be in any case.  This list of categories aims to replicate the current standard but also eliminate as much as possible compound, heirarchical
+   naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.  And, "Religion & Spirituality" becomes
+   two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
+   ampersands makes xml encoding errors less likely.
 
 
 
