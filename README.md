@@ -283,7 +283,7 @@ representing the platform, directory, host, app or service. The slugs will look 
 - transistor
 - libsyn
 - buzzsprout
-- itunes
+- apple
 - google
 - spotify
 - anchor

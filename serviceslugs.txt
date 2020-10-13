@@ -9,7 +9,7 @@ overcast
 podcastaddict
 hypercatcher
 anchor
-itunes
+apple
 google
 podverse
 podfriend
