@@ -8,5 +8,6 @@ Andreas Hubel
 Christopher Isene
 Tom Rossi
 @PhoneBoy
+Ben Slinger
 
 ... add your name as you contribute!
