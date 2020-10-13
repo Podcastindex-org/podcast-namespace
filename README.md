@@ -190,15 +190,20 @@ this larger namespace.  But, we don't want to be so general that the spec become
    All attributes are optional but recommended for disambiguation and good meta-data for apps.
 
 
-- **\<podcast:guest href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:guest>**
+**\<podcast:persons/>**
 
-   Item
+   Channel or Item (optional | single)
 
-   (optional | multiple)
+   This element lists optional `<podcast:person/>` item elements that reflects persons of interest for the show.
 
-   It identifies a guest in a podcast episode.
+- **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
 
-   All attributes are optional but recommended for disambiguation and good meta-data for apps.
+   Item (optional | multiple)
+
+   This element specifies a person
+   `name" is required and is the full name or alias of the person.
+   `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
+   `img` is optional and is used to show a photo of the person
 
 
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
