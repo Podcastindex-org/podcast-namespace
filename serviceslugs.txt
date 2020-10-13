@@ -43,3 +43,4 @@ shoutengine
 pinecast
 podomatic
 zencast
+podchaser
