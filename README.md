@@ -201,15 +201,6 @@ this larger namespace.  But, we don't want to be so general that the spec become
    All attributes are optional but recommended for disambiguation and good meta-data for apps.
 
 
-- **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>**
-
-   Channel or Item
-
-   (optional | single)
-
-   Specifies the generally accepted rating letter of G, PG, PG-13, R or X.
-
-
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
 
    Channel
@@ -256,6 +247,15 @@ this larger namespace.  But, we don't want to be so general that the spec become
    naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.  And, "Religion & Spirituality" becomes
    two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
    ampersands makes xml encoding errors less likely.
+
+
+- **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>**
+
+  Channel or Item
+
+  (optional | single)
+
+  Specifies the generally accepted rating letter of G, PG, PG-13, R or X.  Or, perhaps an age rating system like all, 14, 19, adult.  Needs discussion.
 
 
 
