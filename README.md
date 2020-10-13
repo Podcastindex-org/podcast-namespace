@@ -116,6 +116,21 @@ this larger namespace.  But, we don't want to be so general that the spec become
    specified by the RSS \<language\> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
    mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
+- **\<podcast:chapters/>**
+
+   Channel (optional | single)
+
+   This element lists optional `<podcast:chapter/>` item elements.
+
+- **\<podcast:chapter start="[(Normal Play Time)]" title="[(string)]" href="[(uri to content)]" type="[mime type]"/>**
+
+   Item (optional | multiple)
+
+   This element specifies a point in time during the podcast that can be linked to directly and optionally supplemented with additional content.
+   `start` is required and uses the [Normal Play Time](https://www.w3.org/TR/media-frags/#naming-time) standard.
+   `title` is required and is used as a user facing identifier for this chapter
+   `href` is optional and points to additional user facing content
+   `type` is optional but it is strongly encouraged if `href` is used so that clients can handle the chapter content appropriately
 
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
 
