@@ -105,7 +105,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
 
-- **\<podcast:transcript type="[mime type]" rel="captions" language="[language code]">**[url to a file or website]**\</podcast:transcript>**
+- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />**
 
    Item
 
@@ -113,7 +113,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
    Links to an external file containing a transcript or closed captions file, which may actually be the same file.  The mime type of the file should be given - such
    as `text/plain`, `text/html`, `application/srt`, `application/json`.  If there is no language attribute given, the linked file is assumed to be the same language that is
-   specified by the RSS \<language> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
+   specified by the RSS \<language\> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
    mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
 
