@@ -43,26 +43,11 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
 Our guiding principles for development of this namespace is "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
 
+<br><br>
 
 ## Element List
 
 ### Phase 1 (Open)
-
-
-- **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
-
-   Channel (required | single)
-
-   Item (optional | multiple)
-
-   This element is required at the channel level.  And, it MUST contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.
-
-    - latlon: (required) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which features in the podcast.
-    - osmid: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
-        - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
-        - osm id: The ID of the OpenStreetMap feature that is described. This may be a city or a building. While OSM IDs are not considered permanent, cities rarely disappear.
-    - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
-    - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
 
 - **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>**
@@ -79,27 +64,6 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
    hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
    it is to have this be a valid, working email address.
-
-
-- **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
-
-   Channel
-
-   (optional | multiple)
-
-   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.
-
-   All attributes are required.
-
-
-- **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**
-
-   Channel
-
-   (optional | multiple)
-
-   Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
-   should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
 
 - **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />**
@@ -127,6 +91,44 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    `type` is optional but it is strongly encouraged if `href` is used so that clients can handle the chapter content appropriately.
 
 
+- **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
+
+   Channel (required | single)
+
+   Item (optional | multiple)
+
+   This element is required at the channel level.  And, it MUST contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.
+
+    - latlon: (required) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which features in the podcast.
+    - osmid: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
+        - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
+        - osm id: The ID of the OpenStreetMap feature that is described. This may be a city or a building. While OSM IDs are not considered permanent, cities rarely disappear.
+    - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
+    - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
+
+
+- **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
+
+   Channel or Item (optional | multiple)
+
+   This element specifies a person of interest to the podcast
+   `name" is required and is the full name or alias of the person.
+   `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
+   `img` is optional and is meant for a photo or graphical representation of the person
+   `href` is optional and is a link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+
+
+- **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
+
+   Channel
+
+   (optional | multiple)
+
+   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.
+
+   All attributes are required.
+
+
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
 
    Channel (optional | single)
@@ -139,6 +141,17 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    played.
 
    All attributes are required except for "stream".  "stream" is a boolean attribute that indicates the uri points to a streaming media that is not downloadable.
+
+
+- **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
+
+   Channel
+
+   (optional | multiple)
+
+   See "ID's" in this document for an explanation.
+
+   All attributes are required.
 
 
 - **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
@@ -177,37 +190,13 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    All attributes are required.
 
 
+- **\<podcast:funding platform="[service slug]" title="[user provided note]">**[url for the show at the platform]**\</podcast:funding>**
 
-- **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
-
-   Channel
+   Channel or Item
 
    (optional | multiple)
 
-   See "ID's" in this document for an explanation.
-
-   All attributes are required.
-
-
-- **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
-
-   Channel or Item (optional | multiple)
-
-   This element specifies a person of interest to the podcast
-   `name" is required and is the full name or alias of the person.
-   `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
-   `img` is optional and is meant for a photo or graphical representation of the person
-   `href` is optional and is a link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
-
-
-- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
-
-   Channel
-
-   (optional | single)
-
-   If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
-   to itself as a confirmation to aggregators that they now have the most current url.
+   This element lists multiple possible donation/funding links for the podcast.
 
 
 
@@ -220,15 +209,6 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    (optional | multiple)
 
    This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
-
-
-- **\<podcast:funding platform="[service slug]" title="[user provided note]">**[url for the show at the platform]**\</podcast:funding>**
-
-   Channel or Item
-
-   (optional | multiple)
-
-   This element lists multiple possible donation/funding links for the podcast.
 
 
 - **\<podcast:category>**[category Name]**\</podcast:category>**
@@ -257,16 +237,31 @@ Our guiding principles for development of this namespace is "[Rules for Standard
   Specifies the generally accepted rating letter of G, PG, PG-13, R or X.  Or, perhaps an age rating system like all, 14, 19, adult.  Needs discussion.
 
 
+- **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**
 
-## Verification, importing and moving
+   Channel
 
-If the "locked" element is present and set to "yes", podcasting hosts and platforms should not allow importing of this feed until the **\<podcast:verificationEmail>** or other
-defined feed owner (such as **\<managingEditor>**) is contacted and subsequently sets the "locked" element to "no" or removes it from the feed.
+   (optional | multiple)
 
-The **\<podcast:previousUrl>** element acts like a relay header in an email envelope.  Each time a feed is imported, an additional **\<podcast:previousUrl>** should be
-added, and all previous ones preserved.
+   Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
+   should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
-Once a successful import has taken place, the **\<podcast:newFeedUrl>** element can be put in the old feed as a pointer to the new location.
+
+- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
+
+   Channel
+
+   (optional | single)
+
+   If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
+   to itself as a confirmation to aggregators that they now have the most current url.
+
+
+
+## Verification for Importing and Transferring
+
+If the "locked" element is present and set to "yes", podcasting hosts should not allow importing of this feed until the email listed in the element's owner="" attribute is
+contacted and subsequently changes the value of the element to "no".
 
 
 
