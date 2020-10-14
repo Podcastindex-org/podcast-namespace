@@ -6,6 +6,9 @@ The large podcast platforms have shown virtually no interest in extending their 
 will become the framework that the independent podcast community needs to deliver new functionality to apps and aggregators.
 
 
+<br><br>
+
+
 ## Goal #1 - Eliminate Redundancy
 
 There is significant overlap amongst the many existing podcast namespaces.  Each platform and publisher has created their own namespace to give their respective
