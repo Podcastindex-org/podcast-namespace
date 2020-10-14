@@ -179,20 +179,15 @@ this larger namespace.  But, we don't want to be so general that the spec become
    All attributes are required.
 
 
-- **\<podcast:persons/>**
-
-   Channel or Item (optional | single)
-
-   This element lists optional `<podcast:person/>` item elements that reflects persons of interest for the show.
-
 - **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
 
-   Item (optional | multiple)
+   Channel or Item (optional | multiple)
 
-   This element specifies a person
+   This element specifies a person of interest to the podcast
    `name" is required and is the full name or alias of the person.
    `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
-   `img` is optional and is used to show a photo of the person
+   `img` is optional and is meant for a photo or graphical representation of the person
+   `href` is optional and is a link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
 
 
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
