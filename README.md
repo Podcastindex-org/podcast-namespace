@@ -41,7 +41,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
 ## The Guiding Principles
 
-Our guiding principles for development of this namespace is "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
+Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
 
 <br><br>
 
@@ -85,10 +85,13 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    (optional | multiple)
 
    This element specifies a point in time during the podcast that can be linked to directly and optionally supplemented with additional content.
-   `start` is required to identify the starting point of the chapter within the podcast. Start time is expressed as seconds since the start time of the podcast.
-   `title` is optional and is used as a user facing identifier for this chapter.
-   `href` is optional and points to additional user facing content.
-   `type` is optional but it is strongly encouraged if `href` is used so that clients can handle the chapter content appropriately.
+
+   Attributes:
+
+   - `start` (required) Used to identify the starting point of the chapter within the podcast. Start time is expressed as seconds since the start time of the podcast.
+   - `title` (optional) Used as a user facing identifier for this chapter.
+   - `href` (optional) Points to a url containing additional user facing content, like an image or wiki entry.
+   - `type` (optional) This attribute is strongly encouraged if `href` is used so that apps can handle the external chapter content appropriately.
 
 
 - **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
@@ -107,15 +110,16 @@ Our guiding principles for development of this namespace is "[Rules for Standard
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
 
-- **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
+- **\<podcast:person name="[(string)]" role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
 
    Channel or Item (optional | multiple)
 
-   This element specifies a person of interest to the podcast
-   `name" is required and is the full name or alias of the person.
-   `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
-   `img` is optional and is meant for a photo or graphical representation of the person
-   `href` is optional and is a link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+   This element specifies a person of interest to the podcast.
+
+   - `name` (required) This is the full name or alias of the person.
+   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
+   - `img` (optional) This is the url of a picture or avatar of the person.
+   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
 
 
 - **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
@@ -190,13 +194,18 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    All attributes are required.
 
 
-- **\<podcast:funding platform="[service slug]" title="[user provided note]">**[url for the show at the platform]**\</podcast:funding>**
+- **\<podcast:funding platform="[service slug]" title="[user provided note (string)]">**[url for the show at the platform]**\</podcast:funding>**
 
    Channel or Item
 
    (optional | multiple)
 
-   This element lists multiple possible donation/funding links for the podcast.
+   This element lists multiple possible donation/funding links for the podcast.  The node value should contain the full url of the donation page.
+
+   Attributes:
+
+   - `platform` (required) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
+   - `title` (optional) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
 
 
 
