@@ -179,18 +179,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
    All attributes are required.
 
 
-- **\<podcast:host href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:host>**
-
-   Channel or Item
-
-   (optional | multiple)
-
-   It identifies a host of a podcast episode if in the Item, or an entire podcast if in the Channel.
-
-   All attributes are optional but recommended for disambiguation and good meta-data for apps.
-
-
-**\<podcast:persons/>**
+- **\<podcast:persons/>**
 
    Channel or Item (optional | single)
 
