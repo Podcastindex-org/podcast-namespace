@@ -61,7 +61,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
 
-- **\<podcast:locked>**[yes or no]**\</podcast:locked>**
+- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>**
 
    Channel
 
@@ -71,14 +71,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
    this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
    feed transfer lock on or off.
 
-
-- **\<podcast:ownerVerification>**[email address]**\</podcast:ownerVerification>**  
-
-   Channel
-
-   (required | single)
-
-   An email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
+   The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
    virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
    hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
    it is to have this be a valid, working email address.
