@@ -19,11 +19,10 @@ different attributes.  For example, instead of using **\<podcast:image type="Lar
 aggregator code easier and more linear.  Sub-elements should be avoided if at all possible.
 
 
-## Goal #3 - Use RSS Native Elements
+## Goal #3 - Keep "required" tags minimal
 
-The RSSv2.0 specification already has a robust set of defined elements.  We should aim to use those instead of creating new ones.  Instead of creating a **\<podcast:owner>**
-element, we can use the already existing **\<managingEditor>** element that contains both name and email address.  In situations like item-level images, where the RSS
-spec never defined that element, it is appropriate to define new ones.
+The only required tags should be those that solve an overwhelming need in the industry.  Requiring tags is a roadblock to adoption and should be avoided.  Attributes
+should also only be required when they are key to the functionality of the tag.
 
 
 ## Goal #4 - Keep Exisiting Conventions
@@ -38,6 +37,9 @@ sit alongside at least one other namespace, it makes sense to keep existing conv
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
 this larger namespace.  But, we don't want to be so general that the spec becomes overly complicated.  A beautiful, "perfect" spec is not important.  Solving real problems is.
+
+
+Our guiding principles for development of this namespace is "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
 
 
 ## Element List

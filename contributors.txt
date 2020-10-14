@@ -1,4 +1,4 @@
-Todd Cochrane
+Tom Rossi
 James Cridland
 Guilherme Dellagustin
 Kevin Finn
@@ -6,8 +6,9 @@ Dave Jones
 Daniel J. Lewis
 Andreas Hubel
 Christopher Isene
-Tom Rossi
+Todd Cochrane
 @PhoneBoy
 Ben Slinger
+Martin Mouritzen
 
 ... add your name as you contribute!
