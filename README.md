@@ -47,8 +47,9 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 ## Element List
 
-### Phase 1 (Open)
+### <u>Phase 1 (Open)</u>
 
+<br>
 
 - **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>**
 
@@ -65,6 +66,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
    it is to have this be a valid, working email address.
 
+<br>
 
 - **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />**
 
@@ -77,6 +79,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    specified by the RSS \<language\> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
    mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
+<br>
 
 - **\<podcast:chapter start="[(int or float)]" title="[(string)]" href="[uri to content]" type="[mime type]"/>**
 
@@ -93,6 +96,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    - `href` (optional) Points to a url containing additional user facing content, like an image or wiki entry.
    - `type` (optional) This attribute is strongly encouraged if `href` is used so that apps can handle the external chapter content appropriately.
 
+<br>
 
 - **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
 
@@ -109,6 +113,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
     - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
+<br>
 
 - **\<podcast:person name="[(string)]" role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
 
@@ -121,6 +126,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    - `img` (optional) This is the url of a picture or avatar of the person.
    - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
 
+<br>
 
 - **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
 
@@ -132,6 +138,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required.
 
+<br>
 
 - **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
 
@@ -146,6 +153,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required except for "stream".  "stream" is a boolean attribute that indicates the uri points to a streaming media that is not downloadable.
 
+<br>
 
 - **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
 
@@ -157,6 +165,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required.
 
+<br>
 
 - **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
 
@@ -169,6 +178,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required.
 
+<br>
 
 - **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>**
 
@@ -181,6 +191,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required.
 
+<br>
 
 - **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>**
 
@@ -193,6 +204,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    All attributes are required.
 
+<br>
 
 - **\<podcast:funding platform="[service slug]" title="[user provided note (string)]">**[url for the show at the platform]**\</podcast:funding>**
 
@@ -211,7 +223,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 <br><br>
 
 
-### Phase 2 (Open)
+### <u>Phase 2 (Open)</u>
 
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
@@ -221,6 +233,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
 
+<br>
 
 - **\<podcast:category>**[category Name]**\</podcast:category>**
 
@@ -238,6 +251,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
    ampersands makes xml encoding errors less likely.
 
+<br>
 
 - **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>**
 
@@ -247,6 +261,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
   Specifies the generally accepted rating letter of G, PG, PG-13, R or X.  Or, perhaps an age rating system like all, 14, 19, adult.  Needs discussion.
 
+<br>
 
 - **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**
 
@@ -257,6 +272,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
+<br>
 
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
 
@@ -268,12 +284,16 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    to itself as a confirmation to aggregators that they now have the most current url.
 
 
+<br><br>
+
 
 ## Verification for Importing and Transferring
 
 If the "locked" element is present and set to "yes", podcasting hosts should not allow importing of this feed until the email listed in the element's owner="" attribute is
 contacted and subsequently changes the value of the element to "no".
 
+
+<br><br>
 
 
 ## ID's
@@ -295,6 +315,9 @@ representing the platform, directory, host, app or service. The slugs will look 
 - overcast
 
 More should be added by the community as needed.  This is just a starter list.
+
+
+<br><br>
 
 
 ## Example feed
