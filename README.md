@@ -39,6 +39,8 @@ to the broadest set of apps, publishers, platforms and aggregators.  Individual 
 this larger namespace.  But, we don't want to be so general that the spec becomes overly complicated.  A beautiful, "perfect" spec is not important.  Solving real problems is.
 
 
+## The Guiding Principles
+
 Our guiding principles for development of this namespace is "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
 
 
