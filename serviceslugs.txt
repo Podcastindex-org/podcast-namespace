@@ -45,3 +45,4 @@ podomatic
 zencast
 podchaser
 podiant
+megafono
