@@ -112,14 +112,14 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
 
-- **\<podcast:chapter start="[Normal Play Time]" title="[(string)]" href="[uri to content]" type="[mime type]"/>**
+- **\<podcast:chapter start="[(int)]" title="[(string)]" href="[uri to content]" type="[mime type]"/>**
 
    Item
 
    (optional | multiple)
 
    This element specifies a point in time during the podcast that can be linked to directly and optionally supplemented with additional content.
-   `start` is required and uses the [Normal Play Time](https://www.w3.org/TR/media-frags/#naming-time) standard.
+   `start` is required to identify the starting point of the chapter within the podcast. Start time is expressed as seconds since the start time of the podcast.
    `title` is optional and is used as a user facing identifier for this chapter
    `href` is optional and points to additional user facing content
    `type` is optional but it is strongly encouraged if `href` is used so that clients can handle the chapter content appropriately
