@@ -189,26 +189,15 @@ Our guiding principles for development of this namespace is "[Rules for Standard
    All attributes are required.
 
 
-- **\<podcast:host href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:host>**
+- **\<podcast:person name="[(string)]" role="[(string)]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
 
-   Channel or Item
+   Channel or Item (optional | multiple)
 
-   (optional | multiple)
-
-   It identifies a host of a podcast episode if in the Item, or an entire podcast if in the Channel.
-
-   All attributes are optional but recommended for disambiguation and good meta-data for apps.
-
-
-- **\<podcast:guest href="[url of bio/wiki/blog/etc.]" img="[link to image/headshot]">**[name of person]**\</podcast:guest>**
-
-   Item
-
-   (optional | multiple)
-
-   It identifies a guest in a podcast episode.
-
-   All attributes are optional but recommended for disambiguation and good meta-data for apps.
+   This element specifies a person of interest to the podcast
+   `name" is required and is the full name or alias of the person.
+   `role` is optional and is used to identify what role the person has for the show or episode. If missing, on the channel element, "host" is assumed, on the Item element "guest" is assumed.
+   `img` is optional and is meant for a photo or graphical representation of the person
+   `href` is optional and is a link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
 
 
 - **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
