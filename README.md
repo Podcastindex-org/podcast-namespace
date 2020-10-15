@@ -158,7 +158,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
+- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
    Channel
 
@@ -166,7 +166,9 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    See "ID's" in this document for an explanation.
 
-   All attributes are required.
+   - `platform` (required) This is the service slug of the platform.
+   - `id` (required) This is the unique identifier for this podcast on the respective platform.
+   - `url` (optional) A url to the page for this podcast on the respective platform.
 
 <br>
 

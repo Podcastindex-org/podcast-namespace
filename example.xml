@@ -40,8 +40,8 @@
         <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
         <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
         <podcast:id>1348299</podcast:id>
-        <podcast:id platform="itunes">39423340445</podcast:id>
-        <podcast:id platform="blubrry">83043423</podcast:id>
+        <podcast:id platform="podcastindex" id="920666" />
+        <podcast:id platform="apple" id="23409402344" url="https://podcasts.apple.com/us/shows/id23409402344" />
         <podcast:alternateEnclosure type="video/mp4" length="11540076" bitrate="512" title="Trailer">https://example.com/pc20trailer.mp4</podcast:alternateEnclosure>
 
         <item>
