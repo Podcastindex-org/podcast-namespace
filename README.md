@@ -1,7 +1,7 @@
 # The "podcast" Namespace
 
-A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create one namespace
-to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
+A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create a single, compact, efficient
+namespace that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
 The large podcast platforms have shown virtually no interest in extending their namespaces for new functionality in many years.  Our hope is that this namespace
 will become the framework that the independent podcast community needs to deliver new functionality to apps and aggregators.
 
@@ -103,7 +103,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 - **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
 
-   Channel (required | single)
+   Channel (optional | single)
 
    Item (optional | multiple)
 
