@@ -1,4 +1,4 @@
-This is the initial spec for a json chapter format that can be referenced in an RSS feed using the "podcast" namespace.namespace
+This is the initial spec for a json chapter format that can be referenced in an RSS feed using the "podcast" namespace.
 
 The "chapters" property is an array of "chapter" objects taking this form:
 
