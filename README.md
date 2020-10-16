@@ -84,20 +84,13 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:chapter start="[(int or float)]" title="[(string)]" href="[uri to content]" type="[mime type]"/>**
+- **\<podcast:chapter url="[url to chapter data]" type="[mimi type]" />**
 
    Item
 
-   (optional | multiple)
+   (optional)
 
-   This element specifies a point in time during the podcast that can be linked to directly and optionally supplemented with additional content.
-
-   Attributes:
-
-   - `start` (required) Used to identify the starting point of the chapter within the podcast. Start time is expressed as seconds since the start time of the podcast.
-   - `title` (optional) Used as a user facing identifier for this chapter.
-   - `href` (optional) Points to a url containing additional user facing content, like an image or wiki entry.
-   - `type` (optional) This attribute is strongly encouraged if `href` is used so that apps can handle the external chapter content appropriately.
+   Links to an external file **(sample needed)** containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.
 
 <br>
 
@@ -118,7 +111,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:person name="[(string)]" role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
+- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:contact>**
 
    Channel or Item (optional | multiple)
 
@@ -143,18 +136,20 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
+- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream />**
 
    Channel (optional | single)
 
    Item (optional | multiple)
 
-   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the
-   channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
-   introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be
-   played.
-
-   All attributes are required except for "stream".  "stream" is a boolean attribute that indicates the uri points to a streaming media that is not downloadable.
+   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be played.
+   
+   - `url` (required) This is the url to the media asset.
+   - `type` (required) Mime type of the media asset.
+   - `length` (required) Duration of media asset in seconds.
+   - `bitrate` (optional) Encoding bitrate of media asset.
+   - `title` (required) Alternate assets need a title since main title will apply to primary asset.
+   - `stream` (optional) Boolean attribute that indicates the uri points to a streaming media that is not downloadable.
 
 <br>
 
@@ -172,20 +167,19 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
+- **\<podcast:imageLarge href="[url to image asset]" size="[pixel width]" />**
 
    Channel or Item
 
    (optional | single)
 
-   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in
-   the feed where appropriate.
+   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
 
    All attributes are required.
 
 <br>
 
-- **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>**
+- **\<podcast:imageMedium href="[url to image asset]" size="[pixel width]" />**
 
    Channel or Item
 
@@ -198,7 +192,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>**
+- **\<podcast:imageSmall href="[url to image asset]" size="[pixel width]" />**
 
    Channel or Item
 
@@ -211,18 +205,19 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:funding platform="[service slug]" title="[user provided note (string)]">**[url for the show at the platform]**\</podcast:funding>**
+- **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>**
 
    Channel or Item
 
    (optional | multiple)
 
-   This element lists multiple possible donation/funding links for the podcast.  The node value should contain the full url of the donation page.
+   This element lists multiple possible donation/funding links for the podcast.
 
    Attributes:
 
+   - `url` (required) Full url to the specific show on the funding platform.
    - `platform` (required) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
-   - `title` (optional) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
+   - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
 
 
 <br><br>
