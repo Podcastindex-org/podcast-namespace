@@ -161,39 +161,19 @@ Please read it before contributing if you aren't familiar with it.
 
 <br>
 
-- **\<podcast:imageLarge href="[url to image asset]" size="[pixel width]" />**
+- **\<podcast:images srcset="[url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w" />**
 
    Channel or Item
 
    (optional | single)
 
-   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:imageMedium href="[url to image asset]" size="[pixel width]" />**
-
-   Channel or Item
-
-   (optional | single)
-
-   This is assumed to point to an image that is 300px to 999px in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:imageSmall href="[url to image asset]" size="[pixel width]" />**
-
-   Channel or Item
-
-   (optional | single)
-
-   This is assumed to point to an image that is 299px or less in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
+   This points to a group of images, separated by commas - each with a pixel width declared after them.  It is highly recommended that the images referenced
+   be square (1:1 ratio), as this is the industry standard for podcast album art, and what podcast apps expect to work with.  The srcset attribute is designed
+   to work like the ```srcset``` attribute in the HTML5 specification.  Suggested widths are 1500px, 600px, 300px and 150px.  See the example feed in this
+   repo for an example of how this looks in practice.
 
    All attributes are required.
 

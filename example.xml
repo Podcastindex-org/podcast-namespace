@@ -2,7 +2,7 @@
 <rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Podcast Feed Template</title>
-        <description>This is a fake show that exists only as an example of the "podcastindex" namespace.</description>
+        <description>This is a fake show that exists only as an example of the "podcast" namespace.</description>
         <link>http://podcastindex.org</link>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en-US</language>
@@ -12,19 +12,23 @@
         <managingEditor>dave@podcastindex.org (Dave Jones)</managingEditor>
         <webMaster>support@podcastindex.org (Tech Support)</webMaster>
         <image>
-            <url>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</url>
+            <url>https://example.com/images/pci_avatar-massive.jpg</url>
             <title>Podcast Feed Template</title>
             <link>https://podcastindex.org</link>
         </image>
+
+        <podcast:locked owner="podcastowner@domain.com">yes</podcast:locked>
+        <podcast:location latlon="39.9622,83.0007" osmid="R182706">US|Columbus, OH</podcast:location>
+
         <itunes:author>Dave Jones</itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:type>episodic</itunes:type>
-        <podcast:location latlon="39.9622,83.0007" osmid="R182706">US|Columbus, OH</podcast:location>
 
-        <itunes:image>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</itunes:image>
-        <podcast:imageLarge>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageLarge>
-        <podcast:imageMedium>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageMedium>
-        <podcast:imageSmall>https://raw.githubusercontent.com/Podcastindex-org/art-graphics-logos/master/pci_avatar.jpg</podcast:imageSmall>
+        <itunes:image>https://example.com/images/pci_avatar-massive.jpg</itunes:image>
+        <podcast:images srcset="https://example.com/images/pci_avatar-massive.jpg 1500w,
+                                        https://example.com/images/pci_avatar-middle.jpg 600w,
+                                        https://example.com/images/pci_avatar-small.jpg 300w,
+                                        https://example.com/images/pci_avatar-tiny.jpg 150w" />
 
         <podcast:category>News</podcast:category>
         <podcast:category>Commentary</podcast:category>
@@ -36,10 +40,9 @@
         <podcast:contact type="advertising" method="email">adbuy@podcastindex.org</podcast:contact>
         <podcast:contact type="abuse" method="email">abuse@podcastindex.org</podcast:contact>
 
-        <podcast:locked owner="podcastowner@domain.com">yes</podcast:locked>
         <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
         <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
-        <podcast:id>1348299</podcast:id>
+
         <podcast:id platform="podcastindex" id="920666" />
         <podcast:id platform="apple" id="23409402344" url="https://podcasts.apple.com/us/shows/id23409402344" />
         <podcast:alternateEnclosure type="video/mp4" length="11540076" bitrate="512" title="Trailer">https://example.com/pc20trailer.mp4</podcast:alternateEnclosure>
