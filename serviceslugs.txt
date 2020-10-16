@@ -27,8 +27,8 @@ podcasts.com
 podchaser
 podfriend
 podiant
-podiant
 podigee
+podnews
 podomatic
 podserve
 podverse
