@@ -10,4 +10,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podfriend](https://www.podfriend.com/)
 
 ## Locked `<podcast:locked>`
-1. 
+1. [Buzzsprout](https://www.buzzsprout.com/)
