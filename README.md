@@ -15,27 +15,20 @@ There is significant overlap amongst the many existing podcast namespaces.  Each
 system and audience the metadata they need in the way they want it delivered.
 
 
-## Goal #2 - Minimize Attributes and Sub-elements
-
-Attributes in xml elements should be used only where absolutely needed.  The preference is to create a new element type, rather than reuse the same element with
-different attributes.  For example, instead of using **\<podcast:image type="Large">**, we would use **\<podcast:imageLarge>**.  This makes the corresponding
-aggregator code easier and more linear.  Sub-elements should be avoided if at all possible.
-
-
-## Goal #3 - Keep "required" tags minimal
+## Goal #2 - Keep "required" tags and attributes minimal
 
 The only required tags should be those that solve an overwhelming need in the industry.  Requiring tags is a roadblock to adoption and should be avoided.  Attributes
 should also only be required when they are key to the functionality of the tag.
 
 
-## Goal #4 - Keep Exisiting Conventions
+## Goal #3 - Keep Exisiting Conventions
 
 Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, it would make sense to turn **\<podcast:explicit>** into
 a unary element, where it's existence is taken as a "yes" and it's absence as a "no".  But, that has never been the standard.  And, given as how this namespace will probably
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
 
-## Goal #5 - Be General... to a point
+## Goal #4 - Be General... to a point
 
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
@@ -44,7 +37,8 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
 ## The Guiding Principles
 
-Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
+Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
+Please read it before contributing if you aren't familiar with it.
 
 <br><br>
 
