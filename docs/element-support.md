@@ -8,6 +8,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Buzzsprout](https://www.buzzsprout.com/blog/transcription-tools)
 2. [Podcast Addict](https://podcastaddict.com/changelog/2020_14#section1)
 3. [Podfriend](https://twitter.com/GoPodfriend/status/1316847938828742656)
+4. [Podnews](https://podnews.net/rss)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
+2. [Podnews](https://podnews.net/rss)
