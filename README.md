@@ -105,7 +105,7 @@ Please read it before contributing if you aren't familiar with it.
 
 <br>
 
-- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:contact>**
+- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
 
    Channel or Item (optional | multiple)
 
