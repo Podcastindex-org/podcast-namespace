@@ -78,13 +78,13 @@ Please read it before contributing if you aren't familiar with it.
 
 <br>
 
-- **\<podcast:chapter url="[url to chapter data]" type="[mimi type]" />**
+- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />**
 
    Item
 
    (optional)
 
-   Links to an external file **(sample needed)** containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.
+   Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.
 
 <br>
 

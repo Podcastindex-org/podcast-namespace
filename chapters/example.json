@@ -3,21 +3,40 @@
     "chapters":
     [
         {
-            "marker": 0,
-            "title": "Intro",
-            "img": "http://example.com/podcast/episode/chapter_art1.jpg"
+            "startTime": 0,
+            "title": "Intro"
         },
         {
-            "marker": 94,
-            "title": "Donation Segment",
-            "img": "http://example.com/podcast/episode/chapter_art2.jpg",
-            "url": "http://example.com/link/to/funding_platform"
+            "startTime": 168,
+            "title": "Hearing Aids"
         },
         {
-            "marker": 203,
-            "title": "News Discussion",
-            "img": "http://example.com/podcast/episode/chapter_art3.jpg",
-            "url": "http://example.com/link/to/article_that_was_discussed"
+            "startTime": 260,
+            "title": "Progress Report"
+        },
+        {
+            "startTime": 410,
+            "title": "Namespace",
+            "img": "https://noagendaassets.com/enc/1602976942.638_pc20feedss.jpg",
+            "url": "https://github.com/Podcastindex-org/podcast-namespace"
+        },
+        {
+            "startTime": 3990,
+            "title": "Just Break Up",
+            "img": "https://noagendaassets.com/enc/1602977264.567_80ad58e16124df27.png",
+            "url": "https://twitter.com/justbreakuppod"
+        },
+        {
+            "startTime": 5510,
+            "title": "The Big Players"
+        },
+        {
+            "startTime": 5854,
+            "title": "Spread the Word"
+        },
+        {
+            "startTime": 6089,
+            "title": "Outro"
         }
     ]
 }
