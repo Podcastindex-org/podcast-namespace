@@ -55,16 +55,18 @@
             <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
             <itunes:image>https://podcastindex.org/ep0003/artMd.jpg</itunes:image>
-            <podcast:imageLarge>https://podcastindex.org/ep0003/artLg.jpg</podcast:imageLarge>
-            <podcast:imageMedium>https://podcastindex.org/ep0003/artMd.jpg</podcast:imageMedium>
-            <podcast:imageSmall>https://podcastindex.org/ep0003/artSm.jpg</podcast:imageSmall>
+            <podcast:images srcset="https://example.com/images/ep3/pci_avatar-massive.jpg 1500w,
+                                        https://example.com/images/ep3/pci_avatar-middle.jpg 600w,
+                                        https://example.com/images/ep3/pci_avatar-small.jpg 300w,
+                                        https://example.com/images/ep3/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
-            <podcast:transcript type="text/plain">https://podcastindex.org/ep0003/transcript.txt</podcast:transcript>
+            <podcast:transcript url="https://example.com/ep3/transcript.txt" type="text/plain" />
             <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
             <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-03-2020-09-18-Final.mp3" length="62407829" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0003/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0003/audio/podnews201009.mp3</podcast:alternateEnclosure>
+            <podcast:chapters url="https://example.com/ep3_chapters.json" type="application/json"/>
         </item>
 
         <item>
@@ -75,9 +77,10 @@
             <pubDate>Thu, 08 Oct 2020 04:30:38 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
             <itunes:image>https://podcastindex.org/ep0002/artMd.jpg</itunes:image>
-            <podcast:imageLarge>https://podcastindex.org/ep0002/artLg.jpg</podcast:imageLarge>
-            <podcast:imageMedium>https://podcastindex.org/ep0002/artMd.jpg</podcast:imageMedium>
-            <podcast:imageSmall>https://podcastindex.org/ep0002/artSm.jpg</podcast:imageSmall>
+            <podcast:images srcset="https://example.com/images/ep2/pci_avatar-massive.jpg 1500w,
+                                        https://example.com/images/ep2/pci_avatar-middle.jpg 600w,
+                                        https://example.com/images/ep2/pci_avatar-small.jpg 300w,
+                                        https://example.com/images/ep2/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
             <podcast:transcript type="application/json" language="es" rel="captions">https://podcastindex.org/ep0002/transcript_es.json</podcast:transcript>
             <podcast:transcript type="application/srt">https://podcastindex.org/ep0002/transcript.srt</podcast:transcript>
@@ -86,6 +89,7 @@
             <enclosure url="https://mp3s.nashownotes.com/PC20-02-2020-09-11-Final.mp3" length="59902895" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0002/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0002/audio/podnews201009.mp3</podcast:alternateEnclosure>
+            <podcast:chapters url="https://example.com/ep2_chapters.json" type="application/json"/>
         </item>
 
         <item>
@@ -96,16 +100,19 @@
             <pubDate>Wed, 07 Nov 2020 04:29:49 GMT</pubDate>
             <author>adam@podcastindex.org (Adam Curry)</author>
             <itunes:image>https://podcastindex.org/ep0001/artMd.jpg</itunes:image>
-            <podcast:imageLarge>https://podcastindex.org/ep0001/artLg.jpg</podcast:imageLarge>
-            <podcast:imageMedium>https://podcastindex.org/ep0001/artMd.jpg</podcast:imageMedium>
-            <podcast:imageSmall>https://podcastindex.org/ep0001/artSm.jpg</podcast:imageSmall>
+            <podcast:images srcset="https://example.com/images/ep2/pci_avatar-massive.jpg 1500w,
+                                        https://example.com/images/ep2/pci_avatar-middle.jpg 600w,
+                                        https://example.com/images/ep2/pci_avatar-small.jpg 300w,
+                                        https://example.com/images/ep2/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
-            <podcast:transcript type="text/html">https://podcastindex.org/ep0001/transcript.html</podcast:transcript>
+            <podcast:transcript url="https://example.com/ep1/transcript.html" type="text/html" />
+            <podcast:transcript url="https://example.com/ep1/transcript_es.html" type="text/html" language="es" />
             <podcast:host href="http://example.com/adamcurry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:host>
             <podcast:guest href="http://example.com/davejones" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:guest>
             <enclosure url="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" length="61222288" type="audio/mpeg"/>
             <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://podcastindex.org/ep0001/audio/podnews201009.m4a</podcast:alternateEnclosure>
             <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://podcastindex.org/ep0001/audio/podnews201009.mp3</podcast:alternateEnclosure>
+            <podcast:chapters url="https://example.com/ep1_chapters.json" type="application/json"/>
         </item>
     </channel>
 </rss>
