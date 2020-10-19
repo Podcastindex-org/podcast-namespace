@@ -40,13 +40,23 @@ this larger namespace.  But, we don't want to be so general that the spec become
 Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
 Please read it before contributing if you aren't familiar with it.
 
+
 ## Official XMLNS definition
 
 To see the formalized tags, see the official definition file [here](docs/1.0.md).
 
+
 ## Supporting platforms and apps
 
 To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](docs/element-support.md).
+
+
+## Example feed
+
+There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.  There is also
+a "sandbox" feed where we experiment with tags while they are being hashed out.
+
+The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](https://noagendaassets.com/enc/pc20sandbox.xml).
 
 <br><br>
 
@@ -113,6 +123,8 @@ To see a list of platforms and apps that currently implement some or all of thes
     - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
+   The maximum recommended string length of the node value is 128 characters.
+
 <br>
 
 - **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
@@ -125,6 +137,8 @@ To see a list of platforms and apps that currently implement some or all of thes
    - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
    - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+
+   The maximum recommended string length of the node value is 128 characters.
 
 <br>
 
@@ -203,6 +217,8 @@ To see a list of platforms and apps that currently implement some or all of thes
    - `platform` (required) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
    - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
 
+   The maximum recommended string length of the node value is 128 characters.
+
 
 <br><br>
 
@@ -216,6 +232,8 @@ To see a list of platforms and apps that currently implement some or all of thes
    (optional | multiple)
 
    This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
+
+   The maximum recommended string length of the node value is 128 characters.
 
 <br>
 
@@ -298,12 +316,4 @@ representing the platform, directory, host, app or service. The slugs will look 
 - anchor
 - overcast
 
-More should be added by the community as needed.  This is just a starter list.
-
-
-<br><br>
-
-
-## Example feed
-
-There is an example feed (example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
+More should be added by the community as needed.  This is just a starter list.  The full list is [here](serviceslugs.txt).
