@@ -40,6 +40,10 @@
         <podcast:contact type="advertising" method="email">adbuy@podcastindex.org</podcast:contact>
         <podcast:contact type="abuse" method="email">abuse@podcastindex.org</podcast:contact>
 
+        <podcast:locked owner="podcastowner@domain.com">yes</podcast:locked>
+
+        <podcast:funding url="www.mydomain.com/support">Support the show!</podcast:funding>
+
         <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
         <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
 
