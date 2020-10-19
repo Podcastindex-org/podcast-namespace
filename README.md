@@ -42,11 +42,11 @@ Please read it before contributing if you aren't familiar with it.
 
 ## Official XMLNS definition
 
-To see the formalized tags, see the official definition file [here](1.0.md).
+To see the formalized tags, see the official definition file [here](docs/1.0.md).
 
 ## Supporting platforms and apps
 
-To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](element-support.md).
+To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](docs/element-support.md).
 
 <br><br>
 
@@ -93,7 +93,8 @@ To see a list of platforms and apps that currently implement some or all of thes
    (optional)
 
    Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.  See
-   the [jsonChapters.md](jsonChapters.md) file for a description of the chapter file syntax.  And, see the [example.json](example.json) example file for a real world example.
+   the [jsonChapters.md](chapters/jsonChapters.md) file for a description of the chapter file syntax.  And, see the [example.json](chapters/example.json) example file for
+   a real world example.
 
 <br>
 
