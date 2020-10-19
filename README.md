@@ -40,6 +40,14 @@ this larger namespace.  But, we don't want to be so general that the spec become
 Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
 Please read it before contributing if you aren't familiar with it.
 
+## Official XMLNS definition
+
+To see the formalized tags, see the official definition file [here](1.0.md).
+
+## Supporting platforms and apps
+
+To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](element-support.md).
+
 <br><br>
 
 ## Element List
@@ -48,7 +56,7 @@ Please read it before contributing if you aren't familiar with it.
 
 <br>
 
-- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>**
+- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>** (formalized)
 
    Channel
 
@@ -65,7 +73,7 @@ Please read it before contributing if you aren't familiar with it.
 
 <br>
 
-- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />**
+- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized)
 
    Item
 
@@ -84,7 +92,8 @@ Please read it before contributing if you aren't familiar with it.
 
    (optional)
 
-   Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.
+   Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.  See
+   the [jsonChapters.md](jsonChapters.md) file for a description of the chapter file syntax.  And, see the [example.json](example.json) example file for a real world example.
 
 <br>
 
