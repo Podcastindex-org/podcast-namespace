@@ -13,3 +13,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
 2. [Podnews](https://podnews.net/rss)
+3. [Podcastindex](https://podcastindex.org/)
+
+## Funding `<podcast:funding>`
+1. [Buzzsprout](https://www.buzzsprout.com/)
