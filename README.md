@@ -41,17 +41,17 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 Please read it before contributing if you aren't familiar with it.
 
 
-## Official XMLNS definition
+## Official XMLNS Definition
 
-To see the formalized tags, see the official definition file [here](docs/1.0.md).
+To see the formalized tags, the official definition file is [here](docs/1.0.md).
 
 
-## Supporting platforms and apps
+## Supporting Platforms and Apps
 
 To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](docs/element-support.md).
 
 
-## Example feed
+## Example Feed
 
 There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.  There is also
 a "sandbox" feed where we experiment with tags while they are being hashed out.
