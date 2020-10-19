@@ -1,8 +1,8 @@
 # The "podcast" Namespace
 
-A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create one namespace
-to rule them all, that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
-The large podcast platforms have shown virtually no interest in extending their namespaces for new functionality in many years.  Our hope is that this namespace
+A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  The broad goal is to create a single, compact, efficient
+namespace that is easily extensible, community controlled/authored and addresses the needs of the independent podcast industry now and in the future.
+Our hope is that this namespace
 will become the framework that the independent podcast community needs to deliver new functionality to apps and aggregators.
 
 
@@ -15,27 +15,20 @@ There is significant overlap amongst the many existing podcast namespaces.  Each
 system and audience the metadata they need in the way they want it delivered.
 
 
-## Goal #2 - Minimize Attributes and Sub-elements
-
-Attributes in xml elements should be used only where absolutely needed.  The preference is to create a new element type, rather than reuse the same element with
-different attributes.  For example, instead of using **\<podcast:image type="Large">**, we would use **\<podcast:imageLarge>**.  This makes the corresponding
-aggregator code easier and more linear.  Sub-elements should be avoided if at all possible.
-
-
-## Goal #3 - Keep "required" tags minimal
+## Goal #2 - Keep "required" tags and attributes minimal
 
 The only required tags should be those that solve an overwhelming need in the industry.  Requiring tags is a roadblock to adoption and should be avoided.  Attributes
 should also only be required when they are key to the functionality of the tag.
 
 
-## Goal #4 - Keep Exisiting Conventions
+## Goal #3 - Keep Exisiting Conventions
 
 Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, it would make sense to turn **\<podcast:explicit>** into
 a unary element, where it's existence is taken as a "yes" and it's absence as a "no".  But, that has never been the standard.  And, given as how this namespace will probably
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
 
-## Goal #5 - Be General... to a point
+## Goal #4 - Be General... to a point
 
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
@@ -44,7 +37,26 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
 ## The Guiding Principles
 
-Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.  Please read it before contributing if you aren't familiar with it.
+Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
+Please read it before contributing if you aren't familiar with it.
+
+
+## Official XMLNS Definition
+
+To see the formalized tags, the official definition file is [here](docs/1.0.md).
+
+
+## Supporting Platforms and Apps
+
+To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](docs/element-support.md).
+
+
+## Example Feed
+
+There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.  There is also
+a "sandbox" feed where we experiment with tags while they are being hashed out.
+
+The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](https://noagendaassets.com/enc/pc20sandbox.xml).
 
 <br><br>
 
@@ -54,7 +66,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>**
+- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>** (formalized)
 
    Channel
 
@@ -71,7 +83,7 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />**
+- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized)
 
    Item
 
@@ -84,26 +96,21 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:chapter start="[(int or float)]" title="[(string)]" href="[uri to content]" type="[mime type]"/>**
+- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />**
 
    Item
 
-   (optional | multiple)
+   (optional)
 
-   This element specifies a point in time during the podcast that can be linked to directly and optionally supplemented with additional content.
-
-   Attributes:
-
-   - `start` (required) Used to identify the starting point of the chapter within the podcast. Start time is expressed as seconds since the start time of the podcast.
-   - `title` (optional) Used as a user facing identifier for this chapter.
-   - `href` (optional) Points to a url containing additional user facing content, like an image or wiki entry.
-   - `type` (optional) This attribute is strongly encouraged if `href` is used so that apps can handle the external chapter content appropriately.
+   Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.  See
+   the [jsonChapters.md](chapters/jsonChapters.md) file for a description of the chapter file syntax.  And, see the [example.json](chapters/example.json) example file for
+   a real world example.
 
 <br>
 
 - **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
 
-   Channel (required | single)
+   Channel (optional | single)
 
    Item (optional | multiple)
 
@@ -116,9 +123,11 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
     - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
+   The maximum recommended string length of the node value is 128 characters.
+
 <br>
 
-- **\<podcast:person name="[(string)]" role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]"/>**
+- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
 
    Channel or Item (optional | multiple)
 
@@ -128,6 +137,8 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
    - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+
+   The maximum recommended string length of the node value is 128 characters.
 
 <br>
 
@@ -143,22 +154,24 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
 <br>
 
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream>**[uri of media asset]**\</podcast:alternateEnclosure>**
+- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream />**
 
    Channel (optional | single)
 
    Item (optional | multiple)
 
-   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the
-   channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
-   introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be
-   played.
-
-   All attributes are required except for "stream".  "stream" is a boolean attribute that indicates the uri points to a streaming media that is not downloadable.
+   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be played.
+   
+   - `url` (required) This is the url to the media asset.
+   - `type` (required) Mime type of the media asset.
+   - `length` (required) Duration of media asset in seconds.
+   - `bitrate` (optional) Encoding bitrate of media asset.
+   - `title` (required) Alternate assets need a title since main title will apply to primary asset.
+   - `stream` (optional) Boolean attribute that indicates the uri points to a streaming media that is not downloadable.
 
 <br>
 
-- **\<podcast:id platform="[service slug]">**[the id string]**\</podcast:id>**
+- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
    Channel
 
@@ -166,61 +179,45 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
 
    See "ID's" in this document for an explanation.
 
-   All attributes are required.
+   - `platform` (required) This is the service slug of the platform.
+   - `id` (required) This is the unique identifier for this podcast on the respective platform.
+   - `url` (optional) A url to the page for this podcast on the respective platform.
 
 <br>
 
-- **\<podcast:imageLarge size="[pixel width]">**[url to a large image file]**\</podcast:imageLarge>**
+- **\<podcast:images srcset="[url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w" />**
 
    Channel or Item
 
    (optional | single)
 
-   This is assumed to point to an image that is 1000px or larger in size.  The image must be square (1:1 ratio).  The image content may differ from other images specified in
-   the feed where appropriate.
+   This points to a group of images, separated by commas - each with a pixel width declared after them.  It is highly recommended that the images referenced
+   be square (1:1 ratio), as this is the industry standard for podcast album art, and what podcast apps expect to work with.  The srcset attribute is designed
+   to work like the ```srcset``` attribute in the HTML5 specification.  Suggested widths are 1500px, 600px, 300px and 150px.  See the example feed in this
+   repo for an example of how this looks in practice.
 
    All attributes are required.
 
 <br>
 
-- **\<podcast:imageMedium size="[pixel width]">**[url to a medium image file]**\</podcast:imageMedium>**
-
-   Channel or Item
-
-   (optional | single)
-
-   This is assumed to point to an image that is 300px to 999px in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:imageSmall size="[pixel width]">**[url to a small image file]**\</podcast:imageSmall>**
-
-   Channel or Item
-
-   (optional | single)
-
-   This is assumed to point to an image that is 299px or less in size.
-   The image must be square (1:1 ratio).  The image content may differ from other images specified in the feed where appropriate.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:funding platform="[service slug]" title="[user provided note (string)]">**[url for the show at the platform]**\</podcast:funding>**
+- **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>**
 
    Channel or Item
 
    (optional | multiple)
 
-   This element lists multiple possible donation/funding links for the podcast.  The node value should contain the full url of the donation page.
+   This element lists multiple possible donation/funding links for the podcast.
 
    Attributes:
 
+   - `url` (required) Full url to the specific show on the funding platform.
    - `platform` (required) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
-   - `title` (optional) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
+   - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
+
+   The maximum recommended string length of the node value is 128 characters.
 
 
 <br><br>
@@ -235,6 +232,8 @@ Our guiding principles for development of this namespace are the "[Rules for Sta
    (optional | multiple)
 
    This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
+
+   The maximum recommended string length of the node value is 128 characters.
 
 <br>
 
@@ -317,12 +316,4 @@ representing the platform, directory, host, app or service. The slugs will look 
 - anchor
 - overcast
 
-More should be added by the community as needed.  This is just a starter list.
-
-
-<br><br>
-
-
-## Example feed
-
-There is an example feed (example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
+More should be added by the community as needed.  This is just a starter list.  The full list is [here](serviceslugs.txt).
