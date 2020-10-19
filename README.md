@@ -96,6 +96,25 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
+- **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>** (formalized)
+
+   Channel or Item
+
+   (optional | multiple)
+
+   This element lists multiple possible donation/funding links for the podcast.
+
+   Attributes:
+
+   - `url` (required) Full url to the specific show on the funding platform.
+   - `platform` (optional) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
+   - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
+
+   The maximum recommended string length of the node value is 128 characters.
+
+
+<br>
+
 - **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />**
 
    Item
@@ -200,24 +219,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    repo for an example of how this looks in practice.
 
    All attributes are required.
-
-<br>
-
-- **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>**
-
-   Channel or Item
-
-   (optional | multiple)
-
-   This element lists multiple possible donation/funding links for the podcast.
-
-   Attributes:
-
-   - `url` (required) Full url to the specific show on the funding platform.
-   - `platform` (optional) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
-   - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
-
-   The maximum recommended string length of the node value is 128 characters.
 
 
 <br><br>
