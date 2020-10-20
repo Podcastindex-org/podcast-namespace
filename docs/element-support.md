@@ -11,7 +11,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Podnews](https://podnews.net/rss)
 
 ## Locked `<podcast:locked>`
-1. [Buzzsprout](https://www.buzzsprout.com/)
+1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
 2. [Podnews](https://podnews.net/rss)
 3. [Podcastindex](https://podcastindex.org/)
 
