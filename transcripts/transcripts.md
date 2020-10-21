@@ -1,4 +1,9 @@
+## Transcript File Format Details
+
 This is the initial spec for the podcast transcript format.  There are three possible formats detailed below.
+
+
+<br><br>
 
 
 ## HTML
@@ -20,6 +25,8 @@ designed to serve as an accessibility aid and provide searchable episode content
 <time>0:09</time>
 <p>You're triggering Tom right now with a hey, here's a cool feature.</p>
 ```
+
+Example file:  [example.html](example.html)
 
 <br><br>
 
@@ -75,6 +82,8 @@ The JSON representation is a flexible format that accomodates various degrees of
 }
 ```
 
+Example file:  [example.json](example.json)
+
 <br><br>
 
 
@@ -125,3 +134,5 @@ here from breaking through
 careers podcast. My question is,
 do we need a podcast trailer?
 ```
+
+Example file:  [example.srt](example.srt)

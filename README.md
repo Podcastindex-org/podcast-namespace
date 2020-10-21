@@ -94,6 +94,8 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    specified by the RSS \<language\> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
    mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
 
+   A fuller explanation of the file format expected by the `<podcast:transcript>` tag is detailed [here](transcripts/transcripts.md).
+
 <br>
 
 - **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>** (formalized)
