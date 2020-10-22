@@ -81,6 +81,14 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
    it is to have this be a valid, working email address.
 
+   When importing a feed, if the hosting provider has already verified the owner="" email address on their own system, and the email matches what is listed in this
+   tag, it is safe to import the feed.  This could be useful in a situation where the owner's account at the previous hosting company is locked out or for some other
+   reason inaccessible to the owner for disabling the lock.
+
+   Attributes:
+
+   - `owner` (required) The email address of the podcast owner.
+
 <br>
 
 - **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized)
@@ -212,7 +220,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 <br><br>
 
 
-### <u>Phase 2 (Open)</u>
+### <u>Phase 2 (proposals)</u>
 
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
