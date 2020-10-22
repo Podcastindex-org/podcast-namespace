@@ -165,7 +165,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:contact type="[feedback or advertising or abuse]" method="[email or link]">**[email address or url]**\</podcast:contact>**
+- **\<podcast:contact type="[feedback or advertising or abuse]">**[email address or url]**\</podcast:contact>**
 
    Channel
 
