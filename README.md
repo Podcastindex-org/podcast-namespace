@@ -9,6 +9,34 @@ will become the framework that the independent podcast community needs to delive
 <br><br>
 
 
+## Current Roadmap
+
+**Phase 1** - Comment period closes on `11/15/20` and tags that have good consensus will be adopted.  Any tags withe questions, concerns or no discernable use case will be either
+              removed or booted to Phase 2.
+
+**Phase 2** - This phase is currently open for tag proposals and ideas.
+
+
+<br><br>
+
+
+## Tag Adoption Process
+
+To be adopted as an official part of the namespace, there must be consensus around a tag's usefulness and either commitment to adoption by at least 1 host and 1 app, or a recognition
+that the tag is already being used in the wild.
+
+It is ALWAYS ok to delay a tag to a future Phase if there is any concern about it.  That is to be expected and encouraged.
+
+When a Phase comes to a close, there will be a full review of any tags currently open for comment and questions will be asked to gather consensus before final adoption.  No tags
+will be adopted by fiat, or if there are unresolved questions.  They will just be moved to the next Phase for further comment and refinement.
+
+Tags that are proposals or rough ideas should be expected to have syntax problems or typos.  Those should be refined away as they are worked on.  If they are not, that is a good idea
+that the tag in question isn't being seen as useful and should be considered for dropping.
+
+
+<br><br>
+
+
 ## Goal #1 - Eliminate Redundancy
 
 There is significant overlap amongst the many existing podcast namespaces.  Each platform and publisher has created their own namespace to give their respective
