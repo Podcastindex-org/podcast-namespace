@@ -1,5 +1,7 @@
 This is the initial spec for a json chapter format that can be referenced in an RSS feed using the "podcast" namespace.
 
+This type of file should be served with a type of 'application/audio-chapters+json';
+
 The "chapters" property is an array of "chapter" objects taking this form:
 
 ```
