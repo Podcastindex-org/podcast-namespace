@@ -11,7 +11,7 @@ will become the framework that the independent podcast community needs to delive
 
 ## Current Roadmap
 
-**Phase 1** - Comment period closes on `11/15/20` and tags that have good consensus will be adopted.  Any tags withe questions, concerns or no discernable use case will be either
+**Phase 1** - Comment period closes on `11/15/20` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either
               removed or booted to Phase 2.
 
 **Phase 2** - This phase is currently open for tag proposals and ideas.
@@ -32,6 +32,9 @@ will be adopted by fiat, or if there are unresolved questions.  They will just b
 
 Tags that are proposals or rough ideas should be expected to have syntax problems or typos.  Those should be refined away as they are worked on.  If they are not, that is a good idea
 that the tag in question isn't being seen as useful and should be considered for dropping.
+
+We are not a "standards body".  It is a community driven project where all stake holders are encouraged to participate, so that many voices are heard.  This is an open-source
+project to be built fully in the open.  Discussions also take place on [podcastindex.social](https://podcastindex.social) where anyone is free to register and participate.
 
 
 <br><br>
