@@ -178,23 +178,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream />**
-
-   Channel (optional | single)
-
-   Item (optional | multiple)
-
-   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be played.
-   
-   - `url` (required) This is the url to the media asset.
-   - `type` (required) Mime type of the media asset.
-   - `length` (required) Length of the file in bytes.
-   - `bitrate` (optional) Encoding bitrate of media asset.
-   - `title` (required) Alternate assets need a title since main title will apply to primary asset.
-   - `stream` (optional) Boolean attribute that indicates the uri points to a streaming media that is not downloadable.
-
-<br>
-
 - **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
    Channel
@@ -279,6 +262,23 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
+
+<br>
+
+- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" stream />**
+
+   Channel (optional | single)
+
+   Item (optional | multiple)
+
+   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.  There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the channel level would be useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be played.
+
+   - `url` (required) This is the url to the media asset.
+   - `type` (required) Mime type of the media asset.
+   - `length` (required) Length of the file in bytes.
+   - `bitrate` (optional) Encoding bitrate of media asset.
+   - `title` (required) Alternate assets need a title since main title will apply to primary asset.
+   - `stream` (optional) Boolean attribute that indicates the uri points to a streaming media that is not downloadable.
 
 
 <br><br>
