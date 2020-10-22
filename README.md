@@ -171,7 +171,8 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    (optional | multiple)
 
-   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.
+   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.  Only one element of each "type"
+   is allowed.
 
    All attributes are required.
 
