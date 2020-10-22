@@ -112,7 +112,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    - `platform` (optional) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
    - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
 
-   The maximum recommended string length of the node value is 128 characters.
+   The maximum recommended string character length of the node value is 128 characters.
 
 
 <br>
