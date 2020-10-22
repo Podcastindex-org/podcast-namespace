@@ -277,17 +277,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
    should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
 
-<br>
-
-- **\<podcast:newFeedUrl>**[the url the feed now lives at]**\</podcast:newFeedUrl>**
-
-   Channel
-
-   (optional | single)
-
-   If the feed moved, or was imported to a different hosting platform, this element may exist and specify the new location.  It may refer
-   to itself as a confirmation to aggregators that they now have the most current url.
-
 
 <br><br>
 
