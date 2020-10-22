@@ -187,7 +187,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    
    - `url` (required) This is the url to the media asset.
    - `type` (required) Mime type of the media asset.
-   - `length` (required) Duration of media asset in seconds.
+   - `length` (required) Length of the file in bytes.
    - `bitrate` (optional) Encoding bitrate of media asset.
    - `title` (required) Alternate assets need a title since main title will apply to primary asset.
    - `stream` (optional) Boolean attribute that indicates the uri points to a streaming media that is not downloadable.
