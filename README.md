@@ -134,7 +134,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    Item (optional | multiple)
 
-   This element is required at the channel level.  And, it MUST contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.
+   This element must contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.
 
     - latlon: (required) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which features in the podcast.
     - osmid: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
@@ -143,7 +143,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
     - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
     - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
-   The maximum recommended string length of the node value is 128 characters.
+   The maximum recommended string character length of the node value is 128 characters.
 
 <br>
 
