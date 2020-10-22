@@ -98,7 +98,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:funding url="[url for the show at the platform] platform="[service slug]">**[user provided content to link]**\</podcast:funding>** (formalized)
+- **\<podcast:funding url="[url for the show at the platform]">**[user provided content to link]**\</podcast:funding>** (formalized)
 
    Channel or Item
 
@@ -109,7 +109,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    Attributes:
 
    - `url` (required) Full url to the specific show on the funding platform.
-   - `platform` (optional) Identifies a payment or funding platform for the podcast. Service slugs should be recorded here in the repository.
    - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
 
    The maximum recommended string character length of the node value is 128 characters.
