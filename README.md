@@ -335,6 +335,20 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    - `id` (required) This is the unique identifier for this podcast on the respective platform.
    - `url` (optional) A url to the page for this podcast on the respective platform.
 
+<br>
+
+- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>**
+
+   Item
+
+   (optional | multiple)
+
+   See "ID's" in this document for an explanation.
+
+   - `startTime` (required) The time where the soundbite begins
+   - `duration` (required) How long is the soundbite (recommended between 15 and 120 seconds)
+   - `node value` (optional) Used as free form string from the podcast creator to specify a title for the soundbite (otherwise default to episode title)
+
 
 <br><br>
 
