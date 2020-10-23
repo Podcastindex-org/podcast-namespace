@@ -229,23 +229,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    - `id` (required) This is the unique identifier for this podcast on the respective platform.
    - `url` (optional) A url to the page for this podcast on the respective platform.
 
-<br>
-
-- **\<podcast:images srcset="[url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w" />**
-
-   Channel or Item
-
-   (optional | single)
-
-   This points to a group of images, separated by commas - each with a pixel width declared after them.  It is highly recommended that the images referenced
-   be square (1:1 ratio), as this is the industry standard for podcast album art, and what podcast apps expect to work with.  The srcset attribute is designed
-   to work like the ```srcset``` attribute in the HTML5 specification.  Suggested widths are 1500px, 600px, 300px and 150px.  See the example feed in this
-   repo for an example of how this looks in practice.
-
-   All attributes are required.
 
 
 <br><br>
@@ -333,6 +316,24 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    this feed.  If the aggregator is listed as blocked, it should take that as a signal by the feed owner to not index/aggregate this feed.
 
    *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.
+
+<br>
+
+- **\<podcast:images srcset="[url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w,
+                             [url to image] [pixelwidth(int)]w" />**
+
+   Channel or Item
+
+   (optional | single)
+
+   This points to a group of images, separated by commas - each with a pixel width declared after them.  It is highly recommended that the images referenced
+   be square (1:1 ratio), as this is the industry standard for podcast album art, and what podcast apps expect to work with.  The srcset attribute is designed
+   to work like the ```srcset``` attribute in the HTML5 specification.  Suggested widths are 1500px, 600px, 300px and 150px.  See the example feed in this
+   repo for an example of how this looks in practice.
+
+   All attributes are required.
 
 <br><br>
 
