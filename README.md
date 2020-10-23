@@ -215,20 +215,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    All attributes are required.
 
-<br>
-
-- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
-
-   Channel
-
-   (optional | multiple)
-
-   See "ID's" in this document for an explanation.
-
-   - `platform` (required) This is the service slug of the platform.
-   - `id` (required) This is the unique identifier for this podcast on the respective platform.
-   - `url` (optional) A url to the page for this podcast on the respective platform.
-
 
 
 <br><br>
@@ -334,6 +320,21 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    repo for an example of how this looks in practice.
 
    All attributes are required.
+
+<br>
+
+- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
+
+   Channel
+
+   (optional | multiple)
+
+   See "ID's" in this document for an explanation.
+
+   - `platform` (required) This is the service slug of the platform.
+   - `id` (required) This is the unique identifier for this podcast on the respective platform.
+   - `url` (optional) A url to the page for this podcast on the respective platform.
+
 
 <br><br>
 
