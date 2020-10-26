@@ -94,6 +94,7 @@ In this simple form, the chapter objects have no ID's and are treated as sequent
 ordered in ascending fashing based on their `startTime`.  In a very simple example such as this nothing is present except the `startTime`,
 `title`, and a few bits of optional meta-data.
 
+<br><br>
 
 ## More complex example
 
