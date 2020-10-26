@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
-  "chapters": [
+  "chapters":
+  [
     {
       "startTime": 0,
       "title": "Intro"
@@ -24,6 +25,11 @@
       "startTime": 3990,
       "title": "Just Break Up",
       "img": "https://example.com/images/justbreakuppod.png"
+    },
+    {
+      "startTime": 4600,
+      "title": "Donations",
+      "url": "https://example.com/paypal_link"
     },
     {
       "startTime": 5510,
