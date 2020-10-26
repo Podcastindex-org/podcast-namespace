@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "author": "John Doe",
+  "title": "Episode 7 - Making Progress",
+  "podcastName": "John's Awesome Podcast",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Intro",
+      "id": "ch0"
+    },
+    {
+      "startTime": 168,
+      "title": "Hearing Aids",
+      "id": "ch1",
+      "hasArtwork": "chapter1.jpg"
+    },
+    {
+      "startTime": 260,
+      "title": "Progress Report",
+      "id": "ch2"
+    },
+    {
+      "startTime": 410,
+      "title": "Namespace",
+      "img": "https://example.com/images/namepsace_example.jpg",
+      "url": "https://github.com/Podcastindex-org/podcast-namespace",
+      "id": "ch3"
+    },
+    {
+      "startTime": 3990,
+      "title": "Just Break Up",
+      "img": "https://example.com/images/justbreakuppod.png",
+      "url": "https://twitter.com/justbreakuppod",
+      "id": "ch4",
+      "hasArtwork": false
+    },
+    {
+      "startTime": 4826,
+      "title": "Boston Harbor",
+      "img": "https://example.com/images/bostonharbor.jpg",
+      "id": "ch5",
+      "toc": false
+    },
+    {
+      "startTime": 5510,
+      "title": "The Big Players",
+      "id": "ch6"
+    },
+    {
+      "startTime": 5854,
+      "title": "Spread the Word",
+      "id": "ch7",
+      "hasArtwork": "chapter6.jpg"
+    },
+    {
+      "startTime": 6089,
+      "title": "Outro",
+      "id": "ch8"
+    }
+  ]
+}
