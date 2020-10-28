@@ -1,8 +1,34 @@
-This is the initial spec for a json chapter format that can be referenced in an RSS feed using the "podcast" namespace.
+## JSON Chapters Format (v1.1.0)
 
-This type of file should be served with a type of 'application/audio-chapters+json';
+This is the initial spec for a json chapters format that can be referenced in an RSS feed using the `<podcast:chapters>` tag of
+the "podcast" namespace.  This file can reside on any publicly accessible url.  See the podcast namespace documentation for
+details on the format of the tag.
 
-The "chapters" property is an array of "chapter" objects which take this basic form:
+This type of file should be served with a Content-type of 'application/audio-chapters+json'.  Chapter order is assumed to be
+in ascending order based on the `startTime`.
+
+<br>
+
+## "Chapters" Object
+
+The chapters object is a simple JSON object with only 2 required properties:
+
+ - `version` (required - string) The version number of the format being used
+ - `chapters` (required - array) An array of chapter objects defined below
+
+#### Optional Attributes:
+
+ - `author` (optional - string) The name of the author of this podcast episode.
+ - `title` (optional - string) The title of this podcast episode.
+ - `podcastName` (optional - string) The name of the podcast this episode belongs to.
+ - `description` (optional - string) A description of this episode.
+ - `fileName` (optional - string) The name of the audio file these chapters apply to.
+
+<br>
+
+## "Chapter" Objects
+
+The "chapter" object takes this basic form:
 
 ```
 {
@@ -11,28 +37,18 @@ The "chapters" property is an array of "chapter" objects which take this basic f
 }
 ```
 
-Chapter Object Attributes:
+There is only one required attribute:
 
  - `startTime` (required - float) The time, expressed in seconds with float precision for fractions of a second.
+
+#### Optional Attributes:
+
  - `title` (optional - string) The title of this chapter.
  - `img` (optional - string) The url of an image to use as chapter art.
  - `url` (optional - string) The url of a web page or supporting document that's related to the topic of this chapter.
- - `toc` (optional - boolean) If this property is present and set to false, this chapter should not display visibly to
-                              the user in either the table of contents or as a jump-to point in the user interface.  It
-                              should be considered a "silent" chapter marker for the purpose of meta-data only.  If this
-                              property is set to `true` or not present at all, this should be considered a normal chapter
-                              for display to the user.  The name "toc" is short for "table of contents".
+ - `toc` (optional - boolean) If this property is present and set to false, this chapter should not display visibly to the user in either the table of contents or as a jump-to point in the user interface.  It should be considered a "silent" chapter marker for the purpose of meta-data only.  If this property is set to `true` or not present at all, this should be considered a normal chapter for display to the user.  The name "toc" is short for "table of contents".
 
-
-
-Other attributes at the parent level:
-
- - `author` (optional - string) The name of the author of this podcast episode.
- - `title` (optional - string) The title of this podcast episode.
- - `podcastName` (optional - string) The name of the podcast this episode belongs to.
- - `description` (optional - string) A description of this episode.
- - `fileName` (optional - string) The name of the audio file these chapters apply to.
-
+<br>
 
 ## Basic example
 
@@ -40,7 +56,7 @@ Here is what a very basic chapters file may look like:
 
 ```
 {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "chapters":
     [
         {
@@ -97,7 +113,7 @@ chapter list, but allows for different artwork to be shown:
 
 ```
 {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "John Doe",
     "title": "Episode 7 - Making Progress",
     "podcastName": "John's Awesome Podcast",
