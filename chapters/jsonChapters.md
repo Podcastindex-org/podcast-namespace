@@ -100,7 +100,7 @@ Here is what a very basic chapters file may look like:
 ```
 
 In this simple form, the chapter objects are treated as sequential just based on their index as a function of being
-ordered in ascending fashing based on their `startTime`.  In a very simple example such as this nothing is present except the `startTime`,
+ordered in ascending fashion based on their `startTime`.  In a very simple example such as this nothing is present except the `startTime`,
 `title`, and a few bits of optional meta-data.
 
 <br><br>
