@@ -39,8 +39,8 @@ The JSON representation is a flexible format that accomodates various degrees of
 - `<version>`: The version of JSON transcript specification
 - `<segments>`: An array of dialogue elements (segments)
 - `<speaker>`: Speaker
-- `<start_time>`: Start time for the segment
-- `<end_time>`: End time for the segment (if available)
+- `<startTime>`: Start time for the segment
+- `<endTime>`: End time for the segment (if available)
 - `<body>`: Dialogue content
 
 #### Snippet:
