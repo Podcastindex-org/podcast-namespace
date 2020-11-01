@@ -272,7 +272,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" />**
+- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" rel="[(string)]" />**
 
    Channel (optional | single)
 
@@ -290,6 +290,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    - `length` (required) Length of the file in bytes.
    - `bitrate` (optional) Encoding bitrate of media asset.
    - `title` (required) Alternate assets need a title since main title will apply to primary asset.
+   - `rel` (optional) Indicates what the purpose of this enclosure is. Like "lowbitrate" for a small file to use over cellular.
 
 <br>
 
