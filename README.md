@@ -167,6 +167,38 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
+- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
+
+   Channel or Item (optional | multiple)
+
+   This element specifies a person of interest to the podcast.
+
+   - `name` (required) This is the full name or alias of the person.
+   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
+   - `img` (optional) This is the url of a picture or avatar of the person.
+   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+
+   The maximum recommended string length of the node value is 128 characters.
+
+<br>
+
+- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>**
+
+   Item
+
+   (optional | multiple)
+
+   See "ID's" in this document for an explanation.
+
+   - `startTime` (required) The time where the soundbite begins
+   - `duration` (required) How long is the soundbite (recommended between 15 and 120 seconds)
+   - `node value` (optional) Used as free form string from the podcast creator to specify a title for the soundbite (otherwise default to episode title)
+
+<br><br>
+
+
+### <u>Phase 2 (proposals)</u>
+
 - **\<podcast:location latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]")>**[CountryCode(|Locality)]**\</podcast:location>**
 
    Channel (optional | single)
@@ -188,39 +220,6 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    The maximum recommended string character length of the node value is 128 characters.
 
 <br>
-
-- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
-
-   Channel or Item (optional | multiple)
-
-   This element specifies a person of interest to the podcast.
-
-   - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
-   - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
-
-   The maximum recommended string length of the node value is 128 characters.
-
-<br>
-
-- **\<podcast:contact type="[feedback or advertising or abuse]">**[email address or url]**\</podcast:contact>**
-
-   Channel
-
-   (optional | multiple)
-
-   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.  Only one element of each "type"
-   is allowed.
-
-   All attributes are required.
-
-
-
-<br><br>
-
-
-### <u>Phase 2 (proposals)</u>
 
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
@@ -337,18 +336,16 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>**
+- **\<podcast:contact type="[feedback or advertising or abuse]">**[email address or url]**\</podcast:contact>**
 
-   Item
+   Channel
 
    (optional | multiple)
 
-   See "ID's" in this document for an explanation.
+   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.  Only one element of each "type"
+   is allowed.
 
-   - `startTime` (required) The time where the soundbite begins
-   - `duration` (required) How long is the soundbite (recommended between 15 and 120 seconds)
-   - `node value` (optional) Used as free form string from the podcast creator to specify a title for the soundbite (otherwise default to episode title)
-
+   All attributes are required.
 
 <br><br>
 
