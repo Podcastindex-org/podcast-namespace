@@ -1,6 +1,6 @@
 # Application Support by Element
 
-For elements that are included in the official [DTD](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md), we will highlight applications offering production support.
+For elements that are included in the official [DTD](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md), we will highlight applications offering production support. Links should point to a public announcement or production example.
 
 # Elements
 
@@ -24,3 +24,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [Podfriend](https://twitter.com/adamcurry/status/1323417144378445831)
 3. [Hypercatcher](https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/)
 4. [PodcastAddict](https://podcastaddict.com/changelog/2020_16#section4)
+5. [Buzzsprout](https://twitter.com/buzzsprout/status/1324425781330796545)
