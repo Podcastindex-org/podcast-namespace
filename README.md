@@ -155,7 +155,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />**
+- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />** (formalized)
 
    Item
 
