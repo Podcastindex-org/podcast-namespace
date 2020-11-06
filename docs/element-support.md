@@ -25,3 +25,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Hypercatcher](https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/)
 4. [PodcastAddict](https://podcastaddict.com/changelog/2020_16#section4)
 5. [Buzzsprout](https://twitter.com/buzzsprout/status/1324425781330796545)
+6. [Podverse](https://twitter.com/Podverse/status/1324729288281632771?s=20)
+
+## Soundbites `<podcast:soundbite>`
+1. [Buzzsprout](https://www.buzzsprout.com)
+
