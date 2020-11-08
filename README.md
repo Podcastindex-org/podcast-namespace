@@ -350,7 +350,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of msats(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
+- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of bitcoin(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
 
    Channel
    
@@ -361,7 +361,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    - `type` (required) What type of system will be receiving the payments. Currently only "lightning" is supported.
    - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
-   - `suggested` (required) The amount to send per minute of episode play time, defined in millisatoshis.
+   - `suggested` (required) The amount to send per minute of episode play time, defined in bitcoin (float, 0.00000005000 is 5sat/min).
 
 - **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
 
