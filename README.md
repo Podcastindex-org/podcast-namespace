@@ -348,6 +348,33 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    All attributes are required.
 
+<br>
+
+- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of msats(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
+
+   Channel
+   
+   (optional | single)
+
+   This element defines the payment "model".  One or more `<podcast:valueRecipient>` tags must be contained within this element to instruct where to send the payments
+   within this defined model.
+
+   - `type` (required) What type of system will be receiving the payments. Currently only "lightning" is supported.
+   - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
+   - `suggested` (required) The amount to send per minute of episode play time, defined in millisatoshis.
+
+- **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
+
+   Channel
+
+   (required | multiple)
+
+   - `name` (optional) A friendly name to identify the receipient.
+   - `type` (required) The type of destination this is.  Currently, only "node" is supported.
+   - `address` (required) The address of the digital wallet or node that will receive payments.
+   - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
+
+
 <br><br>
 
 
