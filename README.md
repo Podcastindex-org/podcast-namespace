@@ -301,7 +301,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    The "indexers" element is meant as a container for one or more `<podcast:block>` elements which send a signal to podcast aggregators whether they are allowed to pull and parse
    this feed.  If the aggregator is listed as blocked, it should take that as a signal by the feed owner to not index/aggregate this feed.
 
-   *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.
+   *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.*
 
 <br>
 
