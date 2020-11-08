@@ -301,7 +301,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    The "indexers" element is meant as a container for one or more `<podcast:block>` elements which send a signal to podcast aggregators whether they are allowed to pull and parse
    this feed.  If the aggregator is listed as blocked, it should take that as a signal by the feed owner to not index/aggregate this feed.
 
-   *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.
+   *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.*
 
 <br>
 
@@ -350,7 +350,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of msats(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
+- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of bitcoin(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
 
    Channel
    
@@ -361,7 +361,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
    - `type` (required) What type of system will be receiving the payments. Currently only "lightning" is supported.
    - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
-   - `suggested` (required) The amount to send per minute of episode play time, defined in millisatoshis.
+   - `suggested` (required) The amount to send per minute of episode play time, defined in bitcoin (float, 0.00000005000 is 5sat/min).
 
 - **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
 
