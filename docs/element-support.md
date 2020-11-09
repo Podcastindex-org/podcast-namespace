@@ -18,6 +18,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
 2. [Podfriend](https://twitter.com/GoPodfriend/status/1318663369684123648)
+3. [Podverse](https://twitter.com/Podverse/status/1325734448608899072?s=20)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
