@@ -13,5 +13,6 @@ Martin Mouritzen
 Andy Beard
 Andy Valencia
 Matt Basta
+Mitch Downey
 
 ... add your name as you contribute!
