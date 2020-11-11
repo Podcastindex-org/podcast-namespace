@@ -374,6 +374,17 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
    - `address` (required) The address of the digital wallet or node that will receive payments.
    - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
 
+<br>
+
+- **\<podcast:season title="[title of season(string)]">**[(int)]**\</podcast:season>**
+
+   Item
+
+   (optional | single)
+
+   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a title associate with it.  The element's value is an integer identifying the season number.
+
+   All attributes are optional.
 
 <br><br>
 
