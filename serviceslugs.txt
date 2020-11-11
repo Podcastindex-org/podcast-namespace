@@ -10,6 +10,7 @@ buzzsprout
 captivate
 castos
 fireside
+fyyd
 google
 hypercatcher
 libsyn
