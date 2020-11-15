@@ -167,22 +167,7 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
-
-   Channel or Item (optional | multiple)
-
-   This element specifies a person of interest to the podcast.
-
-   - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
-   - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
-
-   The maximum recommended string length of the node value is 128 characters.
-
-<br>
-
-- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>**
+- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>** (formalized)
 
    Item
 
@@ -198,6 +183,21 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 
 ### <u>Phase 2 (proposals)</u>
+
+- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
+
+   Channel or Item (optional | multiple)
+
+   This element specifies a person of interest to the podcast.
+
+   - `name` (required) This is the full name or alias of the person.
+   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
+   - `img` (optional) This is the url of a picture or avatar of the person.
+   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+
+   The maximum recommended string length of the node value is 128 characters.
+
+<br>
 
 - **\<podcast:location country="[Country Code]" locality="[Locality]" latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]") />**
 
