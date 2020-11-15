@@ -97,13 +97,14 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 <br>
 
-The following tags have been formally adopted into the namespace.  They are documented in the XMLNS document [here](docs/1.0.md).
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
+full implementation details.
 
-- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>** (formalized) <br>
-- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized) <br>
-- **\<podcast:funding url="[url for the show at the platform]">**[user provided content to link]**\</podcast:funding>** (formalized) <br>
-- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />** (formalized) <br>
-- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>** (formalized) <br>
+- **\<podcast:locked>** <br>
+- **\<podcast:transcript>** <br>
+- **\<podcast:funding>** <br>
+- **\<podcast:chapters>** <br>
+- **\<podcast:soundbite>** <br>
 
 <br><br>
 
