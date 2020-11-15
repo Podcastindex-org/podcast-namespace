@@ -93,96 +93,22 @@ The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](http
 
 ## Element List
 
-### <u>Phase 1 (Open)</u>
+### <u>Phase 1 (Closed on 11/15/20)</u>
 
 <br>
 
-- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>** (formalized)
+The following tags have been formally adopted into the namespace.  They are documented in the XMLNS document [here](docs/1.0.md).
 
-   Channel
-
-   (required | single)
-
-   This tells other podcast platforms whether they are allowed to import this feed.  A value of "yes" means that any attempt to import
-   this feed into a new platform should be rejected.  It is expected that podcast hosting providers will enable a toggle in their GUI to allow their users to turn
-   feed transfer lock on or off.
-
-   The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations.  This could be a public email or a
-   virtual email address at the hosting provider that redirects to the owner's true email address.  This is a critical element, and it's expected that podcast
-   hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important
-   it is to have this be a valid, working email address.
-
-   When importing a feed, if the hosting provider has already verified the owner="" email address on their own system, and the email matches what is listed in this
-   tag, it is safe to import the feed.  This could be useful in a situation where the owner's account at the previous hosting company is locked out or for some other
-   reason inaccessible to the owner for disabling the lock.
-
-   Attributes:
-
-   - `owner` (required) The email address of the podcast owner.
-
-<br>
-
-- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized)
-
-   Item
-
-   (optional | multiple)
-
-   Links to an external file containing a transcript or closed captions file, which may actually be the same file.  The mime type of the file should be given - such
-   as `text/plain`, `text/html`, `application/srt`, `application/json`.  If there is no language attribute given, the linked file is assumed to be the same language that is
-   specified by the RSS \<language\> element.  If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the
-   mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.
-
-   Detailed file format information and example files are [here](transcripts/transcripts.md).
-
-<br>
-
-- **\<podcast:funding url="[url for the show at the platform]">**[user provided content to link]**\</podcast:funding>** (formalized)
-
-   Channel or Item
-
-   (optional | multiple)
-
-   This element lists multiple possible donation/funding links for the podcast.
-
-   Attributes:
-
-   - `url` (required) Full url to the specific show on the funding platform.
-   - `node value` (required) Used as free form string from the podcast owner to show to the listeners.  Ex. "Support us on Patreon!"
-
-   The maximum recommended string character length of the node value is 128 characters.
-
-
-<br>
-
-- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />** (formalized)
-
-   Item
-
-   (optional)
-
-   Links to an external file (see example file) containing chapter data for the episode. The mime type of the file should be given - JSON prefered, `application/json`.  See
-   the [jsonChapters.md](chapters/jsonChapters.md) file for a description of the chapter file syntax.  And, see the [example.json](chapters/example.json) example file for
-   a real world example.
-
-<br>
-
-- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>** (formalized)
-
-   Item
-
-   (optional | multiple)
-
-   See "ID's" in this document for an explanation.
-
-   - `startTime` (required) The time where the soundbite begins
-   - `duration` (required) How long is the soundbite (recommended between 15 and 120 seconds)
-   - `node value` (optional) Used as free form string from the podcast creator to specify a title for the soundbite (otherwise default to episode title)
+- **\<podcast:locked owner="[podcast owner email address]">**[yes or no]**\</podcast:locked>** (formalized) <br>
+- **\<podcast:transcript url="[url to a file or website]" type="[mime type]" rel="captions" language="[language code]" />** (formalized) <br>
+- **\<podcast:funding url="[url for the show at the platform]">**[user provided content to link]**\</podcast:funding>** (formalized) <br>
+- **\<podcast:chapters url="[url to chapter data file]" type="[mime type]" />** (formalized) <br>
+- **\<podcast:soundbite startTime="[123]" duration="[30]">[Title of Soundbite]\</podcast:soundbite>** (formalized) <br>
 
 <br><br>
 
 
-### <u>Phase 2 (proposals)</u>
+### <u>Phase 2 (Open)</u>
 
 - **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
 
