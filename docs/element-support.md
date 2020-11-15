@@ -21,6 +21,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [Podfriend](https://twitter.com/GoPodfriend/status/1318663369684123648)
 3. [Podverse](https://twitter.com/Podverse/status/1325734448608899072?s=20)
 4. [Podcastindex](https://podcastindex.org)
+5. [podStation](https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
