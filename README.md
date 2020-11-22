@@ -256,7 +256,7 @@ full implementation details.
 
    (optional | multiple)
 
-   See "ID's" in this document for an explanation.
+   See "[IDs](#user-content-ids)" in this document for an explanation.
 
    - `platform` (required) This is the service slug of the platform.
    - `id` (required) This is the unique identifier for this podcast on the respective platform.
@@ -326,7 +326,7 @@ contacted and subsequently changes the value of the element to "no".
 <br><br>
 
 
-## ID's
+## IDs
 
 Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
 representing the platform, directory, host, app or service. The slugs will look like this:
