@@ -19,4 +19,6 @@ Mitch Downey
 Douglas Kastle
 Andy Lehman
 Daniel Siebiesiuk
+Jon Buda
+Justin Jackson
 ... add your name as you contribute!
