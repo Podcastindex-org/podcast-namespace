@@ -15,6 +15,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
 2. [Podnews](https://podnews.net/rss)
 3. [Podcastindex](https://podcastindex.org)
+4. [Transistor](https://transistor.fm)
+5. [Fireside](https://fireside.fm)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -22,6 +24,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podverse](https://twitter.com/Podverse/status/1325734448608899072?s=20)
 4. [Podcastindex](https://podcastindex.org)
 5. [podStation](https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn)
+6. [Transistor](https://transistor.fm)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
