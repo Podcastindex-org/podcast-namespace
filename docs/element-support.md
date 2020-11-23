@@ -17,6 +17,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podcastindex](https://podcastindex.org)
 4. [Transistor](https://transistor.fm)
 5. [Fireside](https://fireside.fm)
+6. [PodServe.fm](https://www.podserve.fm)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -25,6 +26,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Podcastindex](https://podcastindex.org)
 5. [podStation](https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn)
 6. [Transistor](https://transistor.fm)
+6. [PodServe.fm](https://www.podserve.fm)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
