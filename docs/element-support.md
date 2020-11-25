@@ -10,6 +10,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podfriend](https://twitter.com/GoPodfriend/status/1316847938828742656)
 4. [Podnews](https://podnews.net/rss)
 5. [Podcastindex](https://podcastindex.org)
+6. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -18,6 +19,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Transistor](https://transistor.fm)
 5. [Fireside](https://fireside.fm)
 6. [PodServe.fm](https://www.podserve.fm)
+7. [Castopod](https://podlibre.org/castopod-supports-podcast-locking/)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -26,7 +28,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Podcastindex](https://podcastindex.org)
 5. [podStation](https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn)
 6. [Transistor](https://transistor.fm)
-6. [PodServe.fm](https://www.podserve.fm)
+7. [PodServe.fm](https://www.podserve.fm)
+8. [Castopod](https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -36,6 +39,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [Buzzsprout](https://twitter.com/buzzsprout/status/1324425781330796545)
 6. [Podverse](https://twitter.com/Podverse/status/1324729288281632771?s=20)
 7. [Podcastindex](https://podcastindex.org)
+8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
