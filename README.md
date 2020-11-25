@@ -111,16 +111,19 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
+- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**
 
    Channel or Item (optional | multiple)
 
-   This element specifies a person of interest to the podcast.
+   This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
+   and groups that are listed in the Podcast Taxonomy Project.  (link needed)
 
    - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
+   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list. If `role` is missing then "host" is assumed.
+   - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+   - `href` (optional) Link to a relevant resource of information about the person. (eg. Podchaser profile, website, blog or wiki entry).  Linking to the Podchaser profile url is highly encouraged as the standard for this url.  In a case
+                       where there is no Podchaser profile, then a link to the person's website, blog, wiki entry, etc. can be used.
 
    The maximum recommended string length of the node value is 128 characters.
 
