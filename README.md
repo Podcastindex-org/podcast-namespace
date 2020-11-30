@@ -142,7 +142,8 @@ full implementation details.
    The country code is required, but if either `osmid` or `latlon` is present in the tag, it will take priority over the country code.
 
     - `country`: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
-    - `locality`: (recommended) With a pipe separator from the country code, this is a humanly-readable place name as preferred by the podcast publisher.
+    - `locality`: (recommended) This is a humanly-readable place name as preferred by the podcast publisher for display in an app. Valid values are "Houses of Parliament", or "North Michigan", or "27 Acacia Avenue, Hammersmith".
+                                For programmatic use, developers should use latlon or (better) geo-IDs.
     - `latlon`: (recommended) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which
                          features in the podcast.
     - `osmid`: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
