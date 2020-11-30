@@ -111,40 +111,58 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person role="[host or guest]" img="[(uri of content)]" href="[(uri to website/wiki/blog)]">**[name of person]**</podcast:person>**
+- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**
 
    Channel or Item (optional | multiple)
 
-   This element specifies a person of interest to the podcast.
+   This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
+   and groups that are listed in the Podcast Taxonomy Project.  (link needed)
 
    - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person has for the show or episode. Currently there are two defined roles: "host" or "guest". If role is missing then "host" is assumed.
+   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list. If `role` is missing then "host" is assumed.
+   - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. website, blog or wiki entry).
+   - `href` (optional) Link to a relevant resource of information about the person. (eg. Podchaser profile, website, blog or wiki entry).  Linking to the Podchaser profile url is highly encouraged as the standard for this url.  In a case
+                       where there is no Podchaser profile, then a link to the person's website, blog, wiki entry, etc. can be used.
 
    The maximum recommended string length of the node value is 128 characters.
 
 <br>
 
-- **\<podcast:location country="[Country Code]" locality="[Locality]" latlon="[latitude,longitude]" (osmid="[OSM type][OSM id]") />**
+- **\<podcast:location country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]") />**
 
    Channel (optional | single)
 
    Item (optional | multiple)
 
-   This element must contain, at minimum, a latlon point and a country code.  Although, an OSM specification is highly recommended.  The purpose of this tag is to allow specifying
+   This element must contain, at minimum, a country code.  Although, an OSM specification or latitude/longitude is highly recommended.  The purpose of this tag is to allow specifying
    locations relevant to this podcast or episode.  It can be used as simply as a single tag in the channel to show the "home base" of where a podcast is produced.  Or, more thoroughly
    for a travel podcast to specify locations that were visited during each episode.  Also, a history podcast could reference points of interest discussed.  There are many possible uses.
 
-    - latlon: (required) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which
+   The country code is required, but if either `osmid` or `latlon` is present in the tag, it will take priority over the country code.
+
+    - `country`: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
+    - `locality`: (recommended) This is a humanly-readable place name as preferred by the podcast publisher for display in an app. Valid values are "Houses of Parliament", or "North Michigan", or "27 Acacia Avenue, Hammersmith".
+                                For programmatic use, developers should use latlon or (better) geo-IDs.
+    - `latlon`: (recommended) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which
                          features in the podcast.
-    - osmid: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
+    - `osmid`: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
         - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
         - osm id: The ID of the OpenStreetMap feature that is described. This may be a city or a building. While OSM IDs are not considered permanent, cities rarely disappear.
-    - CountryCode: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
-    - Locality: (recommended) With a pipe separator from the countrycode, this is a humanly-readable place name as preferred by the podcast publisher.
 
    The maximum recommended string character length of the node value is 128 characters.
+
+<br>
+
+- **\<podcast:season title="[title of season]">**[(int)]**\</podcast:season>**
+
+   Item
+
+   (optional | single)
+
+   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a title associate with it.  The element's value is an integer identifying the season number.
+
+   All attributes are optional.
 
 <br>
 
@@ -256,7 +274,7 @@ full implementation details.
 
    (optional | multiple)
 
-   See "ID's" in this document for an explanation.
+   See "[IDs](#user-content-ids)" in this document for an explanation.
 
    - `platform` (required) This is the service slug of the platform.
    - `id` (required) This is the unique identifier for this podcast on the respective platform.
@@ -301,17 +319,6 @@ full implementation details.
    - `address` (required) The address of the digital wallet or node that will receive payments.
    - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
 
-<br>
-
-- **\<podcast:season title="[title of season(string)]">**[(int)]**\</podcast:season>**
-
-   Item
-
-   (optional | single)
-
-   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a title associate with it.  The element's value is an integer identifying the season number.
-
-   All attributes are optional.
 
 <br><br>
 
@@ -326,7 +333,7 @@ contacted and subsequently changes the value of the element to "no".
 <br><br>
 
 
-## ID's
+## IDs
 
 Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
 representing the platform, directory, host, app or service. The slugs will look like this:

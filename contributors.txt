@@ -7,6 +7,7 @@ Daniel J. Lewis
 Andreas Hubel
 Christopher Isene
 Todd Cochrane
+Adam Curry
 @PhoneBoy
 Ben Slinger
 Martin Mouritzen
@@ -16,5 +17,9 @@ Matt Basta
 Mitch Downey
 @Muppet1856
 Douglas Kastle
-
+Andy Lehman
+Daniel Siebiesiuk
+Jon Buda
+Justin Jackson
+Tyler Lacy
 ... add your name as you contribute!
