@@ -11,6 +11,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Podnews](https://podnews.net/rss)
 5. [Podcastindex](https://podcastindex.org)
 6. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
+7. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -20,6 +21,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [Fireside](https://fireside.fm)
 6. [PodServe.fm](https://www.podserve.fm)
 7. [Castopod](https://podlibre.org/castopod-supports-podcast-locking/)
+8. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -30,6 +32,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [Transistor](https://transistor.fm)
 7. [PodServe.fm](https://www.podserve.fm)
 8. [Castopod](https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex)
+9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -40,7 +43,9 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [Podverse](https://twitter.com/Podverse/status/1324729288281632771?s=20)
 7. [Podcastindex](https://podcastindex.org)
 8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
+9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Podverse](https://twitter.com/Podverse/status/1326072379597053953?s=20)
+3. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
