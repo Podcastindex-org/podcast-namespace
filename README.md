@@ -289,16 +289,17 @@ _Because of its complexity, the location tag is [currently being discussed over 
    - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
    - `suggested` (required) The amount to send per minute of episode play time, defined in bitcoin (float, 0.00000005000 is 5sat/min).
 
-- **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
+- **\<podcast:valueRecipient name="[name of recipient(string)]" role ="[role of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
 
    Channel
 
    (required | multiple)
 
-   - `name` (optional) A friendly name to identify the receipient.
+   - `name` (optional) A human readable name to identify the receipient if appropriate.
+   - `role` (optional) Where a known recipient isn't being set, allocate for a role such as player app, hosting company, index.
    - `type` (required) The type of destination this is.  Currently, only "node" is supported.
-   - `address` (required) The address of the digital wallet or node that will receive payments.
-   - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
+   - `address` (optional) The address of the digital wallet or node that will receive payments. Not required for generic roles like player app, hosting company, index.
+   - `split` (required suggest %) Defines a value which this payment destination represents.  Payments will be sent to each destination in the "value" block, according to a run-time calculation made up of all applicable value blocks in the feed or per episode.
 
 
 <br><br>
