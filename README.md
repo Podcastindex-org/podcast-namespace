@@ -299,7 +299,8 @@ _Because of its complexity, the location tag is [currently being discussed over 
    - `role` (optional) Where a known recipient isn't being set, allocate for a role such as player app, hosting company, index.
    - `type` (required) The type of destination this is.  Currently, only "node" is supported.
    - `address` (optional) The address of the digital wallet or node that will receive payments. Not required for generic roles like player app, hosting company, index.
-   - `split` (required suggest %) Defines a value which this payment destination represents.  Payments will be sent to each destination in the "value" block, according to a run-time calculation made up of all applicable value blocks in the feed or per episode.
+   - `split` (required suggest %) Defines a value which this payment destination represents.  Payments will be sent to each destination in the "value" block, according to a run-time calculation made up of all applicable value blocks in the feed or per episode. Total value to be sent will be:
+   `(value to send) * (split) / (sum of splits)`
 
 
 <br><br>
