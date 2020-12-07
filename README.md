@@ -129,28 +129,9 @@ full implementation details.
 
 <br>
 
-- **\<podcast:location country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]") />**
+- **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
 
-   Channel (optional | single)
-
-   Item (optional | multiple)
-
-   This element must contain, at minimum, a country code.  Although, an OSM specification or latitude/longitude is highly recommended.  The purpose of this tag is to allow specifying
-   locations relevant to this podcast or episode.  It can be used as simply as a single tag in the channel to show the "home base" of where a podcast is produced.  Or, more thoroughly
-   for a travel podcast to specify locations that were visited during each episode.  Also, a history podcast could reference points of interest discussed.  There are many possible uses.
-
-   The country code is required, but if either `osmid` or `latlon` is present in the tag, it will take priority over the country code.
-
-    - `country`: (required) The ISO 3166-1 alpha-2 country code, eg 'US'. (Note that the United Kingdom is 'GB', not 'UK'.)
-    - `locality`: (recommended) This is a humanly-readable place name as preferred by the podcast publisher for display in an app. Valid values are "Houses of Parliament", or "North Michigan", or "27 Acacia Avenue, Hammersmith".
-                                For programmatic use, developers should use latlon or (better) geo-IDs.
-    - `latlon`: (recommended) A latitude/longitude point reflecting the location associated with this show or episode. This could be where it is made, or alternatively a location which
-                         features in the podcast.
-    - `osmid`: (recommended) From the OpenStreetMap API. If a value is given for osmid it must contain both 'type' and 'id'.
-        - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
-        - osm id: The ID of the OpenStreetMap feature that is described. This may be a city or a building. While OSM IDs are not considered permanent, cities rarely disappear.
-
-   The maximum recommended string character length of the node value is 128 characters.
+_Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
 
 <br>
 
