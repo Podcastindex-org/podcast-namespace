@@ -13,9 +13,9 @@ will become the framework that the independent podcast community needs to delive
 
 **Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were adopted.
 
-**Phase 2** - Comment period closes on `1/31/21` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either removed or booted to Phase 2.
+**Phase 2** - [Open] Comment period closes on `1/31/21` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either removed or booted to Phase 2.
 
-**Phase 3** - Open. Proposals welcome.
+**Phase 3** - [Open] Proposals welcome.
 
 <br><br>
 
