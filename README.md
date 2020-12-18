@@ -11,11 +11,11 @@ will become the framework that the independent podcast community needs to delive
 
 ## Current Roadmap
 
-**Phase 1** - Comment period closes on `11/15/20` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either
-              removed or booted to Phase 2.
+**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were adopted.
 
-**Phase 2** - This phase is currently open for tag proposals and ideas.
+**Phase 2** - Comment period closes on `1/31/21` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either removed or booted to Phase 2.
 
+**Phase 3** - Open. Proposals welcome.
 
 <br><br>
 
@@ -147,6 +147,20 @@ _Because of its complexity, the location tag is [currently being discussed over 
 
 <br>
 
+- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
+
+   Channel
+
+   (optional | multiple)
+
+   See "[IDs](#user-content-ids)" in this document for an explanation.
+
+   - `platform` (required) This is the service slug of the platform.
+   - `id` (required) This is the unique identifier for this podcast on the respective platform.
+   - `url` (optional) A url to the page for this podcast on the respective platform.
+
+<br>
+
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
    Channel or Item
@@ -158,6 +172,9 @@ _Because of its complexity, the location tag is [currently being discussed over 
    The maximum recommended string length of the node value is 128 characters.
 
 <br>
+
+
+### <u>Phase 3 (Open)</u>
 
 - **\<podcast:category>**[category Name]**\</podcast:category>**
 
@@ -246,20 +263,6 @@ _Because of its complexity, the location tag is [currently being discussed over 
    repo for an example of how this looks in practice.
 
    All attributes are required.
-
-<br>
-
-- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
-
-   Channel
-
-   (optional | multiple)
-
-   See "[IDs](#user-content-ids)" in this document for an explanation.
-
-   - `platform` (required) This is the service slug of the platform.
-   - `id` (required) This is the unique identifier for this podcast on the respective platform.
-   - `url` (optional) A url to the page for this podcast on the respective platform.
 
 <br>
 
