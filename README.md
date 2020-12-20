@@ -116,7 +116,7 @@ full implementation details.
    Channel or Item (optional | multiple)
 
    This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
-   and groups that are listed in the Podcast Taxonomy Project.  (Taxonomy List)[taxonomy.json]
+   and groups that are listed in the Podcast Taxonomy Project.  (Taxonomy List)[./taxonomy.json]
 
    - `name` (required) This is the full name or alias of the person.
    - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list. If `role` is missing then "host" is assumed.
@@ -127,7 +127,7 @@ full implementation details.
 
    The maximum recommended string length of the node value is 128 characters.
 
-   The `role` and `group` tags are case-insensitive.  So, `Host` is the same as `host`.
+   The `role` and `group` tags are case-insensitive.  So, "Host" is the same as "host".
 
 <br>
 
