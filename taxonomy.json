@@ -376,23 +376,5 @@
     "role": "Assistant Editor",
     "description": "The Assistant Editor is responsible for taking the media from the set, ingesting them into the designated editing software, and organizing the footage in an efficient way for the editor. They must also pay close attention to ensure that audio and video are synced and that all footage from set is ingested properly.",
     "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
-    "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
-    "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
-    "example": ""
   }
 ]
