@@ -25,7 +25,7 @@
   },
   {
     "group": "Creative Direction",
-    "role": "Producer ",
+    "role": "Producer",
     "description": "The Producer coordinates and executes the production of the podcast. There duties can include helping craft the creative direction of a project, budgeting, research, scheduling, and overseeing editing and final production.",
     "example": ""
   },
@@ -163,19 +163,19 @@
   },
   {
     "group": "Writing",
-    "role": "Editor ",
+    "role": "Editor",
     "description": "The Editor reviews and prepares scripts for conveying information in a creative, accurate, and engaging manner. ",
     "example": ""
   },
   {
     "group": "Writing",
-    "role": "Fact Checker ",
+    "role": "Fact Checker",
     "description": "The Fact Checker reviews the content of a podcast for factual correctness and verifies that quote attribution is correct. They use a variety of tools including 3rd party research and individual outreach. Often the Fact Checker will also provide notes on how the production can avoid the confusion in the delivery of information in the episode.",
     "example": ""
   },
   {
     "group": "Writing",
-    "role": "Translater ",
+    "role": "Translater",
     "description": "The Translator converts content from one language to another for the podcast. This can be interviews, dialogue, text documents, and more. The Translator's work may be used on-air or behind-the-scenes during the production\/research process.",
     "example": ""
   },
@@ -187,13 +187,13 @@
   },
   {
     "group": "Writing",
-    "role": "Logger ",
+    "role": "Logger",
     "description": "The Logger reviews and documents the contents and timestamps of raw audio in service of producers and editors in the production process.",
     "example": ""
   },
   {
     "group": "Audio Production",
-    "role": "Studio Coordinator ",
+    "role": "Studio Coordinator",
     "description": "The Studio Coordinator manages the recording studio and audio technicians working within the studio at the time of recording.",
     "example": ""
   },
@@ -229,13 +229,13 @@
   },
   {
     "group": "Audio Post-Production",
-    "role": "Audio Editor ",
+    "role": "Audio Editor",
     "description": "The Audio Editor cuts and rearranges audio for clarity and storytelling purposes. The Audio Editor may also perform general audio processing and mastering.",
     "example": ""
   },
   {
     "group": "Audio Post-Production",
-    "role": "Sound Designer ",
+    "role": "Sound Designer",
     "description": "The Sound Designer creates and composes a variety of audio elements. These elements are mostly secondary to speech, but a Sound Designer may creatively edit\/produce speech elements in an artist manner.",
     "example": ""
   },
@@ -319,7 +319,7 @@
   },
   {
     "group": "Visuals",
-    "role": "Cover Art Designer ",
+    "role": "Cover Art Designer",
     "description": "The Cover Art Designer creates the displayed cover art of a podcast or episode. For clarity, cover art is the main image (almost always square in dimensions) accompanying the podcast in directories, while episode cover art is displayed in a similar manner at the episode level. This role may be a digital designer, artist, photographer or any other visual creative.",
     "example": ""
   },
