@@ -118,10 +118,8 @@ full implementation details.
    This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
    and groups that are listed in the Podcast Taxonomy Project.
 
-   The full taxonomy list is [here](taxonomy.json) as a json file.
-
    - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list. If `role` is missing then "host" is assumed.
+   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
    - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
    - `href` (optional) Link to a relevant resource of information about the person. (eg. Podchaser profile, website, blog or wiki entry).  Linking to the Podchaser profile url is highly encouraged as the standard for this url.  In a case
@@ -130,6 +128,8 @@ full implementation details.
    The maximum recommended string length of the node value is 128 characters.
 
    The `role` and `group` tags are case-insensitive.  So, "Host" is the same as "host".
+
+   The full taxonomy list is [here](taxonomy.json) as a json file.
 
 <br>
 
