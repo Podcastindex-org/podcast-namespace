@@ -111,7 +111,7 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**
+- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />** (finalized)
 
    Channel or Item (optional | multiple)
 
@@ -133,11 +133,13 @@ full implementation details.
 
 <br>
 
+
 - **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
 
 _Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
 
 <br>
+
 
 - **\<podcast:season title="[title of season]">**[(int)]**\</podcast:season>**
 
@@ -150,6 +152,7 @@ _Because of its complexity, the location tag is [currently being discussed over 
    All attributes are optional.
 
 <br>
+
 
 - **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
