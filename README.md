@@ -22,11 +22,13 @@ will become the framework that the independent podcast community needs to delive
 
 ## Legend
 
-**Formalized** - This tag is frozen.  Any future changes to it's definition must maintain backwards compatibility.
+**Formalized** - This tag is frozen and listed in the XMLNS document.  Any future changes to it's definition must maintain backwards compatibility.
 
-**Finalized** - The tag is structurally stable and implementation/testing should be considered safe.  Any breaking changes discovered before formalization will be widely communicated.
+**Finalized** - The tag is structurally stable and implementation/testing should be considered safe.  Only language/wording changes should be expected.
 
 **Open** - The tag/phase is open for discussion and collaboration.
+
+
 
 <br><br>
 
