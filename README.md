@@ -20,6 +20,17 @@ will become the framework that the independent podcast community needs to delive
 <br><br>
 
 
+## Legend
+
+**Formalized** - This tag is frozen.  Any future changes to it's definition must maintain backwards compatibility.
+
+**Finalized** - The tag is structurally stable and implementation/testing should be considered safe.  Any breaking changes discovered before formalization will be widely communicated.
+
+**Open** - The tag/phase is open for discussion and collaboration.
+
+<br><br>
+
+
 ## Tag Adoption Process
 
 To be adopted as an official part of the namespace, there must be consensus around a tag's usefulness and either commitment to adoption by at least 1 host and 1 app, or a recognition
@@ -134,22 +145,23 @@ full implementation details.
 <br>
 
 
-- **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
-
-_Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
-
-<br>
-
-
-- **\<podcast:season title="[title of season]">**[(int)]**\</podcast:season>**
+- **\<podcast:season (name="[name of season]")>**[(int)]**\</podcast:season>** (finalized)
 
    Item
 
    (optional | single)
 
-   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a title associate with it.  The element's value is an integer identifying the season number.
+   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a name associate with it, such as `name="Race for the White House 2020"`.  The element's value is an integer
+   identifying the season number.
 
    All attributes are optional.
+
+<br>
+
+
+- **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
+
+_Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
 
 <br>
 
@@ -167,6 +179,7 @@ _Because of its complexity, the location tag is [currently being discussed over 
    - `url` (optional) A url to the page for this podcast on the respective platform.
 
 <br>
+
 
 - **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
 
