@@ -159,6 +159,20 @@ full implementation details.
 <br>
 
 
+- **\<podcast:episode (display="[episode number to show]")>**[(decimal)]**\</podcast:episode>**
+
+   Item
+
+   (optional | single)
+
+   This element exists largely for compatibility with the `season` tag.  But, it also allows for a similar naming idea.  The episode numbers are decimal, so numbering such as `100.5` is acceptable if there was a special mini-episode published
+   between two other episodes.  In this scenario, the number would help with proper chronological sorting, while the `display` attribute could specify an alternate number(like `display="100a"`) to display for the episode in a podcast player app GUI.
+
+   All attributes are optional.
+
+<br>
+
+
 - **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
 
 _Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
