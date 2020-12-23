@@ -35,23 +35,23 @@ This, therefore, means that the podcast:location tag is complex and has a number
 
 ### Structure
 
-- **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
+**\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
 
-   Channel or Item (optional | multiple)
+This tag can exist at either the `<channel>` level, or the `<item>` level, or both. The maximum recommended string length of all attribute values is 128 characters.
 
    - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
-   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
-   - `osmid` (optional) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
+   - `geo` (recommended) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
+   - `osmid` (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
 
-   The maximum recommended string length of all attribute values is 128 characters.
 
-\- **mandatory**: `name="[Humanly readable name]"` - this is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or
-"Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use OSM IDs, below.
 
-This field is a maximum of 64 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in en should
+\- `name` **required**:  This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or
+"Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use the geoURI or OSM IDs, below.
+
+This field is a maximum of 128 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in `en` should
 read Eiffel Tower, Paris and not La Tour d'Eiffel.
 
-\- **recommended**: `geo="[geoURI]"` - a geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+\- `geo` **recommended**:  A geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
 
 Examples:
 
@@ -63,8 +63,10 @@ Examples:
 `geo` is recommended to be used alongside an OSMID. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent point.
 Exceptions are podcasts from, or about, fictional places. Data within these tags must relate to a real place.
 
-\- **recommended**: `osmid="[OSM type][OSM id]"` - from an OpenStreetMap query. If a value is given for osmid it must contain both 'type' and 'id'. osm type: A one-character description of the type of OSM point.
-Valid is "N" (node); "W" (way); "R" (relation). osm id: The ID of the OpenStreetMap feature that is described.
+\- `osmid` **recommended**:  From an OpenStreetMap query. If a value is given for `osmid` it must contain both 'type' and 'id'.
+
+- osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
+- osm id: The ID of the OpenStreetMap feature that is described.
 
 This may describe part of a building, a building or business, a suburb, city, state, or country - anything within the OSM database, using the OpenStreetMap API or a local copy of the data. This is the field
 that is the best programmatic representation of the place being described. The data within OpenStreetMap is rich and can be used for detailed searches.
@@ -74,15 +76,16 @@ Examples:
 - The United States of America: [R148838](https://nominatim.openstreetmap.org/ui/details.html?osmtype=R&osmid=148838)
 - The Eiffel Tower in Paris: [W5013364](https://nominatim.openstreetmap.org/ui/details.html?osmtype=W&osmid=5013364)
 
-The `osmid` is recommended to be used alongside a geo tag. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent
+The `osmid` is recommended to be used alongside a `geo` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent
 point. Exceptions are podcasts from, or about, fictional places. Data within these tags must relate to a real place.
 
-If a developer uses the osmid tag, the canonical latlon is the one returned by OSM. It is intended that the geo tag is used for simple display within a podcast app without any API usage: but for more advanced
- uses, like a geographic search, developers will ingest the full details from OpenStreetMap. The geoURI also offers a useful fallback should the osmid be removed.
+If a developer uses the `osmid` tag, the canonical latlon is the one returned by OSM. It is intended that the `geo` attribute is used for simple display within a podcast app without any API usage: but for more advanced
+ uses, like a geographic search, developers will ingest the full details from OpenStreetMap. The geoURI also offers a useful fallback should the `osmid` be removed.
 
-_Caution: our definition of osmid is what OpenStreetMap call "OSM type and OSM id". It must start with an alphabetical representation of the type, then the numerical ID. Do not use place_id, which is visible in
+_Caution: our definition of `osmid` is what OpenStreetMap call "OSM type and OSM id". It must start with an alphabetical representation of the type, then the numerical ID. Do not use place_id, which is visible in
 API calls - these are unique to each mirror of the OSM data._
 
+<br>
 
 ### UX Suggestion for Podcast Hosting Platforms
 
@@ -117,10 +120,10 @@ For a podcast that is set in Gitmo Nation, a nickname used by the show for the U
 >
 ```
 
-The geo point uses an optional 'uncertainty' value here of 3,900 km, indicating that the "location" described here is up to 3,900km away from the point given (which is the rough width of the USA). The OSMID
+The `geo` point uses an optional 'uncertainty' value here of 3,900 km, indicating that the "location" described here is up to 3,900km away from the point given (which is the rough width of the USA). The OSMID
 includes a more accurate bounding box and geoJSON.
 
-For a podcast that is about Hogwarts, a fictional location, geo and osmid must not be entered.
+For a podcast that is about Hogwarts (a fictional location) the `geo` and `osmid` must not be entered.
 
 ```
 <podcast:location
