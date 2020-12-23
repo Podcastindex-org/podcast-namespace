@@ -143,6 +143,22 @@ full implementation details.
 <br>
 
 
+- **\<podcast:location name="[name of location]" (geo="[geo:latitude,longitude]") (osmid="[open street maps id]") />** (finalized)
+
+   Channel or Item (optional | multiple)
+
+   This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"  This tag has many use cases and is one of the more complex ones.  You are **highly encouraged**
+   to read the full [implementation document](location/location.md) before starting to code for it.
+
+   - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
+   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
+   - `osmid` (optional) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
+
+   The maximum recommended string length of all attribute values is 128 characters.
+
+<br>
+
+
 - **\<podcast:season (name="[name of season]")>**[(int)]**\</podcast:season>** (finalized)
 
    Item
@@ -167,13 +183,6 @@ full implementation details.
    between two other episodes.  In this scenario, the number would help with proper chronological sorting, while the `display` attribute could specify an alternate number(like `display="100a"`) to display for the episode in a podcast player app GUI.
 
    All attributes are optional.
-
-<br>
-
-
-- **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
-
-_Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
 
 <br>
 
