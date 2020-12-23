@@ -129,14 +129,13 @@ full implementation details.
    Channel or Item (optional | multiple)
 
    This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
-   and groups that are listed in the Podcast Taxonomy Project.
+   and groups that are listed in the [Podcast Taxonomy Project](https://podcasttaxonomy.com/).
 
    - `name` (required) This is the full name or alias of the person.
    - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
    - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. Podchaser profile, website, blog or wiki entry).  Linking to the Podchaser profile url is highly encouraged as the standard for this url.  In a case
-                       where there is no Podchaser profile, then a link to the person's website, blog, wiki entry, etc. can be used.
+   - `href` (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.
 
    The maximum recommended string length of the node value is 128 characters.
 
