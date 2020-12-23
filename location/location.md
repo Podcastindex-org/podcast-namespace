@@ -1,9 +1,9 @@
-## Location tag format details
+## Location tag format details <small>(11 Dec, v4.1 - a short note on privacy in the UX suggestion section)</small>
 
 Below, you will find implementation details and UX recommendations for the `<podcast:location>` tag.
 
 
-<br><br>
+### Format
 
 - **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
 
@@ -16,8 +16,6 @@ Below, you will find implementation details and UX recommendations for the `<pod
    The maximum recommended string length of all attribute values is 128 characters.
 
 <hr>
-
-(11 Dec, v4.1 - a short note on privacy in the UX suggestion section)
 
 Channel (optional | multiple)
 Item (optional | multiple)

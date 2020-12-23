@@ -147,11 +147,12 @@ full implementation details.
 
    Channel or Item (optional | multiple)
 
-   This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"  This tag has many use cases and is one of the more complex ones.  You are **highly encouraged**
-   to read the full [implementation document](location/location.md) before starting to code for it.
+   This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"
+
+   The tag has many use cases and is one of the more complex ones.  You are **highly encouraged** to read the full [implementation document](location/location.md) before starting to code for it.
 
    - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
-   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
+   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geoURI:30.2672,97.7431").
    - `osmid` (optional) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
 
    The maximum recommended string length of all attribute values is 128 characters.
