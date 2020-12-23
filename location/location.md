@@ -16,7 +16,9 @@ Below, you will find implementation details and UX recommendations for the `<pod
 
    The maximum recommended string length of all attribute values is 128 characters.
 
-<hr>
+
+<br>
+
 
 This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"  It can exist at either the channel level or the item level, or both.
 
@@ -26,6 +28,9 @@ The use-cases for this tag are multiple, in order of complexity:
 2. To allow a simple point on a map to be visible in a podcast app
 3. To allow a search for "podcasts/episodes about places near me" - for, for example, a travel or news podcast
 4. To describe a specific place in a programmatic fashion to allow complex geo-aware searches
+
+
+<br>
 
 
 It may allow very complex searches such as:
@@ -43,7 +48,8 @@ or a restaurant within a city. "Locations" are also, not always real places, esp
 
 This, therefore, means that the podcast:location tag is complex and has a number of attributes.
 
-Specification:
+
+### Structure
 
 ```
 <podcast:location
