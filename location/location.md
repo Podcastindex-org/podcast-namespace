@@ -1,4 +1,4 @@
-## Location tag format details <small>(11 Dec, v4.1 - a short note on privacy in the UX suggestion section)</small>
+## Location tag format details
 
 Below, you will find implementation details and UX recommendations for the `<podcast:location>` tag.
 
