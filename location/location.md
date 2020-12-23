@@ -4,21 +4,7 @@ Below, you will find implementation details and UX recommendations for the `<pod
 
 <br>
 
-### Format
-
-- **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
-
-   Channel or Item (optional | multiple)
-
-   - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
-   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
-   - `osmid` (optional) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
-
-   The maximum recommended string length of all attribute values is 128 characters.
-
-
-<br><br>
-
+### Overview
 
 This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"  It can exist at either the channel level or the item level, or both.
 
@@ -49,13 +35,15 @@ This, therefore, means that the podcast:location tag is complex and has a number
 
 ### Structure
 
-```
-<podcast:location
-  name="[humanly readable place name]"
-  geo="[geoURI]"
-  osmid="[OSM type][OSM id]"
->
-```
+- **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
+
+   Channel or Item (optional | multiple)
+
+   - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
+   - `geo` (optional) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").
+   - `osmid` (optional) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
+
+   The maximum recommended string length of all attribute values is 128 characters.
 
 \- **mandatory**: `name="[Humanly readable name]"` - this is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or
 "Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use OSM IDs, below.
@@ -105,6 +93,7 @@ in the podcast. The wording of this feature is important to ensure the correct d
 
 Podcast hosts may also wish to remind podcast publishers to always be cautious about posting public location information. It's possible to check the OSM type to see if it relates to a residential address.
 
+<br>
 
 ### Examples
 
@@ -150,6 +139,7 @@ For a podcast from Tesla upon landing on Mars
 
 (The co-ordinate reference system from Mars doesn't yet exist, but this shows the extensibility of this tag).
 
+<br>
 
 ### What This Tag Isn't Built For
 
