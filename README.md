@@ -143,7 +143,7 @@ full implementation details.
 <br>
 
 
-- **\<podcast:location name="[name of location]" (geo="[geo:latitude,longitude]") (osmid="[open street maps id]") />** (finalized)
+- **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
 
    Channel or Item (optional | multiple)
 
