@@ -26,7 +26,7 @@ It may allow very complex searches such as:
 
 Unlike other elements in the "podcast" namespace, a "place" is not permanent. Places are built, and abandoned, all the time. Buildings are demolished, businesses close.
 
-On the other hand, a point on the earth is permanent, but does not describe anything other than a point. This is not always great when wanting to describe a city, rather than an area in a city,
+On the other hand, a point on the earth is permanent, but does not describe anything other than a point. This is not always great when wanting to describe a city, rather than an area within a city,
 or a restaurant within a city. "Locations" are also, not always real places, especially in fiction podcasts.
 
 This, therefore, means that the podcast:location tag is complex and has a number of attributes.
@@ -49,7 +49,8 @@ This tag can exist at either the `<channel>` level, or the `<item>` level, or bo
 
 #### `name` **required**
 
- This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or "Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use the geoURI or OSM IDs, below.
+ This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or "Ernest Murrow Theater, Chicago"). This is not intended to be
+ programmatically parsed and is for display only. For a programmatic designation of the location, use the geoURI or OSM IDs, below.
 
  This field is a maximum of 128 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in `en` should
 read Eiffel Tower, Paris and not La Tour d'Eiffel.
@@ -68,7 +69,8 @@ read Eiffel Tower, Paris and not La Tour d'Eiffel.
 
  For information that may interest space travellers: the RFC does include an optional coordinate reference system for other planets, though these are not recommended to be used yet by the RFC.
 
- The `geo` attribute is recommended to be used alongside an OSMID. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent point.  Exceptions are podcasts from, or about, fictional places. Data within these tags must relate to a real place.
+ The `geo` attribute is recommended to be used alongside an OSMID. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent point.
+ Exceptions are podcasts from, or about, fictional places. Data within these attributes must relate to a real place.
 
 <br>
 
