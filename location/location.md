@@ -41,7 +41,7 @@ This tag can exist at either the `<channel>` level, or the `<item>` level, or bo
 
 <br>
 
- - `name` **required**
+#### `name` **required**
 
  This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or "Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use the geoURI or OSM IDs, below.
 
@@ -50,7 +50,7 @@ read Eiffel Tower, Paris and not La Tour d'Eiffel.
 
 <br>
 
-- `geo` **recommended**
+#### `geo` **recommended**
 
  A geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
 
@@ -66,7 +66,7 @@ read Eiffel Tower, Paris and not La Tour d'Eiffel.
 
 <br>
 
-- `osmid` **recommended**
+#### `osmid` **recommended**
 
  From an OpenStreetMap query. If a value is given for `osmid` it must contain both 'type' and 'id'.
 
