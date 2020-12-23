@@ -57,13 +57,15 @@ This, therefore, means that the podcast:location tag is complex and has a number
 >
 ```
 
-- **mandatory**: `name="[Humanly readable name]"` - this is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or
+\- **mandatory**: `name="[Humanly readable name]"` - this is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or
 "Ernest Murrow Theater, Chicago"). This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use OSM IDs, below.
 
 This field is a maximum of 64 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in en should
 read Eiffel Tower, Paris and not La Tour d'Eiffel.
 
-- **recommended**: `geo="[geoURI]"` - a geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870). Examples:
+\- **recommended**: `geo="[geoURI]"` - a geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+
+Examples:
 
 - geo:37.786971,-122.399677 (a simple latlon description)
 - geo:37.786971,-122.399677,250 (a latlon including a height of 250 meters above ground level)
@@ -73,7 +75,7 @@ read Eiffel Tower, Paris and not La Tour d'Eiffel.
 `geo` is recommended to be used alongside an OSMID. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geoURI serves as a permanent point.
 Exceptions are podcasts from, or about, fictional places. Data within these tags must relate to a real place.
 
-- **recommended**: `osmid="[OSM type][OSM id]"` - from an OpenStreetMap query. If a value is given for osmid it must contain both 'type' and 'id'. osm type: A one-character description of the type of OSM point.
+\- **recommended**: `osmid="[OSM type][OSM id]"` - from an OpenStreetMap query. If a value is given for osmid it must contain both 'type' and 'id'. osm type: A one-character description of the type of OSM point.
 Valid is "N" (node); "W" (way); "R" (relation). osm id: The ID of the OpenStreetMap feature that is described.
 
 This may describe part of a building, a building or business, a suburb, city, state, or country - anything within the OSM database, using the OpenStreetMap API or a local copy of the data. This is the field
