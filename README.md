@@ -97,10 +97,7 @@ To see a list of platforms and apps that currently implement some or all of thes
 
 ## Example Feed
 
-There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.  There is also
-a "sandbox" feed where we experiment with tags while they are being hashed out.
-
-The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](https://noagendaassets.com/enc/pc20sandbox.xml).
+There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
 
 <br><br>
 
@@ -135,7 +132,7 @@ full implementation details.
    - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
    - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.
+   - `href` (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.  Please see the [example feed](example.xml) for possible choices of what to use here.
 
    The maximum recommended string length of the node value is 128 characters.
 
