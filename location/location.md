@@ -160,4 +160,4 @@ For a podcast from Tesla upon landing on Mars
 ### What This Tag Isn't Built For
 
 For privacy and user experience, this tag is not meant as a description of the physical location of podcast hosts and guests ("I'm doing this podcast in Denver, Colorado!"). The physical location of people
-are available via the podcast:people tag's links to places like Twitter, Facebook, Wikipedia and Podchaser.
+are available via the [podcast:person](https://github.com/Podcastindex-org/podcast-namespace#phase-2-open) tag's links to places like Twitter, Facebook, Wikipedia and Podchaser.
