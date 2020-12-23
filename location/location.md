@@ -2,6 +2,7 @@
 
 Below, you will find implementation details and UX recommendations for the `<podcast:location>` tag.
 
+<br>
 
 ### Format
 
@@ -17,25 +18,22 @@ Below, you will find implementation details and UX recommendations for the `<pod
 
 <hr>
 
-Channel (optional | multiple)
-Item (optional | multiple)
-
-This is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"
+This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"  It can exist at either the channel level or the item level, or both.
 
 The use-cases for this tag are multiple, in order of complexity:
 
-    1. To allow a free-text "location" field to be visible in a podcast app, perhaps during playback
-    2. To allow a simple point on a map to be visible in a podcast app
-    3. To allow a search for "podcasts/episodes about places near me" - for, for example, a travel or news podcast
-    4. To describe a specific place in a programmatic fashion to allow complex geo-aware searches
+1. To allow a free-text "location" field to be visible in a podcast app, perhaps during playback
+2. To allow a simple point on a map to be visible in a podcast app
+3. To allow a search for "podcasts/episodes about places near me" - for, for example, a travel or news podcast
+4. To describe a specific place in a programmatic fashion to allow complex geo-aware searches
 
 
 It may allow very complex searches such as:
 
-    - Show me podcasts or episodes about places near me
-    - Show me podcasts about train stations in Germany
-    - Show me podcasts about mines in West Australia
-    - Visa mig podcaster om platser i Kalifornien på svenska - "Show me podcasts about places in Californian, returning Swedish-language podcasts only" (using the <language> tag)
+- Show me podcasts or episodes about places near me
+- Show me podcasts about train stations in Germany
+- Show me podcasts about mines in West Australia
+- Visa mig podcaster om platser i Kalifornien på svenska - "Show me podcasts about places in Californian, returning Swedish-language podcasts only" (using the <language> tag)
 
 
 Unlike other elements in the "podcast" namespace, a "place" is not permanent. Places are built, and abandoned, all the time. Buildings are demolished, businesses close.
