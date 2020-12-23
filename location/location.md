@@ -35,7 +35,13 @@ This, therefore, means that the podcast:location tag is complex and has a number
 
 ### Structure
 
-```**\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />**```
+```
+<podcast:location
+  name="[humanly readable place name]"
+  geo="[geoURI]"
+  osmid="[OSM type][OSM id]"
+>
+```
 
 This tag can exist at either the `<channel>` level, or the `<item>` level, or both. The maximum recommended string length of all attribute values is 128 characters.
 
