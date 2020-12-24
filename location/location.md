@@ -67,10 +67,11 @@ read "Eiffel Tower, Paris" and not "La Tour d'Eiffel".
  - `geo:37.786971,-122.399677,250`, a latlon including a height of 250 meters above ground level.
  - `geo:37.786971,-122.399677;u=350`, a latlon with an accuracy ('uncertainty') of 350 meters.
 
- For information that may interest space travelers: the RFC does include an optional coordinate reference system for other planets, though these are not recommended to be used yet by the RFC.
+For information that may interest space travelers: the RFC does include an optional coordinate reference system for other planets, though these are not recommended to be used yet by the RFC.
 
- The `geo` attribute is recommended to be used alongside an `osmid` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent point.
- Exceptions are podcasts from or about fictional places. Data within these attributes must relate to a real place.
+The `geo` attribute is recommended to be used alongside an `osmid` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent point.
+
+Data within these attributes must relate to a real place. This tag must not be used for podcasts from or about fictional places. 
 
 <br>
 
@@ -89,11 +90,9 @@ that is the best programmatic representation of the place being described. The d
  - The United States of America: [R148838](https://nominatim.openstreetmap.org/ui/details.html?osmtype=R&osmid=148838)
  - The Eiffel Tower in Paris: [W5013364](https://nominatim.openstreetmap.org/ui/details.html?osmtype=W&osmid=5013364)
 
- The `osmid` is recommended to be used alongside a `geo` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent
-point. Exceptions are podcasts from or about fictional places. Data within these tags must relate to a real place.
+The `osmid` is recommended to be used alongside a `geo` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent point. Exceptions are podcasts from or about fictional places. Data within these tags must relate to a real place.
 
- If a developer uses the `osmid` tag, the canonical latlon is the one returned by OSM. It is intended that the `geo` attribute is used for simple display within a podcast app without any API usage: but for more advanced
- uses, like a geographic search, developers will ingest the full details from OpenStreetMap. The geo URI also offers a useful fallback should the `osmid` be removed.
+If a developer uses the `osmid` tag, the canonical latlon is the one returned by OSM. It is intended that the `geo` attribute is used for simple display within a podcast app without any API usage: but for more advanced uses, like a geographic search, developers will ingest the full details from OpenStreetMap. The geo URI also offers a useful fallback should the `osmid` be removed.
 
  _Caution: our definition of `osmid` is what OpenStreetMap calls "OSM type and OSM id". It must start with an alphabetical representation of the type, then the numerical ID. Do not use place_id, which is visible in
 API calls - these are unique to each mirror of the OSM data._
@@ -105,7 +104,8 @@ API calls - these are unique to each mirror of the OSM data._
 The quality of this data is important to ensure a good listener experience. A podcast publisher should be in no doubt what data is being asked for here, to clarify that this is about a location that is mentioned
 in the podcast. The wording of this feature is important to ensure the correct data is available.
 
-![image](https://user-images.githubusercontent.com/1498236/101383942-6c113080-387f-11eb-9cc2-a5a4e5dd19de.png)
+![image](https://user-images.githubusercontent.com/231941/103058983-7a857900-45ef-11eb-9b59-7a9aea22288b.png)
+![image](https://user-images.githubusercontent.com/231941/103058939-51fd7f00-45ef-11eb-9b0c-0665d7e0aefb.png)
 
 Podcast hosts may also wish to remind podcast publishers to always be cautious about posting public location information. It's possible to check the OSM type to see if it relates to a residential address.
 
@@ -159,5 +159,4 @@ For a podcast from Tesla upon landing on Mars:
 
 ### What This Tag Isn't Built For
 
-For privacy and user experience, this tag is not meant as a description of the physical location of podcast hosts and guests ("I'm doing this podcast in Denver, Colorado!"). The physical location of people
-are available via the [podcast:person](https://github.com/Podcastindex-org/podcast-namespace#phase-2-open) tag's links to places like Twitter, Facebook, Wikipedia and Podchaser.
+For privacy and user experience, this tag is not meant as a description of the physical location of podcast hosts and guests ("I'm doing this podcast in Denver, Colorado!"). The physical location of people are available via the [podcast:person](https://github.com/Podcastindex-org/podcast-namespace#phase-2-open) tag's links to places like Twitter, Facebook, Wikipedia and Podchaser.
