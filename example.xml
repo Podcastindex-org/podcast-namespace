@@ -70,6 +70,8 @@
                                         https://example.com/images/ep3/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep3/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
+            <podcast:season name="Podcasting 2.0">1</podcast:season>
+            <podcast:episode>3</podcast:episode>
             <podcast:chapters url="https://example.com/ep3_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="33.833" duration="60.0" />
             <podcast:transcript url="https://example.com/ep3/transcript.txt" type="text/plain" />
@@ -93,6 +95,8 @@
                                         https://example.com/images/ep2/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep2/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
+            <podcast:season name="Podcasting 2.0">1</podcast:season>
+            <podcast:episode>2</podcast:episode>
             <podcast:chapters url="https://example.com/ep2_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="45.4" duration="56.0" />
             <podcast:transcript url="https://example.com/ep2/transcript.txt" type="text/plain" />
@@ -116,6 +120,8 @@
                                         https://example.com/images/ep1/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep1/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>no</itunes:explicit>
+            <podcast:season name="Podcasting 2.0">1</podcast:season>
+            <podcast:episode>1</podcast:episode>
             <podcast:chapters url="https://example.com/ep1_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="29.32" duration="34.0" />
             <podcast:transcript url="https://example.com/ep1/transcript.txt" type="text/plain" />
