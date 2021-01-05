@@ -24,7 +24,7 @@ will become the framework that the independent podcast community needs to delive
 
 **Formalized** - This tag is frozen and listed in the XMLNS document.  Any future changes to it's definition must maintain backwards compatibility.
 
-**Finalized** - The tag is structurally stable and implementation/testing should be considered safe.  Only language/wording changes should be expected.
+**Finalized** - The tag is structurally stable and implementation testing should be considered safe.  Any breaking changes will be widely communicated.
 
 **Open** - The tag/phase is open for discussion and collaboration.
 
@@ -126,20 +126,20 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />** (finalized)
+- **\<podcast:person (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**[name of person]**\</podcast:person>** (finalized)
 
    Channel or Item (optional | multiple)
 
    This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
    and groups that are listed in the [Podcast Taxonomy Project](https://podcasttaxonomy.com/).
 
-   - `name` (required) This is the full name or alias of the person.
+   - Tag Value (required) This is the full name or alias of the person.
    - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
    - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
    - `img` (optional) This is the url of a picture or avatar of the person.
    - `href` (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.  Please see the [example feed](example.xml) for possible choices of what to use here.
 
-   The maximum recommended string length of the node value is 128 characters.
+   The maximum recommended string length of each attribute value, and the tag's node value is 128 characters.
 
    The `role` and `group` tags are case-insensitive.  So, "Host" is the same as "host".
 
@@ -148,7 +148,7 @@ full implementation details.
 <br>
 
 
-- **\<podcast:location name="[humanly readable place name]" (geo="[geoURI]") (osmid="[OSM type][OSM id]") />** (finalized)
+- **\<podcast:location (geo="[geoURI]") (osm="[OSM type][OSM id](#OSM revision)") />**[humanly readable place name]**\</podcast:location>** (finalized)
 
    Channel or Item (optional | multiple)
 
@@ -156,11 +156,11 @@ full implementation details.
 
    The tag has many use cases and is one of the more complex ones.  You are **highly encouraged** to read the full [implementation document](location/location.md) before starting to code for it.
 
-   - `name` (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
+   - Tag Value (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
    - `geo` (recommended) This is a latitude and longitude given in "geo" notation (i.e. "geoURI:30.2672,97.7431").
-   - `osmid` (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
+   - `osm` (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
 
-   The maximum recommended string length of all attribute values is 128 characters.
+   The maximum recommended string length of each attribute value, and the tag's node value is 128 characters.
 
 <br>
 
