@@ -126,7 +126,7 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**[name of person]**\</podcast:person>** (finalized)
+- **\<podcast:person (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]")>**[name of person]**\</podcast:person>** (finalized)
 
    Channel or Item (optional | multiple)
 
@@ -148,7 +148,7 @@ full implementation details.
 <br>
 
 
-- **\<podcast:location (geo="[geoURI]") (osm="[OSM type][OSM id](#OSM revision)") />**[humanly readable place name]**\</podcast:location>** (finalized)
+- **\<podcast:location (geo="[geoURI]") (osm="[OSM type][OSM id](#OSM revision)")>**[humanly readable place name]**\</podcast:location>** (finalized)
 
    Channel or Item (optional | multiple)
 
