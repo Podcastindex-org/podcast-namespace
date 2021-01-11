@@ -48,13 +48,9 @@ This tag can exist at either the `<channel>` level, or the `<item>` level, or bo
 
 #### Tag Node Value **required**
 
- This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or "Ernest Murrow Theater, Chicago". This is not intended to be
- programmatically parsed and is for display only. For a programmatic designation of the location, use the geo URI or OSM IDs, below.
+This is meant for podcast apps to display the name of the location that the podcast is about. Examples might be "Houses of Parliament", "Gitmo Nation" or "Ernest Murrow Theater, Chicago". This is not intended to be programmatically parsed and is for display only. For a programmatic designation of the location, use the geo URI or OSM IDs, below.
 
- This value is a maximum of 128 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in `en` should
-read "Eiffel Tower, Paris" and not "La Tour d'Eiffel".
-
-<br>
+This value is a maximum of 128 characters. It may describe a real or fictional place. It should be in the same language as the podcast, as indicated in the <language> RSS tag: so a podcast in `en` should read "Eiffel Tower, Paris" and not "La Tour d'Eiffel".
 
 #### `geo` **recommended**
 
@@ -76,27 +72,27 @@ Data within these attributes must relate to a real place. This tag must not be u
 
 #### `osm` **recommended**
 
- From an [OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap) query. If a value is given for `osm` it must contain both 'type' and 'id'.
+From an [OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap) query. If a value is given for `osm` it must contain both 'type' and 'id'.
 
  - osm type: A one-character description of the type of OSM point. Valid is "N" (node); "W" (way); "R" (relation).
  - osm id: The ID of the OpenStreetMap feature that is described.
+ - osm revision: an _optional_ revision ID for an OSM object, preceded by a hash.
 
- This may describe part of a building, a building or business, a suburb, city, state, or country - anything within the OSM database, using the OpenStreetMap API or a local copy of the data. This is the field
-that is the best programmatic representation of the place being described. The data within OpenStreetMap is rich and can be used for detailed searches.
+This may describe part of a building, a building or business, a suburb, city, state, or country - anything within the OSM database, using the OpenStreetMap API or a local copy of the data. This is the field that is the best programmatic representation of the place being described. The data within OpenStreetMap is rich and can be used for detailed searches.
 
- Examples:
+Examples:
 
  - The United States of America: [R148838](https://nominatim.openstreetmap.org/ui/details.html?osmtype=R&osmid=148838)
  - The Eiffel Tower in Paris: [W5013364](https://nominatim.openstreetmap.org/ui/details.html?osmtype=W&osmid=5013364)
+ - Paris, but - optionally - the revision made on 8 Jan 2021: [R7444#188](https://www.openstreetmap.org/relation/7444/history)
 
-The `osm` is recommended to be used alongside a `geo` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent point. Exceptions are podcasts from or about fictional places. Data within these tags must relate to a real place.
+The `osm` is recommended to be used with a `geo` attribute. Since OSM IDs are not guaranteed to be permanent (perhaps it's the ID of a building which is later demolished), the geo URI serves as a permanent point. Data within these tags must relate to a real place.
 
 If a developer uses the `osm` tag, the canonical latlon is the one returned by OSM. It is intended that the `geo` attribute is used for simple display within a podcast app without any API usage: but for more advanced uses, like a geographic search, developers will ingest the full details from OpenStreetMap. The geo URI also offers a useful fallback should the `osmid` be removed.
 
- _Caution: our definition of `osm` is what OpenStreetMap calls "OSM type and OSM id". It must start with an alphabetical representation of the type, then the numerical ID. Do not use place_id, which is visible in
-API calls - these are unique to each mirror of the OSM data._
+The revision number for the edit is a special case that allows for more permanent links, with the drawback that these are not fully supported by Nominatim and require a full OSM database complete with changesets. It is recommended to simply link to the object in OSM normally, without a revision number, and some data consumers may not support the revision number.
 
-<br>
+ _Caution: Do not use place_id, which is visible in API calls - these are unique to each mirror of the OSM data. You'll be wanting osm_id instead._
 
 ### UX Suggestion for Podcast Hosting Platforms
 
