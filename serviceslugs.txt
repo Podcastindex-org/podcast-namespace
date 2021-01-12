@@ -26,6 +26,7 @@ podcastaddict
 podcastindex
 podcasts.com
 podchaser
+podcloud
 podfriend
 podiant
 podigee
