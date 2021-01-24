@@ -193,6 +193,9 @@ full implementation details.
 <br>
 
 
+
+### <u>Phase 3 (Open)</u>
+
 - **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
    Channel
@@ -219,9 +222,6 @@ full implementation details.
    The maximum recommended string length of the node value is 128 characters.
 
 <br>
-
-
-### <u>Phase 3 (Open)</u>
 
 - **\<podcast:category>**[category Name]**\</podcast:category>**
 
