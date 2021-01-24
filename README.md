@@ -176,6 +176,8 @@ full implementation details.
 
    All attributes are optional.
 
+   The node value number is required.
+
 <br>
 
 
@@ -189,6 +191,8 @@ full implementation details.
    between two other episodes.  In this scenario, the number would help with proper chronological sorting, while the `display` attribute could specify an alternate number(like `display="100a"`) to display for the episode in a podcast player app GUI.
 
    All attributes are optional.
+
+   The node value number is required.
 
 <br>
 
