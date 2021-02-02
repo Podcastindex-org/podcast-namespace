@@ -16,7 +16,7 @@
             <title>Podcast Feed Template</title>
             <link>https://example.com/show</link>
         </image>
-
+        
         <podcast:locked owner="podcastowner@example.com">yes</podcast:locked>
         <podcast:funding url="https://example.com/donate">Support the show!</podcast:funding>
 
