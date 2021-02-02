@@ -16,11 +16,11 @@
             <title>Podcast Feed Template</title>
             <link>https://example.com/show</link>
         </image>
-        
+
         <podcast:locked owner="podcastowner@example.com">yes</podcast:locked>
         <podcast:funding url="https://example.com/donate">Support the show!</podcast:funding>
 
-        <podcast:location name="Austin, TX" geo="geo:30.2672,97.7431" osmid="R113314" />
+        <podcast:location geo="geo:30.2672,97.7431" osm="R113314">Austin, TX</podcast:location>
 
         <itunes:author>John Doe</itunes:author>
         <itunes:explicit>no</itunes:explicit>
@@ -29,28 +29,10 @@
         <itunes:category text="Technology"/>
 
         <itunes:image>https://example.com/images/pci_avatar-massive.jpg</itunes:image>
-        <podcast:images srcset="https://example.com/images/pci_avatar-massive.jpg 1500w,
-                                        https://example.com/images/pci_avatar-middle.jpg 600w,
-                                        https://example.com/images/pci_avatar-small.jpg 300w,
-                                        https://example.com/images/pci_avatar-tiny.jpg 150w" />
 
         <podcast:category>News</podcast:category>
         <podcast:category>Commentary</podcast:category>
         <podcast:category>Technology</podcast:category>
-
-        <podcast:contact type="feedback" method="link">https://example.com/feedback</podcast:contact>
-        <podcast:contact type="advertising" method="email">adbuy@example.com</podcast:contact>
-        <podcast:contact type="abuse" method="email">abuse@example.com</podcast:contact>
-
-        <podcast:social platform="twitter" href="https://twitter.com/PodcastindexOrg">@examplepodcast</podcast:social>
-        <podcast:social platform="mastodon" href="https://podcastindex.social/">@examplepodcast@podcastindex.social</podcast:social>
-
-        <podcast:previousUrl>https://yeoldhostingprovider.com/podcast479923</podcast:previousUrl>
-        <podcast:previousUrl>https://myveryfirstpodcasthost.com/show251.xml</podcast:previousUrl>
-
-        <podcast:id platform="podcastindex" id="920666" />
-        <podcast:id platform="apple" id="23409402344" url="https://podcasts.apple.com/us/shows/id23409402344" />
-        <podcast:alternateEnclosure type="video/mp4" length="11540076" bitrate="512" title="Trailer">https://example.com/pc20trailer.mp4</podcast:alternateEnclosure>
 
         <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
             <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="99" />
@@ -75,11 +57,10 @@
             <podcast:chapters url="https://example.com/ep3_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="33.833" duration="60.0" />
             <podcast:transcript url="https://example.com/ep3/transcript.txt" type="text/plain" />
-            <podcast:person name="Adam Curry" href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="http://example.com/images/adamcurry.jpg" />
-            <podcast:person role="guest" name="Dave Jones" href="https://github.com/daveajones/" img="http://example.com/images/davejones.jpg" />
+            <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+            <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+            <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
             <enclosure url="https://mp3s.nashownotes.com/PC20-17-2020-12-25-Final.mp3" length="76606111" type="audio/mpeg"/>
-            <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://example.com/podcast/audio/ep0003-low.mp3</podcast:alternateEnclosure>
-            <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://example.com/podcast/audio/ep0003-high.mp3</podcast:alternateEnclosure>
         </item>
 
         <item>
@@ -100,11 +81,10 @@
             <podcast:chapters url="https://example.com/ep2_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="45.4" duration="56.0" />
             <podcast:transcript url="https://example.com/ep2/transcript.txt" type="text/plain" />
-            <podcast:person name="Adam Curry" href="https://en.wikipedia.org/wiki/Adam_Curry" img="http://example.com/images/adamcurry.jpg" />
-            <podcast:person role="guest" name="Dave Jones" href="https://example.com/blog/daveajones/" img="http://example.com/images/davejones.jpg" />
+            <podcast:person href="https://en.wikipedia.org/wiki/Adam_Curry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+            <podcast:person role="guest" href="https://example.com/blog/daveajones/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+            <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/marcusbrown">Marcus Brown</podcast:person>
             <enclosure url="https://mp3s.nashownotes.com/PC20-16-2020-12-18-Final.mp3" length="67080717" type="audio/mpeg"/>
-            <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://example.com/podcast/audio/ep0002-low.mp3</podcast:alternateEnclosure>
-            <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://example.com/podcast/audio/ep0002-high.mp3</podcast:alternateEnclosure>
         </item>
 
         <item>
@@ -125,11 +105,10 @@
             <podcast:chapters url="https://example.com/ep1_chapters.json" type="application/json"/>
             <podcast:soundbite startTime="29.32" duration="34.0" />
             <podcast:transcript url="https://example.com/ep1/transcript.txt" type="text/plain" />
-            <podcast:person name="Adam Curry" href="https://curry.com" img="http://example.com/images/adamcurry.jpg" />
-            <podcast:person role="guest" name="Dave Jones" href="https://www.imdb.com/name/nm0427852888/" img="http://example.com/images/davejones.jpg" />
+            <podcast:person href="https://curry.com" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+            <podcast:person role="guest" href="https://www.imdb.com/name/nm0427852888/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+            <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/jebickmorton">Jebick Morton</podcast:person>
             <enclosure url="https://mp3s.nashownotes.com/PC20-15-2020-12-11-Final.mp3" length="71234813" type="audio/mpeg"/>
-            <podcast:alternateEnclosure type="audio/x-m4a" length="1540076" bitrate="80" title="Audio - low bitrate">https://example.com/podcast/audio/ep0001-low.mp3</podcast:alternateEnclosure>
-            <podcast:alternateEnclosure type="audio/mpeg" length="2534548" bitrate="160" title="Audio - high bitrate">https://example.com/podcast/audio/ep0001-high.mp3</podcast:alternateEnclosure>
         </item>
     </channel>
 </rss>
