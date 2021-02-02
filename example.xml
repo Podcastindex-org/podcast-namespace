@@ -30,10 +30,6 @@
 
         <itunes:image>https://example.com/images/pci_avatar-massive.jpg</itunes:image>
 
-        <podcast:category>News</podcast:category>
-        <podcast:category>Commentary</podcast:category>
-        <podcast:category>Technology</podcast:category>
-
         <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
             <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="99" />
             <podcast:valueRecipient name="hosting company" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="1" />
