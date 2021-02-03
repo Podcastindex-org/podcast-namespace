@@ -50,3 +50,6 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [Podverse](https://twitter.com/Podverse/status/1326072379597053953?s=20)
 3. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 4. [Castopod](https://podlibre.org/castopod-supports-soundbite-tag/)
+
+## Location `<podcast:location>`
+1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
