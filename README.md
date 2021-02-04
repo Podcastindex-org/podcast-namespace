@@ -124,7 +124,7 @@ full implementation details.
 <br><br>
 
 
-### <u>Phase 2 (Close on 1/31/21)</u>
+### <u>Phase 2 (Closed on 1/31/21)</u>
 
 - **\<podcast:person>** <br>
 - **\<podcast:location>** <br>
