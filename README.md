@@ -121,10 +121,12 @@ full implementation details.
 - **\<podcast:chapters>** <br>
 - **\<podcast:soundbite>** <br>
 
-<br><br>
-
-
 ### <u>Phase 2 (Closed on 1/31/21)</u>
+
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
+full implementation details.
 
 - **\<podcast:person>** <br>
 - **\<podcast:location>** <br>
