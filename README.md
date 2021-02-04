@@ -126,76 +126,12 @@ full implementation details.
 
 ### <u>Phase 2 (Open)</u>
 
-- **\<podcast:person (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]")>**[name of person]**\</podcast:person>** (finalized)
+- **\<podcast:person>** <br>
+- **\<podcast:location>** <br>
+- **\<podcast:season>** <br>
+- **\<podcast:episode>** <br>
 
-   Channel or Item (optional | multiple)
-
-   This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
-   and groups that are listed in the [Podcast Taxonomy Project](https://podcasttaxonomy.com/).
-
-   - Tag Value (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
-   - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
-   - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.  Please see the [example feed](example.xml) for possible choices of what to use here.
-
-   The maximum recommended string length of each attribute value, and the tag's node value is 128 characters.
-
-   The `role` and `group` tags are case-insensitive.  So, "Host" is the same as "host".
-
-   The full taxonomy list is [here](taxonomy.json) as a json file.
-
-<br>
-
-
-- **\<podcast:location (geo="[geoURI]") (osm="[OSM type][OSM id](#OSM revision)")>**[humanly readable place name]**\</podcast:location>** (finalized)
-
-   Channel or Item (optional | multiple)
-
-   This tag is intended to describe the location of editorial focus for a podcast's content - i.e. "what place is this podcast about?"
-
-   The tag has many use cases and is one of the more complex ones.  You are **highly encouraged** to read the full [implementation document](location/location.md) before starting to code for it.
-
-   - Tag Value (required) This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way.
-   - `geo` (recommended) This is a latitude and longitude given in "geo" notation (i.e. "geoURI:30.2672,97.7431").
-   - `osm` (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")
-
-   The maximum recommended string length of each attribute value, and the tag's node value is 128 characters.
-
-<br>
-
-
-- **\<podcast:season (name="[name of season]")>**[(int)]**\</podcast:season>** (finalized)
-
-   Item
-
-   (optional | single)
-
-   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a name associate with it, such as `name="Race for the White House 2020"`.  The element's value is an integer
-   identifying the season number.
-
-   All attributes are optional.
-
-   The node value number is required.
-
-<br>
-
-
-- **\<podcast:episode (display="[episode number to show]")>**[(decimal)]**\</podcast:episode>**
-
-   Item
-
-   (optional | single)
-
-   This element exists largely for compatibility with the `season` tag.  But, it also allows for a similar naming idea.  The episode numbers are decimal, so numbering such as `100.5` is acceptable if there was a special mini-episode published
-   between two other episodes.  In this scenario, the number would help with proper chronological sorting, while the `display` attribute could specify an alternate number(like `display="100a"`) to display for the episode in a podcast player app GUI.
-
-   All attributes are optional.
-
-   The node value number is required.
-
-<br>
-
+<br><br>
 
 
 ### <u>Phase 3 (Open)</u>
