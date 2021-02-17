@@ -155,7 +155,7 @@ The following tags should be considered purely as proposals.  They should not be
 
     - `url` (optional) This is a url that points to the full license details for this license.
 
-    Example: <podcast:license url="https://creativecommons.org/licenses/by-nc/2.0">cc-by-nc2.0</podcast:license>
+    Example: <podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
 
 <br>
 
