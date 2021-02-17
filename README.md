@@ -144,6 +144,21 @@ The following tags should be considered purely as proposals.  They should not be
 
 <br>
 
+- **<podcast:license url="[https://urlofdetailledlicense]">**[license slug]**\</podcast:license>**
+
+    Channel or Item
+
+    (optional | single)
+
+    This element defines the license that is applied to the audio content of the episode or the audio of the podcast as a whole.  The node value
+    should be a reference to a slug defined in the license slug file.
+
+    - `url` (optional) This is a url that points to the full license details for this license.
+
+    Example: <podcast:license url="https://creativecommons.org/licenses/by-nc/2.0">cc-by-nc2.0</podcast:license>
+
+<br>
+
 - **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
 
    Channel
