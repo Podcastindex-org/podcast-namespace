@@ -427,6 +427,22 @@
     {
       "id": 107,
       "name": "Reviews"
+    },
+    {
+      "id": 108,
+      "name": "Climate"
+    },
+    {
+      "id": 109,
+      "name": "Weather"
+    },
+    {
+      "id": 110,
+      "name": "Tabletop"
+    },
+    {
+      "id": 111,
+      "name": "Role-Playing"
     }
   ]
 }
