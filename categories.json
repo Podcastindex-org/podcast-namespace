@@ -443,6 +443,10 @@
     {
       "id": 111,
       "name": "Role-Playing"
+    },
+    {
+      "id": 112,
+      "name": "Cryptocurrency"
     }
   ]
 }
