@@ -33,6 +33,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [PodServe.fm](https://www.podserve.fm)
 8. [Castopod](https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
+10. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -44,6 +45,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [Podcastindex](https://podcastindex.org)
 8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
+10. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
