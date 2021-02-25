@@ -289,29 +289,13 @@ The following tags should be considered purely as proposals.  They should not be
 
 <br>
 
-- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of bitcoin(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
+- **\<podcast:value>**[one or more "valueRecipient" elements]**\</podcast:value>**
 
-   Channel
-   
-   (optional | single)
+   Details for this tag are now located in dedicated documentation [here](value/value.md).
 
-   This element defines the payment "model".  One or more `<podcast:valueRecipient>` tags must be contained within this element to instruct where to send the payments
-   within this defined model.
+- **\<podcast:valueRecipient />**
 
-   - `type` (required) What type of system will be receiving the payments. Currently only "lightning" is supported.
-   - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
-   - `suggested` (required) The amount to send per minute of episode play time, defined in bitcoin (float, 0.00000005000 is 5sat/min).
-
-- **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
-
-   Channel
-
-   (required | multiple)
-
-   - `name` (optional) A friendly name to identify the receipient.
-   - `type` (required) The type of destination this is.  Currently, only "node" is supported.
-   - `address` (required) The address of the digital wallet or node that will receive payments.
-   - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
+   Details for this tag are now located in dedicated documentation [here](value/value.md).
 
 
 <br><br>
