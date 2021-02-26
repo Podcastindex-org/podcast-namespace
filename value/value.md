@@ -271,12 +271,12 @@ For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
  - `split`: \<the number of shares\>
 
 If the receiving Lightning node, or service, requires a custom record or meta-data of some sort to be passed along with the payment
-the `customRecordKey` and `customRecordValue` can be utilized as follows:
+the `customKey` and `customValue` can be utilized as follows:
 
  - `type`: "node"
  - `method`: "keysend"
- - `customRecordKey`: \<key name\>
- - `customRecordValue`: \<value\>
+ - `customKey`: \<key name\>
+ - `customValue`: \<value\>
  - `address`: \<the destination node's pubkey\>
  - `split`: \<the number of shares\>
 
