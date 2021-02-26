@@ -330,3 +330,8 @@ representing the platform, directory, host, app or service. The slugs will look 
 - overcast
 
 More should be added by the community as needed.  This is just a starter list.  The full list is [here](serviceslugs.txt).
+
+
+## Badges and Media
+
+![Podcast Namespace](images/podcastindex-namespace-final.svg)
