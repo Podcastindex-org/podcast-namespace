@@ -1,4 +1,4 @@
-# The "podcast:value" standard
+# The "podcast:value" Specification
 
 <small>Version 1.3 by Dave Jones - 2021.02.25</small>
 
