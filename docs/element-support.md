@@ -56,6 +56,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Location `<podcast:location>`
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
 2. [Castopod](https://podlibre.org/castopod-supports-the-location-tag/)
+3. [Podfriend](https://twitter.com/adamcurry/status/1357003546709938181)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
+2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
