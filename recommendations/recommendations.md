@@ -53,7 +53,7 @@ The "recommendation" object takes this basic form:
 ```
 {
 	"type": "page",
-    "title": "History of podcasting",
+    	"title": "History of podcasting",
 	"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 	"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 }
@@ -87,7 +87,7 @@ Here is what a very basic recommendations file may look like:
 	[
 		{
 			"type": "page",
-		    "title": "History of podcasting",
+		    	"title": "History of podcasting",
 			"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 		},
@@ -131,7 +131,7 @@ Here is what a very basic recommendations file may look like:
 			"displayStartTime": 120.0,
 			"displayDuration": 60.0,
 			"type": "page",
-		    "title": "History of podcasting",
+		    	"title": "History of podcasting",
 			"img": "https://en.wikipedia.org/wiki/Podcast#/media/File:Podcasts_(iOS).svg",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 		},
