@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Podcasting is a tremendous ecosytem brimming with tons of stories and ideas that go freely from any platform to any application.  
+Podcasting is a tremendous ecosystem brimming with tons of stories and ideas that go freely from any platform to any application.  
 That comes with a huge drawback: finding and being found can be harsh.  
 Podcasts creators struggle to be found while podcasts listeners struggle to find content.  
 Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they are slowly creating closed silos and removing power from content creators.  
