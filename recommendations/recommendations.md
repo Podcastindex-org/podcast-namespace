@@ -26,7 +26,7 @@ GO PODCASTING!!!
 
    The recommended content can be a web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast or listen to an episode.
 
-   There may be several occurence of this tag for the same element (one per language, one per theme, one per provider…)
+   There may be several occurences of this tag for the same element (one per language, one per theme, one per provider…)
 
    - `url` (required): This is the url to the json file.
    - `type` (required): Mime type, must be json.
