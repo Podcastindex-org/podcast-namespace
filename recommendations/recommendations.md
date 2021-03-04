@@ -82,8 +82,8 @@ Here is what a very basic recommendations file may look like:
 
 ```
 {
-    "version": "1.0.0",
-    "recommendations":
+	"version": "1.0.0",
+	"recommendations":
 	[
 		{
 			"type": "page",
@@ -124,8 +124,8 @@ Here is what a very basic recommendations file may look like:
 
 ```
 {
-    "version": "1.0.0",
-    "recommendations":
+	"version": "1.0.0",
+	"recommendations":
 	[
 		{
 			"displayStartTime": 120.0,
