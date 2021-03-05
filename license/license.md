@@ -23,7 +23,7 @@ We have seen in the past Podcasters demanding to have their podcast removed from
 If we can provide a way to make what is allowed and what is forbiden crystal clear, we will avoid such conflicts.
 
 Please note that this document is about what can be done after the podcast is published, not before.  
-(For instance, using copyrighted music on copyrighted material in a podcast is not the subject here.)  
+(For instance, using copyrighted music or copyrighted material in a podcast is not the subject here.)  
 You may read [PODCASTING LEGAL GUIDE: RULES FOR THE REVOLUTION](https://wiki.creativecommons.org/wiki/Podcasting_Legal_Guide) for more information.
 
 This matter is very complex so this specification only intends to scratch its surface in its current version.
