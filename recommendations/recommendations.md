@@ -8,10 +8,10 @@
 
 Podcasting is a tremendous ecosystem brimming with tons of stories and ideas that go freely from any platform to any application.  
 That comes with a huge drawback: finding and being found can be harsh.  
-Podcasts creators struggle to be found while podcasts listeners struggle to find content.  
+Podcast creators struggle to be found while podcast listeners struggle to find content.  
 Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they are slowly creating closed silos and removing power from content creators.  
 This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to all players.  
-It was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapter and soundbite tags. May they be thanked for it.  
+It was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapters and soundbite tags. May they be thanked for it.  
 GO PODCASTING!!!
 
 ## Specification
@@ -54,7 +54,7 @@ The "recommendation" object takes this basic form:
 {
 	"type": "page",
     	"title": "History of podcasting",
-	"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 	"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 }
 ```
@@ -63,7 +63,7 @@ There are 4 required attributes:
 
  - `type` (required - string) The type of this recommended content (*"page"*, *"podcast"*, *"episode"* or *"soundbite"*).
  - `title` (required - string) The title for this recommended content.
- - `img` (required - string) The image URL for this recommended content. Image should have a 1×1 square ratio.
+ - `image` (required - string) The image URL for this recommended content. Image should have a 1×1 square ratio.
  - `url` (required - string) The URL for this recommended content. If recommended content type is *"podcast"* this is the home page of the podcast. If recommended content type is *"episode"* or *"soundbite"* this is the enclosure URL. 
 
 #### Optional Attributes:
@@ -74,7 +74,7 @@ There are 4 required attributes:
  - `guid` (optional - string) The GUID of this recommended content. Applies to *"episode"* and *"soundbite"* types only.
  - `startTime` (optional - float) The start time (in seconds) of this recommended content. Applies to *"soundbite"* type only.
  - `duration` (optional - float) The duration (in seconds) of this recommended content. Applies to *"soundbite"* type only.
- 
+ - `relevance`  (optional - float) The relevance of this recommended content regarding this Channel or Item. Number must be in [0…1]. 0 is for irrelevant content, 1 is for contents that match perfectly.
 
 ## Basic example
 
@@ -88,20 +88,20 @@ Here is what a very basic recommendations file may look like:
 		{
 			"type": "page",
 		    	"title": "History of podcasting",
-			"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 		},
 		{
 			"type": "podcast",
 			"title": "Podcasting 2.0",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://podcastindex.org/podcast/920666",
 			"rss": "http://mp3s.nashownotes.com/pc20rss.xml"
 		},
 		{
 			"type": "episode",
 			"title": "Episode 26: Manning Battlestations",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
 			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026"
@@ -109,7 +109,7 @@ Here is what a very basic recommendations file may look like:
 		{
 			"type": "soundbite",
 			"title": "GO PODCASTING!!!",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
 			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026",
@@ -128,43 +128,47 @@ Here is what a very basic recommendations file may look like:
 	"recommendations":
 	[
 		{
-			"displayStartTime": 120.0,
-			"displayDuration": 60.0,
+			"displayStartTime": 0.0,
+			"displayDuration": 120.0,
 			"type": "page",
 		    	"title": "History of podcasting",
-			"img": "https://en.wikipedia.org/wiki/Podcast#/media/File:Podcasts_(iOS).svg",
-			"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
+			"image": "https://en.wikipedia.org/wiki/Podcast#/media/File:Podcasts_(iOS).svg",
+			"url": "https://en.wikipedia.org/wiki/History_of_podcasting",
+			"relevance": 0.8
 		},
 		{
-			"displayStartTime": 120.0,
+			"displayStartTime": 120.50,
 			"displayDuration": 60.0,
 			"type": "podcast",
 			"title": "Podcasting 2.0",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://podcastindex.org/podcast/920666",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml"
+			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"relevance": 0.7
 		},
 		{
-			"displayStartTime": 120.0,
-			"displayDuration": 60.0,
+			"displayStartTime": 240.60,
+			"displayDuration": 180.0,
 			"type": "episode",
 			"title": "Episode 26: Manning Battlestations",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
 			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
-			"guid": "PC2026"
+			"guid": "PC2026",
+			"relevance": 0.5
 		},
 		{
-			"displayStartTime": 120.0,
+			"displayStartTime": 3600.10,
 			"displayDuration": 60.0,
 			"type": "soundbite",
 			"title": "GO PODCASTING!!!",
-			"img": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
+			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
 			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026",
 			"startTime": 4737.0,
-			"duration": 5.0
+			"duration": 5.0,
+			"relevance": 0.9
 		}
 	]
 }
