@@ -86,6 +86,8 @@ Here is what a very basic recommendations file may look like:
 ```
 {
 	"version": "1.0",
+	"title": "Podnews podcasting news",
+	"rss": "https://podnews.net/rss",
 	"recommendations":
 	[
 		{
