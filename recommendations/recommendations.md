@@ -24,7 +24,7 @@ GO PODCASTING!!!
 
    This element allows a podcaster to specify a list of recommended content for a podcast or an episode.
 
-   The recommended content can be a web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast or listen to an episode.
+   The recommended content can be a web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist,…
 
    There may be several occurences of this tag for the same element (one per language, one per topic, one per provider…)
 
