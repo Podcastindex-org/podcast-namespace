@@ -124,7 +124,7 @@ Here is what a very basic recommendations file may look like:
 
 ```
 {
-	"version": "1.0.0",
+	"version": "1.0",
 	"recommendations":
 	[
 		{
