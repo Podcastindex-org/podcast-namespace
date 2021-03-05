@@ -12,8 +12,8 @@ But how can one know what is permitted? It is often difficult - or even impossib
 This situation creates akward conflicts where everyone acts in good faith, everyone share the same goal (growing audiences for podcasts) but everyone disagree on what is acceptable.
 
 - Can the podcast be locally copied? Then can the copy be shared? Should it be fetched from the original location only?
-- Can the podcast be shared for free?
-- Can the podcast be shared for a fixed fee? For a subscription fee?
+- Can the podcast be shared/played for free?
+- Can the podcast be shared/played for a fixed fee? For a subscription fee?
 - Can the podcast be used to display ads on it?
 - Can it be used for audio insertion? Pre-roll, mid-roll, post-roll?
 - Can it be trimmed, cut, edited? Translated? Dubbed?
