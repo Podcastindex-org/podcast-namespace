@@ -63,7 +63,7 @@ There are 4 required attributes:
 
  - `type` (required - string) The type of this recommended content (*"page"*, *"podcast"*, *"episode"* or *"soundbite"*).
  - `title` (required - string) The title for this recommended content.
- - `image` (required - string) The image URL for this recommended content. Image should have a 1:1 ratio (square).
+ - `image` (required - string) The image URL for this recommended content. Image must have a 1:1 ratio (square).
  - `url` (required - string) The URL for this recommended content. If recommended content type is *"podcast"* this is the home page of the podcast. If recommended content type is *"episode"* or *"soundbite"* this is the enclosure URL. 
 
 #### Optional Attributes:
