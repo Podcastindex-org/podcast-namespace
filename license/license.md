@@ -19,7 +19,7 @@ This situation creates akward conflicts where everyone acts in good faith, every
 - Can it be trimmed, cut, edited? Translated? Dubbed?
 - Can the shownotes be trimmed, cut, edited? Converted from HTML to plain text?
 
-We have seen in the past Podcasters asking to have their podcast removed from a platform because they felt they were being stolen, even if that would mean less audience for them.  
+We have seen in the past Podcasters demanding to have their podcast removed from a platform because they felt they were being stolen, even if that would mean less audience for them.  
 If we can provide a way to make what is allowed and what is forbiden crystal clear, we will avoid such conflicts.
 
 Please note that this document is about what can be done after the podcast is published, not before.  
