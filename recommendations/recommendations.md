@@ -10,8 +10,8 @@ Podcasting is a tremendous ecosystem brimming with tons of stories and ideas tha
 That comes with a huge drawback: finding and being found can be harsh.  
 Podcasts creators struggle to be found while podcasts listeners struggle to find content.  
 Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they are slowly creating closed silos and removing power from content creators.  
-This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to small players.  
-It was heavily inspired by all the work previously done by the PodcastIndex Team on the chapter and soundbite tags. May they be thanked for it.  
+This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to all players.  
+It was heavily inspired by all the work previously done by the fellowship of the PodcastIndex on the chapter and soundbite tags. May they be thanked for it.  
 GO PODCASTING!!!
 
 ## Specification
