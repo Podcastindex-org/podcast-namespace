@@ -43,8 +43,19 @@ The recommendations object is a simple JSON object with 2 required properties:
 
 #### Optional Attributes:
 
- - `comment` (optional - string) A comment on this file.
+ - `author` (optional - string) The name of the author of this podcast episode.
+ - `title` (optional - string) The title of this podcast episode.
+ - `podcastName` (optional - string) The name of the podcast this episode belongs to.
+ - `description` (optional - string) A description of this episode.
+ - `fileName` (optional - string) The name of the audio file these chapters apply to.
 
+#### Optional Attributes:
+
+ - `comment` (optional - string) A comment on this file.
+ - `podcastName` (optional - string) The name of the source podcast.
+ - `rss` (optional - string) The RSS URL of the source podcast. Applies to both Channel and Item.
+ - `guid` (optional - string) The GUID of the source episode. Applies to Item only.
+ - `url` (required - string) The enclosure URL of the source episode. Applies to Item only.
 
 ## "Recommendation" Objects
 
