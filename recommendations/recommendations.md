@@ -137,7 +137,7 @@ Here is what a very basic recommendations file may look like:
 			"displayDuration": 120.0,
 			"type": "page",
 		    	"title": "History of podcasting",
-			"image": "https://en.wikipedia.org/wiki/Podcast#/media/File:Podcasts_(iOS).svg",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting",
 			"relevance": 0.8
 		},
