@@ -30,7 +30,7 @@ This matter is very complex so this specification only intends to scratch its su
 
 ## Specification
 
-- **\<podcast:license  url="[url to license]" />**
+- **\<podcast:license label="[license label]" url="[url to license]" />**
 
     Channel (optional | single)
 
