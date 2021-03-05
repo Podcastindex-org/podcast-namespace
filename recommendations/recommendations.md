@@ -11,7 +11,7 @@ That comes with a huge drawback: finding and being found can be harsh.
 Podcasts creators struggle to be found while podcasts listeners struggle to find content.  
 Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they are slowly creating closed silos and removing power from content creators.  
 This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to all players.  
-It was heavily inspired by all the work previously done by the fellowship of the PodcastIndex on the chapter and soundbite tags. May they be thanked for it.  
+It was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapter and soundbite tags. May they be thanked for it.  
 GO PODCASTING!!!
 
 ## Specification
@@ -176,4 +176,4 @@ When pulling in web based data there is the chance that this functionality could
 As a safeguard against that, apps should:
 
 - Block all cookies.
-- Allow users to ignore `displayStartTime` and `displayDuration` if they want to (which would display all recommendations from beginning to end).
+- Allow users to ignore `displayStartTime` and `displayDuration` if they want to (which would display all recommendations at the same time, from beginning to end).
