@@ -9,7 +9,7 @@
 Podcasting is an open ecosystem where information travel freely from platform to platform, but that does not mean that podcast are free.  
 The fact that podcast files are available for anyone to download does not mean that anyone is allowed to do anything with them.  
 But how can one know what is permitted? It is often difficult - or even impossible - to know, even more if you want to manage that automatically.  
-This situation creates akward conflicts where everyone acts in good faith, everyone share the same goal (growing audiences for podcasts) but everyone disagree one what is acceptable.
+This situation creates akward conflicts where everyone acts in good faith, everyone share the same goal (growing audiences for podcasts) but everyone disagree on what is acceptable.
 
 - Can the podcast be locally copied? Then can the copy be shared? Should it be fetched from the original location only?
 - Can the podcast be shared for free?
