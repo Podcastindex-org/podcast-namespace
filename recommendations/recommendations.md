@@ -188,4 +188,4 @@ As a safeguard against that, apps should:
 
 - Block all cookies.
 - Allow users to ignore `displayStartTime` and `displayDuration` if they want to.
-- Fetch all recommendations at the same time disregarding `displayStartTime` so that this cannot be used as a way of measuring who listens what.
+- Fetch all recommendations at the same time disregarding `displayStartTime` so that HTTP requests cannot be used as a way of measuring who listens to what.
