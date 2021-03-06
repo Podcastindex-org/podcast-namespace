@@ -46,6 +46,6 @@ This matter is very complex so this specification only intends to scratch its su
    - `<podcast:licence url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
  
    
-   
+   Discussion here: https://github.com/Podcastindex-org/podcast-namespace/issues/177
    
    
