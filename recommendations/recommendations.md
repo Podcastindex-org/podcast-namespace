@@ -187,4 +187,5 @@ When pulling in web based data there is the chance that this functionality could
 As a safeguard against that, apps should:
 
 - Block all cookies.
-- Allow users to ignore `displayStartTime` and `displayDuration` if they want to (which would display all recommendations at the same time, from beginning to end).
+- Allow users to ignore `displayStartTime` and `displayDuration` if they want to.
+- Fetch all recommendations at the same time disregarding `displayStartTime` so that this cannot be used as a way of measuring who listens what.
