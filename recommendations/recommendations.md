@@ -16,7 +16,7 @@ GO PODCASTING!!!
 
 ## Specification
 
-- **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />**[Optionnal comments]**\<podcast:recommendations>**
+- **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />**[Optionnal comments]**\</podcast:recommendations>**
 
     Channel (optional | multiple)
 
