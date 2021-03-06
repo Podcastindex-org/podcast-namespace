@@ -16,7 +16,7 @@ GO PODCASTING!!!
 
 ## Specification
 
-- **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />**
+- **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />[Optionnal comments]<podcast:recommendations>**
 
     Channel (optional | multiple)
 
@@ -32,7 +32,9 @@ GO PODCASTING!!!
    - `type` (required): Mime type, must be json.
    - `language` (optional): The language of the recommended episodes (two-letter language codes, with some possible modifiers, such as "en-us"). If there is no language attribute given, the linked file is assumed to be the same language that is specified by the RSS \<language> element. 
 
-   Example:`<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en" />`
+   Examples:
+   - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />`
+   - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>`
 
 ## "Recommendations" Object
 
