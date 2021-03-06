@@ -30,7 +30,7 @@ This matter is very complex so this specification only intends to scratch its su
 
 ## Specification
 
-- **\<podcast:license label="[license label]" url="[url to license]" />**
+- **\<podcast:license label="[license label]" url="[url to license]" />[License Label]</podcast:license>**
 
     Channel (optional | single)
 
@@ -38,13 +38,12 @@ This matter is very complex so this specification only intends to scratch its su
 
    This element allows a podcaster to specify a license for a podcast or an episode.
 
-   - `label` (required): The license label
    - `url` (required): This is the url to the license file.
 
    Examples:
-   - `<podcast:licence label="(CC BY-ND 4.0)" url="http://creativecommons.org/licenses/by-nd/4.0/" />`
-   - `<podcast:licence label="(CC BY-NC-ND 4.0)" url="http://creativecommons.org/licenses/by-nc-nd/4.0/" />`
-   - `<podcast:licence label="© My Company 2021 - All Rights Reserved" url="http://domain.tld/license.txt" />`
+   - `<podcast:licence url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
+   - `<podcast:licence url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
+   - `<podcast:licence url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
  
    
    
