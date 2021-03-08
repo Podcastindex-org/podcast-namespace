@@ -262,11 +262,12 @@ For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
  - `method` (required): "keysend"
- - `suggested` (optional): An integer representing millisatoshis.
+ - `suggested` (optional): An integer representing millisatoshis per minute. *note this is inconsitent with the example, example should be 15000 if this is followed     - brianoflondon*
 
 For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
 
  - `type`: "node"
+ - `name`: \<Human readable recipient description\>
  - `address`: \<the destination node's pubkey\>
  - `split`: \<the number of shares\>
 
@@ -315,4 +316,69 @@ a single share (effectively 1%) donation to Podcastindex.org.
         split="1"
     />
 </podcast:value>
+```
+
+#### Hive
+
+[Hive](https://hive.io/) is a social media focused blockchain with numerous [Distributed Apps](https://hive.io/eco) (*dapps*) and and two inbuilt native tokens: [Hive](https://www.coingecko.com/en/coins/hive) and [HBD](https://www.coingecko.com/en/coins/hive_dollar) (Hive Blockchain Dollars). HBD is loosely pegged to the USD. Hive can handle very large volumes of payment transactions.
+
+For the `<podcast:value>` tag, the following attributes MUST be used:
+
+ - `type` (required): "HBD" or "Hive"
+ - `method` (required): "Hive"
+ - `suggested` (optional): A float representing a suggested amount in the `type` currency per minute.
+
+For the `<podcast:valueRecipient>` tag, the following attributes can be used:
+
+ - `valueRole` (required): see list below
+ - `address` (required): \<recipient's Hive account name (3-16 chars)\>
+ - `shares` (required): \<integer number of shares\>
+ - `name` (optional): \<Human readable recipient description\>
+ - `split` (optional): \<float pre calculated % splits\>
+
+The proposed list for the `valueRole` tag is as follows:
+```
+['Host','Co-Host','Guest','Producer','Other','Gateway','App','Index']
+```
+The first 5 are descriptive and must be matched with a Hive `address`. `Gateway`,`App` and `Index` are special in that they do not ***need*** to be given with a Hive `address`. If the `address` is left blank (for example `shares` giving a 5% `split` with `valueRole` = `App`, 5% of any payment will be allocated to the listening App at run time.)
+
+<br>
+
+#### Example
+
+This example shows four recipients, 3 are identified and one (the `App`) will be assigned during processing. The total `shares` add up to 105 so the `split` values are programatically calculated and add up to 100%. They are not necessary.
+```
+<podcast@value type="HBD" method="Hive" suggested="0.05">
+	<podcast@valueRecipient
+        valueRole="Host"
+        name="Brian of London (Host)"
+        address="brianoflondon"
+        shares="95"
+        split="90.47619047619048">
+    </podcast@valueRecipient>
+
+	<podcast@valueRecipient
+        valueRole="App"
+        name="App"
+        address=""
+        shares="5"
+        split="4.761904761904762">
+    </podcast@valueRecipient>
+
+    <podcast@valueRecipient
+        valueRole="Gateway"
+        name="Value 4 Value (Gateway)"
+        address="v4vapp"
+        shares="3"
+        split="2.857142857142857">
+    </podcast@valueRecipient>
+
+    <podcast@valueRecipient
+        valueRole="Index"
+        name="Podcast Index (Index)"
+        address="podcastindex"
+        shares="2"
+        split="1.9047619047619049">
+    </podcast@valueRecipient>
+</podcast@value>
 ```
