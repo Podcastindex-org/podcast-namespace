@@ -52,7 +52,25 @@ The namespace gives you (and your listeners) access to many new features:
 
 ## Step 2. Be Web App Friendly
 
-Next, you need to confirm that your feed does not use "mixed content".  That means that all of the parts of your podcast (the feed, images, audio files)
+Next, you need to confirm that your feed does not have "mixed content", and that it supports CORS where necessary.  Again, if you use a hosting company for your podcast
+just [make sure](https://podcastindex.org/apps) they are supporting Podcasting 2.0 features.  If your host isn't on that list, send them a message and let them know you
+want these new features.
+
+If you self-host your podcast, take note of these two things...
+
+#### Mixed Content
+
+"Mixed content" is what happens when part of your podcast (like your feed) is served securely and other parts of it (like the images or the audio) are not.  When this
+happens, web-based podcast players cannot play your content or see your images.  Modern web browsers are very strict about security and "mixed content" is blocked by
+most of them.  Make sure your entire podcast is served over HTTPS with a valid certificate.
+
+#### CORS
+
+Another problem that can hamper your content under certain circumstances (like embedded pages in chapters) is CORS.  If you serve content along with your podcast that
+requires cross-origin access, please be sure to enable the correct CORS policies on the domain the content is served from.  You can find details
+[here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+
+Web-based podcast apps, PWA's (Progressive Web Apps) and Browser Extension based apps are critical to Podcasting 2.0, so the above changes are very important.
 
 <br><br>
 
