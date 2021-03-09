@@ -6,7 +6,7 @@
 Podcasting 2.0 is a set of forward looking ideas combined with the technology to realize them.  It's a vision for what the podcast listener experience can and should
 be.  That experience has stagnated for over a decade, with almost all of the improvements coming in isolated sections of the ecosystem.  There hasn't been a single,
 unified vision from the podcasting community acting together with one voice.  So, we've ended up with fragments of innovation across the podcasting landscape with no
-central driving goal in mind.  Podcasting 2.0 is the expression of that goal.
+central driving goal in mind.  Podcasting 2.0 is the expression of what that goal could be.
 
 Stated eloquently, the aim of Podcasting 2.0 is this:
 
