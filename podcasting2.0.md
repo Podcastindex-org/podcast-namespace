@@ -24,6 +24,7 @@ There are three parts to Podcasting 2.0:
 2. Web app friendliness
 3. Value for Value
 
+<br><br>
 
 ## Step 1. Adopt the "podcast" Namespace
 
@@ -47,11 +48,13 @@ The namespace gives you (and your listeners) access to many new features:
              discoverable on the web.
  - Named Seasons: Seasons have been around for a while, but now you can name them.  This way you can avoid the hassle of trying to cram everything in your show title.
 
+<br><br>
 
 ## Step 2. Be Web App Friendly
 
 Next, you need to confirm that your feed does not use "mixed content".  That means that all of the parts of your podcast (the feed, images, audio files)
 
+<br><br>
 
 ## Step 3. Value for Value
 
