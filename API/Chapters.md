@@ -1,0 +1,91 @@
+# The Chapters API Specification
+
+<small>Version 1.0 by Benjamin Bellamy - 2021.03.11</small>
+
+<br>
+
+## Purpose
+The PodcastIndex namespace allows all podcast platforms (hosting, index, players…) to speak the same language and interact together.  
+These interactions are limited to communications through the RSS feeds.  
+This document describes a new type of interaction between actors who use a same PodcastIndex namespace tag: [Podcast:Chapters](https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md).  
+It was initiated by [David Norman](https://podcastindex.social/@hypercatcher) for [Hypercatcher](https://hypercatcher.com/) and [Benjamin Bellamy](https://podcastindex.social/@benjaminbellamy) for [Castopod](https://castopod.org/) so that HyperCatcher and Castopod are able to interact together and create a seamless experience for podcasters.  
+
+To help making things clear, let's take an example:
+A podcaster, we'll call her Eve, is hosting a podcast on Castopod. She is using HyperCatcher to manage the chapters.
+
+### Before using Chapter API
+Whenever Eve wants to publish a new episode, she has to:
+- Go to her Castopod admin panel, save the episode, then publish it so that it is visible in the RSS feed.
+- Go to her HyperCatcher dashboard, click "Edit", click "Fetch Episodes" so that HyperCatcher gets this new episode.
+- Click on the newly fetched episode, copy the "Url for Json".
+- Go back to Castopod admin panel, edit the episode, paste the previously copied "Url for Json" into the appropriate field, hoping that no platform had fetched the RSS in the meantime, before it was pasted.
+
+Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.
+
+### After using Chapter API
+Whenever Eve wants to publish a new episode, she has to:
+- Go to her Castopod admin panel, save the episode. (Castopod will automatically call the Chapter API at Hypercatcher, send the new episode and get from HyperCatcher the public "URL for Json" and the private URL to the episode in the HyperCatcher dashboard.)
+- That's it.
+
+Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.  
+Because Castopod knows the private URL to the episode in the HyperCatcher dashboard, a link from the episode edit page in Castopod to the episode in HyperCatcher will be displayed.  
+And we think that this is pretty cool.
+
+## Technical Specification
+
+This version is a first draft. It will be updated.
+
+This API uses REST.
+
+It involves 2 parties:
+- a poscast hosting service
+- a chapter provider service
+
+### Endpoints
+This API has only one endpoint (so far), hosted at the Chapter provider.
+
+#### AddNewEpisode
+- `POST /AddNewEpisode`
+This adds a new Episode to the chapter provider.  
+The endpoint URL may be defined by the chapter provider. The podcast hosting service must provide a way to specify this endpoint URL as a parameter.  
+
+Parameters:
+- `rss`: RSS feed URL
+- `guid`: New Episode GUID
+- `enclosure_url`: New episode enclosure url
+
+Response:
+- `status`: true or false
+- `jsonUrl`: Url for Json
+- `episodeUrl`: Url for episode on dashboard
+
+### Authentication
+The chapter provider will provide a couple `apiKey` and `apiSecret` which will be displayed on the user dashboard.  
+Fields:
+- `User-Agent`: Mandatory  
+Please identify the system/product you are using to make this request.  
+Example: Castopod/1.0
+- `X-Auth-Key`: Mandatory  
+Your API key string  
+Example: UXKCGDSYGUUEVQJSYDZH
+- `X-Auth-Date`: Mandatory  
+The current unix epoch time as a string. 5 minute window.  
+This value is an integer; round down if needed. The value shall not include a decimal point.  
+Example: 1613713388
+- `Authorization`: Mandatory  
+A SHA-1 hash of the X-Auth-Key, the corresponding secret and the X-Auth-Date value concatenated as a string. The resulting hash should be encoded as a hexadecimal value, two digits per byte, using lower case letters for the hex digits "a" through "f".  
+Example: UXKCGDSYGUUEVQJSYDZH  
+The Authorization header is computed with something like this (pseudo-code):
+```
+authHeader = sha1(apiKey+apiSecret+unixTime)
+```
+
+
+
+
+
+
+
+
+
+
