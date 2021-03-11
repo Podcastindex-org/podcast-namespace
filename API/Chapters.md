@@ -80,3 +80,7 @@ The Authorization header is computed with something like this (pseudo-code):
 ```
 authHeader = sha1(apiKey+apiSecret+unixTime)
 ```
+
+Discussion here:
+- https://github.com/Podcastindex-org/podcast-namespace/issues/209
+- https://podcastindex.social/web/statuses/105872943999299482
