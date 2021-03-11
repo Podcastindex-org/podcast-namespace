@@ -262,12 +262,11 @@ For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
  - `method` (required): "keysend"
- - `suggested` (optional): An integer representing millisatoshis per minute. *note this is inconsitent with the example, example should be 15000 if this is followed     - brianoflondon*
+ - `suggested` (optional): An integer representing millisatoshis per minute.
 
 For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
 
  - `type`: "node"
- - `name`: \<Human readable recipient description\>
  - `address`: \<the destination node's pubkey\>
  - `split`: \<the number of shares\>
 
