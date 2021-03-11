@@ -76,4 +76,10 @@ Web-based podcast apps, PWA's (Progressive Web Apps) and Browser Extension based
 
 ## Step 3. Value for Value
 
-The final step is monetizing your content with cryptocurrency.
+The final step is monetizing your content with cryptocurrency.  This allows your content to be truly free from the pressures of advertising.  Advertising serves a necessary role in any free market, but it does come with a cost.  That cost is censorship - whether it's direct censorship by the advertisers themselves or self-censorship as you restrict your speech as to not offend the advertisers.
+
+Because of this, there is now a way to get cryptocurrency payments directly from your listeners to you using the new `<podcast:value>` tag in your feed.  It is not currently supported by any podcast hosting companies, but you can start using it in your feed today to show up on apps that support it like Sphinx.chat and podStation.
+
+If you can't add the `<podcast:value>` tag to your feed manually, we also have created [a site](https://podcasterwallet.com) that can help you put a value tag directly into the Podcast Index database for your feed.  Any apps that use the Podcast Index will see your value tag and be able to stream micropayments to you.
+
+The `<podcast:value>` tag is still early and experimental.  But, it does work today.  There are more details about it in the [whitepaper]() here.
