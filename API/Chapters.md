@@ -47,7 +47,7 @@ This API has only one endpoint (so far), hosted at the Chapters Provider.
 #### AddNewEpisode
 - `POST /AddNewEpisode`
 This adds a new Episode to the chapter provider.  
-The endpoint URL may be defined by the chapter provider. The Podcast Hosting service must provide a way to specify this endpoint URL as a parameter.  
+The endpoint URL may be defined by the chapter provider. The Podcast Hosting service must provide a way to specify this endpoint URL on its configuration panel.  
 
 Parameters:
 - `rss`: RSS feed URL
