@@ -33,7 +33,7 @@ And we think that this is pretty cool.
 
 ## Technical Specification
 
-This version is a first draft. It will be updated.
+This version is a first draft. It will be updated. It may move somewhere else.
 
 This API uses REST.
 
