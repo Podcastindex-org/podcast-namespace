@@ -1,4 +1,4 @@
-# The Chapters API Specification
+# The podcast:chapters API Specification
 
 <small>Version 1.0 by Benjamin Bellamy - 2021.03.11</small>
 
@@ -13,7 +13,7 @@ It was initiated by [David Norman](https://podcastindex.social/@hypercatcher) fo
 To help making things clear, let's take an example:
 A podcaster, we'll call her Eve, is hosting a podcast on Castopod. She is using HyperCatcher to manage the chapters.
 
-### Without the Chapters API
+### Without the podcast:chapters API
 Whenever Eve wants to publish a new episode, she has to:
 - Go to her Castopod admin panel, save the episode, then publish it so that it is visible in the RSS feed.
 - Go to her HyperCatcher dashboard, click "Edit", click "Fetch Episodes" so that HyperCatcher gets this new episode.
@@ -22,7 +22,7 @@ Whenever Eve wants to publish a new episode, she has to:
 
 Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.
 
-### With the Chapters API
+### With the podcast:chapters API
 Whenever Eve wants to publish a new episode, she has to:
 - Go to her Castopod admin panel, save the episode. (Castopod will automatically call the Chapter API at Hypercatcher, send the new episode and get from HyperCatcher the public "URL for Json" and the private URL to the episode in the HyperCatcher dashboard.)
 - That's it.
