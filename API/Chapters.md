@@ -3,6 +3,7 @@
 <small>Version 1.0 by Benjamin Bellamy - 2021.03.11</small>
 
 <br>
+This version is a first draft. It will be updated. It may move somewhere else.
 
 ## Purpose
 The PodcastIndex namespace allows all podcast platforms (hosting, index, players…) to speak the same language and interact together.  
@@ -32,9 +33,6 @@ Because Castopod knows the private URL to the episode in the HyperCatcher dashbo
 And we think that this is pretty cool.
 
 ## Technical Specification
-
-This version is a first draft. It will be updated. It may move somewhere else.
-
 This API uses REST.
 
 It involves 2 parties:
