@@ -22,7 +22,7 @@ Whenever Eve wants to publish a new episode, she has to:
 - Go to her Castopod admin panel, save the episode, then publish it so that it is visible in the RSS feed.
 - Go to her HyperCatcher dashboard, click "Edit", click "Fetch Episodes" so that HyperCatcher gets this new episode.
 - Click on the newly fetched episode, copy the "Url for Json".
-- Go back to Castopod admin panel, edit the episode, paste the previously copied "Url for Json" into the appropriate field, hoping that no platform had fetched the RSS in the meantime, before it was pasted.
+- Go back to Castopod admin panel, edit the episode, paste the previously copied "Url for Json" into the appropriate field, hoping that no platform had fetched the RSS in the meantime, before the chapter Url was pasted.
 
 Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.
 
