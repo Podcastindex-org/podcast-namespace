@@ -11,7 +11,8 @@ These interactions are limited to communications through the RSS feeds.
 This document describes a new type of interaction between actors who use a same PodcastIndex namespace tag: [Podcast:Chapters](https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md).  
 It was initiated by [David Norman](https://podcastindex.social/@hypercatcher) for [Hypercatcher](https://hypercatcher.com/) and [Benjamin Bellamy](https://podcastindex.social/@benjaminbellamy) for [Castopod](https://castopod.org/) so that HyperCatcher and Castopod are able to interact together and create a seamless experience for podcasters.
 
-We hope this will open a path to more collaborations between platforms which use the PodcastIndex namespace.
+We hope this will open a path to more collaborations between platforms which use the PodcastIndex namespace.  
+(The podcast:transcript API is probably the next to specify…)
 
 ## Example
 To help making things clear, let's take an example:
