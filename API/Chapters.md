@@ -28,7 +28,7 @@ Later, Eve will wait for users to edit chapters, she will go back to HyperCatche
 
 ### With the podcast:chapters API
 Whenever Eve wants to publish a new episode, she has to:
-- Go to her Castopod admin panel, save the episode. (Castopod will automatically call the Chapter API at Hypercatcher, send the new episode and get from HyperCatcher the public "URL for Json" and the private URL to the episode in the HyperCatcher dashboard.)
+- Go to her Castopod admin panel, save the episode. (Castopod will automatically call the Chapter API at Hypercatcher, send the new episode and get from HyperCatcher the public "URL for Json" and insert it automatically in the RSS feed, get the private URL to the episode in the HyperCatcher dashboard and display the link on Castopod Dashboard.)
 - That's it.
 
 Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.  
