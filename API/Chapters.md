@@ -36,16 +36,16 @@ And we think that this is pretty cool.
 This API uses REST.
 
 It involves 2 parties:
-- a poscast hosting service
-- a chapter provider service
+- a Poscast Hosting service.
+- a Chapters Provider service.
 
 ### Endpoints
-This API has only one endpoint (so far), hosted at the Chapter provider.
+This API has only one endpoint (so far), hosted at the Chapters Provider.
 
 #### AddNewEpisode
 - `POST /AddNewEpisode`
 This adds a new Episode to the chapter provider.  
-The endpoint URL may be defined by the chapter provider. The podcast hosting service must provide a way to specify this endpoint URL as a parameter.  
+The endpoint URL may be defined by the chapter provider. The Podcast Hosting service must provide a way to specify this endpoint URL as a parameter.  
 
 Parameters:
 - `rss`: RSS feed URL
@@ -58,7 +58,8 @@ Response:
 - `episodeUrl`: Url for episode on dashboard
 
 ### Authentication
-The chapter provider will provide a couple `apiKey` and `apiSecret` which will be displayed on the user dashboard.  
+Thir API will use the mechanism already used by the [PodcastIndex.org API](https://podcastindex-org.github.io/docs-api/#auth).  
+The Chapters Provider will provide a couple `apiKey` and `apiSecret` which will be displayed on the user dashboard.  
 Fields:
 - `User-Agent`: Mandatory  
 Please identify the system/product you are using to make this request.  
