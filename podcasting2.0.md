@@ -82,5 +82,4 @@ Because of these issues, we've created a way to receive cryptocurrency payments 
 
 If you can't add the `<podcast:value>` tag to your feed manually, we also have created [a site](https://podcasterwallet.com) that can help you put a value tag directly into the Podcast Index database for your feed.  Any apps that use the Podcast Index will see your value tag and be able to stream micropayments to you.
 
-The `<podcast:value>` tag is still early and experimental.  But, it does work today.  There are more details about it in this [blog post]
-(https://blog.podcastindex.org/html/AnotherWay-lJmNWj9T490hdmPmz5M4GV1Tlw6rDF.html) the [whitepaper](value/value.md). And, the Podcasting 2.0 community is always willing to lend you a hand and some advice on the [podcastindex.social](https://podcastindex.social) discussion server.
+The `<podcast:value>` tag is still early and experimental.  But, it does work today.  There are more details about it in this [blog post](https://blog.podcastindex.org/html/AnotherWay-lJmNWj9T490hdmPmz5M4GV1Tlw6rDF.html), and in the official [whitepaper](value/value.md). The Podcasting 2.0 community is also always willing to lend you a hand and some advice on the [podcastindex.social](https://podcastindex.social) discussion server.
