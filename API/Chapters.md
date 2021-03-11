@@ -59,7 +59,7 @@ Response:
 
 ### Authentication
 Thir API will use the mechanism already used by the [PodcastIndex.org API](https://podcastindex-org.github.io/docs-api/#auth).  
-The Chapters Provider will provide a couple `apiKey` and `apiSecret` which will be displayed on the user dashboard so that the podcaster can copy them and paste them on his Podcast Hosting configuration panel.  
+The Chapters Provider will provide a couple `apiKey` and `apiSecret` which will be displayed on the user dashboard so that the podcaster can copy and paste them on his Podcast Hosting configuration panel.  
 Fields:
 - `User-Agent`: Mandatory  
 Please identify the system/product you are using to make this request.  
@@ -78,13 +78,3 @@ The Authorization header is computed with something like this (pseudo-code):
 ```
 authHeader = sha1(apiKey+apiSecret+unixTime)
 ```
-
-
-
-
-
-
-
-
-
-
