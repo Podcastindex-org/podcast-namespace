@@ -29,8 +29,7 @@ Whenever Eve wants to publish a new episode, she has to:
 - That's it.
 
 Later, Eve will wait for users to edit chapters, she will go back to HyperCatcher dashboard, Accept (or not) the community chapters.  
-Because Castopod knows the private URL to the episode in the HyperCatcher dashboard, a link from the episode edit page in Castopod to the episode in HyperCatcher will be displayed.  
-And we think that this is pretty cool.
+Because Castopod knows the private URL to the episode in the HyperCatcher dashboard, a link from the episode edit page in Castopod to the episode in HyperCatcher will be displayed. And we think that this is pretty cool.
 
 ## Technical Specification
 This API uses REST.
