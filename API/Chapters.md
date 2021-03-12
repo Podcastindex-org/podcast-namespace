@@ -14,6 +14,10 @@ It was initiated by [David Norman](https://podcastindex.social/@hypercatcher) fo
 We hope this will open a path to more collaborations between platforms which use the PodcastIndex namespace.  
 (The podcast:transcript API is probably the next to be specified…)
 
+Note that the purpose of this specification is **not** to define “**how**” to manage the chapter service but “**who**” manages the chapter service, so that **any** podcaster is able to choose **any** provider among the ones able to provide the chapter service.  
+Then that provider is free to use IPFS, centralised https or whatever makes sense to him — and to his users.
+This spec is **not** an extension of the [Podcast:Chapters](https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md) tag, it sits next to it.
+
 ## Example
 To help making things clear, let's take an example:
 A podcaster, we'll call her Eve, is hosting a podcast on Castopod. She is using HyperCatcher to manage the chapters.
