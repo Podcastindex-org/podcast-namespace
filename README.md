@@ -192,11 +192,39 @@ Example with Season Linkage:
 <podcast:season name="Race for the Whitehouse">4</podcast:trailer>
 ```
 
+<br>
+
+### **\<podcast:license>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
+
+<br>
+
+<b>
+
+```
+<podcast:license
+ url="[https://urlofdetailledlicense]"
+>
+[license slug]
+</podcast:license>
+```
+
+</b>
+
+Channel or Item
+
+(optional | single)
+
+This element defines the license that is applied to the audio/video content of the episode or the audio/video of the podcast as a whole.  The node value
+should be a reference to a slug defined in the [license slugs](licenseslugs.txt) file.
+
+- `url` (optional) This is a url that points to the full license details for this license.
+
+Example: <podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
 
 <br><br>
 
 
-## Current Proposals
+## Other Proposals
 
 A list of the current proposed tags can be found in the issues section [here](https://github.com/Podcastindex-org/podcast-namespace/labels/proposal).
 
