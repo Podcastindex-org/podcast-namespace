@@ -123,7 +123,7 @@ full implementation details.
 - **\<podcast:chapters>** <br>
 - **\<podcast:soundbite>** <br>
 
-<br><br><hr>
+<br>
 
 ### <u>Phase 2 (Closed on 1/31/21)</u>
 
@@ -137,7 +137,7 @@ full implementation details.
 - **\<podcast:season>** <br>
 - **\<podcast:episode>** <br>
 
-<br><br><hr>
+<br>
 
 
 ### <u>Phase 3 (Open - Closes 6/1/21)</u>
