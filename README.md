@@ -144,7 +144,7 @@ full implementation details.
 
 The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
 
-<br>
+<br><hr><br>
 
 ### **\<podcast:trailer>**
 
