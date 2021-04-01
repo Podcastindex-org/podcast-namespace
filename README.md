@@ -251,7 +251,8 @@ Channel or Item
 This element allows a podcaster (or third party, with podcater permission) to specify a list of recommended content for a podcast or an episode. The recommended content can be a
 web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist, etc.
 
-This is a complex tag.  The full documentation is [here]().  Please read that document to understand and comment on this proposal.
+This is a complex tag.  The full documentation is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/recommendations/recommendations.md).  Please
+read that document to understand and comment on this proposal.
 
 Example:
 ```
