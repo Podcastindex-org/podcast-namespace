@@ -146,7 +146,7 @@ The following tags should be considered purely as work in progress proposals.  T
 
 <br>
 
-### **\<podcast:trailer>** - <small>[Discuss](/issues/84)</small>
+### **\<podcast:trailer>** - <small>[Discuss](issues/84)</small>
 
 <br>
 
@@ -198,7 +198,7 @@ Example with Season Linkage:
 
 ## Current Proposals
 
-A list of the current proposed tags can be found in the issues section [here](/labels/proposal).
+A list of the current proposed tags can be found in the issues section [here](labels/proposal).
 
 <br><br>
 
