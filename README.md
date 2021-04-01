@@ -146,6 +146,8 @@ The following tags should be considered purely as work in progress proposals.  T
 
 <br>
 
+## \<podcast:trailer>
+
 <b>
 
 ```
@@ -176,12 +178,16 @@ This element is used to define the location of an audio or video file to be used
 
 Example:
 ```
-<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
+<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST"
+url="https://example.org/trailers/teaser" length="12345678"
+type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
 ```
 
 Example with Season Linkage:
 ```
-<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/season4teaser" length="12345678" type="video/mp4" season="4">Season 4: Race for the Whitehouse</podcast:trailer>
+<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST"
+url="https://example.org/trailers/season4teaser" length="12345678"
+type="video/mp4" season="4">Season 4: Race for the Whitehouse</podcast:trailer>
 
 (combined with)
 
