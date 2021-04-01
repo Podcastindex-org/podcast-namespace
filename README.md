@@ -204,7 +204,7 @@ Example with Season Linkage:
 <podcast:license
  url="[https://urlofdetailledlicense]"
 >
-[license slug]
+[license slug(string)]
 </podcast:license>
 ```
 
@@ -219,7 +219,50 @@ should be a reference to a slug defined in the [license slugs](licenseslugs.txt)
 
 - `url` (optional) This is a url that points to the full license details for this license.
 
-Example: <podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
+Example:
+```
+<podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
+```
+
+<br>
+
+### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
+
+<br>
+
+<b>
+
+```
+<podcast:recommendations
+ url="[url to json file(string)]"
+ type="application/json"
+ language="[language code(string)]"
+>
+[optional comments(string)]
+</podcast:recommendations>
+```
+
+</b>
+
+Channel or Item
+
+(optional | multiple)
+
+This element allows a podcaster (or third party, with podcater permission) to specify a list of recommended content for a podcast or an episode. The recommended content can be a
+web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist, etc.
+
+This is a complex tag.  The full documentation is [here]().  Please read that document to understand and comment on this proposal.
+
+Example:
+```
+<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />
+```
+
+Example:
+```
+<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>
+```
+
 
 <br><br>
 
