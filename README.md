@@ -200,6 +200,7 @@ Example with Season Linkage:
 
 A list of the current proposed tags can be found in the issues section [here](/labels/proposal).
 
+<br><br>
 
 
 ## Verification for Importing and Transferring
