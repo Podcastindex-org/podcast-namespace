@@ -144,7 +144,7 @@ full implementation details.
 
 The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
 
-<br><hr><br>
+<br>
 
 ### **\<podcast:trailer>**
 
@@ -178,12 +178,7 @@ This element is used to define the location of an audio or video file to be used
 - `type` (recommended) The mime type of the file.
 - `season` (optional) If this attribute is present it specifies that this trailer is for a particular season number.
 
-Example:
-```
-<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST"
-url="https://example.org/trailers/teaser" length="12345678"
-type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
-```
+Example: `<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3">Coming April 1st, 2021</podcast:trailer>`
 
 Example with Season Linkage:
 ```
