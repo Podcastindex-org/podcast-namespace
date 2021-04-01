@@ -146,7 +146,7 @@ The following tags should be considered purely as work in progress proposals.  T
 
 <br>
 
-### **\<podcast:trailer>**
+### **\<podcast:trailer>** - Discussion [here](/issues/84).
 
 <br>
 
