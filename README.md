@@ -286,7 +286,7 @@ contacted and subsequently changes the value of the element to "no".
 
 ## IDs
 
-Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
+There can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
 representing the platform, directory, host, app or service. The slugs will look like this:
 
 - blubrry
