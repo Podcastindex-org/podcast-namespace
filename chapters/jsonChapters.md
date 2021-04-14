@@ -4,7 +4,7 @@ This is the initial spec for a json chapters format that can be referenced in an
 the "podcast" namespace.  This file can reside on any publicly accessible url.  See the podcast namespace documentation for
 details on the format of the tag.
 
-This type of file should be served with a Content-type of 'application/audio-chapters+json'.  Chapter order is assumed to be
+This type of file should be served with a Content-type of 'application/json+chapters'.  Chapter order is assumed to be
 in ascending order based on the `startTime`.
 
 <br>

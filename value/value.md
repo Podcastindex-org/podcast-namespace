@@ -141,6 +141,7 @@ There is no limit on how many `valueRecipient` elements can be present in a give
     customKey="[optional key to pass(mixed)]"
     customValue="[optional value to pass(mixed)]"
     split="[share count(int)]"
+    fee=[true|false]
 />
 ```
 
@@ -154,6 +155,7 @@ There is no limit on how many `valueRecipient` elements can be present in a give
  - `type` (required) A slug that represents the type of receiving address that will receive the payment.
  - `address` (required) This denotes the receiving address of the payee.
  - `split` (required) The number of shares of the payment this recipient will receive.
+ - `fee` (optional) If this attribute is not specified, it is assumed to be false.
 
 <br>
 
@@ -173,6 +175,10 @@ the underlying currency being used.
 The `split` attribute denotes an amount of "shares" of the total payment that the recipient will receive when each timed payment is made.
 When a single `<podcast:valueRecipient>` is present, it should be assumed that the `split` for that recipient is 100%, and the "split" should
 be ignored.  When multiple recipients are present, a share calculation (see below) should be made to determine how much to send to each recipient's address.
+
+The `fee` attribute tells apps whether this split should be treated as a "fee", or a normal split.  If this attribute is true, then this split should be calculated
+as a fee, meaning it's percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
+providers such as apps, hosting companies, API's and third-party value add providers to add their fee to a value block.
 
 <br><br>
 
@@ -287,7 +293,7 @@ the `customKey` and `customValue` can be utilized as follows:
 
 This is a live, working example of a Lightning keysend value block in production.  It designates four recipients for payment - two
 podcast hosts at 49 and 46 shares respectively, a producer working on per episode chapter creation who gets a 5 share, and
-a single share (effectively 1%) donation to Podcastindex.org.
+a single share (effectively 1%) fee to the Podcastindex.org API.
 
 ```
 <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
