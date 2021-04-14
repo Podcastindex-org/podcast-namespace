@@ -35,6 +35,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 8. [Castopod](https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 10. [PodcastGuru](https://twitter.com/podcastguru_app/status/1351911108886589448)
+11. [Hypercatcher](https://hypercatcher.com)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
