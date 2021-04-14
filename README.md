@@ -264,6 +264,90 @@ Example:
 <podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>
 ```
 
+<br>
+
+### **\<podcast:alternateEnclosure>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
+<br>
+
+<b>
+
+```
+<podcast:alternateEnclosure
+ type="[mime type]"
+ length="[(int)]"
+ bitrate="[(float)]"
+ height="[(int)]"
+ lang="[(string)]"
+ rel="[(string)]"
+ codecs="[(string)]"
+ default="[(boolean)]"
+ >
+[one or more <podcast:source> elements]
+</podcast:alternateEnclosure>
+```
+
+</b>
+
+Item
+
+(optional | multiple)
+
+This element defines a media file. One or more <podcast:source> tags must be contained within this element to list available methods to obtain the file. This is meant to provide different
+versions of a media file -- such as low or high bitrate, alternate formats (different codecs or video), alternate URI schemes (IPFS or live streaming), or alternate download types not
+indicated by the URI and type (like torrents).
+
+This is a complex tag.  The full documentation is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/alternateEnclosure/alternateEnclosure.md).  Please
+read that document to understand and comment on this proposal.
+
+Example:
+```
+<enclosure url="https://best-podcast.com/file-0.mp3" length="43200000" type="audio/mpeg" />
+
+<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true">
+    <podcast:source uri="https://best-podcast.com/file-0.mp3" />
+    <podcast:source uri="ipfs://someRandomMpegFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000">
+    <podcast:source uri="https://best-podcast.com/file-high.opus" />
+    <podcast:source uri="ipfs://someRandomHighBitrateOpusFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000">
+    <podcast:source uri="https://best-podcast.com/file-proprietary.aac" />
+    <podcast:source uri="ipfs://someRandomProprietaryAACFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000">
+    <podcast:source uri="https://best-podcast.com/file-low.opus" />
+    <podcast:source uri="ipfs://someRandomLowBitrateOpusFile" />
+</podcast:alternateEnclosure>
+```
+
+Example:
+```
+<podcast:alternateEnclosure type="audio/mpeg" length="2490970" bitrate="160707.74">
+    <podcast:source uri="https://best-podcast.com/file-0.mp3" />
+    <podcast:source uri="ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y" />
+    <podcast:source uri="https://best-podcast.com/file-0.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somerandom.onion/file-0.mp3" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="video/mp4" length="10562995" bitrate="681483.55" height="1080">
+    <podcast:source uri="https://best-podcast.com/file-1080.mp4" />
+    <podcast:source uri="ipfs://QmfQKJcp2xdByEt8mzWr1AJUhwvb9rdWPoacvdq2roDhgh" />
+    <podcast:source uri="https://best-podcast.com/file-1080.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somrandom.onion/file-1080.mp4" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720">
+    <podcast:source uri="https://best-podcast.com/file-720.mp4" />
+    <podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" />
+    <podcast:source uri="https://best-podcast.com/file-720.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somrandom.onion/file-720.mp4" />
+</podcast:alternateEnclosure>
+```
+
 
 <br><br>
 
