@@ -262,7 +262,8 @@ For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
  - `method` (required): "keysend"
- - `suggested` (optional): An integer representing millisatoshis.
+ - `suggested` (optional): A float representing a BTC amount.
+        e.g. 0.00000005000 is 5 Sats.
 
 For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
 
@@ -313,6 +314,7 @@ a single share (effectively 1%) donation to Podcastindex.org.
         type="node"
         address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
         split="1"
+        fee="true"
     />
 </podcast:value>
 ```
