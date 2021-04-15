@@ -26,6 +26,7 @@ The chapters object is a simple JSON object with only 2 required properties:
  - `podcastName` (optional - string) The name of the podcast this episode belongs to.
  - `description` (optional - string) A description of this episode.
  - `fileName` (optional - string) The name of the audio file these chapters apply to.
+ - `waypoints` (optional - boolean) If this property is present, the locations in a chapter object should be displayed with a route between locations.
 
 <br>
 
