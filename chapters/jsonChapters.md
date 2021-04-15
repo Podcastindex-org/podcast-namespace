@@ -1,4 +1,5 @@
-## JSON Chapters Format (v1.2.0)
+## JSON Chapters Format
+<small>Version 1.2 - Updated on 2021.04.15</small>
 
 
 This is the initial spec for a json chapters format that can be referenced in an RSS feed using the `<podcast:chapters>` tag of
