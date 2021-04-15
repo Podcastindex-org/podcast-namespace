@@ -1,4 +1,5 @@
-## JSON Chapters Format (v1.1.0)
+## JSON Chapters Format (v1.2.0)
+
 
 This is the initial spec for a json chapters format that can be referenced in an RSS feed using the `<podcast:chapters>` tag of
 the "podcast" namespace.  This file can reside on any publicly accessible url.  See the podcast namespace documentation for
@@ -26,7 +27,7 @@ The chapters object is a simple JSON object with only 2 required properties:
 
 <br>
 
-## "Chapter" Objects
+## The "Chapter" Object
 
 The "chapter" object takes this basic form:
 
@@ -41,6 +42,8 @@ There is only one required attribute:
 
  - `startTime` (required - float) The starting time of the chapter, expressed in seconds with float precision for fractions of a second.
 
+<br>
+
 #### Optional Attributes:
 
  - `title` (optional - string) The title of this chapter.
@@ -48,6 +51,32 @@ There is only one required attribute:
  - `url` (optional - string) The url of a web page or supporting document that's related to the topic of this chapter.
  - `toc` (optional - boolean) If this property is present and set to false, this chapter should not display visibly to the user in either the table of contents or as a jump-to point in the user interface.  It should be considered a "silent" chapter marker for the purpose of meta-data only.  If this property is set to `true` or not present at all, this should be considered a normal chapter for display to the user.  The name "toc" is short for "table of contents".
  - `endTime` (optional - float) The end time of the chapter, expressed in seconds with float precision for fractions of a second.
+ - `location` (optional - object) This object defines an optional location that is tied to this chapter.  It follows the structure of the [location](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) tag in the XML namespace.
+
+<br>
+
+## The Location Object:
+
+The "location" object takes this basic form:
+
+```
+{
+    "name": "Eiffel Tower, Paris",
+    "geo": "geo:48.858093,2.294694"
+}
+```
+
+It is intended to provide for rich location-based experiences tied to a point of time within a podcast episode, or other feed based media.  For example, a "walking tour" may include latitude and longitude waypoints along side the image within chapters markers as someone listens to the tour podcast.  This
+would allow apps to show a map with markers within the UI as the tour progresses.  Or, perhaps a "History of the Middle East" podcast might expose a map to highlight where certain landmarks are when being discussed.
+
+There are two required attributes:
+
+ - `name` (required - string) A human readable place name.
+ - `geo` (required - string) A simple latitude,longitude given in geoURI format, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+
+#### Optional Attributes:
+
+ - `osm` (optional - string) An OpenStreetMaps query string.  Please see the [location](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) XML tag specification for full details.
 
 <br>
 
@@ -148,7 +177,11 @@ chapter list, but allows for different artwork to be shown:
         {
             "startTime": 4826,
             "img": "https://example.com/images/bostonharbor.jpg",
-            "toc": false
+            "toc": false,
+            "location": {
+                "name": "Eiffel Tower, Paris",
+                "geo": "geo:42.3417649,-70.9661596"
+            }
         },
         {
             "startTime": 5510,
