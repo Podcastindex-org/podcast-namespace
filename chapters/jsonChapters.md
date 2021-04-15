@@ -1,7 +1,7 @@
 ## JSON Chapters Format
 <small>Version 1.2 - Updated on 2021.04.15</small>
 
-<br>
+<br><br>
 
 This is the initial spec for a json chapters format that can be referenced in an RSS feed using the `<podcast:chapters>` tag of
 the "podcast" namespace.  This file can reside on any publicly accessible url.  See the podcast namespace documentation for
