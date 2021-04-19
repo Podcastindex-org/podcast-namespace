@@ -65,7 +65,7 @@ Currently, there can be only a single copy of this element at each level.
 <br>
 
 #### Structure:
-```
+```xml
 <podcast:value
     type="[cryptocurrency or layer(string)]"
     method="[payment transport(string)]"
@@ -107,7 +107,7 @@ exists at the `<item>` level, it is intended to override the channel level tag f
 
 #### Example:
 
-```
+```xml
 <podcast:value
     type="lightning"
     method="keysend"
@@ -133,7 +133,7 @@ There is no limit on how many `valueRecipient` elements can be present in a give
 
 #### Structure:
 
-```
+```xml
 <podcast:valueRecipient
     name="[name of recipient(string)]"
     type="[address type(string)]"
@@ -192,7 +192,7 @@ The interval payment calculation is:
 
 To calculate payouts, let's take the following value block as an example:
 
-```
+```xml
 <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
     <podcast:valueRecipient
         name="Host"
@@ -294,7 +294,7 @@ This is a live, working example of a Lightning keysend value block in production
 podcast hosts at 49 and 46 shares respectively, a producer working on per episode chapter creation who gets a 5 share, and
 a single share (effectively 1%) fee to the Podcastindex.org API.
 
-```
+```xml
 <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
     <podcast:valueRecipient
         name="Adam Curry (Podcaster)"

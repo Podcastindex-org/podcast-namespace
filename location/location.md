@@ -35,7 +35,7 @@ This, therefore, means that the `<podcast:location>` tag is complex and has a nu
 
 ### Structure
 
-```
+```xml
 <podcast:location
   geo="[geo URI]"
   osm="[OSM type][OSM id](#OSM revision)"
@@ -110,7 +110,7 @@ Podcast hosts may also wish to remind podcast publishers to always be cautious a
 
 For a podcast that is talking about the Eiffel Tower, but actually made in Birmingham, Alabama, this is what the specification would suggest:
 
-```
+```xml
 <podcast:location
   geo="geo:48.858093,2.294694"
   osm="W5013364"
@@ -119,7 +119,7 @@ For a podcast that is talking about the Eiffel Tower, but actually made in Birmi
 
 For a podcast that is set in Gitmo Nation, a nickname used by the show for the United States of America:
 
-```
+```xml
 <podcast:location
   geo="geo:39.7837304,-100.445882;u=3900000"
   osm="R148838"
@@ -131,13 +131,13 @@ includes a more accurate bounding box and geoJSON.
 
 For a podcast that is about Hogwarts (a fictional location), the `geo` and `osm` must not be entered:
 
-```
-<podcast:location>Hogwarts"</podcast:location>
+```xml
+<podcast:location>Hogwarts</podcast:location>
 ```
 
 For a podcast from Tesla upon landing on Mars:
 
-```
+```xml
 <podcast:location geo="geo:37.786971,-122.399677;crs=Mars-2031">Tesla Base 3</podcast:location>
 ```
 

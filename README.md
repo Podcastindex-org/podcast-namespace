@@ -152,7 +152,7 @@ The following tags should be considered purely as work in progress proposals.  T
 
 <b>
 
-```
+```xml
 <podcast:trailer
  pubdate="[date of release(RFC 2822)]"
  url="[uri of audio/video file(string)]"
@@ -179,12 +179,12 @@ This element is used to define the location of an audio or video file to be used
 - `season` (optional) If this attribute is present it specifies that this trailer is for a particular season number.
 
 Example:
-```
+```xml
 <podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
 ```
 
 Example with Season Linkage:
-```
+```xml
 <podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/season4teaser" length="12345678" type="video/mp4" season="4">Season 4: Race for the Whitehouse</podcast:trailer>
 
 (combined with)
@@ -200,7 +200,7 @@ Example with Season Linkage:
 
 <b>
 
-```
+```xml
 <podcast:license
  url="[https://urlofdetailledlicense]"
 >
@@ -220,7 +220,7 @@ should be a reference to a slug defined in the [license slugs](licenseslugs.txt)
 - `url` (optional) This is a url that points to the full license details for this license.
 
 Example:
-```
+```xml
 <podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
 ```
 
@@ -232,7 +232,7 @@ Example:
 
 <b>
 
-```
+```xml
 <podcast:recommendations
  url="[url to json file(string)]"
  type="application/json"
@@ -255,12 +255,12 @@ This is a complex tag.  The full documentation is [here](https://github.com/Podc
 read that document to understand and comment on this proposal.
 
 Example:
-```
+```xml
 <podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />
 ```
 
 Example:
-```
+```xml
 <podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>
 ```
 
@@ -271,13 +271,14 @@ Example:
 
 <b>
 
-```
+```xml
 <podcast:alternateEnclosure
  type="[mime type]"
  length="[(int)]"
  bitrate="[(float)]"
  height="[(int)]"
  lang="[(string)]"
+ title="[(string)]"
  rel="[(string)]"
  codecs="[(string)]"
  default="[(boolean)]"
@@ -300,32 +301,32 @@ This is a complex tag.  The full documentation is [here](https://github.com/Podc
 read that document to understand and comment on this proposal.
 
 Example:
-```
+```xml
 <enclosure url="https://best-podcast.com/file-0.mp3" length="43200000" type="audio/mpeg" />
 
-<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true">
+<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard">
     <podcast:source uri="https://best-podcast.com/file-0.mp3" />
     <podcast:source uri="ipfs://someRandomMpegFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000">
+<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000" title="High quality">
     <podcast:source uri="https://best-podcast.com/file-high.opus" />
     <podcast:source uri="ipfs://someRandomHighBitrateOpusFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000">
+<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000" title="High quality AAC">
     <podcast:source uri="https://best-podcast.com/file-proprietary.aac" />
     <podcast:source uri="ipfs://someRandomProprietaryAACFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000">
+<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000" title="Low bandwidth">
     <podcast:source uri="https://best-podcast.com/file-low.opus" />
     <podcast:source uri="ipfs://someRandomLowBitrateOpusFile" />
 </podcast:alternateEnclosure>
 ```
 
 Example:
-```
+```xml
 <podcast:alternateEnclosure type="audio/mpeg" length="2490970" bitrate="160707.74">
     <podcast:source uri="https://best-podcast.com/file-0.mp3" />
     <podcast:source uri="ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y" />

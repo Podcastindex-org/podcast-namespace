@@ -55,10 +55,10 @@ The recommendations object is a simple JSON object with 2 required properties:
 
 The "recommendation" object takes this basic form:
 
-```
+```json
 {
 	"type": "page",
-    	"title": "History of podcasting",
+    "title": "History of podcasting",
 	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 	"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 }
@@ -85,14 +85,14 @@ There are 4 required attributes:
 
 Here is what a very basic recommendations file may look like:
 
-```
+```json
 {
 	"version": "1.0",
 	"recommendations":
 	[
 		{
 			"type": "page",
-		    	"title": "History of podcasting",
+			"title": "History of podcasting",
 			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 		},
@@ -127,7 +127,7 @@ Here is what a very basic recommendations file may look like:
 
 ## More complex example
 
-```
+```json
 {
 	"version": "1.0",
 	"title": "Podnews podcasting news",
@@ -138,7 +138,7 @@ Here is what a very basic recommendations file may look like:
 			"displayStartTime": 0.0,
 			"displayDuration": 120.0,
 			"type": "page",
-		    	"title": "History of podcasting",
+			"title": "History of podcasting",
 			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting",
 			"relevance": 0.8

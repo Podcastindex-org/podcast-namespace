@@ -20,7 +20,7 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
 ## Specification
 
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" height="[(int)]" lang="[(string)]" rel="[(string)]" codecs="[(string)]" default="[(boolean)]"> ... </podcast:alternateEnclosure>**
+- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" height="[(int)]" lang="[(string)]" title="[(string)]" rel="[(string)]" codecs="[(string)]" default="[(boolean)]"> ... </podcast:alternateEnclosure>**
    Item (optional | multiple)
 
    This element defines a media file. One or more `<podcast:source>` tags must be contained within this element to list available methods to obtain the file.  This is meant to provide different versions of a media file -- such as low or high bitrate, alternate formats (different codecs or video), alternate URI schemes (IPFS or live streaming), or alternate download types not indicated by the URI and type (like torrents).
@@ -36,6 +36,7 @@ Lastly, I propose optional information to verify integrity of downloaded media v
    - `bitrate` (optional) Encoding bitrate of media asset.
    - `height` (optional) Height of the media asset for video formats
    - `lang` (optional) An [IETF language tag (BCP 47)](https://en.wikipedia.org/wiki/BCP_47) code identifying the language of this media.
+   - `title` (optional) A human-readable string identifying the name of the media asset.  Should be limited to 32 characters for UX.
    - `rel` (optional) Provides a method of offering and/or grouping together different media elements.  If not set, or set to "default", the media will be grouped with the enclosure and assumed to be an alternative to the enclosure's encoding/transport.  This attribute can and should be the same for items with the same content encoded by different means.  Should be limited to 32 characters for UX.
    - `codecs` (optional) A [RFC 6381](https://tools.ietf.org/html/rfc6381) string specifying the codecs available in this media.
    - `default` (optional) Boolean specifying whether or not the given media is the same as the file from the _enclosure_ element and should be the preferred media element.  The primary reason to set this is to offer alternative transports for the enclosure.  If not set, this should be assumed to be _false_.
@@ -67,22 +68,22 @@ Example of content served via audio in mp3, [high-bitrate Opus](https://wiki.xip
 ```xml
 <enclosure url="https://best-podcast.com/file-0.mp3" length="43200000" type="audio/mpeg" />
 
-<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true">
+<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard">
     <podcast:source uri="https://best-podcast.com/file-0.mp3" />
     <podcast:source uri="ipfs://someRandomMpegFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000">
+<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000" title="High quality">
     <podcast:source uri="https://best-podcast.com/file-high.opus" />
     <podcast:source uri="ipfs://someRandomHighBitrateOpusFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000">
+<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000" title="High quality AAC">
     <podcast:source uri="https://best-podcast.com/file-proprietary.aac" />
     <podcast:source uri="ipfs://someRandomProprietaryAACFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000">
+<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000" title="Low bandwidth">
     <podcast:source uri="https://best-podcast.com/file-low.opus" />
     <podcast:source uri="ipfs://someRandomLowBitrateOpusFile" />
 </podcast:alternateEnclosure>
