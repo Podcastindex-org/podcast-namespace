@@ -278,6 +278,7 @@ Example:
  bitrate="[(float)]"
  height="[(int)]"
  lang="[(string)]"
+ title="[(string)]"
  rel="[(string)]"
  codecs="[(string)]"
  default="[(boolean)]"
@@ -303,22 +304,22 @@ Example:
 ```
 <enclosure url="https://best-podcast.com/file-0.mp3" length="43200000" type="audio/mpeg" />
 
-<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true">
+<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard">
     <podcast:source uri="https://best-podcast.com/file-0.mp3" />
     <podcast:source uri="ipfs://someRandomMpegFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000">
+<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000" title="High quality">
     <podcast:source uri="https://best-podcast.com/file-high.opus" />
     <podcast:source uri="ipfs://someRandomHighBitrateOpusFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000">
+<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000" title="High quality AAC">
     <podcast:source uri="https://best-podcast.com/file-proprietary.aac" />
     <podcast:source uri="ipfs://someRandomProprietaryAACFile" />
 </podcast:alternateEnclosure>
 
-<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000">
+<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000" title="Low bandwidth">
     <podcast:source uri="https://best-podcast.com/file-low.opus" />
     <podcast:source uri="ipfs://someRandomLowBitrateOpusFile" />
 </podcast:alternateEnclosure>
