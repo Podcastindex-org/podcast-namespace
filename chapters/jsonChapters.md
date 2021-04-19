@@ -89,7 +89,7 @@ Here is what a very basic chapters file may look like:
 
 ```json
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "chapters":
     [
         {
@@ -146,7 +146,7 @@ chapter list, but allows for different artwork to be shown:
 
 ```json
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "John Doe",
     "title": "Episode 7 - Making Progress",
     "podcastName": "John's Awesome Podcast",
@@ -179,7 +179,7 @@ chapter list, but allows for different artwork to be shown:
         },
         {
             "startTime": 4826,
-            "img": "https://example.com/images/bostonharbor.jpg",
+            "img": "https://example.com/images/parisfrance.jpg",
             "toc": false,
             "location": {
                 "name": "Eiffel Tower, Paris",

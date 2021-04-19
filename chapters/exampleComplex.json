@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "John Doe",
   "title": "Episode 7 - Making Progress",
   "podcastName": "John's Awesome Podcast",
@@ -37,8 +37,12 @@
     },
     {
       "startTime": 4826,
-      "img": "https://example.com/images/bostonharbor.jpg",
-      "toc": false
+      "img": "https://example.com/images/parisfrance.jpg",
+      "toc": false,
+      "location": {
+        "name": "Eiffel Tower, Paris",
+        "geo": "geo:42.3417649,-70.9661596"
+      }
     },
     {
       "startTime": 5510,
