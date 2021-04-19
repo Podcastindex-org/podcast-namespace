@@ -34,7 +34,7 @@ The chapters object is a simple JSON object with only 2 required properties:
 
 The "chapter" object takes this basic form:
 
-```
+```json
 {
     "startTime": 94,
     "title": "Donation Segment"
@@ -62,7 +62,7 @@ There is only one required attribute:
 
 The "location" object takes this basic form:
 
-```
+```json
 {
     "name": "Eiffel Tower, Paris",
     "geo": "geo:48.858093,2.294694"
@@ -87,7 +87,7 @@ There are two required attributes:
 
 Here is what a very basic chapters file may look like:
 
-```
+```json
 {
     "version": "1.1.0",
     "chapters":
@@ -144,7 +144,7 @@ In this more robust example, we can bring in more meta-data about the podcast ep
 context for something like an embedded HTML5 player on a website.  Also there is an example of a "silent" chapter that has no presence in the visible
 chapter list, but allows for different artwork to be shown:
 
-```
+```json
 {
     "version": "1.1.0",
     "author": "John Doe",
