@@ -11,9 +11,9 @@ will become the framework that the independent podcast community needs to delive
 
 ## Current Roadmap
 
-**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were adopted.
+**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were `formalized`.
 
-**Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were adopted.
+**Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were `formalized`.
 
 **Phase 3** - [Open] Proposals welcome.  This phase will close on June 1st, 2021.  At that time, any tags with full agreement will be reviewed for
                      formalization.  Any tags with concerns or questions will be pushed forward to the next phase.  Current tag proposals under
@@ -215,7 +215,7 @@ Channel or Item
 (optional | single)
 
 This element defines the license that is applied to the audio/video content of the episode or the audio/video of the podcast as a whole.  The node value
-should be a reference to a slug defined in the [license slugs](licenseslugs.txt) file.
+should be a lower-cased reference to a license "identifier" defined in the [SPDX License List](https://spdx.org/licenses/) file.
 
 - `url` (optional) This is a url that points to the full license details for this license.
 
