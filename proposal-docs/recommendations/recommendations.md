@@ -47,7 +47,7 @@ The recommendations object is a simple JSON object with 2 required properties:
 
  - `comment` (optional - string) A comment on this file.
  - `title` (optional - string) The name of the source podcast or source podcast episode. Applies to both Channel and Item.
- - `rss` (optional - string) The RSS URL of the source podcast. Applies to both Channel and Item.
+ - `feed` (optional - string) The RSS URL of the source podcast. Applies to both Channel and Item.
  - `guid` (optional - string) The GUID of the source episode. Applies to Item only.
  - `url` (required - string) The enclosure URL of the source episode. Applies to Item only.
 
@@ -75,7 +75,7 @@ There are 4 required attributes:
 
  - `displayStartTime` (optional - float) The start time (in seconds) that tells when this recommended content should start being displayed. If `displayStartTime` is omitted, recommendation will be displayed from the beginning. Applies only when called from an *Item* (not from the *Channel*).
  - `displayDuration` (optional - float) The duration (in seconds) that tells when this recommended content should stop being displayed. If `displayDuration` is omitted, recommendation will be displayed until the end. Applies only when called from an *Item* (not from the *Channel*).
- - `rss` (optional - string) The RSS URL of this recommended content. Applies to *"podcast"*, *"episode"* and *"soundbite"* types only.
+ - `feed` (optional - string) The RSS URL of this recommended content. Applies to *"podcast"*, *"episode"* and *"soundbite"* types only.
  - `guid` (optional - string) The GUID of this recommended content. Applies to *"episode"* and *"soundbite"* types only.
  - `startTime` (optional - float) The start time (in seconds) of this recommended content. Applies to *"soundbite"* type only.
  - `duration` (optional - float) The duration (in seconds) of this recommended content. Applies to *"soundbite"* type only.
@@ -101,14 +101,14 @@ Here is what a very basic recommendations file may look like:
 			"title": "Podcasting 2.0",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://podcastindex.org/podcast/920666",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml"
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml"
 		},
 		{
 			"type": "episode",
 			"title": "Episode 26: Manning Battlestations",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026"
 		},
 		{
@@ -116,7 +116,7 @@ Here is what a very basic recommendations file may look like:
 			"title": "GO PODCASTING!!!",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026",
 			"startTime": 4737.0,
 			"duration": 5.0
@@ -131,7 +131,7 @@ Here is what a very basic recommendations file may look like:
 {
 	"version": "1.0",
 	"title": "Podnews podcasting news",
-	"rss": "https://podnews.net/rss",
+	"feed": "https://podnews.net/rss",
 	"recommendations":
 	[
 		{
@@ -150,7 +150,7 @@ Here is what a very basic recommendations file may look like:
 			"title": "Podcasting 2.0",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://podcastindex.org/podcast/920666",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"relevance": 0.7
 		},
 		{
@@ -160,7 +160,7 @@ Here is what a very basic recommendations file may look like:
 			"title": "Episode 26: Manning Battlestations",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026",
 			"relevance": 0.5
 		},
@@ -171,7 +171,7 @@ Here is what a very basic recommendations file may look like:
 			"title": "GO PODCASTING!!!",
 			"image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
 			"url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-			"rss": "http://mp3s.nashownotes.com/pc20rss.xml",
+			"feed": "http://mp3s.nashownotes.com/pc20rss.xml",
 			"guid": "PC2026",
 			"startTime": 4737.0,
 			"duration": 5.0,
