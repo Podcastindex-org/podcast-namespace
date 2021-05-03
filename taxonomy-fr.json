@@ -4,28 +4,28 @@
       "group":"Direction de Cr\u00e9ation",
       "role":"R\u00e9alisat\u00b7eur\u00b7rice",
       "description":"Le directeur est \u00e0 la t\u00eate de toute la production cr\u00e9ative, des d\u00e9tails cr\u00e9atifs \u00e0 la logistique. Il n'y a g\u00e9n\u00e9ralement qu'un seul r\u00e9alisateur pour une production. Ce r\u00f4le est principalement vu dans les podcasts de fiction.",
-      "example":"Jenna Knorr pour \"Bienvenue \u00e0 Tinsel Town\""
+      "example":"Jenna Knorr pour \u00ab\u202fBienvenue \u00e0 Tinsel Town\u202f\u00bb"
    },
    {
       "key":"Creative Direction\/Assistant Director",
       "group":"Direction de Cr\u00e9ation",
       "role":"R\u00e9alisat\u00b7eur\u00b7rice-Assistant\u00b7e",
       "description":"Le directeur adjoint est une liaison entre le r\u00e9alisateur et le reste de la production, coordonnant souvent la logistique quotidienne de la production. Il peut y avoir plusieurs directeurs adjoints sur un projet. Ce r\u00f4le est principalement vu dans les podcasts de fiction.",
-      "example":"William Wright pour \"Inn Between\""
+      "example":"William Wright pour \u00ab\u202fInn Between\u202f\u00bb"
    },
    {
       "key":"Creative Direction\/Executive Producer",
       "group":"Direction de Cr\u00e9ation",
       "role":"Product\u00b7eur\u00b7rice ex\u00e9cut\u00b7if\u00b7ive",
-      "description":"Le producteur ex\u00e9cutif est le producteur principal d'une production. Le r\u00f4le peut varier en termes de contr\u00f4le cr\u00e9atif, certains \"EP\" d\u00e9tenant la direction cr\u00e9ative d'un podcast (en fait en assumant le r\u00f4le de r\u00e9alisateur), tandis que d'autres peuvent adopter une approche plus pratique. Le producteur ex\u00e9cutif a peut-\u00eatre collect\u00e9 des fonds pour financer la production, mais ce n'est pas une responsabilit\u00e9 n\u00e9cessaire du r\u00f4le.",
-      "example":"Jane Rotonda pour \"The Larry Meiller Show\""
+      "description":"Le producteur ex\u00e9cutif est le producteur principal d'une production. Le r\u00f4le peut varier en termes de contr\u00f4le cr\u00e9atif, certains \u00ab\u202fEP\u202f\u00bb d\u00e9tenant la direction cr\u00e9ative d'un podcast (en fait en assumant le r\u00f4le de r\u00e9alisateur), tandis que d'autres peuvent adopter une approche plus pratique. Le producteur ex\u00e9cutif a peut-\u00eatre collect\u00e9 des fonds pour financer la production, mais ce n'est pas une responsabilit\u00e9 n\u00e9cessaire du r\u00f4le.",
+      "example":"Jane Rotonda pour \u00ab\u202fThe Larry Meiller Show\u202f\u00bb"
    },
    {
       "key":"Creative Direction\/Senior Producer",
       "group":"Direction de Cr\u00e9ation",
       "role":"Premi\u00b7er\u00b7\u00e8re R\u00e9alisat\u00b7eur\u00b7rice",
       "description":"Le producteur principal est le deuxi\u00e8me producteur le plus ancien de la production (deuxi\u00e8me apr\u00e8s le producteur ex\u00e9cutif). Ils supervisent les producteurs et la direction g\u00e9n\u00e9rale et la logistique de l'ensemble de la production.",
-      "example":"Dr. Jeremy Weisz de \"INspired INsider\""
+      "example":"Dr. Jeremy Weisz de \u00ab\u202fINspired INsider\u202f\u00bb"
    },
    {
       "key":"Creative Direction\/Producer ",
@@ -39,7 +39,7 @@
       "group":"Direction de Cr\u00e9ation",
       "role":"Product\u00b7eur\u00b7rice D\u00e9l\u00e9gu\u00e9\u00b7e",
       "description":"Le producteur associ\u00e9 remplit une ou plusieurs fonctions de producteur qui lui sont d\u00e9l\u00e9gu\u00e9es par un producteur.",
-      "example":"Alex Baumhardt pour \"APM Reports\""
+      "example":"Alex Baumhardt pour \u00ab\u202fAPM Reports\u202f\u00bb"
    },
    {
       "key":"Creative Direction\/Development Producer",
@@ -53,56 +53,56 @@
       "group":"Direction de Cr\u00e9ation",
       "role":"Direct\u00b7eur\u00b7rice de la Cr\u00e9ation",
       "description":"Le directeur de la cr\u00e9ation est responsable de la strat\u00e9gie cr\u00e9ative et de l'ex\u00e9cution de toute une s\u00e9rie. Souvent, ce r\u00f4le d\u00e9passe le contenu pour affecter les \u0153uvres d'art, la musique, les campagnes marketing, etc.",
-      "example":"Neil Druckmann sur \"The Official The Last of Us\""
+      "example":"Neil Druckmann sur \u00ab\u202fThe Official The Last of Us\u202f\u00bb"
    },
    {
       "key":"Cast\/Host",
       "group":"Distribution",
       "role":"Pr\u00e9sentat\u00b7eur\u00b7rice",
       "description":"L'h\u00f4te est le ma\u00eetre des c\u00e9r\u00e9monies \u00e0 l'antenne du podcast et une pr\u00e9sence constante sur chaque \u00e9pisode (\u00e0 l'exception des h\u00f4tes invit\u00e9s et des \u00e9pisodes alternatifs). Les t\u00e2ches de l'h\u00f4te peuvent inclure la r\u00e9alisation d'entrevues, l'introduction d'histoires et de segments, la narration, etc. Il peut y avoir plus d'un h\u00f4te par podcast ou \u00e9pisode.",
-      "example":"Joe Rogan pour \"The Joe Rogan Experience\""
+      "example":"Joe Rogan pour \u00ab\u202fThe Joe Rogan Experience\u202f\u00bb"
    },
    {
       "key":"Cast\/Co-Host",
       "group":"Distribution",
       "role":"Co-Pr\u00e9sentat\u00b7eur\u00b7rice",
       "description":"Le co-animateur remplit bon nombre des m\u00eames t\u00e2ches que l'h\u00f4te, tout en prenant une pr\u00e9sence secondaire sur le podcast.",
-      "example":"Dax Shepard pour \"Armchair Expert\""
+      "example":"Dax Shepard pour \u00ab\u202fArmchair Expert\u202f\u00bb"
    },
    {
       "key":"Cast\/Guest Host",
       "group":"Distribution",
       "role":"Pr\u00e9sentat\u00b7eur\u00b7rice Exceptionnel\u00b7le",
       "description":"L'h\u00f4te invit\u00e9 remplit toutes les fonctions du r\u00f4le d'h\u00f4te traditionnel, mais le fait \u00e0 titre temporaire. Souvent en une seule apparition ou en une courte p\u00e9riode d'\u00e9pisodes.",
-      "example":"Erica Kelly sur \"Let's Taco 'Bout Women and True Crime\""
+      "example":"Erica Kelly sur \u00ab\u202fLet's Taco 'Bout Women and True Crime\u202f\u00bb"
    },
    {
       "key":"Cast\/Guest",
       "group":"Distribution",
       "role":"Invit\u00e9\u00b7e",
       "description":"L'invit\u00e9 est une partie ext\u00e9rieure qui fait une apparition \u00e0 l'antenne sur un \u00e9pisode, souvent en tant que participant \u00e0 un panel ou sujet de l'interview.",
-      "example":"Lewis Brindley pour \"Triforce!\""
+      "example":"Lewis Brindley pour \u00ab\u202fTriforce!\""
    },
    {
       "key":"Cast\/Voice Actor",
       "group":"Distribution",
       "role":"Com\u00e9dien\u00b7ne Voix",
       "description":"The Voice Actor donne une performance dans laquelle ils pr\u00eatent leur voix au r\u00f4le d'un personnage dans un \u00e9pisode de podcast. Alors que la majorit\u00e9 des r\u00f4les de doublage seront fictifs, le r\u00f4le de doubleur peut \u00e9galement couvrir des reconstitutions de conversations et de personnes r\u00e9elles.",
-      "example":"Venk Potula pour \"Masala Jones\""
+      "example":"Venk Potula pour \u00ab\u202fMasala Jones\u202f\u00bb"
    },
    {
       "key":"Cast\/Narrator",
       "group":"Distribution",
       "role":"Narrat\u00b7eur\u00b7rice",
-      "description":"The Narrator donne une performance dans laquelle racontent l'exposition d'une histoire fictive ou non fictive, souvent de mani\u00e8re sc\u00e9naris\u00e9e. Le narrateur peut \u00e9galement interpr\u00e9ter des voix de personnages dans l'histoire, \u00e0 condition qu'ils conservent toujours le r\u00f4le de conteur d'exposition ou de \u00abvoix de Dieu\u00bb.",
-      "example":"James Harvey Freetly pour \"Lakeshore & Limbo\""
+      "description":"The Narrator donne une performance dans laquelle racontent l'exposition d'une histoire fictive ou non fictive, souvent de mani\u00e8re sc\u00e9naris\u00e9e. Le narrateur peut \u00e9galement interpr\u00e9ter des voix de personnages dans l'histoire, \u00e0 condition qu'ils conservent toujours le r\u00f4le de conteur d'exposition ou de \u00ab\u202fvoix de Dieu\u202f\u00bb.",
+      "example":"James Harvey Freetly pour \u00ab\u202fLakeshore & Limbo\u202f\u00bb"
    },
    {
       "key":"Cast\/Announcer",
       "group":"Distribution",
       "role":"Annonc\u00b7eur\u00b7euse",
       "description":"L'annonceur donne de courtes performances vocales pour l'introduction du podcast, des sujets d'\u00e9pisode, des segments, des invit\u00e9s, des prix, etc. L'annonceur est secondaire par rapport \u00e0 l'h\u00f4te du podcast et effectue souvent ses introductions d'une mani\u00e8re sc\u00e9naris\u00e9e et produite.",
-      "example":"Lydia Kapp pour \"World Builders Anonymous\""
+      "example":"Lydia Kapp pour \u00ab\u202fWorld Builders Anonymous\u202f\u00bb"
    },
    {
       "key":"Cast\/Reporter",
@@ -116,21 +116,21 @@
       "group":"\u00c9criture",
       "role":"Aut\u00b7eur\u00b7rice",
       "description":"L'auteur a \u00e9crit de la prose ou de la po\u00e9sie initialement destin\u00e9e \u00e0 un texte qui est maintenant lu textuellement \u00e0 l'antenne.",
-      "example":"Heiko Martens pour \"The Sigmund Freud Files\""
+      "example":"Heiko Martens pour \u00ab\u202fThe Sigmund Freud Files\u202f\u00bb"
    },
    {
       "key":"Writing\/Editorial Director",
       "group":"\u00c9criture",
       "role":"Direct\u00b7eur\u00b7rice de la R\u00e9daction",
       "description":"Le directeur de la r\u00e9daction dirige tous les d\u00e9partements de l'organisation derri\u00e8re le podcast et est responsable de la d\u00e9l\u00e9gation des t\u00e2ches aux membres du personnel et de leur gestion. Ils sont l'\u00e9diteur le plus haut plac\u00e9 et sont responsables de la direction, de l'exactitude et des d\u00e9cisions derri\u00e8re le contenu de podcast.",
-      "example":"Christopher Twarowski pour \"News Beat\""
+      "example":"Christopher Twarowski pour \u00ab\u202fNews Beat\u202f\u00bb"
    },
    {
       "key":"Writing\/Co-Writer",
       "group":"\u00c9criture",
       "role":"Co-r\u00e9dact\u00b7eur\u00b7rice",
       "description":"Le co-sc\u00e9nariste a \u00e9crit un podcast en partenariat avec 1 ou 2 autres \u00e9crivains, partageant ainsi le m\u00e9rite de l'arc cr\u00e9atif, du dialogue et de la narration.",
-      "example":"Max Eggers dans \"THE LIGHTHOUSE\""
+      "example":"Max Eggers dans \u00ab\u202fTHE LIGHTHOUSE\u202f\u00bb"
    },
    {
       "key":"Writing\/Writer",
@@ -144,49 +144,49 @@
       "group":"\u00c9criture",
       "role":"Aut\u00b7eur\u00b7rice Composit\u00b7eur\u00b7rice",
       "description":"L'auteur-compositeur a \u00e9crit les paroles et \/ ou la musique d'accompagnement d'une chanson originale cr\u00e9\u00e9e pour le podcast et jou\u00e9e sur un \u00e9pisode.",
-      "example":"Ben Lapidus pour \"Gay Future\""
+      "example":"Ben Lapidus pour \u00ab\u202fGay Future\u202f\u00bb"
    },
    {
       "key":"Writing\/Guest Writer",
       "group":"\u00c9criture",
       "role":"R\u00e9dact\u00b7eur\u00b7rice Invit\u00e9\u00b7e",
       "description":"L'\u00e9crivain invit\u00e9 remplit les fonctions d'\u00e9crivain \u00e0 titre temporaire, souvent sous la forme d'un \u00e9pisode unique ou d'une courte p\u00e9riode d'\u00e9pisodes. La distinction entre \u00e9crivain et \u00e9crivain invit\u00e9 d\u00e9pend de la d\u00e9cision du podcast lui-m\u00eame.",
-      "example":"Beth Crane pour \"The Unseen Hour\""
+      "example":"Beth Crane pour \u00ab\u202fThe Unseen Hour\u202f\u00bb"
    },
    {
       "key":"Writing\/Story Editor",
       "group":"\u00c9criture",
       "role":"R\u00e9dact\u00b7eur\u00b7rice en Chef ",
       "description":"L'\u00e9diteur d'histoire est responsable de la direction g\u00e9n\u00e9rale de l'arc de l'histoire et du d\u00e9veloppement des personnages d'un podcast. Souvent vu dans les podcasts de fiction et documentaires.",
-      "example":"Gabrielle Loux pour \"The NoSleep Podcast\""
+      "example":"Gabrielle Loux pour \u00ab\u202fThe NoSleep Podcast\u202f\u00bb"
    },
    {
       "key":"Writing\/Managing Editor",
       "group":"\u00c9criture",
       "role":"Direct\u00b7eur\u00b7rice de la Publication",
       "description":"Le r\u00e9dacteur en chef supervise et coordonne les activit\u00e9s \u00e9ditoriales des podcasts, en fournissant \u00e0 la fois une \u00e9dition d\u00e9taill\u00e9e et la gestion d'une \u00e9quipe de r\u00e9dacteurs et d'\u00e9diteurs pour s'assurer que les d\u00e9lais et les budgets sont respect\u00e9s.",
-      "example":"Flora Lichtman pour \"Every Little Thing\""
+      "example":"Flora Lichtman pour \u00ab\u202fEvery Little Thing\u202f\u00bb"
    },
    {
       "key":"Writing\/Script Editor",
       "group":"\u00c9criture",
       "role":"Chef\u00b7fe-Sc\u00e9nariste",
       "description":"L'\u00e9diteur de script fournit des notes et des modifications au script d'enregistrement dans un r\u00f4le tr\u00e8s pratique. L'\u00e9diteur de script est principalement utilis\u00e9 dans la fiction, les documentaires et les publicit\u00e9s o\u00f9 les enregistrements sc\u00e9naris\u00e9s sont r\u00e9pandus.",
-      "example":"Alex Rioux pour \"Bienvenue \u00e0 Tinsel Town: A Christmas Adventure\""
+      "example":"Alex Rioux pour \u00ab\u202fBienvenue \u00e0 Tinsel Town: A Christmas Adventure\u202f\u00bb"
    },
    {
       "key":"Writing\/Script Coordinator",
       "group":"\u00c9criture",
       "role":"Coordinat\u00b7eur\u00b7rice de sc\u00e9nario",
       "description":"Le coordinateur du sc\u00e9nario emballe le script final avec des annotations qui refl\u00e8tent une logistique sp\u00e9cifique et des indices cr\u00e9atifs pour l'enregistrement et la production.",
-      "example":"Alex Rioux pour \"Bienvenue \u00e0 Tinsel Town: A Christmas Adventure\""
+      "example":"Alex Rioux pour \u00ab\u202fBienvenue \u00e0 Tinsel Town: A Christmas Adventure\u202f\u00bb"
    },
    {
       "key":"Writing\/Researcher",
       "group":"\u00c9criture",
       "role":"Enqu\u00eat\u00b7eur\u00b7rice",
       "description":"Le chercheur coordonne la recherche et la v\u00e9rification des informations qui peuvent ensuite \u00eatre utilis\u00e9es pour le contenu d'un \u00e9pisode de podcast, informant souvent la direction d'une histoire en fonction de nouvelles informations d\u00e9couvertes.",
-      "example":"Dave Grave pour \"The Zero Brain Podcast\""
+      "example":"Dave Grave pour \u00ab\u202fThe Zero Brain Podcast\u202f\u00bb"
    },
    {
       "key":"Writing\/Editor ",
@@ -235,7 +235,7 @@
       "group":"Production Audio",
       "role":"Direct\u00b7eur\u00b7rice Technique",
       "description":"Le directeur technique supervise l'enregistrement et la production du podcast car il est impliqu\u00e9 dans les technologies audio, y compris le mat\u00e9riel et les logiciels, et la gestion des r\u00f4les impliqu\u00e9s dans ces domaines.",
-      "example":"Adam Raymonda sur \"Celebuzz'd\""
+      "example":"Adam Raymonda sur \u00ab\u202fCelebuzz'd\u202f\u00bb"
    },
    {
       "key":"Audio Production\/Technical Manager",
@@ -249,7 +249,7 @@
       "group":"Production Audio",
       "role":"Ing\u00e9nieur\u00b7e du Son",
       "description":"L'ing\u00e9nieur audio aide \u00e0 enregistrer et \u00e0 produire de l'audio en configurant des environnements d'enregistrement, en surveillant le recodage et en apportant des ajustements techniques tout au long. L'ing\u00e9nieur audio est pr\u00e9sent pendant le processus d'enregistrement, effectuant le plus souvent des ajustements en temps r\u00e9el. L'ing\u00e9nieur du son peut travailler avec des conversations, de la musique, des chansons ou tout autre type d'audio.",
-      "example":"Peter Leonard de \"Startup Podcast\""
+      "example":"Peter Leonard de \u00ab\u202fStartup Podcast\u202f\u00bb"
    },
    {
       "key":"Audio Production\/Remote Recording Engineer ",
@@ -263,7 +263,7 @@
       "group":"Production Audio",
       "role":"Ing\u00e9nieur\u00b7e Post-Production",
       "description":"L'ing\u00e9nieur postproduction \u00e9value les technologies audio et leur application en ce qui concerne les \u00e9tapes finales de production et de publication.",
-      "example":"Dick Wound pour \"Queens Next Door\""
+      "example":"Dick Wound pour \u00ab\u202fQueens Next Door\u202f\u00bb"
    },
    {
       "key":"Audio Post-Production\/Audio Editor ",
@@ -291,56 +291,56 @@
       "group":"Post-Production Audio",
       "role":"Composit\u00b7eur\u00b7rice",
       "description":"Le compositeur \u00e9crit une pi\u00e8ce musicale originale (ou plusieurs) qui est jou\u00e9e sur l'\u00e9pisode publi\u00e9. Le compositeur sera \u00e9galement souvent l'interpr\u00e8te de ladite pi\u00e8ce musicale.",
-      "example":"Marcus Thorne Bagala de \"This American Life\""
+      "example":"Marcus Thorne Bagala de \u00ab\u202fThis American Life\u202f\u00bb"
    },
    {
       "key":"Audio Post-Production\/Theme Music",
       "group":"Post-Production Audio",
       "role":"Musique de G\u00e9n\u00e9rique",
       "description":"Theme Music est une pi\u00e8ce musicale qui accompagne le podcast \u00e0 travers plusieurs \u00e9pisodes, le plus souvent au d\u00e9but d'un \u00e9pisode. Le th\u00e8me Musique est utilis\u00e9 pour pr\u00e9senter le podcast en tant que marque. Ce r\u00f4le est pour le cr\u00e9ateur de la musique du th\u00e8me.",
-      "example":"Mark Philips de \"Startup Podcast\""
+      "example":"Mark Philips de \u00ab\u202fStartup Podcast\u202f\u00bb"
    },
    {
       "key":"Audio Post-Production\/Music Production",
       "group":"Post-Production Audio",
       "role":"Production Musicale",
       "description":"Le r\u00f4le de production musicale aide \u00e0 cr\u00e9er de mani\u00e8re cr\u00e9ative de la musique dans un r\u00f4le distinct de l'\u00e9criture de ladite musique. La production musicale implique souvent des d\u00e9cisions cr\u00e9atives en fonction de la m\u00e9thode d'enregistrement de la musique, de l'arrangement des instruments, de l'utilisation d'effets, etc.",
-      "example":"Storm Duper pour \"Faking Star Wars Radio\""
+      "example":"Storm Duper pour \u00ab\u202fFaking Star Wars Radio\u202f\u00bb"
    },
    {
       "key":"Audio Post-Production\/Music Contributor",
       "group":"Post-Production Audio",
       "role":"Contribution Musicale",
       "description":"The Music Contributor est le cr\u00e9ateur de la musique qui a \u00e9t\u00e9 utilis\u00e9e pour le podcast mais pas n\u00e9cessairement produite sp\u00e9cifiquement pour le podcast. Souvent, un podcast utilisera une pi\u00e8ce musicale existante et cr\u00e9ditera le cr\u00e9ateur original.",
-      "example":"Bobby Lord de \"Startup Podcast\""
+      "example":"Bobby Lord de \u00ab\u202fStartup Podcast\u202f\u00bb"
    },
    {
       "key":"Administration\/Production Coordinator",
       "group":"Gestion",
       "role":"Coordinat\u00b7eur\u00b7rice de Production",
       "description":"Le coordonnateur de la production est responsable de la gestion de la logistique du processus de production de l'enregistrement \u00e0 la publication, y compris l'obtention des autorisations et des permis requis, la connexion des diff\u00e9rentes \u00e9quipes de production et d'enregistrement, la coordination de la cr\u00e9ation des m\u00e9tadonn\u00e9es de post-production, la budg\u00e9tisation, etc.",
-      "example":"Taneya Boyde sur \"Pr\u00eat pour le changement?\""
+      "example":"Taneya Boyde sur \u00ab\u202fPr\u00eat pour le changement\u202f?\u202f\u00bb"
    },
    {
       "key":"Administration\/Booking Coordinator",
       "group":"Gestion",
       "role":"Programmat\u00b7eur\u00b7rice",
       "description":"Le coordonnateur des r\u00e9servations est charg\u00e9 de faire venir de nouveaux invit\u00e9s pour les entrevues, y compris la recherche des invit\u00e9s, la planification des entrevues, le mat\u00e9riel d'accueil et les processus post-publication.",
-      "example":"Meryl Klemow pour \"Campfire Sht Show\""
+      "example":"Meryl Klemow pour \u00ab\u202fCampfire Sht Show\u202f\u00bb"
    },
    {
       "key":"Administration\/Production Assistant",
       "group":"Gestion",
       "role":"Assistant\u00b7e de Production",
       "description":"L'assistant de production aide \u00e0 soutenir un membre de la direction d'un podcast (souvent un r\u00e9alisateur ou un producteur), en aidant \u00e0 les pr\u00e9parer de diverses mani\u00e8res, y compris la planification, la logistique, les communications, etc.",
-      "example":"Wallace Mack pour \"The Nod\""
+      "example":"Wallace Mack pour \u00ab\u202fThe Nod\u202f\u00bb"
    },
    {
       "key":"Administration\/Content Manager",
       "group":"Gestion",
       "role":"Responsable des Contenus",
       "description":"Le gestionnaire de contenu est responsable de la distribution du contenu d'un podcast \u00e0 l'int\u00e9rieur et \u00e0 l'ext\u00e9rieur de l'\u00e9pisode, y compris, mais sans s'y limiter, les clips, les newsletters, les images, les promotions crois\u00e9es, etc.",
-      "example":"Kenneth Lee Johnson II pour \"Malice Corp Smack Talk\""
+      "example":"Kenneth Lee Johnson II pour \u00ab\u202fMalice Corp Smack Talk\u202f\u00bb"
    },
    {
       "key":"Administration\/Marketing Manager",
@@ -368,7 +368,7 @@
       "group":"Illustrations",
       "role":"Infographiste",
       "description":"Le graphiste est quelqu'un qui a cr\u00e9\u00e9 des visuels personnalis\u00e9s pour accompagner le podcast de diff\u00e9rentes mani\u00e8res.",
-      "example":"Sky Knight pour \"The XP Billionaires\""
+      "example":"Sky Knight pour \u00ab\u202fThe XP Billionaires\u202f\u00bb"
    },
    {
       "key":"Visuals\/Cover Art Designer ",
@@ -382,7 +382,7 @@
       "group":"Communaut\u00e9",
       "role":"Responsable R\u00e9seaux Sociaux",
       "description":"Le gestionnaire de m\u00e9dias sociaux g\u00e8re les comptes de m\u00e9dias sociaux du podcast, y compris, mais sans s'y limiter, la cr\u00e9ation de contenu, la publication, les r\u00e9ponses, la surveillance, etc.",
-      "example":"Tom Joshi-Cale pour \"World on a String\""
+      "example":"Tom Joshi-Cale pour \u00ab\u202fWorld on a String\u202f\u00bb"
    },
    {
       "key":"Misc.\/Consultant",
