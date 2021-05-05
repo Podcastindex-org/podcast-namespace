@@ -146,7 +146,7 @@ The following tags should be considered purely as work in progress proposals.  T
 
 <br>
 
-### **\<podcast:trailer>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/84)</small>
+### **\<podcast:trailer>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/84)</small>
 
 <br>
 
@@ -154,10 +154,10 @@ The following tags should be considered purely as work in progress proposals.  T
 
 ```xml
 <podcast:trailer
- pubdate="[date of release(RFC 2822)]"
  url="[uri of audio/video file(string)]"
  length="[file size in bytes(number)]"
  type="[mime type(string)]"
+ pubdate="[date of release(RFC 2822)]"
  season="[season number(number)]"
 >
 [Title of Trailer(string)]
@@ -170,10 +170,12 @@ Channel
 
 (optional | multiple)
 
-This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast or a specific season.  There can be more than one trailer present in the channel of the feed.  If there is more than one listed, the most recent one according to it's `pubdate` should be chosen by default within podcast apps.  If the `season` attribute is present, then the `<podcast:season>` element it references must also be present within the feed.
+This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast or a specific season.  There can be more than one trailer present in the channel of the
+feed.  If there is more than one listed, the most recent one according to it's `pubdate` should be chosen by default within podcast apps.  If the `season` attribute is present, then the `<podcast:season>` element
+it references must also be present within the feed.  This element is basically just like an `<enclosure>` with the extra `pubdate` and `season` attributes added.
 
-- `pubdate` (required) The date the trailer was published.
 - `url` (required) This is a url that points to the audio or video file to be played.
+- `pubdate` (required) The date the trailer was published.
 - `length` (recommended) The length of the file in bytes.
 - `type` (recommended) The mime type of the file.
 - `season` (optional) If this attribute is present it specifies that this trailer is for a particular season number.
