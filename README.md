@@ -171,8 +171,11 @@ Channel
 (optional | multiple)
 
 This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast or a specific season.  There can be more than one trailer present in the channel of the
-feed.  If there is more than one listed, the most recent one according to it's `pubdate` should be chosen by default within podcast apps.  If the `season` attribute is present, then the `<podcast:season>` element
-it references must also be present within the feed.  This element is basically just like an `<enclosure>` with the extra `pubdate` and `season` attributes added.
+feed.  If there is more than one listed, the most recent one according to it's `pubdate` should be chosen by default within podcast apps.  If the `season` attribute is present, it must be a number that matches
+the format of the `<podcast:season>` tag.  So, for a podcast that has 3 published seasons, a new `<podcast:trailer season="4">` tag can be put in the channel to later be matched up with a `<podcast:season>4<podcast:season>`
+tag when it's published within a new `<item>`.
+
+This element is basically just like an `<enclosure>` with the extra `pubdate` and `season` attributes added.
 
 - `url` (required) This is a url that points to the audio or video file to be played.
 - `pubdate` (required) The date the trailer was published.
@@ -189,9 +192,9 @@ Example with Season Linkage:
 ```xml
 <podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/season4teaser" length="12345678" type="video/mp4" season="4">Season 4: Race for the Whitehouse</podcast:trailer>
 
-(combined with)
+(later matches with)
 
-<podcast:season name="Race for the Whitehouse">4</podcast:trailer>
+<podcast:season name="Race for the Whitehouse">4</podcast:season>
 ```
 
 <br>
