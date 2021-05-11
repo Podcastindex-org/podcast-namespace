@@ -11,11 +11,31 @@ will become the framework that the independent podcast community needs to delive
 
 ## Current Roadmap
 
-**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were adopted.
+**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were **formalized**.
 
-**Phase 2** - [Open] Comment period closes on `1/31/21` and tags that have good consensus will be adopted.  Any tags with questions, concerns or no discernable use case will be either removed or booted to Phase 3.
+**Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were **formalized**.
 
-**Phase 3** - [Open] Proposals welcome.
+**Phase 3** - [Open] Proposals welcome.  This phase will close on June 1st, 2021.  At that time, any tags with full agreement will be reviewed for
+                     formalization.  Any tags with concerns or questions will be pushed forward to the next phase.  Current tag proposals under
+                     consideration are listed [here](#phase-3-open).
+
+<br><br>
+
+
+## Legend
+
+**Formalized** - This tag is frozen and listed in the XMLNS document.  Any future changes to it's definition must maintain backwards compatibility.
+
+**Finalized** - The tag is structurally stable and implementation testing should be considered safe.  Any breaking changes will be widely communicated.
+
+**Open** - The tag/phase is open for discussion and collaboration.
+
+**Required** - This tag or attribute must be present.
+
+**Optional** - This tag or attribute may be left out.
+
+**Recommended** - This tag or attribute is technically optional, but is strongly recommended to be present for the tag to function as fully intended.
+
 
 <br><br>
 
@@ -84,10 +104,7 @@ To see a list of platforms and apps that currently implement some or all of thes
 
 ## Example Feed
 
-There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.  There is also
-a "sandbox" feed where we experiment with tags while they are being hashed out.
-
-The url for that feed is:  [https://noagendaassets.com/enc/pc20sandbox.xml](https://noagendaassets.com/enc/pc20sandbox.xml).
+There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
 
 <br><br>
 
@@ -106,210 +123,246 @@ full implementation details.
 - **\<podcast:chapters>** <br>
 - **\<podcast:soundbite>** <br>
 
+<br>
+
+### <u>Phase 2 (Closed on 1/31/21)</u>
+
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
+full implementation details.
+
+- **\<podcast:person>** <br>
+- **\<podcast:location>** <br>
+- **\<podcast:season>** <br>
+- **\<podcast:episode>** <br>
+
+<br>
+
+
+### <u>Phase 3 (Open - Closes 6/1/21)</u>
+
+The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
+
+<br>
+
+### **\<podcast:trailer>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/84)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:trailer
+ url="[uri of audio/video file(string)]"
+ length="[file size in bytes(number)]"
+ type="[mime type(string)]"
+ pubdate="[date of release(RFC 2822)]"
+ season="[season number(number)]"
+>
+[Title of Trailer(string)]
+</podcast:trailer>
+```
+
+</b>
+
+Channel
+
+(optional | multiple)
+
+This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast or a specific season.  There can be more than one trailer present in the channel of the
+feed.  If there is more than one present, the most recent one (according to it's `pubdate`) should be chosen as the preview by default within podcast apps.  If the `season` attribute is present, it must be a number that matches
+the format of the `<podcast:season>` tag.  So, for a podcast that has 3 published seasons, a new `<podcast:trailer season="4">` tag can be put in the channel to later be matched up with a `<podcast:season>4<podcast:season>`
+tag when it's published within a new `<item>`.
+
+This element is basically just like an `<enclosure>` with the extra `pubdate` and `season` attributes added.
+
+- `url` (required) This is a url that points to the audio or video file to be played.
+- `pubdate` (required) The date the trailer was published.
+- `length` (recommended) The length of the file in bytes.
+- `type` (recommended) The mime type of the file.
+- `season` (optional) If this attribute is present it specifies that this trailer is for a particular season number.
+
+Example:
+```xml
+<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
+```
+
+Example with Season Linkage:
+```xml
+<podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/season4teaser" length="12345678" type="video/mp4" season="4">Season 4: Race for the Whitehouse</podcast:trailer>
+
+(later matches with)
+
+<podcast:season name="Race for the Whitehouse">4</podcast:season>
+```
+
+<br>
+
+### **\<podcast:license>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:license
+ url="[https://urlofdetailledlicense]"
+>
+[license slug(string)]
+</podcast:license>
+```
+
+</b>
+
+Channel or Item
+
+(optional | single)
+
+This element defines the license that is applied to the audio/video content of the episode or the audio/video of the podcast as a whole.  The node value
+should be a lower-cased reference to a license "identifier" defined in the [SPDX License List](https://spdx.org/licenses/) file.
+
+- `url` (optional) This is a url that points to the full license details for this license.
+
+Example:
+```xml
+<podcast:license url="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</podcast:license>
+```
+
+<br>
+
+### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:recommendations
+ url="[url to json file(string)]"
+ type="application/json"
+ language="[language code(string)]"
+>
+[optional comments(string)]
+</podcast:recommendations>
+```
+
+</b>
+
+Channel or Item
+
+(optional | multiple)
+
+This element allows a podcaster (or third party, with podcater permission) to specify a list of recommended content for a podcast or an episode. The recommended content can be a
+web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist, etc.
+
+This is a complex tag.  The full documentation is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/recommendations/recommendations.md).  Please
+read that document to understand and comment on this proposal.
+
+Example:
+```xml
+<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />
+```
+
+Example:
+```xml
+<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>
+```
+
+<br>
+
+### **\<podcast:alternateEnclosure>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
+<br>
+
+<b>
+
+```xml
+<podcast:alternateEnclosure
+ type="[mime type]"
+ length="[(int)]"
+ bitrate="[(float)]"
+ height="[(int)]"
+ lang="[(string)]"
+ title="[(string)]"
+ rel="[(string)]"
+ codecs="[(string)]"
+ default="[(boolean)]"
+ >
+[one or more <podcast:source> elements]
+</podcast:alternateEnclosure>
+```
+
+</b>
+
+Item
+
+(optional | multiple)
+
+This element defines a media file. One or more <podcast:source> tags must be contained within this element to list available methods to obtain the file. This is meant to provide different
+versions of a media file -- such as low or high bitrate, alternate formats (different codecs or video), alternate URI schemes (IPFS or live streaming), or alternate download types not
+indicated by the URI and type (like torrents).
+
+This is a complex tag.  The full documentation is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/alternateEnclosure/alternateEnclosure.md).  Please
+read that document to understand and comment on this proposal.
+
+Example:
+```xml
+<enclosure url="https://best-podcast.com/file-0.mp3" length="43200000" type="audio/mpeg" />
+
+<podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard">
+    <podcast:source uri="https://best-podcast.com/file-0.mp3" />
+    <podcast:source uri="ipfs://someRandomMpegFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000" title="High quality">
+    <podcast:source uri="https://best-podcast.com/file-high.opus" />
+    <podcast:source uri="ipfs://someRandomHighBitrateOpusFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000" title="High quality AAC">
+    <podcast:source uri="https://best-podcast.com/file-proprietary.aac" />
+    <podcast:source uri="ipfs://someRandomProprietaryAACFile" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000" title="Low bandwidth">
+    <podcast:source uri="https://best-podcast.com/file-low.opus" />
+    <podcast:source uri="ipfs://someRandomLowBitrateOpusFile" />
+</podcast:alternateEnclosure>
+```
+
+Example:
+```xml
+<podcast:alternateEnclosure type="audio/mpeg" length="2490970" bitrate="160707.74">
+    <podcast:source uri="https://best-podcast.com/file-0.mp3" />
+    <podcast:source uri="ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y" />
+    <podcast:source uri="https://best-podcast.com/file-0.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somerandom.onion/file-0.mp3" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="video/mp4" length="10562995" bitrate="681483.55" height="1080">
+    <podcast:source uri="https://best-podcast.com/file-1080.mp4" />
+    <podcast:source uri="ipfs://QmfQKJcp2xdByEt8mzWr1AJUhwvb9rdWPoacvdq2roDhgh" />
+    <podcast:source uri="https://best-podcast.com/file-1080.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somrandom.onion/file-1080.mp4" />
+</podcast:alternateEnclosure>
+
+<podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720">
+    <podcast:source uri="https://best-podcast.com/file-720.mp4" />
+    <podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" />
+    <podcast:source uri="https://best-podcast.com/file-720.torrent" contentType="application/x-bittorrent" />
+    <podcast:source uri="http://somrandom.onion/file-720.mp4" />
+</podcast:alternateEnclosure>
+```
+
+
 <br><br>
 
 
-### <u>Phase 2 (Open)</u>
+## Other Proposals
 
-- **\<podcast:person name="[name of person]" (role="[host,guest,etc.]") (group="[cast,writing,etc.]") (img="[uri of content]") (href="[uri to Podchaser/website/wiki/blog]") />**
-
-   Channel or Item (optional | multiple)
-
-   This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles
-   and groups that are listed in the Podcast Taxonomy Project.
-
-   - `name` (required) This is the full name or alias of the person.
-   - `role` (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
-   - `group` (optional) This should be a camel-cased, alphanumeric reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
-   - `img` (optional) This is the url of a picture or avatar of the person.
-   - `href` (optional) Link to a relevant resource of information about the person. (eg. Podchaser profile, website, blog or wiki entry).  Linking to the Podchaser profile url is highly encouraged as the standard for this url.  In a case
-                       where there is no Podchaser profile, then a link to the person's website, blog, wiki entry, etc. can be used.
-
-   The maximum recommended string length of the node value is 128 characters.
-
-   The `role` and `group` tags are case-insensitive.  So, "Host" is the same as "host".
-
-   The full taxonomy list is [here](taxonomy.json) as a json file.
-
-<br>
-
-- **\<podcast:location <strike>country="[Country Code]" (locality="[Locality]") (latlon="[latitude,longitude]") (osmid="[OSM type][OSM id]")</strike> />**
-
-_Because of its complexity, the location tag is [currently being discussed over here](https://github.com/Podcastindex-org/podcast-namespace/issues/138). The top message contains the current proposal._
-
-<br>
-
-- **\<podcast:season title="[title of season]">**[(int)]**\</podcast:season>**
-
-   Item
-
-   (optional | single)
-
-   This element allows for identifying which episodes in a podcast are part of a "season", and allowing that season to have a title associate with it.  The element's value is an integer identifying the season number.
-
-   All attributes are optional.
-
-<br>
-
-- **\<podcast:id platform="[service slug]" id="[platform id]" url="[link to the podcast page on the service]" />**
-
-   Channel
-
-   (optional | multiple)
-
-   See "[IDs](#user-content-ids)" in this document for an explanation.
-
-   - `platform` (required) This is the service slug of the platform.
-   - `id` (required) This is the unique identifier for this podcast on the respective platform.
-   - `url` (optional) A url to the page for this podcast on the respective platform.
-
-<br>
-
-- **\<podcast:social platform="[service slug]" url="[link to social media account]">**[social media handle]**\</podcast:social>**
-
-   Channel or Item
-
-   (optional | multiple)
-
-   This element lists social media accounts for this podcast.  The service slugs should be community written into the accompanying serviceslugs.txt file.
-
-   The maximum recommended string length of the node value is 128 characters.
-
-<br>
-
-
-### <u>Phase 3 (Open)</u>
-
-- **\<podcast:category>**[category Name]**\</podcast:category>**
-
-   Channel
-
-   (optional | multiple)
-
-   See "Categories" in this document for an explanation.  There can be up to a total of 9 categories defined.
-
-   There can be a maximum of 9 category elements defined in a feed.  Any number greater than that should be discarded.
-
-   Category names are defined in the accompanying "categories.json" file in this repository.  They should be referenced in the element by their textual name.
-   The characters can be in any case.  This list of categories aims to replicate the current standard but also eliminate as much as possible compound, heirarchical
-   naming and the use of ampersands.  Thus, "Health & Fitness" becomes "Health" and "Fitness" as two distinct categories.  And, "Religion & Spirituality" becomes
-   two separate categories.  Again, they are different things that don't always go together.  Splitting them allows for more flexible combinations.  And, avoiding
-   ampersands makes xml encoding errors less likely.
-
-<br>
-
-- **\<podcast:contentRating>**[rating letter]**\</podcast:contentRating>**
-
-  Channel or Item
-
-  (optional | single)
-
-  Specifies the generally accepted rating letter of G, PG, PG-13, R or X.  Or, perhaps an age rating system like all, 14, 19, adult.  Needs discussion.
-
-<br>
-
-- **\<podcast:previousUrl>**[url this feed was imported from]**\</podcast:previousUrl>**
-
-   Channel
-
-   (optional | multiple)
-
-   Lists the previous url of this feed before it was imported.  Any time a feed is moved, an additional **\<podcast:previousUrl>** element
-   should be added to the channel, to create a paper trail of all the previous urls this feed has lived at.  This way, aggregators can easily deduplicate their feed lists.
-
-<br>
-
-- **\<podcast:alternateEnclosure url="[url of media asset]" type="[mime type]" length="[(int)]" bitrate="[(float)]" title="[(string)]" rel="[(string)]" />**
-
-   Channel (optional | single)
-
-   Item (optional | multiple)
-
-   This element is meant to provide alternate versions of an enclosure, such as low or high bitrate, or alternate formats or alternate uri schemes, like IPFS or live streaming.
-   There may be multiple alternateEnclosure elements in an item, but there must be no more than one in a channel.  The presence of this element at the channel level would be
-   useful for adding a video/audio trailer or intro media that introduces the listener to the podcast.  For instance, in a podcast of an audiobook, this could be the book's
-   introduction or preface.  The alternateEnclosure element always refers to an "alternate" media version.  The standard RSS enclosure element is always the default media to be played.
-
-   An `<enclosure>` tag must be present along with this tag within the item.
-
-   - `url` (required) This is the url to the media asset.
-   - `type` (required) Mime type of the media asset.
-   - `length` (required) Length of the file in bytes.
-   - `bitrate` (optional) Encoding bitrate of media asset.
-   - `title` (required) Alternate assets need a title since main title will apply to primary asset.
-   - `rel` (optional) Indicates what the purpose of this enclosure is. Like "lowbitrate" for a small file to use over cellular.
-
-<br>
-
-- **\<podcast:indexers>** + **\<podcast:block>[domain, bot or service slug]\</podcast:block>**
-
-   Channel (optional | single)
-
-   The "indexers" element is meant as a container for one or more `<podcast:block>` elements which send a signal to podcast aggregators whether they are allowed to pull and parse
-   this feed.  If the aggregator is listed as blocked, it should take that as a signal by the feed owner to not index/aggregate this feed.
-
-   *Note: this element needs a lot more discussion and work.  This is just a placeholder for discussion.*
-
-<br>
-
-- **\<podcast:images srcset="[url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w,
-                             [url to image] [pixelwidth(int)]w" />**
-
-   Channel or Item
-
-   (optional | single)
-
-   This points to a group of images, separated by commas - each with a pixel width declared after them.  It is highly recommended that the images referenced
-   be square (1:1 ratio), as this is the industry standard for podcast album art, and what podcast apps expect to work with.  The srcset attribute is designed
-   to work like the ```srcset``` attribute in the HTML5 specification.  Suggested widths are 1500px, 600px, 300px and 150px.  See the example feed in this
-   repo for an example of how this looks in practice.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:contact type="[feedback or advertising or abuse]">**[email address or url]**\</podcast:contact>**
-
-   Channel
-
-   (optional | multiple)
-
-   This element allows for listing different contact methods for the podcast owner.  This could be for general feedback, advertising inquiries, abuse reports, etc.  Only one element of each "type"
-   is allowed.
-
-   All attributes are required.
-
-<br>
-
-- **\<podcast:value type="[lightning]" method="[keysend]" suggested="[number of bitcoin(float)]">**[one or more "valueRecipient" elements]**\</podcast:value>**
-
-   Channel
-   
-   (optional | single)
-
-   This element defines the payment "model".  One or more `<podcast:valueRecipient>` tags must be contained within this element to instruct where to send the payments
-   within this defined model.
-
-   - `type` (required) What type of system will be receiving the payments. Currently only "lightning" is supported.
-   - `method` (required) The protocol to use to send the payments. Currently only "keysend" is supported.
-   - `suggested` (required) The amount to send per minute of episode play time, defined in bitcoin (float, 0.00000005000 is 5sat/min).
-
-- **\<podcast:valueRecipient name="[name of recipient(string)]" type="[node]" address="[public key of bitcoin/lightning node(string)]" split="[percentage(int)]" />**
-
-   Channel
-
-   (required | multiple)
-
-   - `name` (optional) A friendly name to identify the receipient.
-   - `type` (required) The type of destination this is.  Currently, only "node" is supported.
-   - `address` (required) The address of the digital wallet or node that will receive payments.
-   - `split` (required) Defines a percentage that this payment destination represents.  Payments will be sent to each destination in the "value" block, dividing up by this percentage.
-
+A list of the current proposed tags can be found in the issues section [here](https://github.com/Podcastindex-org/podcast-namespace/labels/proposal).
 
 <br><br>
-
 
 
 ## Verification for Importing and Transferring
@@ -323,7 +376,7 @@ contacted and subsequently changes the value of the element to "no".
 
 ## IDs
 
-Their can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
+There can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
 representing the platform, directory, host, app or service. The slugs will look like this:
 
 - blubrry
@@ -340,3 +393,8 @@ representing the platform, directory, host, app or service. The slugs will look 
 - overcast
 
 More should be added by the community as needed.  This is just a starter list.  The full list is [here](serviceslugs.txt).
+
+
+## Badges and Media
+
+![Podcast Namespace](images/podcastindex-namespace-final.svg)

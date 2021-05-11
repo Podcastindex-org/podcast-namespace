@@ -17,7 +17,7 @@ designed to serve as an accessibility aid and provide searchable episode content
 - `<p>`: Content of monologue
 
 #### Snippet:
-```
+```html
 <cite>Kevin:</cite>
 <time>0:00</time>
 <p>We have an update planned where we would like to give the ability to upload an artwork file for these videos</p>
@@ -44,7 +44,7 @@ The JSON representation is a flexible format that accomodates various degrees of
 - `<body>`: Dialogue content
 
 #### Snippet:
-```
+```json
 {
   "version": "1.0.0",
   "segments": [
@@ -136,3 +136,61 @@ do we need a podcast trailer?
 ```
 
 Example file:  [example.srt](example.srt)
+
+
+## WebVTT
+
+Web Video Text Tracks Format (WebVTT) are an alternative to SRT primarily designed for the use in HTML on the web.  It is supported in all major web browsers and is similar enough to SRT to be converted.
+
+### Differences from SRT taken from [Wikipedia](https://en.wikipedia.org/wiki/WebVTT):
+- WebVTT's first line starts with WEBVTT after the optional UTF-8 byte order mark
+- There is space for optional header data between the first line and the first cue
+- Timecode fractional values are separated by a full stop instead of a comma
+- Timecode hours are optional
+- The frame numbering/identification preceding the timecode is optional
+- Comments identified by the word NOTE can be added
+- Metadata information can be added in a JSON-style format
+- Chapter information can be optionally specified
+- Only supports extended characters as UTF-8
+- CSS in a separate file defined in the companion HTML document for C tags is used instead of the FONT tag
+- Cue settings allow the customization of cue positioning on the video
+
+#### Properties:
+- Max number of lines: 2
+- Max characters per line: 32
+- Speaker names (optional): Start a new card when the speaker changes. Include the speaker's name, followed by a colon.
+
+#### Snippet:
+```
+WEBVTT
+
+00:00:00.000 --> 00:00:02.760
+Sarah: In today's episode,
+you'll learn whether or not you
+
+00:00:02.760 --> 00:00:06.090
+should have a podcast trailer.
+And if so, what should you
+
+00:00:06.090 --> 00:00:11.610
+include in one? Welcome to
+Podcasting Q&A, where you learn
+
+00:00:11.610 --> 00:00:15.750
+the best tips and strategies to
+launch, grow and monetize your
+
+00:00:15.750 --> 00:00:18.630
+podcast. This week's question
+comes from Gillian.
+
+00:00:19.080 --> 00:00:21.450
+Gillian: Hi Buzzsprout, Gillian
+here from breaking through
+
+00:00:21.450 --> 00:00:25.350
+careers podcast. My question is,
+do we need a podcast trailer?
+```
+
+Example file:  [example.vtt](example.vtt)

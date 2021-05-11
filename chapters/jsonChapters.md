@@ -1,10 +1,13 @@
-## JSON Chapters Format (v1.1.0)
+## JSON Chapters Format
+<small>Version 1.2 - Updated on 2021.04.15</small>
+
+<br><br>
 
 This is the initial spec for a json chapters format that can be referenced in an RSS feed using the `<podcast:chapters>` tag of
 the "podcast" namespace.  This file can reside on any publicly accessible url.  See the podcast namespace documentation for
 details on the format of the tag.
 
-This type of file should be served with a Content-type of 'application/audio-chapters+json'.  Chapter order is assumed to be
+This type of file should be served with a Content-type of 'application/json+chapters'.  Chapter order is assumed to be
 in ascending order based on the `startTime`.
 
 <br>
@@ -23,14 +26,15 @@ The chapters object is a simple JSON object with only 2 required properties:
  - `podcastName` (optional - string) The name of the podcast this episode belongs to.
  - `description` (optional - string) A description of this episode.
  - `fileName` (optional - string) The name of the audio file these chapters apply to.
+ - `waypoints` (optional - boolean) If this property is present, the locations in a chapter object should be displayed with a route between locations.
 
 <br>
 
-## "Chapter" Objects
+## The "Chapter" Object
 
 The "chapter" object takes this basic form:
 
-```
+```json
 {
     "startTime": 94,
     "title": "Donation Segment"
@@ -41,6 +45,8 @@ There is only one required attribute:
 
  - `startTime` (required - float) The starting time of the chapter, expressed in seconds with float precision for fractions of a second.
 
+<br>
+
 #### Optional Attributes:
 
  - `title` (optional - string) The title of this chapter.
@@ -48,6 +54,32 @@ There is only one required attribute:
  - `url` (optional - string) The url of a web page or supporting document that's related to the topic of this chapter.
  - `toc` (optional - boolean) If this property is present and set to false, this chapter should not display visibly to the user in either the table of contents or as a jump-to point in the user interface.  It should be considered a "silent" chapter marker for the purpose of meta-data only.  If this property is set to `true` or not present at all, this should be considered a normal chapter for display to the user.  The name "toc" is short for "table of contents".
  - `endTime` (optional - float) The end time of the chapter, expressed in seconds with float precision for fractions of a second.
+ - `location` (optional - object) This object defines an optional location that is tied to this chapter.  It follows the structure of the [location](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) tag in the XML namespace.
+
+<br>
+
+## The Location Object:
+
+The "location" object takes this basic form:
+
+```json
+{
+    "name": "Eiffel Tower, Paris",
+    "geo": "geo:48.858093,2.294694"
+}
+```
+
+It is intended to provide for rich location-based experiences tied to a point of time within a podcast episode, or other feed based media.  For example, a "walking tour" may include latitude and longitude waypoints along side the image within chapters markers as someone listens to the tour podcast.  This
+would allow apps to show a map with markers within the UI as the tour progresses.  Or, perhaps a "History of the Middle East" podcast might expose a map to highlight where certain landmarks are when being discussed.
+
+There are two required attributes:
+
+ - `name` (required - string) A human readable place name.
+ - `geo` (required - string) A simple latitude,longitude given in geoURI format, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+
+#### Optional Attributes:
+
+ - `osm` (optional - string) An OpenStreetMaps query string.  Please see the [location](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) XML tag specification for full details.
 
 <br>
 
@@ -55,9 +87,9 @@ There is only one required attribute:
 
 Here is what a very basic chapters file may look like:
 
-```
+```json
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "chapters":
     [
         {
@@ -112,9 +144,9 @@ In this more robust example, we can bring in more meta-data about the podcast ep
 context for something like an embedded HTML5 player on a website.  Also there is an example of a "silent" chapter that has no presence in the visible
 chapter list, but allows for different artwork to be shown:
 
-```
+```json
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "John Doe",
     "title": "Episode 7 - Making Progress",
     "podcastName": "John's Awesome Podcast",
@@ -147,8 +179,12 @@ chapter list, but allows for different artwork to be shown:
         },
         {
             "startTime": 4826,
-            "img": "https://example.com/images/bostonharbor.jpg",
-            "toc": false
+            "img": "https://example.com/images/parisfrance.jpg",
+            "toc": false,
+            "location": {
+                "name": "Eiffel Tower, Paris",
+                "geo": "geo:42.3417649,-70.9661596"
+            }
         },
         {
             "startTime": 5510,

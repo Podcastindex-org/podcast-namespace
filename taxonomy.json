@@ -8,7 +8,7 @@
   {
     "group": "Creative Direction",
     "role": "Assistant Director",
-    "description": "The Assistant Director is a liason between the director and the rest of the production, often coordinating the daily logistics of production. There may be multiple assistant directors on a project. This role is primarily seen in fiction podcasts.",
+    "description": "The Assistant Director is a liaison between the director and the rest of the production, often coordinating the daily logistics of production. There may be multiple assistant directors on a project. This role is primarily seen in fiction podcasts.",
     "example": "William Wright for \"Inn Between\""
   },
   {
@@ -56,7 +56,7 @@
   {
     "group": "Cast",
     "role": "Co-Host",
-    "description": "The Co-Host performs many of the same duties as the host, while taking a secondary presence on the podcast. ",
+    "description": "The Co-Host performs many of the same duties as the host, while taking a secondary presence on the podcast.",
     "example": "Dax Shepard for \"Armchair Expert\""
   },
   {
@@ -68,7 +68,7 @@
   {
     "group": "Cast",
     "role": "Guest",
-    "description": "The Guest is an outside party who makes an on-air appearance on an episode, often as a participant in a panel or the interview subject. ",
+    "description": "The Guest is an outside party who makes an on-air appearance on an episode, often as a participant in a panel or the interview subject.",
     "example": "Lewis Brindley for \"Triforce!\""
   },
   {
@@ -164,7 +164,7 @@
   {
     "group": "Writing",
     "role": "Editor",
-    "description": "The Editor reviews and prepares scripts for conveying information in a creative, accurate, and engaging manner. ",
+    "description": "The Editor reviews and prepares scripts for conveying information in a creative, accurate, and engaging manner.",
     "example": ""
   },
   {
@@ -175,7 +175,7 @@
   },
   {
     "group": "Writing",
-    "role": "Translater",
+    "role": "Translator",
     "description": "The Translator converts content from one language to another for the podcast. This can be interviews, dialogue, text documents, and more. The Translator's work may be used on-air or behind-the-scenes during the production\/research process.",
     "example": ""
   },
@@ -200,7 +200,7 @@
   {
     "group": "Audio Production",
     "role": "Technical Director",
-    "description": "The Technical Director oversees the podcast's recording and production as it is involved with audio technologies including hardware and software, and managing roles involved these areas. ",
+    "description": "The Technical Director oversees the podcast's recording and production as it is involved with audio technologies including hardware and software, and managing roles involved these areas.",
     "example": "Adam Raymonda on \"Celebuzz'd\""
   },
   {
@@ -217,7 +217,7 @@
   },
   {
     "group": "Audio Production",
-    "role": "Remote Recording Engineer ",
+    "role": "Remote Recording Engineer",
     "description": "The Remote Recording Engineer ensures the proper recording of conversations taking place in multiple locations across a phone line or internet connection. The Remote Recording Engineer evaluates the different recording set ups and attempts to reconcile them into a cohesive sound, while also monitoring the recording process to capture the best possible audio.",
     "example": ""
   },
@@ -241,7 +241,7 @@
   },
   {
     "group": "Audio Post-Production",
-    "role": "Foley Artist ",
+    "role": "Foley Artist",
     "description": "The Foley Artist sound effects for a podcast and can do so both via physical recording and digital processing, or a combination of the two.",
     "example": ""
   },
@@ -278,7 +278,7 @@
   {
     "group": "Administration",
     "role": "Booking Coordinator",
-    "description": "The Booking Coordinator is responsible for bringing on new guests for interviews, including sourcing guests, scheduling interviews, onboarding materials, and post-publication processes. ",
+    "description": "The Booking Coordinator is responsible for bringing on new guests for interviews, including sourcing guests, scheduling interviews, onboarding materials, and post-publication processes.",
     "example": "Meryl Klemow for \"Campfire Sht Show\""
   },
   {
@@ -375,24 +375,6 @@
     "group": "Video Post-Production",
     "role": "Assistant Editor",
     "description": "The Assistant Editor is responsible for taking the media from the set, ingesting them into the designated editing software, and organizing the footage in an efficient way for the editor. They must also pay close attention to ensure that audio and video are synced and that all footage from set is ingested properly.",
-    "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
-    "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
-    "example": ""
-  },
-  {
-    "group": "Production Technology",
-    "role": "",
-    "description": "",
     "example": ""
   }
 ]

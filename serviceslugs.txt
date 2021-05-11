@@ -23,9 +23,11 @@ paypal
 pinecast
 podbean
 podcastaddict
+podcastguru
 podcastindex
 podcasts.com
 podchaser
+podcloud
 podfriend
 podiant
 podigee
