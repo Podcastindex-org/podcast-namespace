@@ -199,7 +199,7 @@ Example with Season Linkage:
 
 <br>
 
-### **\<podcast:license>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
+### **\<podcast:license>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
 
 <br>
 
@@ -220,7 +220,8 @@ Channel or Item
 (optional | single)
 
 This element defines the license that is applied to the audio/video content of the episode or the audio/video of the podcast as a whole.  The node value
-should be a lower-cased reference to a license "identifier" defined in the [SPDX License List](https://spdx.org/licenses/) file.
+should be a lower-cased reference to a license "identifier" defined in the [SPDX License List](https://spdx.org/licenses/) file or, if it's a custom license, it
+can be a free form abbreviation of the name of the license.  Custom licenses should always include a url attribute reference.
 
 - `url` (optional) This is a url that points to the full license details for this license.
 
