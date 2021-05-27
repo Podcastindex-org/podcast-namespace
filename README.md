@@ -272,7 +272,7 @@ Example:
 
 <br>
 
-### **\<podcast:alternateEnclosure>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
+### **\<podcast:alternateEnclosure>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
 <br>
 
 <b>
