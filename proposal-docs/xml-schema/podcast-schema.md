@@ -2,11 +2,13 @@
 
 A schema in XML is a definition of the elements and attributes in a particular realm known as a namespace. The namespace for the Podcast Index extension is `https://podcastindex.org/namespace/1.0`.
 
-The namespace has a formal definition, called the XML Schema (XSD), which is designed to be readable by a machine. It also has an informal definition, which is the list of elements and their function and use. This is human-readable, and helps the developer to understand the namespace elements' purpose and use. The Podcast Index informal schema is found at `https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md`. This was originally called the "document type definition", but has been renamed to avoid confusion with an older, less versatile, XML schema language of the same name.
+The namespace has a formal definition, called the XML Schema (XSD), which is designed to be readable by a machine. It also has an informal definition, which is the list of elements and their function and use. This is human-readable, and helps the developer to understand the namespace elements' purpose and use. The Podcast Index informal schema is found at `https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md`. This was originally called the "document type definition", but has been renamed to avoid confusion with an older, less versatile, XML schema syntax of the same name.
 
 #Getting Started
 
-First, you'll need have the formal XML Schema document (`podcast.xsd`) on your machine. When an XML document is created, it must have a root element. Since the Podcast namespace elements are designed to exist within the RSS document namespace, the Podcast namespace doesn't need, and doesn't have, a root element.
+These instructions assume you are using Microsoft Visual Studio Code (https://code.visualstudio.com/download), a free programming editor. You'll also need the Redhat XML extension to VS Code, `redhat.vscode-xml`. This can be found from within the VS Code Marketplace or at https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml.
+
+Then, you'll need have the formal XML Schema document (`podcast.xsd`) on your machine. This is the formal specification of the Podcast Index namespace. To get started, you should know that, when an XML document is created, it must have a root element. Since the Podcast namespace elements are designed to exist within the RSS document namespace, the Podcast namespace doesn't need, and doesn't have, a root element.
 
 For this reason, there's another XML Schema document, `podcast-wrapper.xsd`. This is simply a wrapper schema that defines a non-canonical element called `<test-wrapper>` that acts as the root. Inside this element can appear any of the other Podcast Index namespace tags. The wrapper schema is strictly for understanding and manually authoring the tags of the Podcast Index.
 
@@ -52,7 +54,7 @@ In the top of a document, you can specify the namespace and give it a (hopefully
 
 ```xml
 <doc xmlns:podcast="https://podcastindex.org/namespace/1.0"
-     xmlns:yearbook="http://yearbook.com/namespace:person">
+     xmlns:yearbook="http://yearbook.com/namespace">
      <podcast:person>Person in the Podcast namespace</podcast:person>
      <yearbook:person>Person in the Yearbook namespace</yearbook:person>
 ```
@@ -63,7 +65,7 @@ Note that the namespace alias is local to the document. The following snippet is
 
 ```xml
 <doc xmlns:p="https://podcastindex.org/namespace/1.0"
-     xmlns:y="http://yearbook.com/namespace:person">
+     xmlns:y="http://yearbook.com/namespace">
      <p:person>Person in the Podcast namespace</p:person>
      <y:person>Person in the Yearbook namespace</y:person>
 ```
@@ -72,7 +74,7 @@ You can also specify a namespace to be the default namespace. Any element or att
 
 ```xml
 <doc xmlns:p="https://podcastindex.org/namespace/1.0"
-     xmlns="http://yearbook.com/namespace:person">
+     xmlns="http://yearbook.com/namespace">
      <p:person>Person in the Podcast namespace</p:person>
      <person>Person in the Yearbook namespace</person>
 ```
