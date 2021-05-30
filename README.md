@@ -6,6 +6,15 @@ Our hope is that this namespace
 will become the framework that the independent podcast community needs to deliver new functionality to apps and aggregators.
 
 
+Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
+Please read it before contributing if you aren't familiar with it.
+
+
+* [Official XMLNS Definition](docs/1.0.md) the official definition of all formalized tags.
+* List of platforms and apps that currently implement some or all of these tags: [Supporting Platforms and Apps](docs/element-support.md).
+* Example Feed: There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
+* [Other recommendations](docs/other-recommendations.md) when creating RSS podcast feeds.
+
 <br><br>
 
 
@@ -85,26 +94,6 @@ There is no way to address every possible metadata point that each platform woul
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
 this larger namespace.  But, we don't want to be so general that the spec becomes overly complicated.  A beautiful, "perfect" spec is not important.  Solving real problems is.
 
-
-## The Guiding Principles
-
-Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
-Please read it before contributing if you aren't familiar with it.
-
-
-## Official XMLNS Definition
-
-To see the formalized tags, the official definition file is [here](docs/1.0.md).
-
-
-## Supporting Platforms and Apps
-
-To see a list of platforms and apps that currently implement some or all of these tags, see the list [here](docs/element-support.md).
-
-
-## Example Feed
-
-There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
 
 <br><br>
 
