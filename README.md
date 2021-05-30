@@ -386,22 +386,7 @@ contacted and subsequently changes the value of the element to "no".
 ## IDs
 
 There can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
-representing the platform, directory, host, app or service. The slugs will look like this:
-
-- blubrry
-- captivate
-- podcastindex
-- fireside
-- transistor
-- libsyn
-- buzzsprout
-- apple
-- google
-- spotify
-- anchor
-- overcast
-
-More should be added by the community as needed.  This is just a starter list.  The full list is [here](serviceslugs.txt).
+representing the platform, directory, host, app or service. The full list is [here](serviceslugs.txt). More should be added by the community as needed.
 
 
 ## Badges and Media
