@@ -69,26 +69,26 @@ project to be built fully in the open.  Discussions also take place on [podcasti
 <br><br>
 
 
-## Goal #1 - Eliminate Redundancy
+### Goal #1 - Eliminate Redundancy
 
 There is significant overlap amongst the many existing podcast namespaces.  Each platform and publisher has created their own namespace to give their respective
 system and audience the metadata they need in the way they want it delivered.
 
 
-## Goal #2 - Keep "required" tags and attributes minimal
+### Goal #2 - Keep "required" tags and attributes minimal
 
 The only required tags should be those that solve an overwhelming need in the industry.  Requiring tags is a roadblock to adoption and should be avoided.  Attributes
 should also only be required when they are key to the functionality of the tag.
 
 
-## Goal #3 - Keep Exisiting Conventions
+### Goal #3 - Keep Exisiting Conventions
 
 Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, it would make sense to turn **\<podcast:explicit>** into
 a unary element, where it's existence is taken as a "yes" and it's absence as a "no".  But, that has never been the standard.  And, given as how this namespace will probably
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
 
-## Goal #4 - Be General... to a point
+### Goal #4 - Be General... to a point
 
 There is no way to address every possible metadata point that each platform would want.  That is not the aim.  Instead we focus on defining the elements that would be useful
 to the broadest set of apps, publishers, platforms and aggregators.  Individual parties can keep their respective supplemental namespaces small and targeted as an adjunct to
