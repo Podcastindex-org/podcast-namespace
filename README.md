@@ -15,7 +15,7 @@ will become the framework that the independent podcast community needs to delive
 
 **Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were **formalized**.
 
-**Phase 3** - [Open] Proposals welcome.  This phase will close on June 1st, 2021.  At that time, any tags with full agreement will be reviewed for
+**Phase 3** - [Closed] Proposals welcome.  This phase will close on June 1st, 2021.  At that time, any tags with full agreement will be reviewed for
                      formalization.  Any tags with concerns or questions will be pushed forward to the next phase.  Current tag proposals under
                      consideration are listed [here](#phase-3-open).
 
@@ -142,11 +142,11 @@ full implementation details.
 
 ### <u>Phase 3 (Closed on 6/1/21)</u>
 
-The following tags have been finalized ahead of formal consideration and review on June 1st, 2021.
+The following tags have been finalized ahead of formal consideration and review after June 1st, 2021.
 
 <br>
 
-### **\<podcast:trailer>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/84)</small>
+### **\<podcast:trailer>** - <small>[Discussion](https://github.com/Podcastindex-org/podcast-namespace/issues/84)</small>
 
 <br>
 
@@ -199,7 +199,7 @@ Example with Season Linkage:
 
 <br>
 
-### **\<podcast:license>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
+### **\<podcast:license>** - <small>[Discussion](https://github.com/Podcastindex-org/podcast-namespace/issues/177)</small>
 
 <br>
 
@@ -233,7 +233,7 @@ Example:
 <br>
 
 
-### **\<podcast:alternateEnclosure>** - <small>[Finalized](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
+### **\<podcast:alternateEnclosure>** - <small>[Discussion](https://github.com/Podcastindex-org/podcast-namespace/issues/174#issue-798007719)</small>
 <br>
 
 <b>
