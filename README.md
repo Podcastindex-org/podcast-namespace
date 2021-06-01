@@ -140,7 +140,7 @@ full implementation details.
 <br>
 
 
-### <u>Phase 3 (Open - Closes 6/1/21)</u>
+### <u>Phase 3 (Closed on 6/1/21)</u>
 
 The following tags have been finalized ahead of formal consideration and review on June 1st, 2021.
 
