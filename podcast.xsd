@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="yesnoenumeration">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="max128">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="128"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="max32">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="root">
+		<xs:complexType>
+<xs:choice maxOccurs="unbounded">
+	<xs:element name="transcript">
+		<xs:annotation>
+			<xs:documentation>This tag is used to link to a transcript or closed captions file. Multiple tags can be present for multiple transcript formats.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="url" use="required">
+				<xs:annotation>
+					<xs:documentation>URL of the podcast transcript.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="type" use="required">
+				<xs:annotation>
+					<xs:documentation>Mime type of the file such as text/plain, text/html, application/srt, text/vtt, application/json
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="language" use="optional"> 
+				<xs:annotation>
+					<xs:documentation>The language of the linked transcript. If there is no language attribute given, the linked file is assumed to be the same language that is specified by the RSS language element.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="rel" use="optional"> <!-- can this only be "captions"? -->
+			<xs:annotation>
+				<xs:documentation>If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the mime type is. In that scenario, time codes are assumed to be present in the file in some capacity.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+</xs:complexType>
+	</xs:element>
+
+	<xs:element name="locked">
+		<xs:annotation>
+			<xs:documentation>T
+				his tag may be set to yes or no. The purpose is to tell other podcast platforms whether they are allowed to import this feed. A value of yes means that any attempt to import this feed into a new platform should be rejected.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:simpleContent>
+				<xs:extension base="yesnoenumeration">
+					<xs:attribute name="owner" use="required">
+						<xs:annotation>
+							<xs:documentation>
+								The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations. This could be a public email or a virtual email address at the hosting provider that redirects to the owner's true email address. This is a critical element, and it's expected that podcast hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important it is to have this be a valid, working email address.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="funding">
+		<xs:annotation>
+			<xs:documentation>
+				This tag lists possible donation/funding links for the podcast. The content of the tag is the recommended string to be used with the link.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:simpleContent>
+				<xs:extension base="max128">
+					<xs:attribute name="url" use="required">
+						<xs:annotation>
+							<xs:documentation>
+								The URL to be followed to fund the podcast.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="chapters">
+		<xs:annotation>
+			<xs:documentation>
+				Links to an external file (see example file) containing chapter data for the episode. See the jsonChapters.md file for a description of the chapter file syntax. And, see the example.json example file for a real world example.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="url" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The URL where the chapters file is located.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="type" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						Mime type of file - JSON prefered, 'application/json+chapters'.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="soundbite">
+		<xs:annotation>
+			<xs:documentation>
+				Mime type of file - JSON prefered, 'application/json+chapters'.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="max128">
+					<xs:attribute name="startTime" type="xs:decimal" use="required">
+						<xs:annotation>
+							<xs:documentation>
+								The time where the soundbite begins
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="duration" type="xs:decimal" use="required">
+						<xs:annotation>
+							<xs:documentation>
+								How long is the soundbite (recommended between 15 and 120 seconds)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="nodevalue" type="xs:decimal" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								Used as free form string from the podcast creator to specify a title for the soundbite (null defaults to episode title)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="person">
+		<xs:annotation>
+			<xs:documentation>
+				This element specifies a person of interest to the podcast. It is primarily intended to identify people like hosts, co-hosts and guests. Although, it is flexible enough to allow fuller credits to be given using the roles and groups that are listed in the Podcast Taxonomy Project
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="max128">
+					<xs:annotation>
+						<xs:documentation>
+							This is the full name or alias of the person. This value cannot be blank.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:attribute name="role" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If role is missing then "host" is assumed.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="group" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								This should be a reference to an official group within the Podcast Taxonomy Project list. If group is not present, then "cast" is assumed.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="img" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								This is the url of a picture or avatar of the person.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="href" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								The url to a relevant resource of information about the person, such as a homepage or third-party profile platform. Please see the example feed for possible choices of what to use here.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="location">
+		<xs:annotation>
+			<xs:documentation>
+				This tag is intended to describe the location of editorial focus for a podcast's content (i.e. "what place is this podcast about?"). The tag has many use cases and is one of the more complex ones. You are highly encouraged to read the full implementation document before starting to code for it.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="max128">
+					<xs:attribute name="geo" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431"). Optional but recommended.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="osm" use="optional">
+					<xs:annotation>
+						<xs:documentation>
+							The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314"). Optional but recommended.
+						</xs:documentation>
+					</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="season">
+		<xs:annotation>
+			<xs:documentation>
+				This element allows for identifying which episodes in a podcast are part of a particular "season", with an optional season name attached.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="name" use="required">
+						<xs:annotation>
+							<xs:documentation>
+								This is the "name" of the season. If this attribute is present, applications are free to not show the season number to the end user, and may use it simply for chronological sorting and grouping purposes. Please do not exceed 128 characters for the name attribute.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="max128"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="episode">
+		<xs:annotation>
+			<xs:documentation>
+				This element exists largely for compatibility with the season tag. But, it also allows for a similar idea to what "name" functions as in that element.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="display" use="optional">
+						<xs:annotation>
+							<xs:documentation>
+								If this attribute is present, podcast apps and aggregators are encouraged to show it's value instead of the purely numerical node value. This attribute is a string. Please do not exceed 32 characters for the display attribute.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="max32"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="value">
+		<xs:annotation>
+			<xs:documentation>
+				designates the cryptocurrency or payment layer that will be used, the transport method for transacting the payments, and a suggested amount denominated in the given cryptocurrency.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="valueRecipient" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="name" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									A free-form string that designates who or what this recipient is. Recommended.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="customKey" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									The name of a custom record key to send along with the payment.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="customValue" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									A custom value to pass along with the payment. This is considered the value that belongs to the customKey.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="type" use="required">
+							<xs:annotation>
+								<xs:documentation>
+									A slug that represents the type of receiving address that will receive the payment.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="address" use="required">
+							<xs:annotation>
+								<xs:documentation>
+									This denotes the receiving address of the payee.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="split" type="xs:integer" use="required">
+							<xs:annotation>
+								<xs:documentation>
+									The number of shares of the payment this recipient will receive.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="fee" type="xs:boolean" default="true">
+							<xs:annotation>
+								<xs:documentation>
+									The fee attribute tells apps whether this split should be treated as a "fee", or a normal split.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="type" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						This is the service slug of the cryptocurrency or protocol layer.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="method" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						This is the transport mechanism that will be used.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="suggested" type="xs:decimal" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+						This is an optional suggestion on how much cryptocurrency to send with each payment.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- I can't find documentation for this -->
+	<xs:element name="images">
+		<xs:complexType>
+			<xs:attribute name="srcset" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+
+</xs:schema>
