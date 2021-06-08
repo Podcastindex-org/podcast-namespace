@@ -14,6 +14,10 @@ This tag proposal will allow feed owners and the hosts of multiple feeds, to sig
 
 An additional benefit will derive if feeds signal the name or names of the Hive accounts authorized to send Podpings. These authorized Hive accounts will be included in a `<podcast:podpingAuth>` tag
 
+## API Requirements
+
+This tag can also contribute to a future API endpoint for the PodcastIndex which can easily return whether or not any given RSS feed is using Podping and return the Hive accounts authorized to send pings.
+
 ## Specification
 
 For the `<podcast:podping>` tag there are no attributes.
