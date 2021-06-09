@@ -57,7 +57,9 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
 <br><br>
 
-- **\<podcast:source uri="[uri of media asset]" contentType="[mime type]" />**
+- ```xml
+   <podcast:source uri="[uri of media asset]" contentType="[mime type]" />
+   ```
 
    podcast:alternateEnclosure (required | multiple)
 
@@ -71,7 +73,9 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
 <br><br>
 
-- **\<podcast:integrity type="[integrity type]" value="[integrity value]" />**
+- ```xml
+   <podcast:integrity type="[integrity type]" value="[integrity value]" />
+   ```
 
    podcast:alternateEnclosure (optional | multiple)
 
