@@ -20,19 +20,21 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
 ## Specification
 
-- **\<podcast:alternateEnclosure**<br>
-    type="[mime type]"<br>
-    length="[(int)]"<br>
-    bitrate="[(float)]"<br>
-    height="[(int)]"<br>
-    lang="[(string)]"<br>
-    title="[(string)]"<br>
-    rel="[(string)]"<br>
-    codecs="[(string)]"<br>
-    default="[(boolean)]"><br>
-   [one or more of <podcst:source> and <podcast:integrity>]<br>
-  **\</podcast:alternateEnclosure>**<br>
-  
+- ```xml
+    <podcast:alternateEnclosure
+      type="[mime type]"
+      length="[(int)]"
+      bitrate="[(float)]"
+      height="[(int)]"
+      lang="[(string)]"
+      title="[(string)]"
+      rel="[(string)]"
+      codecs="[(string)]"
+      default="[(boolean)]">
+    [one or more of <podcst:source> and <podcast:integrity>]
+    </podcast:alternateEnclosure>
+    ```
+
    Item (optional | multiple)
 
    This element defines a media file. One or more `<podcast:source>` tags must be contained within this element to list available methods to obtain the file.  This is meant to provide different versions of a media file -- such as low or high bitrate, alternate formats (different codecs or video), alternate URI schemes (IPFS or live streaming), or alternate download types not indicated by the URI and type (like torrents).
