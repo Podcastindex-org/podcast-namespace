@@ -139,8 +139,8 @@ full implementation details.
 - **\<podcast:trailer>** <br>
 - **\<podcast:license>** <br>
 - **\<podcast:alternateEnclosure>** <br>
-- **\<podcast:source>** <br>
-- **\<podcast:integrity>** <br>
+- - **\<podcast:source>** <br>
+- - **\<podcast:integrity>** <br>
 
 <br>
 

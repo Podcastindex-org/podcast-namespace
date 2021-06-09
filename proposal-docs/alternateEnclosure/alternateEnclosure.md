@@ -20,7 +20,18 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
 ## Specification
 
-- **\<podcast:alternateEnclosure type="[mime type]" length="[(int)]" bitrate="[(float)]" height="[(int)]" lang="[(string)]" title="[(string)]" rel="[(string)]" codecs="[(string)]" default="[(boolean)]"> ... </podcast:alternateEnclosure>**
+- **\<podcast:alternateEnclosure**
+    type="[mime type]"
+    length="[(int)]"
+    bitrate="[(float)]"
+    height="[(int)]"
+    lang="[(string)]"
+    title="[(string)]"
+    rel="[(string)]"
+    codecs="[(string)]"
+    default="[(boolean)]">
+   [one or more of <podcst:source> and <podcast:integrity>]
+  **\</podcast:alternateEnclosure>**
    Item (optional | multiple)
 
    This element defines a media file. One or more `<podcast:source>` tags must be contained within this element to list available methods to obtain the file.  This is meant to provide different versions of a media file -- such as low or high bitrate, alternate formats (different codecs or video), alternate URI schemes (IPFS or live streaming), or alternate download types not indicated by the URI and type (like torrents).
@@ -41,16 +52,21 @@ Lastly, I propose optional information to verify integrity of downloaded media v
    - `codecs` (optional) A [RFC 6381](https://tools.ietf.org/html/rfc6381) string specifying the codecs available in this media.
    - `default` (optional) Boolean specifying whether or not the given media is the same as the file from the _enclosure_ element and should be the preferred media element.  The primary reason to set this is to offer alternative transports for the enclosure.  If not set, this should be assumed to be _false_.
 
+<br><br>
+
 - **\<podcast:source uri="[uri of media asset]" contentType="[mime type]" />**
 
    podcast:alternateEnclosure (required | multiple)
 
-   This element defines available transport methods to obtain media, such as HTTP, HTTPS, IPFS, Tor, magnet, etc, via alternate URI schemes and content types if the `<podcast:alternateEnclosure>` content type does not suffice, such as torrent or stream files.
+   This element defines available transport methods to obtain media, such as HTTP, HTTPS, IPFS, Tor, magnet, etc, via alternate URI schemes.  If the mime type of the transport medium, such as a torrent file, is different than the media file
+   that will ultimately be delivered (the one specified in the `type` attribute of `<podcast:alternateEnclosure>`) then the `contentType` attribute should be used to specify it here.
 
    There should be one or more source elements in a media tag.
 
    - `uri` (required) This a an [IANA-registered](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) URI for the media asset.
    - `contentType` (optional) Mime type of the data retrieved from the URI, if different from the media's "type"
+
+<br><br>
 
 - **\<podcast:integrity type="[integrity type]" value="[integrity value]" />**
 
