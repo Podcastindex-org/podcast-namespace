@@ -24,9 +24,9 @@ Please read it before contributing if you aren't familiar with it.
 
 **Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were **formalized**.
 
-**Phase 3** - [Closed] Proposals welcome.  This phase will close on June 1st, 2021.  At that time, any tags with full agreement will be reviewed for
-                     formalization.  Any tags with concerns or questions will be pushed forward to the next phase.  Current tag proposals under
-                     consideration are listed [here](#phase-3-open).
+**Phase 3** - [Closed] Comment period closed on `6/1/21` and 5 tags were **formalized**.
+
+**Phase 4** - [Open] As of 6/9/2021, all proposals for phase 4 are welcome. Current tag proposals under consideration are listed here.  No closing date is set at this time.
 
 <br><br>
 
