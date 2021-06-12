@@ -141,6 +141,7 @@ full implementation details.
 - **\<podcast:alternateEnclosure>** <br>
   - **\<podcast:source>** <br>
   - **\<podcast:integrity>** <br>
+- **\<podcast:guid>** <br>
 
 <br>
 
