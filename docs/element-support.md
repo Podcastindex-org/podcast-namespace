@@ -14,6 +14,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 8. [PodcastGuru](https://twitter.com/podcastguru_app/status/1362902472793223169)
 9. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91)
+10. [PodServe.fm](https://www.podserve.fm)
 
 
 ## Locked `<podcast:locked>`
@@ -51,6 +52,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [Podcastindex](https://podcastindex.org)
 8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
+10. [PodServe.fm](https://www.podserve.fm)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
