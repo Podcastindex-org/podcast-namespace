@@ -1,6 +1,6 @@
 ## Transcript File Format Details
 
-This is the initial spec for the podcast transcript format.  There are three possible formats detailed below.
+This is the initial spec for the podcast transcript format.  There are four possible formats detailed below.
 
 
 <br><br>

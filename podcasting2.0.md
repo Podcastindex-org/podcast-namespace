@@ -47,6 +47,13 @@ The namespace gives you (and your listeners) access to many new features:
  - Location: Is your podcast about a specific place?  Tag it's location right in the episode or podcast feed to let people know.  It makes your show more
              discoverable on the web.
  - Named Seasons: Seasons have been around for a while, but now you can name them.  This way you can avoid the hassle of trying to cram everything in your show title.
+ - Trailers: Trailers can exist as a separate audio/video file, outside of an actual episode.  They can be tied to specific seasons for promotional consistency.
+ - License: Want to protect your work from derivative use, or the other way around?  You can assign a specific license to the content of the entire podcast, or different
+            licenses for each episode.  You can use preexisting open source licenses or write one yourself.
+ - Alternate Enclosures: It's now possible to deliver alternative versions of content in the same podcast feed. You can assign video versions of an audio podcast.  Or,
+                         maybe a low (or high) bandwidth version of the main audio/video file.  Or, perhaps you want to deliver a version of your content over another
+                         method like IPFS or WebTorrent.
+
 
 <br><br>
 
