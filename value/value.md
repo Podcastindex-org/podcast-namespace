@@ -177,7 +177,7 @@ When a single `<podcast:valueRecipient>` is present, it should be assumed that t
 be ignored.  When multiple recipients are present, a share calculation (see below) should be made to determine how much to send to each recipient's address.
 
 The `fee` attribute tells apps whether this split should be treated as a "fee", or a normal split.  If this attribute is true, then this split should be calculated
-as a fee, meaning it's percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
+as a fee, meaning its percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
 providers such as apps, hosting companies, API's and third-party value add providers to add their fee to a value block.
 
 <br><br>
