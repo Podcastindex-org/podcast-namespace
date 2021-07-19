@@ -8,7 +8,7 @@
 
 Here we describe an additional "block" of XML that gives podcasters (and other media creators) a way to receive direct
 payments from their audience in response to the action of viewing or listening to a created work. Utilizing so called "Layer 2"
-crypto-currency networks like Lightning, and possibly other digital currency mechanisms, near real-time micropayments can
+cryptocurrency networks like Lightning, and possibly other digital currency mechanisms, near real-time micropayments can
 be directly sent from listener or viewer to the creator without the need for a payment processor or other "middle men".
 
 The value block designates single or multiple destinations for these micro-payments.  The idea is that the creator of the media
