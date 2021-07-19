@@ -216,16 +216,16 @@ To calculate payouts, let's take the following value block as an example:
 ```
 
 This block designates three payment recipients.  On each timed payment interval, the total payment will be split into 3 smaller
-payments according to the shares listed in the split for each recipient.  So, in this case, if the listener decided to pay 100 satoshis per minute for listening
-to this podcast, then once per minute the "Host" would be sent 50 satoshis, the "Co-Host" would be sent 40 satoshis and the
-"Producer" would be sent 10 satoshis - all to their respective lightning node addresses using the "keysend" protocol.
+payments according to the shares listed in the split for each recipient.  So, in this case, if the listener decided to pay 100 sats per minute for listening
+to this podcast, then once per minute the "Host" would be sent 50 sats, the "Co-Host" would be sent 40 sats and the
+"Producer" would be sent 10 sats - all to their respective lightning node addresses using the "keysend" protocol.
 
 If, instead of a 50/40/10 (total of 100) split, the splits were given as 190/152/38 (total of 380), the respective payment amounts each minute would still
-be 50 satoshis, 40 satoshis and 10 satoshis because the listener chose to pay 100 satoshis per minute, and the respective shares (as a percentage of the total) would remain the same.
+be 50 sats, 40 sats and 10 sats because the listener chose to pay 100 sats per minute, and the respective shares (as a percentage of the total) would remain the same.
 
 On a 190/152/38 split, each minute the payment calculation would be:
 
- - Interval payout: 100 satoshis
+ - Interval payout: 100 sats
 
  - Share total: 380
 
@@ -236,7 +236,7 @@ On a 190/152/38 split, each minute the payment calculation would be:
 If an app chooses to only make a payout once every 30 minutes of listening/watching, the calculation would be the same after multiplying
 the per-minute payment by 30:
 
- - Interval payout: 3000 satoshis (100 * 30)
+ - Interval payout: 3000 sats (100 * 30)
 
  - Shares total: 380
 
