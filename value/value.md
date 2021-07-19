@@ -41,6 +41,8 @@ in a single transaction.  Likewise, some apps with limited connectivity may need
 hour.  In that scenario, there would be 60 payments added up into a single, larger payment.  Batching transactions
 like this also helps to minimize the impact of transaction fees on the underlying cryptocurrency network.
 
+Note that playback speed is not a factor in this calculation. The "one minute payment interval" refers to the minutes that make up the total runtime of the content, thus all payment calculations are independent of playback speed.
+
 <div class="page"/>
 
 <br><br>
