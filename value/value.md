@@ -107,7 +107,7 @@ exists at the `<item>` level, it is intended to override the channel level tag f
 
 #### Example:
 
-The following example uses the `keysend` method of the `lightning` Network and
+The following example uses the `keysend` method of the `lightning` network and
 sets the suggested value to 5 sats. A sat, short for satoshi, is a one hundred
 millionth of a single bitcoin (0.00000001 BTC). The smallest unit on the
 Lightning Network is a millisat, which is a thousandth of a sat.
