@@ -98,8 +98,7 @@ to be streamed to what is, essentially, an open invoice.  Other cryptocurrencies
 would be used here.  If not, a value of "default" should be given.
 
 The "suggested" amount is just that.  It's a suggestion, and must be changeable by the user to another value, or
-to zero.  The suggested amount should always be given in the smallest denomination available within the payment
-protocol being used.  For instance, with Lightning it is given in millisatoshis.
+to zero.  The suggested amount depends on the payment protocol being used.  For instance, with Lightning on the Bitcoin network, the amount can be as low as one millisatoshi, expressed as `0.00000000001` BTC.
 
 A single value tag can contain many `<podcast:valueRecipient>` tags as children.  All of these given recipients are
 sent individual payments when the payment interval triggers.
