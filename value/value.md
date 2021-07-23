@@ -357,11 +357,16 @@ and guest.
           name="John Vallis (Host)"
           type="node"
           address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
-          split="50"
+          split="100"
       />
   </podcast:value>
   ...
   <item>
+    <title>#00 - John's Solo Episode</title>
+    ...
+  </item>
+  <item>
+    <title>#01 - John and Gigi</title>
     <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
         <podcast:valueRecipient
             name="John Vallis (Host)"
@@ -379,6 +384,7 @@ and guest.
     ...
   </item>
   <item>
+    <title>#02 - John and Paul</title>
     <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
         <podcast:valueRecipient
             name="John Vallis (Host)"
