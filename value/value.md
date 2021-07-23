@@ -389,7 +389,7 @@ and guest.
         <podcast:valueRecipient
             name="John Vallis (Host)"
             type="node"
-            address=""
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
             split="50"
         />
         <podcast:valueRecipient
