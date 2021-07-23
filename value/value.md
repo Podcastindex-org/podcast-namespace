@@ -341,6 +341,13 @@ Since the value block is defined at the `<channel>` level, it applies to every p
 
 ##### Example: `<Item>` Override
 
+To set up different payment splits for individual episodes, a value block has to
+be defined on the `<item>` level. This will override the value settings set on
+the `<channel>` level.
+
+The following example defines different value blocks for each episode in order
+to include the guests as value recipients. Payments are split 50/50 between host
+and guest.
 
 ```xml
 ...
