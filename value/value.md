@@ -338,3 +338,56 @@ Since the value block is defined at the `<channel>` level, it applies to every p
   ...
 </channel>
 ```
+
+##### Example: `<Item>` Override
+
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+      <podcast:valueRecipient
+          name="John Vallis (Host)"
+          type="node"
+          address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+          split="50"
+      />
+  </podcast:value>
+  ...
+  <item>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Gigi (Guest)"
+            type="node"
+            address="02e12fea95f576a680ec1938b7ed98ef0855eadeced493566877d404e404bfbf52"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  <item>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address=""
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Paul Itoi (Guest)"
+            type="node"
+            address="03a9a8d953fe747d0dd94dd3c567ddc58451101e987e2d2bf7a4d1e10a2c89ff38"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  ...
+</channel>
+```
