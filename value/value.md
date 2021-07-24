@@ -300,33 +300,107 @@ the `customKey` and `customValue` can be utilized as follows:
 This is a live, working example of a Lightning keysend value block in production.  It designates four recipients for payment - two
 podcast hosts at 49 and 46 shares respectively, a producer working on per episode chapter creation who gets a 5 share, and
 a single share (effectively 1%) fee to the Podcastindex.org API.
+Since the value block is defined at the `<channel>` level, it applies to every podcast episode.
 
 ```xml
-<podcast:value type="lightning" method="keysend" suggested="0.00000015000">
-    <podcast:valueRecipient
-        name="Adam Curry (Podcaster)"
-        type="node"
-        address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
-        split="49"
-    />
-    <podcast:valueRecipient
-        name="Dave Jones (Podcaster)"
-        type="node"
-        address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
-        split="46"
-    />
-    <podcast:valueRecipient
-        name="Dreb Scott (Chapter Creation)"
-        type="node"
-        address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
-        split="5"
-    />
-    <podcast:valueRecipient
-        name="Podcastindex.org (Donation)"
-        type="node"
-        address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
-        split="1"
-        fee="true"
-    />
-</podcast:value>
+...
+<channel>
+  <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
+      <podcast:valueRecipient
+          name="Adam Curry (Podcaster)"
+          type="node"
+          address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
+          split="49"
+      />
+      <podcast:valueRecipient
+          name="Dave Jones (Podcaster)"
+          type="node"
+          address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
+          split="46"
+      />
+      <podcast:valueRecipient
+          name="Dreb Scott (Chapter Creation)"
+          type="node"
+          address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
+          split="5"
+      />
+      <podcast:valueRecipient
+          name="Podcastindex.org (Donation)"
+          type="node"
+          address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
+          split="1"
+          fee="true"
+      />
+  </podcast:value>
+  ...
+  <item>...</item>
+  <item>...</item>
+  ...
+</channel>
+```
+
+##### Example: `<Item>` Override
+
+To set up different payment splits for individual episodes, a value block has to
+be defined on the `<item>` level. This will override the value settings set on
+the `<channel>` level.
+
+The following example defines different value blocks for each episode in order
+to include the guests as value recipients. Payments are split 50/50 between host
+and guest.
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+      <podcast:valueRecipient
+          name="John Vallis (Host)"
+          type="node"
+          address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+          split="100"
+      />
+  </podcast:value>
+  ...
+  <item>
+    <title>#00 - John's Solo Episode</title>
+    ...
+  </item>
+  <item>
+    <title>#01 - John and Gigi</title>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Gigi (Guest)"
+            type="node"
+            address="02e12fea95f576a680ec1938b7ed98ef0855eadeced493566877d404e404bfbf52"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  <item>
+    <title>#02 - John and Paul</title>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Paul Itoi (Guest)"
+            type="node"
+            address="03a9a8d953fe747d0dd94dd3c567ddc58451101e987e2d2bf7a4d1e10a2c89ff38"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  ...
+</channel>
 ```
