@@ -266,6 +266,12 @@ API that exposes a compatible process.
 Currently, development is centered fully on [Lightning](https://github.com/lightningnetwork) using the "keysend" protocol.  Keysend allows for push
 based payments without the recipient needing to generate an invoice to receive them.
 
+Atomic multipath payments ([AMPs]) are another, more modern method to send
+spontaneous payments via lightning. AMP payments require the same information
+as `keysend` payments, namely a node pubkey and a payment amount.
+
+[AMPs]: https://bitcoinops.org/en/topics/multipath-payments/
+
 <br>
 
 #### Lightning
