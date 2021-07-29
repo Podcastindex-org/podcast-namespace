@@ -263,8 +263,14 @@ they will spend and charge.
 The value block is designed to be flexible enough to handle most any cryptocurrency, and even fiat currencies with a given
 API that exposes a compatible process.
 
-Currently, development is centered fully on [Lightning](https://github.com/lightningnetwork) using the "keysend" protocol.  Keysend allows for push
+Currently, development is centered mostly on [Lightning](https://github.com/lightningnetwork) using the "keysend" method.  Keysend allows for push
 based payments without the recipient needing to generate an invoice to receive them.
+Another method to send spontaneous payments via Lightning is AMP, atomic
+[multipath payments][AMP]. AMP supersedes keysend in many ways and allows for
+more robust and larger payments. However, it is still in beta and thus not
+widely implemented as of now.
+
+[AMP]: https://bitcoinops.org/en/topics/multipath-payments/
 
 <br>
 
@@ -273,7 +279,7 @@ based payments without the recipient needing to generate an invoice to receive t
 For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
- - `method` (required): "keysend"
+ - `method` (required): "keysend" or "amp"
  - `suggested` (optional): A float representing a BTC amount.
         e.g. 0.00000005000 is 5 Sats.
 
@@ -287,7 +293,7 @@ If the receiving Lightning node, or service, requires a custom record or meta-da
 the `customKey` and `customValue` can be utilized as follows:
 
  - `type`: "node"
- - `method`: "keysend"
+ - `method`: "keysend" or "amp"
  - `customKey`: \<key name\>
  - `customValue`: \<value\>
  - `address`: \<the destination node's pubkey\>
@@ -336,6 +342,18 @@ Since the value block is defined at the `<channel>` level, it applies to every p
   <item>...</item>
   <item>...</item>
   ...
+</channel>
+```
+
+To use Atomic Multipath Payments (AMP) instead of `keysend`, simply set the
+payment `method` to `amp`:
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="amp" suggested="0.00000015000">
+  ...
+  </podcast:value>
 </channel>
 ```
 
