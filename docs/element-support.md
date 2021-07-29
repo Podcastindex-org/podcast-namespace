@@ -53,6 +53,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 10. [PodServe.fm](https://www.podserve.fm)
+11. [JustCast.com](https://twitter.com/thejustcast/status/1420783756156145664)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
