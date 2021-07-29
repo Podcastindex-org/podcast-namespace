@@ -279,7 +279,7 @@ as `keysend` payments, namely a node pubkey and a payment amount.
 For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
- - `method` (required): "keysend"
+ - `method` (required): "keysend" or "amp"
  - `suggested` (optional): A float representing a BTC amount.
         e.g. 0.00000005000 is 5 Sats.
 
@@ -293,7 +293,7 @@ If the receiving Lightning node, or service, requires a custom record or meta-da
 the `customKey` and `customValue` can be utilized as follows:
 
  - `type`: "node"
- - `method`: "keysend"
+ - `method`: "keysend" or "amp"
  - `customKey`: \<key name\>
  - `customValue`: \<value\>
  - `address`: \<the destination node's pubkey\>
