@@ -1,5 +1,6 @@
 bitcoin
 lightning
 keysend
+amp
 wallet
 node
