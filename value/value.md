@@ -345,6 +345,18 @@ Since the value block is defined at the `<channel>` level, it applies to every p
 </channel>
 ```
 
+To use Atomic Multipath Payments (AMP) instead of `keysend`, simply set the
+payment `method` to `amp`:
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="amp" suggested="0.00000015000">
+  ...
+  </podcast:value>
+</channel>
+```
+
 ##### Example: `<Item>` Override
 
 To set up different payment splits for individual episodes, a value block has to
