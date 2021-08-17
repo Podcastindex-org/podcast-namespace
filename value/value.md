@@ -8,7 +8,7 @@
 
 Here we describe an additional "block" of XML that gives podcasters (and other media creators) a way to receive direct
 payments from their audience in response to the action of viewing or listening to a created work. Utilizing so called "Layer 2"
-crypto-currency networks like Lightning, and possibly other digital currency mechanisms, near real-time micropayments can
+cryptocurrency networks like Lightning, and possibly other digital currency mechanisms, near real-time micropayments can
 be directly sent from listener or viewer to the creator without the need for a payment processor or other "middle men".
 
 The value block designates single or multiple destinations for these micro-payments.  The idea is that the creator of the media
@@ -41,6 +41,8 @@ in a single transaction.  Likewise, some apps with limited connectivity may need
 hour.  In that scenario, there would be 60 payments added up into a single, larger payment.  Batching transactions
 like this also helps to minimize the impact of transaction fees on the underlying cryptocurrency network.
 
+Note that playback speed is not a factor in this calculation. The "one minute payment interval" refers to the minutes that make up the total runtime of the content, thus all payment calculations are independent of playback speed.
+
 <div class="page"/>
 
 <br><br>
@@ -65,7 +67,7 @@ Currently, there can be only a single copy of this element at each level.
 <br>
 
 #### Structure:
-```
+```xml
 <podcast:value
     type="[cryptocurrency or layer(string)]"
     method="[payment transport(string)]"
@@ -96,8 +98,7 @@ to be streamed to what is, essentially, an open invoice.  Other cryptocurrencies
 would be used here.  If not, a value of "default" should be given.
 
 The "suggested" amount is just that.  It's a suggestion, and must be changeable by the user to another value, or
-to zero.  The suggested amount should always be given in the smallest denomination available within the payment
-protocol being used.  For instance, with Lightning it is given in millisatoshis.
+to zero.  The suggested amount depends on the payment protocol being used.  For instance, with Lightning on the Bitcoin network, the amount can be as low as one millisatoshi, expressed as `0.00000000001` BTC.
 
 A single value tag can contain many `<podcast:valueRecipient>` tags as children.  All of these given recipients are
 sent individual payments when the payment interval triggers.
@@ -107,7 +108,12 @@ exists at the `<item>` level, it is intended to override the channel level tag f
 
 #### Example:
 
-```
+The following example uses the `keysend` method of the `lightning` network and
+sets the suggested value to 5 sats. A sat, short for satoshi, is a
+one-hundred-millionth of a single bitcoin (0.00000001 BTC). The smallest unit on
+the Lightning Network is a millisat, which is a thousandth of a sat.
+
+```xml
 <podcast:value
     type="lightning"
     method="keysend"
@@ -133,7 +139,7 @@ There is no limit on how many `valueRecipient` elements can be present in a give
 
 #### Structure:
 
-```
+```xml
 <podcast:valueRecipient
     name="[name of recipient(string)]"
     type="[address type(string)]"
@@ -177,7 +183,7 @@ When a single `<podcast:valueRecipient>` is present, it should be assumed that t
 be ignored.  When multiple recipients are present, a share calculation (see below) should be made to determine how much to send to each recipient's address.
 
 The `fee` attribute tells apps whether this split should be treated as a "fee", or a normal split.  If this attribute is true, then this split should be calculated
-as a fee, meaning it's percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
+as a fee, meaning its percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
 providers such as apps, hosting companies, API's and third-party value add providers to add their fee to a value block.
 
 <br><br>
@@ -192,7 +198,7 @@ The interval payment calculation is:
 
 To calculate payouts, let's take the following value block as an example:
 
-```
+```xml
 <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
     <podcast:valueRecipient
         name="Host"
@@ -216,16 +222,16 @@ To calculate payouts, let's take the following value block as an example:
 ```
 
 This block designates three payment recipients.  On each timed payment interval, the total payment will be split into 3 smaller
-payments according to the shares listed in the split for each recipient.  So, in this case, if the listener decided to pay 100 satoshis per minute for listening
-to this podcast, then once per minute the "Host" would be sent 50 satoshis, the "Co-Host" would be sent 40 satoshis and the
-"Producer" would be sent 10 satoshis - all to their respective lightning node addresses using the "keysend" protocol.
+payments according to the shares listed in the split for each recipient.  So, in this case, if the listener decided to pay 100 sats per minute for listening
+to this podcast, then once per minute the "Host" would be sent 50 sats, the "Co-Host" would be sent 40 sats and the
+"Producer" would be sent 10 sats - all to their respective lightning node addresses using the "keysend" protocol.
 
 If, instead of a 50/40/10 (total of 100) split, the splits were given as 190/152/38 (total of 380), the respective payment amounts each minute would still
-be 50 satoshis, 40 satoshis and 10 satoshis because the listener chose to pay 100 satoshis per minute, and the respective shares (as a percentage of the total) would remain the same.
+be 50 sats, 40 sats and 10 sats because the listener chose to pay 100 sats per minute, and the respective shares (as a percentage of the total) would remain the same.
 
 On a 190/152/38 split, each minute the payment calculation would be:
 
- - Interval payout: 100 satoshis
+ - Interval payout: 100 sats
 
  - Share total: 380
 
@@ -236,7 +242,7 @@ On a 190/152/38 split, each minute the payment calculation would be:
 If an app chooses to only make a payout once every 30 minutes of listening/watching, the calculation would be the same after multiplying
 the per-minute payment by 30:
 
- - Interval payout: 3000 satoshis (100 * 30)
+ - Interval payout: 3000 sats (100 * 30)
 
  - Shares total: 380
 
@@ -257,8 +263,14 @@ they will spend and charge.
 The value block is designed to be flexible enough to handle most any cryptocurrency, and even fiat currencies with a given
 API that exposes a compatible process.
 
-Currently, development is centered fully on [Lightning](https://github.com/lightningnetwork) using the "keysend" protocol.  Keysend allows for push
+Currently, development is centered mostly on [Lightning](https://github.com/lightningnetwork) using the "keysend" method.  Keysend allows for push
 based payments without the recipient needing to generate an invoice to receive them.
+Another method to send spontaneous payments via Lightning is AMP, atomic
+[multipath payments][AMP]. AMP supersedes keysend in many ways and allows for
+more robust and larger payments. However, it is still in beta and thus not
+widely implemented as of now.
+
+[AMP]: https://bitcoinops.org/en/topics/multipath-payments/
 
 <br>
 
@@ -267,7 +279,7 @@ based payments without the recipient needing to generate an invoice to receive t
 For the `<podcast:value>` tag, the following attributes MUST be used:
 
  - `type` (required): "lightning"
- - `method` (required): "keysend"
+ - `method` (required): "keysend" or "amp"
  - `suggested` (optional): A float representing a BTC amount.
         e.g. 0.00000005000 is 5 Sats.
 
@@ -281,7 +293,7 @@ If the receiving Lightning node, or service, requires a custom record or meta-da
 the `customKey` and `customValue` can be utilized as follows:
 
  - `type`: "node"
- - `method`: "keysend"
+ - `method`: "keysend" or "amp"
  - `customKey`: \<key name\>
  - `customValue`: \<value\>
  - `address`: \<the destination node's pubkey\>
@@ -294,33 +306,119 @@ the `customKey` and `customValue` can be utilized as follows:
 This is a live, working example of a Lightning keysend value block in production.  It designates four recipients for payment - two
 podcast hosts at 49 and 46 shares respectively, a producer working on per episode chapter creation who gets a 5 share, and
 a single share (effectively 1%) fee to the Podcastindex.org API.
+Since the value block is defined at the `<channel>` level, it applies to every podcast episode.
 
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
+      <podcast:valueRecipient
+          name="Adam Curry (Podcaster)"
+          type="node"
+          address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
+          split="49"
+      />
+      <podcast:valueRecipient
+          name="Dave Jones (Podcaster)"
+          type="node"
+          address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
+          split="46"
+      />
+      <podcast:valueRecipient
+          name="Dreb Scott (Chapter Creation)"
+          type="node"
+          address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
+          split="5"
+      />
+      <podcast:valueRecipient
+          name="Podcastindex.org (Donation)"
+          type="node"
+          address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
+          split="1"
+          fee="true"
+      />
+  </podcast:value>
+  ...
+  <item>...</item>
+  <item>...</item>
+  ...
+</channel>
 ```
-<podcast:value type="lightning" method="keysend" suggested="0.00000015000">
-    <podcast:valueRecipient
-        name="Adam Curry (Podcaster)"
-        type="node"
-        address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
-        split="49"
-    />
-    <podcast:valueRecipient
-        name="Dave Jones (Podcaster)"
-        type="node"
-        address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
-        split="46"
-    />
-    <podcast:valueRecipient
-        name="Dreb Scott (Chapter Creation)"
-        type="node"
-        address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
-        split="5"
-    />
-    <podcast:valueRecipient
-        name="Podcastindex.org (Donation)"
-        type="node"
-        address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
-        split="1"
-        fee="true"
-    />
-</podcast:value>
+
+To use Atomic Multipath Payments (AMP) instead of `keysend`, simply set the
+payment `method` to `amp`:
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="amp" suggested="0.00000015000">
+  ...
+  </podcast:value>
+</channel>
+```
+
+##### Example: `<Item>` Override
+
+To set up different payment splits for individual episodes, a value block has to
+be defined on the `<item>` level. This will override the value settings set on
+the `<channel>` level.
+
+The following example defines different value blocks for each episode in order
+to include the guests as value recipients. Payments are split 50/50 between host
+and guest.
+
+```xml
+...
+<channel>
+  <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+      <podcast:valueRecipient
+          name="John Vallis (Host)"
+          type="node"
+          address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+          split="100"
+      />
+  </podcast:value>
+  ...
+  <item>
+    <title>#00 - John's Solo Episode</title>
+    ...
+  </item>
+  <item>
+    <title>#01 - John and Gigi</title>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Gigi (Guest)"
+            type="node"
+            address="02e12fea95f576a680ec1938b7ed98ef0855eadeced493566877d404e404bfbf52"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  <item>
+    <title>#02 - John and Paul</title>
+    <podcast:value type="lightning" method="keysend" suggested="0.00000021000">
+        <podcast:valueRecipient
+            name="John Vallis (Host)"
+            type="node"
+            address="02a9cd2bca29dd7e29bdfdf485a8e78b8ccf9327517afa03a59be8f62a58792e1b"
+            split="50"
+        />
+        <podcast:valueRecipient
+            name="Paul Itoi (Guest)"
+            type="node"
+            address="03a9a8d953fe747d0dd94dd3c567ddc58451101e987e2d2bf7a4d1e10a2c89ff38"
+            split="50"
+        />
+    </podcast:value>
+    ...
+  </item>
+  ...
+</channel>
 ```

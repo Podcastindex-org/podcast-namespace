@@ -1,6 +1,6 @@
 ## Transcript File Format Details
 
-This is the initial spec for the podcast transcript format.  There are three possible formats detailed below.
+This is the initial spec for the podcast transcript format.  There are four possible formats detailed below.
 
 
 <br><br>
@@ -17,7 +17,7 @@ designed to serve as an accessibility aid and provide searchable episode content
 - `<p>`: Content of monologue
 
 #### Snippet:
-```
+```html
 <cite>Kevin:</cite>
 <time>0:00</time>
 <p>We have an update planned where we would like to give the ability to upload an artwork file for these videos</p>
@@ -44,7 +44,7 @@ The JSON representation is a flexible format that accomodates various degrees of
 - `<body>`: Dialogue content
 
 #### Snippet:
-```
+```json
 {
   "version": "1.0.0",
   "segments": [

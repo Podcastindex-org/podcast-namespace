@@ -13,6 +13,9 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 7. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 8. [PodcastGuru](https://twitter.com/podcastguru_app/status/1362902472793223169)
+9. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91)
+10. [PodServe.fm](https://www.podserve.fm)
+
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -23,6 +26,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [PodServe.fm](https://www.podserve.fm)
 7. [Castopod](https://podlibre.org/castopod-supports-podcast-locking/)
 8. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
+9. [RSS.com Podcasting](https://rss.com)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -36,6 +40,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 10. [PodcastGuru](https://twitter.com/podcastguru_app/status/1351911108886589448)
 11. [Hypercatcher](https://hypercatcher.com)
+12. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/releases/tag/3.3.1)
+13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -47,12 +53,16 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [Podcastindex](https://podcastindex.org)
 8. [Castopod](https://podlibre.org/castopod-supports-chapters-and-transcript-tags/)
 9. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
+10. [PodServe.fm](https://www.podserve.fm)
+11. [JustCast.com](https://twitter.com/thejustcast/status/1420783756156145664)
+12. [RSS.com Podcasting](https://rss.com)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Podverse](https://twitter.com/Podverse/status/1326072379597053953?s=20)
 3. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 4. [Castopod](https://podlibre.org/castopod-supports-soundbite-tag/)
+5. [RSS.com Podcasting](https://rss.com)
 
 ## Location `<podcast:location>`
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
@@ -62,3 +72,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
+3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)

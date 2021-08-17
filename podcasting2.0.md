@@ -47,6 +47,13 @@ The namespace gives you (and your listeners) access to many new features:
  - Location: Is your podcast about a specific place?  Tag it's location right in the episode or podcast feed to let people know.  It makes your show more
              discoverable on the web.
  - Named Seasons: Seasons have been around for a while, but now you can name them.  This way you can avoid the hassle of trying to cram everything in your show title.
+ - Trailers: Trailers can exist as a separate audio/video file, outside of an actual episode.  They can be tied to specific seasons for promotional consistency.
+ - License: Want to protect your work from derivative use, or the other way around?  You can assign a specific license to the content of the entire podcast, or different
+            licenses for each episode.  You can use preexisting open source licenses or write one yourself.
+ - Alternate Enclosures: It's now possible to deliver alternative versions of content in the same podcast feed. You can assign video versions of an audio podcast.  Or,
+                         maybe a low (or high) bandwidth version of the main audio/video file.  Or, perhaps you want to deliver a version of your content over another
+                         method like IPFS or WebTorrent.
+
 
 <br><br>
 
@@ -78,7 +85,14 @@ Web-based podcast apps, PWA's (Progressive Web Apps) and Browser Extension based
 
 The final step is monetizing your content with cryptocurrency so your listeners can support you directly with no middle-men.  This allows your content to be truly free from the pressures of advertising.  Advertising serves a necessary role in any free market, but it does come with a cost.  That cost is censorship - whether it's direct censorship by the advertisers themselves or self-censorship as you restrict your speech as to not offend the advertisers.
 
-Because of these issues, we've created a way to receive cryptocurrency payments directly from your listeners to you using the experimental `<podcast:value>` tag in your podcast feed.  Because it is experimental, it is not currently supported by any major podcast hosting companies. But, if you are so inclined, you can start using it in your feed today so that your podcast will show up on apps that support it like [Sphinx.chat](https://sphinx.chat) and [podStation](https://podstation.github.io).
+Because of these issues, we've created a way to receive cryptocurrency payments directly from your listeners to you using the experimental `<podcast:value>` tag in your podcast feed.  Because it is experimental, it is not currently supported by any major podcast hosting companies. But, if you are so inclined, you can start using it in your feed today so that your podcast will show up on apps that support it like:
+
+- [Breez](https://Breez.technology)
+- [Podfriend](https://podfriend.com)
+- [CurioCaster](https://curiocaster.com)
+- [Podverse](https://podverse.fm)
+- [podStation](https://podstation.github.io)
+- [Sphinx.chat](https://sphinx.chat)
 
 If you can't add the `<podcast:value>` tag to your feed manually, we also have created [a site](https://podcasterwallet.com) that can help you put a value tag directly into the Podcast Index database for your feed.  Any apps that use the Podcast Index will see your value tag and be able to stream micropayments to you.
 
