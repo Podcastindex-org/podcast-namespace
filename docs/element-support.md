@@ -73,3 +73,6 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
+
+## GUID `<podcast:guid>`
+1. [Buzzsprout](https://www.buzzsprout.com)
