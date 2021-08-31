@@ -15,6 +15,7 @@ This specification is about giving control to content creators on the content th
   - `GUID` support for channel element,
   - a `motive` tag that explains why a specific recommendation was included,
   - a `medium` tag so that this can work with any feed, including non-podcast medium. (See \<podcast:medium> for more information.)
+
 All this was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapters and soundbite tags. May they be thanked for it.
 GO PODCASTING!!!
 
