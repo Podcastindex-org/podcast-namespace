@@ -59,7 +59,7 @@ Example:
 
 ```json
 {
-	"version": "1.2",
+	"version": "1.0",
 	"title": "Podnews podcasting news",
 	"feed": "https://podnews.net/rss",
 	"guid": "9b024349-ccf0-5f69-a609-6b82873eab3c"
