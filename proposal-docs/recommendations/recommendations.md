@@ -86,7 +86,7 @@ There are 4 required attributes:
    -  'feed',
    -  'feed-item',
    -  'none'
- - `medium` (required - string) The medium kind. It can be:
+ - `medium` (required - string) The medium type. It can be:
    - `podcast`,
    - `audiobook`,
    - `music`,
