@@ -108,14 +108,14 @@ There are 4 required attributes:
  - `startTime` (optional - float) The start time (in seconds) of this recommended content. Applies to *"feed-item"* type only.
  - `duration` (optional - float) The duration (in seconds) of this recommended content. Applies to *"feed-item"* type only.
  - `motive` (optional - string) The reason why this content is recommended. It can be:
-   -  `references`,
-   -  `additional content`,
-   -  `acknowledgment`,
-   -  `advertising`,
-   -  `audience exchange`,
-   -  `similar content`,
-   -  `also liked by the audience`,
-   -  `made by the same people`
+   -  `references` (content that was used when creating this podcast, similar to the Wikipedia References paragraph),
+   -  `additional content` (content that provides extra information),
+   -  `acknowledgment` (thanking people),
+   -  `advertising` (sponsored content),
+   -  `audience exchange` (exchanging audiences between podcasts),
+   -  `content-based recommendation` (content related thank to semantic indexing),
+   -  `audience-based recommendation` (people who liked this also liked…),
+   -  `made by the same people` (the creators of this podcast also made that…)
  - `relevance`  (optional - float) The relevance of this recommended content regarding this Channel or Item. Number must be in [0…1]. 0 is for irrelevant content, 1 is for contents that match perfectly.
 
 ## Basic example
@@ -198,7 +198,7 @@ Here is what a very basic recommendations file may look like:
 			"title": "History of podcasting",
 			"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
 			"url": "https://en.wikipedia.org/wiki/History_of_podcasting",
-			"motive": "do you want to know more",
+			"motive": "additional content",
 			"relevance": 0.8
 		},
 		{
@@ -237,7 +237,7 @@ Here is what a very basic recommendations file may look like:
 			"guid": "PC2026",
 			"startTime": 4737.0,
 			"duration": 5.0,
-			"motive": "do you want to know more",
+			"motive": "additional content",
 			"relevance": 0.9
 		}
 	]
