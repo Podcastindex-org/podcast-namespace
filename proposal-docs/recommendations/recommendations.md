@@ -13,7 +13,7 @@ Several platforms are now implementing recommendation engines, but these feature
 This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to all players.
 - Version 1.1 adds:
   - `GUID` support for channel element,
-  - a `reason` tag that explains why a specefic recommendation was included,
+  - a `motive` tag that explains why a specific recommendation was included,
   - a `medium` tag so that this can work with any feed, including non-podcast medium. (See \<podcast:medium> for more information.)
 - Version 1.2 brings minor corrections.
 All this was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapters and soundbite tags. May they be thanked for it.
