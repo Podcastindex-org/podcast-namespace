@@ -113,7 +113,7 @@ There are 4 required attributes:
    -  `acknowledgment` (thanking people),
    -  `advertising` (sponsored content),
    -  `audience exchange` (exchanging audiences between podcasts),
-   -  `content-based recommendation` (content related thank to semantic indexing),
+   -  `content-based recommendation` (content related thanks to semantic indexation),
    -  `audience-based recommendation` (people who liked this also liked…),
    -  `made by the same people` (the creators of this podcast also made that…)
  - `relevance`  (optional - float) The relevance of this recommended content regarding this Channel or Item. Number must be in [0…1]. 0 is for irrelevant content, 1 is for contents that match perfectly.
