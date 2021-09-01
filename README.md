@@ -26,7 +26,7 @@ Please read it before contributing if you aren't familiar with it.
 
 **Phase 3** - [Closed] Comment period closed on `6/1/21` and 5 tags were **formalized**.
 
-**Phase 4** - [Open] As of 6/9/2021, all proposals for phase 4 are welcome. Current tag proposals under consideration are listed here.  No closing date is set at this time.
+**Phase 4** - [Open] Comment period will close on 12/1/21, all proposals for phase 4 are welcome. Current tag proposals under consideration are listed below.
 
 <br><br>
 
@@ -146,7 +146,7 @@ full implementation details.
 <br>
 
 
-## <u>Phase 4 (Open for Proposals)</u>
+## <u>Phase 4 (Closes on 12/1/2021)</u>
 
 The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
 
