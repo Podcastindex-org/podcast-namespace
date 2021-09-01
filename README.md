@@ -146,7 +146,7 @@ full implementation details.
 <br>
 
 
-### <u>Phase 4 (Open for Proposals)</u>
+## <u>Phase 4 (Open for Proposals)</u>
 
 The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
 
@@ -208,6 +208,7 @@ Example:
 
 <br>
 
+----
 
 ### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
 
@@ -249,7 +250,55 @@ Example:
 
 <br>
 
+----
 
+### **\<podcast:medium>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/263)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:medium>[podcast|music|video|film|audiobook(string)]</podcast:medium>
+```
+
+</b>
+
+Channel
+
+(optional | single)
+
+This tag tells the an application what the content contained within the feed IS, as opposed to what the content is ABOUT in the case of a category.  This allows a podcast app to
+modify it's behavior or UI to give a better experience to the user for this content.  For example, if a podcast has `<podcast:medium>music</podcast:medium>` an app may choose to
+reset playback speed to 1x and adjust it's EQ settings to be better for music vs. spoken word.
+
+Accepted medium names are curated within a list maintained by the community as new mediums are discovered over time. Newly proposed mediums should require some level of
+justification to be added to this list. One may argue and/or prove use of a new medium even for only one application, should it prove different enough from existing mediums to have meaning.
+
+**This list is currently a non-exhaustive proposal and subject to change**
+
+- `podcast` - Describes a feed for a podcast show.
+  - *Justification*: Nothing new, as this is what all podcasts that exist default to today.  If no `medium` tag is present in the channel, this medium is assumed.
+- `music` - A feed of music organized into an "album" with each item a song within the album.
+  - *Justification*: Music has existed as a medium for a very long time and dedicated music applications already exist.
+- `video` - Like a "podcast" but used in a more visual experience
+  - *Justification*: Videos add different enough level of user experience to discern them from regular podcasts.  Sites like YouTube already exist and prove out the existence of "videos" as a medium.
+- `film` - Specific types of videos with one item per feed.
+  - *Justification*: While doable, users have come to expect to be able to search for films without directly subscribing to a high level organization of "channels."  This allows the application to make beneficial assumptions regarding how to handle an item within a film.  Films exist as a medium already with dedicated applications today.
+- `audiobook` - Specific types of audio with one item per feed.
+  - *Justification*: Similar to a film, users typically search for audiobooks by name without some level of subscription/following.  This isn't to say that an application couldn't allow following an "author," for example, but that wouldn't be organized at the channel level.  Audiobooks exist as a medium already with dedicated applications today.
+
+Example use for a "podcast":
+```xml
+<podcast:medium>podcast</podcast:medium>
+```
+
+Example use for "music":
+```xml
+<podcast:medium>music</podcast:medium>
+```
+
+<br>
 
 ## Other Proposals
 
