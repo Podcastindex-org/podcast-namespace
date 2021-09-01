@@ -300,6 +300,103 @@ Example use for "music":
 
 <br>
 
+----
+
+### **\<podcast:pinned>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/281)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:gateway
+  order="[(number)]"
+>
+[free form message to listeners(string)]
+</podcast:gateway>
+```
+
+</b>
+
+Item
+
+(optional | multiple)
+
+This tag, when present in an `<item>` indicates that this episode is a so-called "gateway episode".  Gateway episodes are episodes that the podcaster (or maybe crowd sourced) thinks
+represent the best entry point into a long running show.  If a podcast has 300 episodes, it might be a good idea to designate 1 or more older episodes as the best place to start.
+
+The `order` attribute is an unsigned integer that is meant as an ascending listening order.  The episode with `order="1"` should be played first, then `order="2"` and so on.
+
+When podcast apps encounter gateway episodes, it is suggested that they present these episodes (in some form of UI) to the user when the user subscribes or follows the podcast.
+
+Example of a single gateway:
+```xml
+<item>
+    <title>Podcasting 2.0 - How it all Began</title>
+    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
+    <link>https://example.com/pc20/ep1</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep1</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/live.mp3" type="audio/mpeg" />
+    <podcast:gateway>Start here!</podcast:gateway>
+</item>
+```
+
+Example of a gateway series:
+```xml
+<item>
+    <title>Podcasting 2.0 - How it all Began</title>
+    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
+    <link>https://example.com/pc20/ep1</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep1</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/pc20_ep1.mp3" type="audio/mpeg" />
+    <pubDate>Fri, 11 Sep 2020 18:51:09 GMT</pubDate>
+    <podcast:episode>1</podcast:episode>
+    <itunes:episode>1</itunes:episode>
+    <podcast:gateway order="1">Start here!</podcast:gateway>
+</item>
+
+<item>
+    <title>Podcasting 2.0 - The tide has turned</title>
+    <description>What a big week.  So many important things happened this week.  We dive into it all and what it means!</description>
+    <link>https://example.com/pc20/ep45</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep45</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/pc20_ep45.mp3" type="audio/mpeg" />
+    <pubDate>Fri, 20 Aug 2021 20:23:55 GMT</pubDate>
+    <podcast:episode>45</podcast:episode>
+    <itunes:episode>45</itunes:episode>
+    <podcast:gateway order="2">We reached a milestone here!</podcast:gateway>
+</item>
+```
+
+<br>
+
 ## Other Proposals
 
 A list of the current proposed tags can be found in the issues section [here](https://github.com/Podcastindex-org/podcast-namespace/labels/proposal).
