@@ -415,8 +415,9 @@ Channel or Item
 
 (optional | single)
 
-This tag, when present, allows for specifying many different images sizes in a compact way.  The syntax is borrowed from the HTML5 [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes)
-syntax.  It allows for describing multiple image sources with width and pixel hints directly in the attribute.
+This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or channel level.  The syntax is borrowed from
+the HTML5 [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes) syntax.  It allows for describing multiple image sources with width and
+pixel hints directly in the attribute.
 
 Example of a single gateway:
 ```xml
