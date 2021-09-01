@@ -302,7 +302,7 @@ Example use for "music":
 
 ----
 
-### **\<podcast:pinned>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/281)</small>
+### **\<podcast:gateway>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/281)</small>
 
 <br>
 
