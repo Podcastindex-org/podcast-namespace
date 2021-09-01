@@ -202,7 +202,9 @@ Example:
     <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
     <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
     <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
-    <enclosure url="rtmps://live.example.com/live.mp3" type="audio/mpeg" />
+    <podcast:alternateEnclosure type="audio/mpeg" length="312">
+        <podcast:source uri="https://example.com/pc20/livestream" />
+    </podcast:alternateEnclosure>
 </podcast:liveItem>
 ```
 
