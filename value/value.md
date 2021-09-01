@@ -1,6 +1,6 @@
 # The "podcast:value" Specification
 
-<small>Version 1.3 by Dave Jones - 2021.02.25</small>
+<small>Version 1.4 by @daveajones, @dergigi - 2021.09.01</small>
 
 <br>
 
