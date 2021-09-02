@@ -22,6 +22,18 @@ This tag can also contribute to a future API endpoint for the PodcastIndex which
 
 For the `<podcast:podping>` tag there is only one optional attribute `usesPodping` which will usually be set to `True` though could be set to `False` to specifically opt out of using Poding and indicate a feed must be polled by legacy RSS polling methods.
 
+For the optional but helpful `<podcast:podpingAuth>` tag there is one attribute, a single value with a single allowed Hive account.
+
+## Example
+
+```xml
+<podcast:podping>
+    <podcast:podpingAuth account="podping.aaa"/>
+    <podcast:podpingAuth account="podping.bbb"/>
+    <podcast:podpingAuth account="podping.ccc"/>
+</podcast:podping>
+```
+
 ## Example
 
 ```xml
