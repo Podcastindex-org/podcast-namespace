@@ -1,6 +1,6 @@
 # The "podcast:value" Specification
 
-<small>Version 1.4 by [@daveajones](https://github.com/daveajones), [@dergigi](https://github.com/dergigi) - 2021.09.01</small>
+<small>Version 1.4 by [Dave Jones](https://github.com/daveajones), with [GiGi](https://github.com/dergigi), [Evan Feenstra](https://github.com/evanfeenstra) and [Paul Itoi](https://github.com/pitoi) - 2021.09.01</small>
 
 <br>
 
