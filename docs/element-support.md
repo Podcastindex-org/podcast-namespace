@@ -42,6 +42,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [Hypercatcher](https://hypercatcher.com)
 12. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/releases/tag/3.3.1)
 13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
+14. [RSS.com Podcasting](https://rss.com)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
