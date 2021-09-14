@@ -9,6 +9,7 @@ will become the framework that the independent podcast community needs to delive
 Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
 Please read it before contributing if you aren't familiar with it.
 
+The podcast namespace is part of the larger "Podcasting 2.0" project which exists to bring control of podcasting's protocols back into the hands of the open podcasting community.  A good overview can be found here:  [Podcasting 2.0](podcasting2.0.md)
 
 * [Official XMLNS Definition](docs/1.0.md) the official definition of all formalized tags.
 * List of platforms and apps that currently implement some or all of these tags: [Supporting Platforms and Apps](docs/element-support.md).
