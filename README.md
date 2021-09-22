@@ -284,17 +284,17 @@ justification to be added to this list. One may argue and/or prove use of a new 
   - *Justification*: Nothing new, as this is what all podcasts that exist default to today.  If no `medium` tag is present in the channel, this medium is assumed.
 - `music` - A feed of music organized into an "album" with each item a song within the album.
   - *Justification*: Music has existed as a medium for a very long time and dedicated music applications already exist.
-- `video` - Like a "podcast" but used in a more visual experience
+- `video` - Like a "podcast" but used in a more visual experience.
   - *Justification*: Videos add different enough level of user experience to discern them from regular podcasts.  Sites like YouTube already exist and prove out the existence of "videos" as a medium.
 - `film` - Specific types of videos with one item per feed.
   - *Justification*: While doable, users have come to expect to be able to search for films without directly subscribing to a high level organization of "channels."  This allows the application to make
     beneficial assumptions regarding how to handle an item within a film.  Films exist as a medium already with dedicated applications today.
 - `audiobook` - Specific types of audio with one item per feed.
-  - *Justification*: Similar to a film, users typically search for audiobooks by name without some level of subscription/following.  This isn't to say that an application couldn't allow following an "author"
+  - *Justification*: Similar to a film, users typically search for audiobooks by name without some level of subscription/following.  This isn't to say that an application couldn't allow following an "author".
     for example, but that wouldn't be organized at the channel level.  Audiobooks exist as a medium already with dedicated applications today.
-- `newsletter` - Describes a feed of curated written articles
+- `newsletter` - Describes a feed of curated written articles.
   - *Justification*: Many newsletter publications already have RSS feeds -- this helps explicitly identify them.
-- `blog` - Describes a feed of informal written articles
+- `blog` - Describes a feed of informally written articles.
   - *Justification*: Many blogs already have RSS feeds, perhaps since the dawn of RSS -- this helps explicitly identify them.
 
 Example use for a "podcast":
