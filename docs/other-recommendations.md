@@ -9,7 +9,7 @@ For all new episodes, we recommended to use
 * either a permanent URI, e.g. `https://example.com/ep0003`
 * or a [Universally unique identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) e.g. `7c029615-a810-5214-9342-eee73f58435d`
 
-The GUID of an episode should never change, even if a new version of the epsiode is being published, otherwise this episode will be duplicated downstream. 
+The GUID of an episode should never change, even if a new version of the episode is being published, otherwise this episode will be duplicated downstream. 
 
 
 Consumers of podcast feeds should fall back to the enclosure URL or the namespaced UUIDv5 (SHA1 Hash with ns:URL) of the enclosure URL, if the value is not set – see https://github.com/Podcastindex-org/podcast-namespace/issues/186#issuecomment-932742468 for more details.
