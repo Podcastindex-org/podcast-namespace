@@ -193,7 +193,7 @@ The `customKey` and `customValue` pair can be used (especially for the Lighning 
 
 The idea is that Podcast Index will parse and store and all client apps will always send a `customKey:customValue` pair if these are found in the Value Block.
 
-For example, the `customKey`'s of `818818`, `112111100` are used to route payments to Hive accounts or specific wallets on LNPay respectively. These fields are documented [in the list maintained by Satoshis Stream]().
+For example, the `customKey`'s of `818818`, `112111100` are used to route payments to Hive accounts or specific wallets on LNPay respectively. These fields are documented [in the list maintained by Satoshis Stream](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md).
 
 If your specific application would benefit from your own `customKey:customValue` pair which will be passed along from the player to your app, and for which nothing already exists, add your own.
 
