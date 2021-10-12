@@ -186,6 +186,16 @@ The `fee` attribute tells apps whether this split should be treated as a "fee", 
 as a fee, meaning its percentage (as calculated from the shares) should be taken off the top of the entire transaction amount.  This is the preferred way for service
 providers such as apps, hosting companies, API's and third-party value add providers to add their fee to a value block.
 
+#### Custom Key/Value Pairs
+
+The `customKey` and `customValue` pair can be used (especially for the Lighning Network) to help a receiving application route or process payments that have all arrived at one node.
+
+The idea is that Podcast Index will parse and store and all client apps will always send a `customKey:customValue` pair if these are found in the Value Block.
+
+For example, the `customKey`'s of `818818`, `112111100` are used to route payments to Hive accounts or specific wallets on LNPay respectively. These fields are documented [in the list maintained by Satoshis Stream]().
+
+If your specific application would benefit from your own `customKey:customValue` pair which will be passed along from the player to your app, and for which nothing already exists, add your own.
+
 <br><br>
 
 <div class="page"/>
