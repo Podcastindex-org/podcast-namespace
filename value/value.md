@@ -290,15 +290,21 @@ For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
  - `address`: \<the destination node's pubkey\>
  - `split`: \<the number of shares\>
 
-If the receiving Lightning node, or service, requires a custom record or meta-data of some sort to be passed along with the payment
-the `customKey` and `customValue` can be utilized as follows:
+If the receiving Lightning node, or service, requires application specific data to be sent with the payment in the lightning  message `extension` (a _TLV stream_, see the Appendix section), the `customKey` and `customValue` can be utilized as follows:
 
  - `type`: "node"
  - `method`: "keysend" or "amp"
- - `customKey`: \<key name\>
- - `customValue`: \<value\>
+ - `customKey`: \<tlv record type, a 64 bit integer greater than or equal to 2^16\>
+ - `customValue`: \<tlv record value, a string\>
  - `address`: \<the destination node's pubkey\>
  - `split`: \<the number of shares\>
+
+ When sending a payment containing application specific data, the client must use UTF-8 as encoding for `customValue`.
+
+ **Remarks:** 
+ 
+ - `customValue` is specified as a string due to the emergence of known users for this field (see Appendix). If we decide to support raw binary data in the future, a new attribute can be introduced to indicate the different behavior
+ - There is at least one known shared node ([satoshis.stream](https://satoshis.stream/)) that requires, in addition to this specification, the inclusion of the TLV record with type `7629169`, as defined [here](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md#field-7629169), in order to correctly route the payment to the corresponding receiver
 
 <br>
 
@@ -423,3 +429,13 @@ and guest.
   ...
 </channel>
 ```
+
+<br>
+
+##### Appendix
+
+Lightning payments are performed using lightning messages as specified in [BOLT #1: Base Protocol](https://github.com/lightningnetwork/lightning-rfc/blob/master/01-messaging.md).
+
+One part of the message is the `extension`, a TLV (Type-Length-Value) stream. Application specific data can be added to transactions using _custom records_ on the TLV Stream.
+
+A community maintained registry of known custom record types and formats, governed by satoshis.stream, can be found at the document [TLV record registry](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md). In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for the `customKey` and `customValue` attributes.
