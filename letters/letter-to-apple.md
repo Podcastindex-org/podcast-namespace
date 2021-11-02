@@ -1,5 +1,10 @@
 # An Open Letter to Apple
 
+> Please leave a comment and I'll invite you and give you edit power - Brian
+
+[![hackmd-github-sync-badge](https://hackmd.io/x-EFQGinSrCquuV-KYn72A/badge)](https://hackmd.io/x-EFQGinSrCquuV-KYn72A)
+
+
 Signatories:
 ## Adam Curry - The Podfather
 ### Co-inventor of Podcasting.
@@ -15,16 +20,16 @@ EARLY DRAFT v1.0
 
 1. **Podcast Linking**: allow iOS and Mac users to select their own choice of 3rd party Podcast playing app for links to podcasts. We have a standardised schema and a range of apps, which have adopted it. We would love to see the Apple Podcast app also recognise this standard way of linking to episodes of podcasts.
 2. **Use Podping**: We would be delighted to see Apple start using the free to use instant notification system Podping. This would dramatically reduce the number and frequency of checks on RSS feeds which Apple makes 24x7 to keep Apple's index up to date.
-3. **Recognise the vibrant Podcasting 2.0 development community** and **engage with us** making everything better for everyone involved in Podcasting! This largely grass roots and direct form of communication is one of the most vibrant parts of the Internet and we want to keep it growing.
+3. **Appoint a dedicated Podcasting 2.0 Liason**: We'd love to see Apple recognise the vibrant Podcasting 2.0 development community and **engage with us** making everything better for everyone involved in Podcasting! This largely grass roots and direct form of communication is one of the most vibrant parts of the Internet and we want to keep it growing.
 
 
 ## Background
 
-Back in 2005 I was called to a meeting with Steve Jobs. He asked me if it would be OK to put Podcasts directly into the software for the iPod: iTunes on the Mac. 
+Adam writes: "Back in 2005 I was called to a meeting with Steve Jobs. He asked me if it would be OK to put Podcasts directly into the software for the iPod: iTunes on the Mac. 
 
-This meeting followed a number of years of open source development which had led up to the fledgling Podcasting industry. We had built our own production tools, distribution systems and podcast player software. We had our own Index which, following that meeting with Steve Jobs, I entrusted to Apple.
+This meeting followed a number of years of open source development which built the fledgling Podcasting industry. That effort had built production tools, distribution systems and podcast player software. We had our own Index which, following that meeting with Steve Jobs, I entrusted to Apple."
     
-Many years later, in which Podcasting grew into a thriving industry all of its own, Apple still holds a special place with it's Index of shows and free to use API.
+Many years later, through which Podcasting grew into a thriving industry all of its own, Apple still holds a special place with it's Index of shows and free to use API.
     
 Today Apple maintains a large market dominance on its own iOS platform with the built in Podcasting App. But there is healthy competition from a range of apps produced by billion dollar companies right down to single person startups. All these apps compete on iOS and Google's Android and there is room for all of them.
     
@@ -66,4 +71,8 @@ Podping is currently being used by the following podcast hosts and the *podpings
 
 With Apple on board and using Podping to provide much faster and more energy efficient updates of podcasts to millions of iOS devices, we are sure that the rest of the Podcast hosting companies would join.
 
-## Needs some kind of ending
+## One More Thing
+
+PodcastIndex has been working for over a year now and been at the center of developing many new initiatives around what we've called Podcasting 2.0. Those innovations we've mentioned in this letter are just the tip of an iceberg.
+
+We know Apple has been passionate about Podcasting for almost as long as we have, we would love to collaborate further and see Apple adopt some of the innovations our teams come up with! Please get in touch with Adam directly and lets work together on making Podcasting even better.
