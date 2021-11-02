@@ -14,6 +14,8 @@ Stated eloquently, the aim of Podcasting 2.0 is this:
   > --Tom Rossi [Tom Rossi](https://podcastindex.social/@tomrossi7/105839063781381384)
 
 
+<br>
+
 Closed ecosystems can not innovate any better or faster than open systems.  We should know this by now.  The open world of RSS based podcasting can not only
 keep pace with closed systems, it can exceed them easily.  Podcasting 2.0 is simply the technological expression of this idea.  We can make a better podcasting
 experience for listeners than they can get behind any walled garden - no matter how high or expensive those walls are.

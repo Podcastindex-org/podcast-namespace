@@ -9,6 +9,7 @@ will become the framework that the independent podcast community needs to delive
 Our guiding principles for development of this namespace are the "[Rules for Standards Makers](http://scripting.com/2017/05/09/rulesForStandardsmakers.html)" by Dave Winer.
 Please read it before contributing if you aren't familiar with it.
 
+The podcast namespace is part of the larger "Podcasting 2.0" project which exists to bring control of podcasting's protocols back into the hands of the open podcasting community.  A good overview can be found here:  [Podcasting 2.0](podcasting2.0.md)
 
 * [Official XMLNS Definition](docs/1.0.md) the official definition of all formalized tags.
 * List of platforms and apps that currently implement some or all of these tags: [Supporting Platforms and Apps](docs/element-support.md).
@@ -26,7 +27,7 @@ Please read it before contributing if you aren't familiar with it.
 
 **Phase 3** - [Closed] Comment period closed on `6/1/21` and 5 tags were **formalized**.
 
-**Phase 4** - [Open] As of 6/9/2021, all proposals for phase 4 are welcome. Current tag proposals under consideration are listed here.  No closing date is set at this time.
+**Phase 4** - [Open] Comment period will close on 12/1/21, all proposals for phase 4 are welcome. Current tag proposals under consideration are listed below.
 
 <br><br>
 
@@ -146,10 +147,71 @@ full implementation details.
 <br>
 
 
-### <u>Phase 4 (Open for Proposals)</u>
+## <u>Phase 4 (Closes on 12/1/2021)</u>
 
 The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
 
+
+### **\<podcast:liveItem>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/212)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:liveItem
+  status="['pending','live','ended'(string)]"
+  start="[ISO8601 time stamp(string)]"
+  end="[ISO8601 time stamp(string)]"
+>
+
+</podcast:liveItem>
+```
+
+</b>
+
+Channel
+
+(optional | multiple)
+
+This element is used for a feed to deliver a live stream to podcast apps.  It takes the same format as a standard `<item>` episode tag, but holds a subset of elements along with
+some additional new elements that are appropriate for a live stream context.  The `start` and `end` attributes denote when the live stream "should" start and end.  But, real life
+dictates that those times might not be adhered to.  Apps are therefore encouraged not to rely on those times as anything more than a suggestion.  The canonical way to know if a
+stream has started is with the `status` attribute.  If `status` is "live" then the stream has started.
+
+This item will also make use of the [podping](https://podping.cloud) notification network.  A podping notification SHOULD be sent out by the host when the live stream starts to let
+apps know.
+
+
+Example:
+```xml
+<podcast:liveItem
+  status="live"
+  start="2021-09-26T07:30:00.000-0600"
+  end="2021-09-26T08:30:00.000-0600"
+>
+    <title>Podcasting 2.0 Live Show</title>
+    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
+    <link>https://example.com/podcast/live</link>
+    <guid isPermaLink="true">https://example.com/live</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep3/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep3/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep3/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep3/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <podcast:alternateEnclosure type="audio/mpeg" length="312">
+        <podcast:source uri="https://example.com/pc20/livestream" />
+    </podcast:alternateEnclosure>
+</podcast:liveItem>
+```
+
+<br>
+
+----
 
 ### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
 
@@ -191,7 +253,192 @@ Example:
 
 <br>
 
+----
 
+### **\<podcast:medium>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/263)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:medium>[podcast|music|video|film|audiobook(string)]</podcast:medium>
+```
+
+</b>
+
+Channel
+
+(optional | single)
+
+This tag tells the an application what the content contained within the feed IS, as opposed to what the content is ABOUT in the case of a category.  This allows a podcast app to
+modify it's behavior or UI to give a better experience to the user for this content.  For example, if a podcast has `<podcast:medium>music</podcast:medium>` an app may choose to
+reset playback speed to 1x and adjust it's EQ settings to be better for music vs. spoken word.
+
+Accepted medium names are curated within a list maintained by the community as new mediums are discovered over time. Newly proposed mediums should require some level of
+justification to be added to this list. One may argue and/or prove use of a new medium even for only one application, should it prove different enough from existing mediums to have meaning.
+
+**This list is currently a non-exhaustive proposal and subject to change**
+
+- `podcast` - Describes a feed for a podcast show.
+  - *Justification*: Nothing new, as this is what all podcasts that exist default to today.  If no `medium` tag is present in the channel, this medium is assumed.
+- `music` - A feed of music organized into an "album" with each item a song within the album.
+  - *Justification*: Music has existed as a medium for a very long time and dedicated music applications already exist.
+- `video` - Like a "podcast" but used in a more visual experience.
+  - *Justification*: Videos add different enough level of user experience to discern them from regular podcasts.  Sites like YouTube already exist and prove out the existence of "videos" as a medium.
+- `film` - Specific types of videos with one item per feed.
+  - *Justification*: While doable, users have come to expect to be able to search for films without directly subscribing to a high level organization of "channels."  This allows the application to make
+    beneficial assumptions regarding how to handle an item within a film.  Films exist as a medium already with dedicated applications today.
+- `audiobook` - Specific types of audio with one item per feed.
+  - *Justification*: Similar to a film, users typically search for audiobooks by name without some level of subscription/following.  This isn't to say that an application couldn't allow following an "author".
+    for example, but that wouldn't be organized at the channel level.  Audiobooks exist as a medium already with dedicated applications today.
+- `newsletter` - Describes a feed of curated written articles.
+  - *Justification*: Many newsletter publications already have RSS feeds -- this helps explicitly identify them.
+- `blog` - Describes a feed of informally written articles.
+  - *Justification*: Many blogs already have RSS feeds, perhaps since the dawn of RSS -- this helps explicitly identify them.
+
+Example use for a "podcast":
+```xml
+<podcast:medium>podcast</podcast:medium>
+```
+
+Example use for "music":
+```xml
+<podcast:medium>music</podcast:medium>
+```
+
+<br>
+
+----
+
+### **\<podcast:gateway>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/281)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:gateway
+  order="[(number)]"
+>
+[free form message to listeners(string)]
+</podcast:gateway>
+```
+
+</b>
+
+Item
+
+(optional | multiple)
+
+This tag, when present in an `<item>` indicates that this episode is a so-called "gateway episode".  Gateway episodes are episodes that the podcaster (or maybe crowd sourced) thinks
+represent the best entry point into a long running show.  If a podcast has 300 episodes, it might be a good idea to designate 1 or more older episodes as the best place to start.
+
+The `order` attribute is an unsigned integer that is meant as an ascending listening order.  The episode with `order="1"` should be played first, then `order="2"` and so on.
+
+When podcast apps encounter gateway episodes, it is suggested that they present these episodes (in some form of UI) to the user when the user subscribes or follows the podcast.
+
+Example of a single gateway:
+```xml
+<item>
+    <title>Podcasting 2.0 - How it all Began</title>
+    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
+    <link>https://example.com/pc20/ep1</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep1</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/live.mp3" type="audio/mpeg" />
+    <podcast:gateway>Start here!</podcast:gateway>
+</item>
+```
+
+Example of a gateway series:
+```xml
+<item>
+    <title>Podcasting 2.0 - How it all Began</title>
+    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
+    <link>https://example.com/pc20/ep1</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep1</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/pc20_ep1.mp3" type="audio/mpeg" />
+    <pubDate>Fri, 11 Sep 2020 18:51:09 GMT</pubDate>
+    <podcast:episode>1</podcast:episode>
+    <itunes:episode>1</itunes:episode>
+    <podcast:gateway order="1">Start here!</podcast:gateway>
+</item>
+
+<item>
+    <title>Podcasting 2.0 - The tide has turned</title>
+    <description>What a big week.  So many important things happened this week.  We dive into it all and what it means!</description>
+    <link>https://example.com/pc20/ep45</link>
+    <guid isPermaLink="true">https://example.com/pc20/ep45</guid>
+    <author>John Doe (john@example.com)</author>
+    <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+    />
+    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+    <enclosure url="https://live.example.com/pc20_ep45.mp3" type="audio/mpeg" />
+    <pubDate>Fri, 20 Aug 2021 20:23:55 GMT</pubDate>
+    <podcast:episode>45</podcast:episode>
+    <itunes:episode>45</itunes:episode>
+    <podcast:gateway order="2">We reached a milestone here!</podcast:gateway>
+</item>
+```
+
+----
+
+### **\<podcast:images>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/43)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:images
+  srcset="[image urls with sizing attached(string array)]"
+/>
+```
+
+</b>
+
+Channel or Item
+
+(optional | single)
+
+This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or channel level.  The syntax is borrowed from
+the HTML5 [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes) syntax.  It allows for describing multiple image sources with width and
+pixel hints directly in the attribute.
+
+Example of a single gateway:
+```xml
+<podcast:images
+    srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
+            https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
+            https://example.com/images/ep1/pci_avatar-small.jpg 300w,
+            https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
+/>
+```
+
+<br>
 
 ## Other Proposals
 

@@ -15,6 +15,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 8. [PodcastGuru](https://twitter.com/podcastguru_app/status/1362902472793223169)
 9. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91)
 10. [PodServe.fm](https://www.podserve.fm)
+11. [Omny Studio](https://blog.omnystudio.com/are-transcriptions-the-building-blocks-for-the-future-of-audio-distribution-464e653c2668)
 
 
 ## Locked `<podcast:locked>`
@@ -42,6 +43,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [Hypercatcher](https://hypercatcher.com)
 12. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/releases/tag/3.3.1)
 13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
+14. [RSS.com Podcasting](https://rss.com)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -73,3 +75,6 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
+
+## GUID `<podcast:guid>`
+1. [Buzzsprout](https://www.buzzsprout.com)
