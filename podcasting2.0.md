@@ -95,6 +95,8 @@ Because of these issues, we've created a way to receive cryptocurrency payments 
 - [Podverse](https://podverse.fm)
 - [podStation](https://podstation.github.io)
 - [Sphinx.chat](https://sphinx.chat)
+- [Castamatic](https://castamatic.com)
+- [Fountain.fm](https://fountain.fm)
 
 If you can't add the `<podcast:value>` tag to your feed manually, we also have created [a site](https://podcasterwallet.com) that can help you put a value tag directly into the Podcast Index database for your feed.  Any apps that use the Podcast Index will see your value tag and be able to stream micropayments to you.
 
