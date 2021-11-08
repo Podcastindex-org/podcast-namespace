@@ -44,6 +44,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 12. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/releases/tag/3.3.1)
 13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
 14. [RSS.com Podcasting](https://rss.com)
+15. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -58,6 +59,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 10. [PodServe.fm](https://www.podserve.fm)
 11. [JustCast.com](https://twitter.com/thejustcast/status/1420783756156145664)
 12. [RSS.com Podcasting](https://rss.com)
+13. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
