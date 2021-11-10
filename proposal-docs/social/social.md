@@ -26,7 +26,7 @@ There are three elements:
 
    Channel (optional | multiple)
 
-   This element allows a podcaster to specify one or more platforsm where listeners can interact.
+   This element allows a podcaster to specify one or more platforms where listeners can interact.
    There may be several occurences of this tag for the same element (on several platforms, the podcast may have several accounts on the same plaforms…)
 
    - `platform` (required): This is the platform id. It can be one of the following:
