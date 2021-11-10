@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Social networks (Facebook, Instagram, Twitter, Mastodon…) and discussion platforms (Slack, Discord, Jabber, IRC, Matrix…) are a convenient way
+Social networks (Facebook, Instagram, Twitter, Mastodon…) and discussion platforms (Slack, Discord, XMPP/Jabber, IRC, Matrix…) are a convenient way
 for podcasters to interact with their audience, and for listeners to interact with podcasters.
 Thanks to them listeners can comment, share or like podcast episodes.
 The purpose of this specification is to allow podcast apps to know where they should guide the listeners to make these interactions - and the onboarding process
@@ -22,27 +22,27 @@ There are three elements:
 
 ### Social Element
 
-- **\<podcast:social platform="[platform_id]" podcastAccountId="[podcast_account_id]" podcastAccountUrl="[podcast_account_url]" priority="[platform_priority]">**[one or more "podcast:socialPlatform" elements]**\</podcast:social>**
+- **\<podcast:social platform="[platform_id]" podcastAccountId="[podcast_account_id]" podcastAccountUrl="[podcast_account_url]" priority="[platform_priority]">**[one or more "podcast:socialSignUp" elements]**\</podcast:social>**
 
    Channel (optional | multiple)
 
-   This element allows a podcaster to specify one or many platform where listeners can interact.
+   This element allows a podcaster to specify one or more platforsm where listeners can interact.
    There may be several occurences of this tag for the same element (on several platforms, the podcast may have several accounts on the same plaforms…)
 
-   - `platform` (required): This is the platform id. It can be on of the following:
+   - `platform` (required): This is the platform id. It can be one of the following:
      - activitypub
      - facebook
      - twitter
      - instagram
      - slack
      - discord
-     - jabber
+     - xmpp
      - irc
      - matrix
      - …
    - `podcastAccountId` (required): The podcast ID on this platform.
    - `podcastAccountUrl` (required): The podcast URL on this platform.
-   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is prefered, lower is better)
+   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
 
    Examples:
    - `<podcast:social platform="twitter" podcastAccountId="@PodcastindexOrg" podcastAccountUrl="https://twitter.com/PodcastindexOrg"></podcast:social>`
@@ -54,11 +54,11 @@ There are three elements:
 
   podcast:social (optional | multiple)
 
-  This element allows to make easy onboarding for listeners on social/discussion platforms, especially for decentralized ones (such as Matrix or ActivityPub) where podcasters and listeners can register on different servers.
+  This element allows easy onboarding for listeners on social/discussion platforms, especially for decentralized ones (such as Matrix or ActivityPub) where podcasters and listeners can register on different servers.
 
    - `homeUrl` (required): The platform home URL.
    - `signUpUrl` (required): The platform sign up URL.
-   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is prefered, lower is better)
+   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
 
   Examples:
   - `<podcast:socialSignUp homeUrl="https://twitter.com/" signUpUrl="https://twitter.com/login" priority="1" />`
@@ -72,20 +72,20 @@ There are three elements:
 
   This element allows listeners to interact (comment, share, like…) with an episode.
 
-  - `platform` (required): This is the platform id. It can be on of the following:
+  - `platform` (required): This is the platform id. It can be one of the following:
        - activitypub
        - facebook
        - twitter
        - instagram
        - slack
        - discord
-       - jabber
+       - xmpp
        - irc
        - matrix
        - …
    - `podcastAccountId` (required): The podcast ID on this platform.
-   - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same plateform for the same episode (for instance , two Tweets about the same episode). Format must be ISO 8601.
-   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is prefered, lower is better)
+   - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same platform for the same episode (for instance, two Tweets about the same episode). Format must be [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+   - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
    - element's content: URL to this episode on this platform
 
   Examples:
@@ -95,7 +95,7 @@ There are three elements:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://lespoesiesdheloise.fr/@heloise/feed.xml" rel="self" type="application/rss+xml"/>
     <title>Les Poésies d’Héloïse</title>
