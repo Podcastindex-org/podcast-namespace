@@ -89,7 +89,7 @@ There are three elements:
    - element's content: URL to this episode on this platform
 
   Examples:
-  - `<podcast:socialInteract platform="twitter" podcastAccountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781<podcast:socialInteract>`
+  - `<podcast:socialInteract platform="twitter" podcastAccountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781</podcast:socialInteract>`
 
 ## Full RSS feed example
 
