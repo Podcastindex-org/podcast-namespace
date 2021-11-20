@@ -22,31 +22,41 @@ There are three elements:
 
 ### Social Element
 
-- **\<podcast:social platform="[platform_id]" podcastAccountId="[podcast_account_id]" podcastAccountUrl="[podcast_account_url]" priority="[platform_priority]">**[one or more "podcast:socialSignUp" elements]**\</podcast:social>**
+- **\<podcast:social platform="[platform_id]" protocol="[protocol_name]" accountId="[podcast_account_id]" accountUrl="[podcast_account_url]" priority="[platform_priority]">**[one or more "podcast:socialSignUp" elements]**\</podcast:social>**
 
    Channel (optional | multiple)
 
    This element allows a podcaster to specify one or more platforms where listeners can interact.
    There may be several occurences of this tag for the same element (on several platforms, the podcast may have several accounts on the same plaforms…)
 
-   - `platform` (required): This is the platform id. It can be one of the following:
-     - activitypub
-     - facebook
-     - twitter
-     - instagram
-     - slack
-     - discord
-     - xmpp
-     - irc
-     - matrix
-     - …
-   - `podcastAccountId` (required): The podcast ID on this platform.
-   - `podcastAccountUrl` (required): The podcast URL on this platform.
+  - `platform` (required): This is the platform id. It can be one of the following:
+       - castopod
+       - mastodon
+       - peertube
+       - facebook
+       - twitter
+       - instagram
+       - slack
+       - discord
+       - …
+  - `protocol` (required): This is the protocol name. It can be one of the following:
+       - activitypub
+       - xmpp
+       - irc
+       - matrix
+       - facebook
+       - twitter
+       - instagram
+       - slack
+       - discord
+       - …
+   - `accountId` (required): The podcast ID on this platform.
+   - `accountUrl` (required): The podcast URL on this platform.
    - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
 
    Examples:
-   - `<podcast:social platform="twitter" podcastAccountId="@PodcastindexOrg" podcastAccountUrl="https://twitter.com/PodcastindexOrg"></podcast:social>`
-   - `<podcast:social platform="activitypub" podcastAccountId="@podcastindex@noagendasocial.com" podcastAccountUrl="https://noagendasocial.com/@podcastindex"></podcast:social>`
+   - `<podcast:social platform="twitter" protocol="twitter" accountId="@PodcastindexOrg" accountUrl="https://twitter.com/PodcastindexOrg"></podcast:social>`
+   - `<podcast:social platform="mastodon" protocol="activitypub" accountId="@podcastindex@noagendasocial.com" accountUrl="https://noagendasocial.com/@podcastindex"></podcast:social>`
 
 ### SocialSignUp Element
 
@@ -66,13 +76,23 @@ There are three elements:
 
 ### SocialInteract Element
 
-- **\<podcast:socialInteract platform="platform_id" podcastAccountId="podcast_account_id" pubDate="publication_date" priority="platform_priority">**[URL to this episode on this platform]**</podcast:social>**
+- **\<podcast:socialInteract platform="platform_id" protocol="protocol_name" accountId="podcast_account_id" pubDate="publication_date" priority="platform_priority">**[URL to this episode on this platform]**</podcast:social>**
 
   Item (optional | multiple)
 
   This element allows listeners to interact (comment, share, like…) with an episode.
 
   - `platform` (required): This is the platform id. It can be one of the following:
+       - castopod
+       - mastodon
+       - peertube
+       - facebook
+       - twitter
+       - instagram
+       - slack
+       - discord
+       - …
+  - `protocol` (required): This is the protocol name. It can be one of the following:
        - activitypub
        - facebook
        - twitter
@@ -83,17 +103,18 @@ There are three elements:
        - irc
        - matrix
        - …
-   - `podcastAccountId` (required): The podcast ID on this platform.
+   - `accountId` (required): The podcast ID on this platform.
    - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same platform for the same episode (for instance, two Tweets about the same episode). Format must be [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
    - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
    - element's content: URL to this episode on this platform
 
   Examples:
-  - `<podcast:socialInteract platform="twitter" podcastAccountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781</podcast:socialInteract>`
+  - `<podcast:socialInteract platform="twitter" protocol="twitter" accountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781</podcast:socialInteract>`
+  - `<podcast:socialInteract priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-08T20:07:13+0000">https://lespoesiesdheloise.fr/@heloise/notes/e4b3d7f3-e84b-40c6-b828-f5537f0c3659</podcast:socialInteract>`
 
 ## Full RSS feed example
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
@@ -101,12 +122,15 @@ There are three elements:
     <title>Les Poésies d’Héloïse</title>
     […]
 
-    <podcast:social priority="1" platform="activitypub" podcastAccountId="@heloise@lespoesiesdheloise.fr" podcastAccountUrl="https://lespoesiesdheloise.fr/@heloise">
+    <podcast:social priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" accountUrl="https://lespoesiesdheloise.fr/@heloise">
       <podcast:socialSignUp priority="1" homeUrl="https://enfants-et-famille.podcasts.chat/public" signUpUrl="https://enfants-et-famille.podcasts.chat/auth/sign_up" />
       <podcast:socialSignUp priority="2" homeUrl="https://mamot.fr/public" signUpUrl="https://mamot.fr/auth/sign_up" />
       <podcast:socialSignUp priority="3" homeUrl="https://podcastindex.social/public" signUpUrl="https://podcastindex.social/auth/sign_up" />
     </podcast:social>
-    <podcast:social priority="666" platform="facebook" podcastAccountId="LesPoesiesDHeloise" podcastAccountUrl="https://www.facebook.com/LesPoesiesDHeloise">
+    <podcast:social priority="2" platform="mastodon" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" accountUrl="https://enfants-et-famille.podcasts.chat/web/accounts/5">
+      <podcast:socialSignUp priority="1" homeUrl="https://enfants-et-famille.podcasts.chat/public" signUpUrl="https://enfants-et-famille.podcasts.chat/auth/sign_up"/>
+    </podcast:social>
+    <podcast:social priority="666" platform="facebook" protocol="facebook" accountId="LesPoesiesDHeloise" accountUrl="https://www.facebook.com/LesPoesiesDHeloise">
       <podcast:socialSignUp homeUrl="https://www.facebook.com/" signUpUrl="https://www.facebook.com/r.php?display=page" />
     </podcast:social>
 
@@ -118,8 +142,8 @@ There are three elements:
       <link>https://lespoesiesdheloise.fr/@heloise/episodes/oisillon-bleu</link>
       […]
 
-      <podcast:socialInteract priority="1" platform="activitypub" podcastAccountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-14T10:25:42Z">https://lespoesiesdheloise.fr/@heloise/notes/4ba8df51-d67d-405d-a475-6471e1235c1c</podcast:socialInteract>
-      <podcast:socialInteract priority="666" platform="facebook" podcastAccountId="LesPoesiesDHeloise" pubDate="2021-04-14T10:25:42Z">https://www.facebook.com/LesPoesiesDHeloise/posts/399766303947452</podcast:socialInteract>
+      <podcast:socialInteract priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-14T10:25:42Z">https://lespoesiesdheloise.fr/@heloise/notes/4ba8df51-d67d-405d-a475-6471e1235c1c</podcast:socialInteract>
+      <podcast:socialInteract priority="666" platform="facebook" protocol="facebook" accountId="LesPoesiesDHeloise" pubDate="2021-04-14T10:25:42Z">https://www.facebook.com/LesPoesiesDHeloise/posts/399766303947452</podcast:socialInteract>
 
     </item>
     […]
