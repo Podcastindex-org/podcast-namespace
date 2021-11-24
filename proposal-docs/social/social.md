@@ -38,6 +38,8 @@ There are three elements:
        - instagram
        - slack
        - discord
+       - 3speak
+       - peakd.com
        - …
   - `protocol` (required): This is the protocol name. It can be one of the following:
        - activitypub
@@ -49,6 +51,7 @@ There are three elements:
        - instagram
        - slack
        - discord
+       - hive
        - …
    - `accountId` (required): The podcast ID on this platform.
    - `accountUrl` (required): The podcast URL on this platform.
@@ -91,6 +94,8 @@ There are three elements:
        - instagram
        - slack
        - discord
+       - 3speak
+       - peakd
        - …
   - `protocol` (required): This is the protocol name. It can be one of the following:
        - activitypub
@@ -102,6 +107,7 @@ There are three elements:
        - xmpp
        - irc
        - matrix
+       - hive
        - …
    - `accountId` (required): The podcast ID on this platform.
    - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same platform for the same episode (for instance, two Tweets about the same episode). Format must be [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
