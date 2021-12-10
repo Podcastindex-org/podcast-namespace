@@ -256,39 +256,6 @@ Example:
 
 ----
 
-
-### **\<podcast:images>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/43)</small>
-
-<br>
-
-<b>
-
-```xml
-<podcast:images
-  srcset="[image urls with sizing attached(string array)]"
-/>
-```
-
-</b>
-
-Channel or Item
-
-(optional | single)
-
-This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or channel level.  The syntax is borrowed from
-the HTML5 [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes) syntax.  It allows for describing multiple image sources with width and
-pixel hints directly in the attribute.
-
-Example of a single gateway:
-```xml
-<podcast:images
-    srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
-            https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
-            https://example.com/images/ep1/pci_avatar-small.jpg 300w,
-            https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
-/>
-```
-
 <br>
 
 ## Other Proposals
