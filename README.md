@@ -149,7 +149,17 @@ full implementation details.
 
 ## <u>Phase 4 (Closed on 12/1/2021)</u>
 
-The following tags should be considered purely as work in progress proposals.  They should not be relied upon or implemented except for testing purposes and experimentation.
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
+full implementation details.
+
+- **\<podcast:medium>** <br>
+- **\<podcast:images>** <br>
+
+<br>
+
+The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress.
 
 
 ### **\<podcast:liveItem>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/212)</small>
