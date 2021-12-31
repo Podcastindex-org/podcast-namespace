@@ -16,7 +16,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 9. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91)
 10. [PodServe.fm](https://www.podserve.fm)
 11. [Omny Studio](https://blog.omnystudio.com/are-transcriptions-the-building-blocks-for-the-future-of-audio-distribution-464e653c2668)
-
+12. [RSS.com Podcasting](https://rss.com)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
