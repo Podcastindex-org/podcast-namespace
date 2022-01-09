@@ -162,67 +162,6 @@ full implementation details.
 The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress.
 
 
-### **\<podcast:liveItem>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/212)</small>
-
-<br>
-
-<b>
-
-```xml
-<podcast:liveItem
-  status="['pending','live','ended'(string)]"
-  start="[ISO8601 time stamp(string)]"
-  end="[ISO8601 time stamp(string)]"
->
-
-</podcast:liveItem>
-```
-
-</b>
-
-Channel
-
-(optional | multiple)
-
-This element is used for a feed to deliver a live stream to podcast apps.  It takes the same format as a standard `<item>` episode tag, but holds a subset of elements along with
-some additional new elements that are appropriate for a live stream context.  The `start` and `end` attributes denote when the live stream "should" start and end.  But, real life
-dictates that those times might not be adhered to.  Apps are therefore encouraged not to rely on those times as anything more than a suggestion.  The canonical way to know if a
-stream has started is with the `status` attribute.  If `status` is "live" then the stream has started.
-
-This item will also make use of the [podping](https://podping.cloud) notification network.  A podping notification SHOULD be sent out by the host when the live stream starts to let
-apps know.
-
-
-Example:
-```xml
-<podcast:liveItem
-  status="live"
-  start="2021-09-26T07:30:00.000-0600"
-  end="2021-09-26T08:30:00.000-0600"
->
-    <title>Podcasting 2.0 Live Show</title>
-    <description>A look into the future of podcasting and how we get to Podcasting 2.0!</description>
-    <link>https://example.com/podcast/live</link>
-    <guid isPermaLink="true">https://example.com/live</guid>
-    <author>John Doe (john@example.com)</author>
-    <podcast:images srcset="https://example.com/images/ep3/pci_avatar-massive.jpg 1500w,
-        https://example.com/images/ep3/pci_avatar-middle.jpg 600w,
-        https://example.com/images/ep3/pci_avatar-small.jpg 300w,
-        https://example.com/images/ep3/pci_avatar-tiny.jpg 150w"
-    />
-    <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
-    <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
-    <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
-    <podcast:alternateEnclosure type="audio/mpeg" length="312">
-        <podcast:source uri="https://example.com/pc20/livestream" />
-    </podcast:alternateEnclosure>
-</podcast:liveItem>
-```
-
-<br>
-
-----
-
 ### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
 
 <br>
