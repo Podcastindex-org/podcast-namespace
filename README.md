@@ -156,6 +156,7 @@ full implementation details.
 
 - **\<podcast:medium>** <br>
 - **\<podcast:images>** <br>
+- **\<podcast:liveItem>** <br>
 
 <br>
 
