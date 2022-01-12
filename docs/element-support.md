@@ -18,6 +18,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [Omny Studio](https://blog.omnystudio.com/are-transcriptions-the-building-blocks-for-the-future-of-audio-distribution-464e653c2668)
 12. [RSS.com Podcasting](https://rss.com)
 13. [Audioboom](https://twitter.com/Audioboom/status/1478378244638494733)
+14. [Caproni](https://caproni.fm/en)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -29,6 +30,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 7. [Castopod](https://podlibre.org/castopod-supports-podcast-locking/)
 8. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 9. [RSS.com Podcasting](https://rss.com)
+10. [Caproni](https://caproni.fm/en)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -46,6 +48,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
 14. [RSS.com Podcasting](https://rss.com)
 15. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
+16. [Caproni](https://caproni.fm/en)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -73,6 +76,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
 2. [Castopod](https://podlibre.org/castopod-supports-the-location-tag/)
 3. [Podfriend](https://twitter.com/adamcurry/status/1357003546709938181)
+4. [Caproni](https://caproni.fm/en)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
