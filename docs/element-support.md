@@ -31,6 +31,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 8. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 9. [RSS.com Podcasting](https://rss.com)
 10. [Caproni](https://caproni.fm/en)
+11. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -49,6 +50,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 14. [RSS.com Podcasting](https://rss.com)
 15. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 16. [Caproni](https://caproni.fm/en)
+17. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -85,3 +87,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
+2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
