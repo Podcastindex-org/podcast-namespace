@@ -91,3 +91,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
+2. [usocial](http://usocial.me)
