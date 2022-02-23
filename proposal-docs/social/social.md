@@ -81,9 +81,9 @@ There are three elements:
 
 - **\<podcast:socialInteract platform="platform_id" protocol="protocol_name" accountId="podcast_account_id" pubDate="publication_date" priority="platform_priority">**[URL to this episode on this platform]**</podcast:social>**
 
-  Item (optional | multiple)
+  Item or Channel (optional | multiple)
 
-  This element allows listeners to interact (comment, share, like…) with an episode.
+  This element allows listeners to interact with (comment, share, like, review…) an episode, or a podcast.
 
   - `platform` (required): This is the platform id. It can be one of the following:
        - castopod
@@ -96,6 +96,7 @@ There are three elements:
        - discord
        - 3speak
        - peakd
+       - none *(to indicate a strong opt-out preference)*
        - …
   - `protocol` (required): This is the protocol name. It can be one of the following:
        - activitypub
@@ -112,11 +113,14 @@ There are three elements:
    - `accountId` (required): The podcast ID on this platform.
    - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same platform for the same episode (for instance, two Tweets about the same episode). Format must be [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
    - `priority` (optional): This platform priority (useful if the podcaster wants to tell which platform is preferred, lower is better)
-   - element's content: URL to this episode on this platform
+   - element's content: URL to the social media post on this platform corresponding to this episode (if at the `<item>` level) or for this podcast (if at the `channel` level), or a short reason for apps to display when comments are disabled (if `platform="none"`)
 
   Examples:
   - `<podcast:socialInteract platform="twitter" protocol="twitter" accountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781</podcast:socialInteract>`
   - `<podcast:socialInteract priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-08T20:07:13+0000">https://lespoesiesdheloise.fr/@heloise/notes/e4b3d7f3-e84b-40c6-b828-f5537f0c3659</podcast:socialInteract>`
+
+  Or to opt out:
+  - `<podcast:socialInteract platform="none">Comments disabled for this episode</podcast:socialInteract>`
 
 ## Full RSS feed example
 
