@@ -90,6 +90,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
+3. [Sounder.fm](https://feeds.sounder.fm/17048/rss.xml)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
