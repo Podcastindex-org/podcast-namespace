@@ -16,28 +16,42 @@ content they want to recommend, and at the same time providing a free recommenda
 
 
 <br><br>
-## Specification
+## Tag Specification
+```xml
+<podcast:recommendations
+    url="[url to json file(string)]"
+    type="application/json"
+    language="[language code(string)]"
+/>
+[Optionnal comments(string)]
+</podcast:recommendations>
+```
 
-- **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />**[Optionnal comments]**\</podcast:recommendations>**
+Channel (optional | multiple)
 
-    Channel (optional | multiple)
+Item (optional | multiple)
 
-    Item (optional | multiple)
+This element allows a podcaster to specify a list of recommended content for a podcast or an episode.
 
-   This element allows a podcaster to specify a list of recommended content for a podcast or an episode.
+The recommended content can be a web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add
+an episode to playlist, add a soundbite to playlist, etc.
 
-   The recommended content can be a web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist,…
+There may be several occurences of this tag for the same element (one per language, one per topic, one per provider).
 
-   There may be several occurences of this tag for the same element (one per language, one per topic, one per provider…)
+#### Attributes
 
-   - `url` (required): This is the url to the json file.
-   - `type` (required): Mime type, must be json.
-   - `language` (optional): The language of the recommended episodes (two-letter language codes, with some possible modifiers, such as "en-us"). If there is no language attribute given, the linked file is assumed to be the same language that is specified by the RSS \<language> element.
+ - `url` (required): This is the url to the json file.
+ - `type` (required): Mime type, must be json.
+ - `language` (optional): The language of the recommended episodes (two-letter language codes, with some possible modifiers, such as "en-us"). If there
+                          is no language attribute given, the linked file is assumed to be the same language that is specified by the RSS `<language>` element.
 
-   Examples:
-   - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />`
-   - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en"/>`
+#### Examples
+ - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />`
+ - `<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en" />`
 
+
+
+<br><br>
 ## "Recommendations" Object
 
 The recommendations object is a simple JSON object with 2 required properties:
@@ -45,25 +59,27 @@ The recommendations object is a simple JSON object with 2 required properties:
  - `version` (required - string) The version number of the format being used.
  - `recommendations` (required - array) An array of recommendations objects defined below.
 
-#### Optional Attributes:
-
+#### Optional Attributes
  - `comment` (optional - string) A comment on this file.
  - `title` (optional - string) The name of the source podcast or **source** podcast episode. Applies to both Channel and Item.
  - `feed` (optional - string) The RSS URL of the **source** podcast. Applies to both podcast Channel and podcast Item.
  - `guid` (optional - string) The GUID of the **source** element. Applies to both podcast Channel and podcast Item.
  - `url` (optionnal - string) The enclosure URL of the **source** medium.
 
-Example:
-
+#### Example
 ```json
 {
 	"version": "1.0",
 	"title": "Podnews podcasting news",
 	"feed": "https://podnews.net/rss",
-	"guid": "9b024349-ccf0-5f69-a609-6b82873eab3c"
+	"guid": "9b024349-ccf0-5f69-a609-6b82873eab3c",
+	"recommendations": [
+	    ...
+	]
 }
 ```
 
+<br><br>
 ## "Recommendation" Objects
 
 The "recommendation" object takes this basic form:
