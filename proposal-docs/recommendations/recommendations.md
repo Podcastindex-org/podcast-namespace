@@ -52,9 +52,12 @@ There may be several occurences of this tag for the same element (one per langua
 
 
 <br><br>
-## The "recommendations" JSON Parent Object
+## JSON File Specification
 
-The recommendations object is a simple JSON object with 2 required properties:
+The recommendations file contains a simple JSON object with 2 required properties and a few optional properties.  This top-level object
+is simply a container for the main payload, which is an array of `recommendation` objects contained in the `recommendations` property.
+
+#### Required Attributes
 
  - `version` (required - string) The version number of the format being used.
  - `recommendations` (required - array) An array of `recommendations` objects defined below.
@@ -79,28 +82,29 @@ The recommendations object is a simple JSON object with 2 required properties:
 }
 ```
 
-<br><br>
-## The "recommendation" JSON Child Objects
 
-The `recommendation` object defined here exists as one or more objects in a `recommendations` array within the parent object.  It is meant to structure data
-that might otherwise be present buried within shownotes HTML.
+
+<br><br>
+## The "recommendations" Array
+
+Each recommendation is defined in a `recommendation` object that resides within the `recommendations` array.  It is meant to structure data
+that might otherwise be present - buried within shownotes HTML.
 
 #### Required attributes:
 
  - `linkType` (required - string) The link type of this recommended content, it can be:
    -  'generic',
    -  'feed',
-   -  'feed-item',
+   -  'item',
    -  'none'
- - `medium` (required - string) The medium type. It can be:
+ - `medium` (required - string) The [medium](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#medium) type. It can be:
    - `podcast`,
-   - `audiobook`,
    - `music`,
    - `video`,
    - `film`,
-   - `image`,
-   - `text`,
-   - `html`
+   - `audiobook`,
+   - `newsletter`,
+   - `blog`
  - `title` (required - string) The title for this recommended content.
 
 #### Optional Attributes:
