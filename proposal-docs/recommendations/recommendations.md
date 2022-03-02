@@ -6,19 +6,16 @@
 
 ## Purpose
 
-- Podcasting is a tremendous ecosystem brimming with tons of stories and ideas that go freely from any platform to any application.  
-That comes with a huge drawback: finding and being found can be harsh.  
-Podcast creators struggle to be found while podcast listeners struggle to find content.  
-Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they are slowly creating closed silos and removing power from content creators.  
-This specification is about giving control to content creators on the content they want to recommend, and at the same time providing a free recommendation system to all players.
-- Adding:
-  - `GUID` support for channel element,
-  - a `motive` tag that explains why a specific recommendation was included,
-  - a `medium` tag so that this can work with any feed, including non-podcast medium. (See \<podcast:medium> for more information.)
+Podcasting is a tremendous ecosystem brimming with tons of stories and ideas that go freely from any platform to any application.  That comes
+with a huge drawback: finding and being found can be harsh.  Podcast creators struggle to be found while podcast listeners struggle to find content.
 
-All this was heavily inspired by all the work previously done by the Fellowship of the PodcastIndex on the chapters and soundbite tags. May they be thanked for it.
-GO PODCASTING!!!
+Several platforms are now implementing recommendation engines, but these features are expensive and unattainable for small players. Moreover they
+are slowly creating closed silos and removing power from content creators.  This specification is about giving control to content creators on the
+content they want to recommend, and at the same time providing a free recommendation system to all players.
 
+
+
+<br><br>
 ## Specification
 
 - **\<podcast:recommendations url="[url to json file]" type="application/json" language="[language code]" />**[Optionnal comments]**\</podcast:recommendations>**
