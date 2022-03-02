@@ -16,7 +16,7 @@ content they want to recommend, and at the same time providing a free recommenda
 
 
 <br><br>
-## Tag Specification
+## Specification
 ```xml
 <podcast:recommendations
     url="[url to json file(string)]"
@@ -52,12 +52,12 @@ There may be several occurences of this tag for the same element (one per langua
 
 
 <br><br>
-## "Recommendations" Object
+## The "recommendations" JSON Parent Object
 
 The recommendations object is a simple JSON object with 2 required properties:
 
  - `version` (required - string) The version number of the format being used.
- - `recommendations` (required - array) An array of recommendations objects defined below.
+ - `recommendations` (required - array) An array of `recommendations` objects defined below.
 
 #### Optional Attributes
  - `comment` (optional - string) A comment on this file.
@@ -80,20 +80,12 @@ The recommendations object is a simple JSON object with 2 required properties:
 ```
 
 <br><br>
-## "Recommendation" Objects
+## The "recommendation" JSON Child Objects
 
-The "recommendation" object takes this basic form:
+The `recommendation` object defined here exists as one or more objects in a `recommendations` array within the parent object.  It is meant to structure data
+that might otherwise be present buried within shownotes HTML.
 
-```json
-{
-	"linkType": "generic",
-        "title": "History of podcasting",
-	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
-	"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
-}
-```
-
-There are 4 required attributes:
+#### Required attributes:
 
  - `linkType` (required - string) The link type of this recommended content, it can be:
    -  'generic',
@@ -113,10 +105,13 @@ There are 4 required attributes:
 
 #### Optional Attributes:
 
- - `url` (optional - string) The URL for this recommended content. If recommended content type is *"feed"* this is the home page of the podcast/medium. If recommended content type is *"feed-item"* this is the enclosure URL.
+ - `url` (optional - string) The URL for this recommended content. If recommended content type is *"feed"* this is the home page of the podcast/medium.
+                             If recommended content type is *"feed-item"* this is the enclosure URL.
  - `image` (optional - string) The image URL for this recommended content. Image must have a 1:1 ratio (square).
- - `displayStartTime` (optional - float) The start time (in seconds) that tells when this recommended content should start being displayed. If `displayStartTime` is omitted, recommendation will be displayed from the beginning. Applies only when called from an *Item* (not from the *Channel*).
- - `displayDuration` (optional - float) The duration (in seconds) that tells when this recommended content should stop being displayed. If `displayDuration` is omitted, recommendation will be displayed until the end. Applies only when called from an *Item* (not from the *Channel*).
+ - `displayStartTime` (optional - float) The start time (in seconds) that tells when this recommended content should start being displayed. If `displayStartTime`
+                                         is omitted, recommendation will be displayed from the beginning. Applies only when called from an *Item* (not from the *Channel*).
+ - `displayDuration` (optional - float) The duration (in seconds) that tells when this recommended content should stop being displayed. If `displayDuration` is
+                                        omitted, recommendation will be displayed until the end. Applies only when called from an *Item* (not from the *Channel*).
  - `feed` (optional - string) The RSS URL of this recommended content. Applies to *"feed"*, *"feed-item"* types.
  - `guid` (optional - string) The GUID of this recommended content. Applies to *"feed"* and *"feed-item"* types.
  - `startTime` (optional - float) The start time (in seconds) of this recommended content. Applies to *"feed-item"* type only.
@@ -130,9 +125,20 @@ There are 4 required attributes:
    -  `content-based recommendation` (content related thanks to semantic indexation),
    -  `audience-based recommendation` (people who liked this also liked…),
    -  `made by the same people` (the creators of this podcast also made that…)
- - `relevance`  (optional - float) The relevance of this recommended content regarding this Channel or Item. Number must be in [0…1]. 0 is for irrelevant content, 1 is for contents that match perfectly.
+ - `relevance`  (optional - float) The relevance of this recommended content regarding this Channel or Item. Number must be in [0…1]. 0 is for irrelevant content, 1 is
+                                   for contents that match perfectly.
 
-## Basic example
+#### Example of Structure
+```json
+{
+	"linkType": "generic",
+        "title": "History of podcasting",
+	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+	"url": "https://en.wikipedia.org/wiki/History_of_podcasting"
+}
+```
+
+#### Basic example
 
 Here is what a very basic recommendations file may look like:
 
@@ -258,7 +264,7 @@ Here is what a very basic recommendations file may look like:
 }
 ```
 
-## Note about privacy
+## Privacy
 
 When pulling in web based data there is the chance that this functionality could be used for tracking.
 As a safeguard against that, apps should:
