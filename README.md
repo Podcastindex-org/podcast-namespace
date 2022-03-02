@@ -21,13 +21,15 @@ The podcast namespace is part of the larger "Podcasting 2.0" project which exist
 
 ## Current Roadmap
 
-**Phase 1** - [Closed] Comment period closed on `11/15/20` and 5 tags were **formalized**.
+**Phase 1** - [Closed] Comment period closed on `11/15/2020` and [5 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-1-closed-on-111520) were **formalized**.
 
-**Phase 2** - [Closed] Comment period closed on `1/31/21` and 4 tags were **formalized**.
+**Phase 2** - [Closed] Comment period closed on `1/31/2021` and [4 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-2-closed-on-13121) were **formalized**.
 
-**Phase 3** - [Closed] Comment period closed on `6/1/21` and 5 tags were **formalized**.
+**Phase 3** - [Closed] Comment period closed on `6/1/2021` and [5 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-3-closed-on-6121) were **formalized**.
 
-**Phase 4** - [Closed] Comment period closed `12/1/21`. Work is currently in progress to review tags for finalization.
+**Phase 4** - [Closed] Comment period closed on `12/1/2021` and [3 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-4-closed-on-1212021) were **formalized**.
+
+**Phase 5** - [Open] Comment period is open as of `3/2/2022`.  Tag submissions and comments are welcome at this time.  Tags [here]() are under active consideration.  New proposals are also [here](https://github.com/Podcastindex-org/podcast-namespace/issues?q=is%3Aissue+is%3Aopen+label%3Aproposal).
 
 <br><br>
 
@@ -160,7 +162,10 @@ full implementation details.
 
 <br>
 
-The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress.
+
+## <u>Phase 5 (Open as of 3/2/2022)</u>
+
+The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress and feedback on them is desired.
 
 
 ### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
