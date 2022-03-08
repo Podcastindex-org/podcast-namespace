@@ -168,6 +168,7 @@ full implementation details.
 
 The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress and feedback on them is desired.
 
+<br>
 
 ### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
 
@@ -185,9 +186,9 @@ The following tags are being actively considered for adoption into the namespace
 
 </b>
 
-Channel
+#### Channel
 
-(optional | single)
+#### (optional | single)
 
 This element allows a podcaster to express which platforms are allowed to publicly display this feed and it's contents.  In it's basic form, it is a direct drop-in
 replacement for `<itunes:block>` and functions identically.  The addition of the `exclude` attribute allows for a comma separated list of platforms from the [slug list](serviceslugs.txt)
