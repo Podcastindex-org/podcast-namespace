@@ -169,42 +169,46 @@ full implementation details.
 The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress and feedback on them is desired.
 
 
-### **\<podcast:recommendations>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/205)</small>
+### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
 
 <br>
 
 <b>
 
 ```xml
-<podcast:recommendations
- url="[url to json file(string)]"
- type="application/json"
- language="[language code(string)]"
+<podcast:block
+ exclude="[comma delimited list(string)]"
 >
-[optional comments(string)]
-</podcast:recommendations>
+[yes|no(bool)]
+</podcast:block>
 ```
 
 </b>
 
-Channel or Item
+Channel
 
-(optional | multiple)
+(optional | single)
 
-This element allows a podcaster (or third party, with podcater permission) to specify a list of recommended content for a podcast or an episode. The recommended content can be a
-web page, a podcast, a podcast episode or a soundbite, so that listeners can eventually subscribe to a podcast, add an episode to playlist, add a soundbite to playlist, etc.
+This element allows a podcaster to express which platforms are allowed to publicly display this feed and it's contents.  In it's basic form, it is a direct drop-in
+replacement for `<itunes:block>` and functions identically.  The addition of the `exclude` attribute allows for a comma separated list of platforms from the [slug list](serviceslugs.txt)
+to be given which operates as an inversion of the intent expressed by the node value.
 
-This is a complex tag.  The full documentation is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/recommendations/recommendations.md).  Please
-read that document to understand and comment on this proposal.
+#### Attributes
+ - **exclude** (optional) A comma separated list of platforms that will be interpreted as a block list or an allow list based on the inversion of the node value (yes or no).
 
-Example:
+Examples:
 ```xml
-<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" />
-```
+<!-- This means "block everything" -->
+<podcast:block>yes</podcast:block>
 
-Example:
-```xml
-<podcast:recommendations url="https://domain.tld/recommendation?guid=1234" type="application/json" language="en">Some other cool podcasts</podcast:recommendations>
+<!-- This means "block nothing" -->
+<podcast:block>no</podcast:block>
+
+<!-- This means "block everything except spotify and google" -->
+<podcast:block exclude="spotify,google">yes</podcast:block>
+
+<!-- This means "block nothing other than apple and podcast index" -->
+<podcast:block exclude="apple,podcastindex">no</podcast:block>
 ```
 
 <br>
