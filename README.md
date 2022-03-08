@@ -166,7 +166,7 @@ full implementation details.
 
 ## <u>Phase 5 (Open as of 3/2/2022)</u>
 
-The following tags are being actively considered for adoption into the namespace as part of phase 4.  They are a work in progress and feedback on them is desired.
+The following tags are being actively considered for adoption into the namespace as part of this phase.  They are a work in progress and feedback on them is desired.
 
 <br>
 
