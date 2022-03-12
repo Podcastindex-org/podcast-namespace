@@ -7,21 +7,22 @@ The <social> and <socialInteract> elements both contain a platform and protocol 
 - `platform` (required): This is the platform id. It can be one of the following:
 - `protocol` (required): This is the protocol name. It can be one of the following:
 
-| `platform` | `protocol`  |
-| ---------- | ----------- |
-| castopod   | activitypub |
-| mastodon   | activitypub |
-| peertube   | activitypub |
-|            | xmpp        |
-|            | irc         |
-| matrix     | matrix      |
-| facebook   | facebook    |
-| twitter    | twitter     |
-| instagram  | instagram   |
-| slack      | slack       |
-| discord    | discord     |
-| 3speak     | hive        |
-| peakd      | hive        |
+| `platform` | `protocol`        |
+| ---------- | ------------------|
+| castopod   | activitypub       |
+| mastodon   | activitypub       |
+| peertube   | activitypub       |
+|            | xmpp              |
+|            | irc               |
+| matrix     | matrix            |
+| facebook   | facebook          |
+| twitter    | twitter           |
+| instagram  | instagram         |
+| slack      | slack             |
+| discord    | discord           |
+| 3speak     | hive              |
+| peakd      | hive              |
+| fountain   | lightningcomments |
 
 
   - `platform` (required): This is the platform id. It can be one of the following:
@@ -35,6 +36,7 @@ The <social> and <socialInteract> elements both contain a platform and protocol 
        - discord
        - 3speak
        - peakd.com
+       - fountain
        - …
   - `protocol` (required): This is the protocol name. It can be one of the following:
        - activitypub
@@ -47,4 +49,5 @@ The <social> and <socialInteract> elements both contain a platform and protocol 
        - slack
        - discord
        - hive
+       - lightningcomments (see #347)
        - …
