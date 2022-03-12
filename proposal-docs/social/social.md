@@ -96,6 +96,7 @@ There are three elements:
        - discord
        - 3speak
        - peakd
+       - fountain
        - none *(to indicate a strong opt-out preference)*
        - …
   - `protocol` (required): This is the protocol name. It can be one of the following:
@@ -109,6 +110,7 @@ There are three elements:
        - irc
        - matrix
        - hive
+       - lightningcomments (see #347 for protocol description)
        - …
    - `accountId` (required): The podcast ID on this platform.
    - `pubDate` (optional): publication date on this platform. This can be useful when there are several interactions for the same platform for the same episode (for instance, two Tweets about the same episode). Format must be [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
@@ -118,6 +120,7 @@ There are three elements:
   Examples:
   - `<podcast:socialInteract platform="twitter" protocol="twitter" accountId="@Podverse" priority="2" pubDate="2021-04-14T10:25:42Z">https://twitter.com/Podverse/status/1375624446296395781</podcast:socialInteract>`
   - `<podcast:socialInteract priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-08T20:07:13+0000">https://lespoesiesdheloise.fr/@heloise/notes/e4b3d7f3-e84b-40c6-b828-f5537f0c3659</podcast:socialInteract>`
+  - `<podcast:socialInteract priority="1" platform="fountain" protocol="lightningcomments" accountId="123868c219bdb51a33560d854d500fe7d3123a1ad9e05dd89d0007e11313588123">https://api.fountain.fm/v1/comments?feed=221233&amp;episode=1230123071</podcast:socialInteract>`
 
   Or to opt out:
   - `<podcast:socialInteract platform="none">Comments disabled for this episode</podcast:socialInteract>`
@@ -153,6 +156,7 @@ There are three elements:
       […]
 
       <podcast:socialInteract priority="1" platform="castopod" protocol="activitypub" accountId="@heloise@lespoesiesdheloise.fr" pubDate="2021-04-14T10:25:42Z">https://lespoesiesdheloise.fr/@heloise/notes/4ba8df51-d67d-405d-a475-6471e1235c1c</podcast:socialInteract>
+      <podcast:socialInteract priority="33" platform="fountain" protocol="lightningcomments" accountId="123868c219bdb51a33560d854d500fe7d3123a1ad9e05dd89d0007e11313588123" pubDate="2021-04-14T10:25:42Z">https://api.fountain.fm/v1/comments?feed=221233&amp;episode=1230123071</podcast:socialInteract>
       <podcast:socialInteract priority="666" platform="facebook" protocol="facebook" accountId="LesPoesiesDHeloise" pubDate="2021-04-14T10:25:42Z">https://www.facebook.com/LesPoesiesDHeloise/posts/399766303947452</podcast:socialInteract>
 
     </item>
