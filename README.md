@@ -172,8 +172,6 @@ The following tags are being actively considered for adoption into the namespace
 <br><br><!-- Tag block -->
 ### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
 
-<br>
-
 <b>
 
 ```xml
@@ -216,8 +214,6 @@ Examples:
 
 <br><br><!-- Tag block -->
 ### **\<podcast:complete>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/351)</small>
-
-<br>
 
 <b>
 
