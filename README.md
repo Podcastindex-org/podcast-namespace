@@ -168,8 +168,8 @@ full implementation details.
 
 The following tags are being actively considered for adoption into the namespace as part of this phase.  They are a work in progress and feedback on them is desired.
 
-<br>
 
+<br><br><!-- Tag block -->
 ### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
 
 <br>
@@ -211,6 +211,52 @@ Examples:
 <!-- This means "block nothing other than apple and podcast index" -->
 <podcast:block exclude="apple,podcastindex">no</podcast:block>
 ```
+
+
+
+<br><br><!-- Tag block -->
+### **\<podcast:complete>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/351)</small>
+
+<br>
+
+<b>
+
+```xml
+<podcast:complete
+ archive="[feed url(string)]"
+>
+[yes|no(bool)]
+</podcast:complete>
+```
+
+</b>
+
+#### Channel
+
+#### (optional | single)
+
+This element allows a podcaster to signal to the world that this podcast will never publish another episode to this feed.  In it's basic form, it is a direct drop-in
+replacement for `<itunes:complete>` and functions identically.  The addition of the `archive` attribute allows for specifying the url of a complete archival feed of the
+podcast that contains every episode in case this feed does not.
+
+Specifying a value of `no` is the same as this tag not being present.
+
+#### Attributes
+ - **archive** (optional) A url of a feed that contains every episode of this podcast.
+
+Examples:
+```xml
+<!-- This podcast will never publish again -->
+<podcast:complete>yes</podcast:complete>
+
+<!-- Redundant usage and not recommended -->
+<podcast:complete>no</podcast:complete>
+
+<!-- This podcast is over, and a complete episode archive feed is "here" -->
+<podcast:complete archive="https://example.org/rss/myarchive.xml">yes</podcast:complete>
+```
+
+
 
 <br>
 
