@@ -1,0 +1,443 @@
+[
+   {
+      "key":"Creative Direction\/Director",
+      "group":"Kreative Leitung",
+      "role":"Direktor",
+      "description":"Der Direktor ist der Leiter der gesamten kreativen Produktion, von kreativen Details bis hin zur Logistik. Es gibt typischerweise einen einzigen Regisseur für eine Produktion. Diese Rolle wird hauptsächlich in fiktiven Podcasts gesehen.",
+      "example":"Jenna Knorr for \"Welcome to Tinsel Town\""
+   },
+   {
+      "key":"Creative Direction\/Assistant Director",
+      "group":"Kreative Leitung",
+      "role":"Regieassistent",
+      "description":"Der Regieassistent ist eine Verbindung zwischen dem Regisseur und dem Rest der Produktion und koordiniert häufig die tägliche Logistik der Produktion. Es können mehrere Regieassistenten an einem Projekt beteiligt sein. Diese Rolle wird hauptsächlich in fiktiven Podcasts gesehen.",
+      "example":"William Wright for \"Inn Between\""
+   },
+   {
+      "key":"Creative Direction\/Executive Producer",
+      "group":"Kreative Leitung",
+      "role":"Produktionsleiter",
+      "description":"Der Produktionsleiter ist der leitende Produzent einer Produktion. Die Rolle kann in Bezug auf die kreative Kontrolle reichen, wobei einige „ EPs “ die kreative Leitung eines Podcasts besitzen (in Wirklichkeit die Rolle des Regisseurs übernehmen). während andere einen eher gelassenen Ansatz wählen. Der ausführende Produzent hat möglicherweise das Geld zur Finanzierung der Produktion aufgebracht, aber es ist keine notwendige Verantwortung der Rolle.",
+      "example":"Jane Rotonda for \"The Larry Meiller Show"
+   },
+   {
+      "key":"Creative Direction\/Senior Producer",
+      "group":"Kreative Leitung",
+      "role":"Senior Produzent",
+      "description":"Der Senior Produzent ist der zweitälteste Produzent der Produktion (an zweiter Stelle nach dem Executive Producer). Er beaufsichtigt die Produzenten und die allgemeine Leitung und Logistik der gesamten Produktion.",
+      "example":"Dr. Jeremy Weisz from \"INspired INsider\""
+   },
+   {
+      "key":"Creative Direction\/Producer",
+      "group":"Kreative Leitung",
+      "role":"Produzent",
+      "description":"Der Produzent koordiniert und führt die Produktion des Podcasts durch. Zu seinen Aufgaben können die Unterstützung bei der Erstellung der kreativen Leitung eines Projekts, die Budgetierung, Recherche, Terminierung und die Überwachung der Bearbeitung und Endproduktion gehören.",
+      "example":""
+   },
+   {
+      "key":"Creative Direction\/Associate Producer",
+      "group":"Kreative Leitung",
+      "role":"Associate Producer",
+      "description":"Der Associate Producer führt eine oder mehrere Producer-Funktionen aus, die ihm von einem Produzenten übertragen wurden.",
+      "example":"Alex Baumhardt for \"APM Reports\""
+   },
+   {
+      "key":"Creative Direction\/Development Producer",
+      "group":"Kreative Leitung",
+      "role":"Development Producer",
+      "description":"Der Development Producer koordiniert und führt die Vorproduktionsleitung eines Podcasts aus. Zu seinen Aufgaben gehört es, neue Episoden- und Serienideen zu finden und mit Autoren und Forschern zusammenzuarbeiten, um das Konzept für die Produktion vorzubereiten.",
+      "example":""
+   },
+   {
+      "key":"Creative Direction\/Creative Director",
+      "group":"Kreative Leitung",
+      "role":"Creative Director",
+      "description":"Der Creative Director ist für die kreative Strategie und Ausführung einer ganzen Serie verantwortlich. Oft erstreckt sich diese Rolle über den Inhalt hinaus und betrifft begleitende Grafiken, Musik, Marketingkampagnen und mehr.",
+      "example":"Neil Druckmann on \"The Official The Last of Us\""
+   },
+   {
+      "key":"Cast\/Host",
+      "group":" Besetzung",
+      "role":"Moderator",
+      "description":"Der Moderator ist der On-Air-Zeremonienmeister des Podcasts und ständig in jeder Folge präsent (mit Ausnahme von Gastmoderatoren und alternativen Folgen). Die Aufgaben des Moderators können das Führen von Interviews, das Vorstellen von Geschichten und Segmenten, Erzählen und mehr. Es kann mehr als einen Host pro Podcast oder Folge geben.",
+      "example":"Joe Rogan for \"The Joe Rogan Experience\""
+   },
+   {
+      "key":"Cast\/Co-Host",
+      "group":" Besetzung",
+      "role":"Co-Moderator",
+      "description":"Der Co-Moderator erfüllt viele der gleichen Aufgaben wie der Moderator, während er im Podcast nur eine untergeordnete Rolle spielt.",
+      "example":"Dax Shepard for \"Armchair Expert\""
+   },
+   {
+      "key":"Cast\/Guest Host",
+      "group":" Besetzung",
+      "role":"Gastmoderator",
+      "description":"Der Gastmoderator erfüllt alle Pflichten der traditionellen Rolle des Moderators, tut dies jedoch in einer vorübergehenden Funktion. Oft als einzelner Auftritt oder eine kurze Zeitspanne von Episoden.",
+      "example":"Erica Kelly on \"Let's Taco 'Bout Women and True Crime\""
+   },
+   {
+      "key":"Cast\/Guest",
+      "group":" Besetzung",
+      "role":"Gast",
+      "description":"Der Gast ist eine externe Partei, die in einer Folge auf Sendung ist, oft als Teilnehmer an einem Panel oder als Interviewpartner.",
+      "example":"Lewis Brindley for \"Triforce!\""
+   },
+   {
+      "key":"Cast\/Voice Actor",
+      "group":" Besetzung",
+      "role":"Synchronsprecher",
+      "description":"Der Synchronsprecher gibt eine Aufführung, in der er der Rolle einer Figur in einer Podcast-Episode seine Stimme verleiht. Während die meisten Rollen des Synchronsprechers fiktiv sind, kann die Rolle des Synchronsprechers auch Nachstellungen der Realität umfassen Gespräche und Menschen.",
+      "example":"Venk Potula for \"Masala Jones\""
+   },
+   {
+      "key":"Cast\/Narrator",
+      "group":" Besetzung",
+      "role":"Erzähler",
+      "description":"Der Erzähler gibt eine Darbietung, in der er die Darstellung einer fiktiven oder nicht-fiktiven Geschichte erzählt, oft in einer geskripteten Weise. Der Erzähler kann auch Stimmen von Charakteren innerhalb der Geschichte vortragen, vorausgesetzt, sie behalten weiterhin die Rolle der Darstellung bei Geschichtenerzähler oder \" Stimme Gottes \" .",
+      "example":"James Harvey Freetly for \"Lakeshore & Limbo\""
+   },
+   {
+      "key":"Cast\/Announcer",
+      "group":" Besetzung",
+      "role":"Ansager",
+      "description":"Der Ansager gibt kurze Gesangsdarbietungen für die Einführung des Podcasts, Episodenthemen, Segmente, Gäste, Preise usw. Der Ansager ist dem Host des Podcasts untergeordnet und führt seine Einführungen oft in einer vorgefertigten, produzierten Weise durch .",
+      "example":"Lydia Kapp for \"World Builders Anonymous\""
+   },
+   {
+      "key":"Cast\/Reporter",
+      "group":" Besetzung",
+      "role":"Reporter",
+      "description":"Der Reporter findet und recherchiert Nachrichten oder Geschichten für den Podcast, interviewt häufig Personen und führt Recherchen durch.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Author",
+      "group":" Schreiben",
+      "role":"Autor",
+      "description":"Der Autor hat Prosa oder Poesie geschrieben, die ursprünglich für einen Text gedacht war, der jetzt wörtlich auf Sendung gelesen wird.",
+      "example":"Heiko Martens for \"The Sigmund Freud Files\""
+   },
+   {
+      "key":"Writing\/Editorial Director",
+      "group":" Schreiben",
+      "role":"Redaktionsleiter",
+      "description":"Der Redaktionsleiter leitet alle Abteilungen der Organisation hinter dem Podcast und ist dafür verantwortlich, Aufgaben an Mitarbeiter zu delegieren und zu verwalten. Sie sind die ranghöchsten Redakteure und verantwortlich für die Richtung, Genauigkeit und Entscheidungen dahinter Podcast-Inhalte.",
+      "example":"Christopher Twarowski for \"News Beat\""
+   },
+   {
+      "key":"Writing\/Co-Writer",
+      "group":" Schreiben",
+      "role":"Co-Autor",
+      "description":"Der Co-Autor hat in Partnerschaft mit 1-2 anderen Autoren einen Podcast geschrieben und teilt gemeinsam die Anerkennung für den kreativen Bogen, den Dialog und die Erzählung.",
+      "example":"Max Eggers on \"THE LIGHTHOUSE\""
+   },
+   {
+      "key":"Writing\/Writer",
+      "group":" Schreiben",
+      "role":"Autor",
+      "description":"Der Autor hat die Geschichte oder den Dialog eines Podcasts geschrieben. Der Autor ist oft am kreativen Bogen einer Produktion beteiligt, aber das ist keine notwendige Voraussetzung. Autoren können an fiktiven oder nicht-fiktiven Podcasts arbeiten.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Songwriter",
+      "group":" Schreiben",
+      "role":"Songschreiber",
+      "description":"Der Songschreiber hat den Text und / oder Begleitmusik zu einem Original-Song geschrieben, der für den Podcast erstellt und in einer Folge gespielt wurde.",
+      "example":"Ben Lapidus for \"Gay Future\""
+   },
+   {
+      "key":"Writing\/Guest Writer",
+      "group":" Schreiben",
+      "role":"Gastautor",
+      "description":"Der Gastautor erfüllt die Aufgaben eines Autors in einer vorübergehenden Funktion, oft als einzelne Episode oder eine kurze Zeitspanne von Episoden. Die Unterscheidung zwischen Autor und Gastautor hängt von der Entscheidung des Podcasts selbst ab.",
+      "example":"Beth Crane for \"The Unseen Hour\""
+   },
+   {
+      "key":"Writing\/Story Editor",
+      "group":" Schreiben",
+      "role":"Story Editor",
+      "description":"Der Story Editor ist für die grobe Richtung des Handlungsbogens und die Charakterentwicklung eines Podcasts verantwortlich. Wird häufig in fiktiven und dokumentarischen Podcasts verwendet.",
+      "example":"Gabrielle Loux for \"The NoSleep Podcast\""
+   },
+   {
+      "key":"Writing\/Managing Editor",
+      "group":" Schreiben",
+      "role":"Leitender Redakteur",
+      "description":"Der Leitende Redakteur beaufsichtigt und koordiniert die redaktionellen Aktivitäten der Podcasts, sorgt sowohl für die detaillierte Bearbeitung als auch für die Verwaltung eines Teams von Autoren und Redakteuren, um sicherzustellen, dass die richtigen Fristen und Budgets eingehalten werden.",
+      "example":"Flora Lichtman for \"Every Little Thing\""
+   },
+   {
+      "key":"Writing\/Script Editor",
+      "group":" Schreiben",
+      "role":"Script Editor",
+      "description":"Der Skripteditor bietet Notizen und Bearbeitungen für das Aufnahmeskript in einer sehr \" praktischen \" Rolle. Der Skripteditor wird hauptsächlich in Fiktion, Dokumentarfilmen und Werbung verwendet, wo geskriptete Aufnahmen vorherrschen.",
+      "example":"Alex Rioux for \"Welcome to Tinsel Town: A Christmas Adventure\""
+   },
+   {
+      "key":"Writing\/Script Coordinator",
+      "group":" Schreiben",
+      "role":"Drehbuchkoordinator",
+      "description":"Der Drehbuchkoordinator verpackt das endgültige Drehbuch mit Anmerkungen, die spezifische logistische und kreative Hinweise für Aufnahme und Produktion widerspiegeln.",
+      "example":"Alex Rioux for \"Welcome to Tinsel Town: A Christmas Adventure\""
+   },
+   {
+      "key":"Writing\/Researcher",
+      "group":" Schreiben",
+      "role":"Rechercheur",
+      "description":"Der Rechercheur koordiniert die Beschaffung und Überprüfung von Informationen, die dann für den Inhalt einer Podcast-Episode verwendet werden können, und gibt häufig die Richtung einer Geschichte auf der Grundlage neuer Erkenntnisse vor.",
+      "example":"Dave Grave for \"The Zero Brain Podcast\""
+   },
+   {
+      "key":"Writing\/Editor",
+      "group":" Schreiben",
+      "role":"Redakteur",
+      "description":"Der Redakteur überprüft und bereitet Skripte vor, um Informationen auf kreative, genaue und ansprechende Weise zu übermitteln.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Fact Checker",
+      "group":" Schreiben",
+      "role":"Faktenprüfer",
+      "description":"Der Faktenprüfer überprüft den Inhalt eines Podcasts auf sachliche Richtigkeit und verifiziert, dass die Zuordnung von Zitaten korrekt ist. Sie verwenden eine Vielzahl von Tools, einschließlich Recherchen von Drittanbietern und individueller Kontaktaufnahme. Oft gibt der Faktenprüfer auch Hinweise, wie die Produktion die Verwirrung bei der Übermittlung von Informationen in der Folge vermeiden kann.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Translator",
+      "group":" Schreiben",
+      "role":"Übersetzer",
+      "description":"Der Übersetzer konvertiert Inhalte für den Podcast von einer Sprache in eine andere. Dies können Interviews, Dialoge, Textdokumente und mehr sein. Die Arbeit des Übersetzers kann on-air oder hinter den Kulissen während der Produktion verwendet werden \ / Forschungsprozess.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Transcriber",
+      "group":" Schreiben",
+      "role":"Transkriptor",
+      "description":"Der Transkriptor wandelt Dialoge und Audiohinweise in Text um, der intern für Produktionsprozesse verwendet oder öffentlich für Zuhörer angezeigt werden kann.",
+      "example":""
+   },
+   {
+      "key":"Writing\/Logger",
+      "group":" Schreiben",
+      "role":"Logger",
+      "description":"Der Logger überprüft und dokumentiert die Inhalte und Zeitstempel von Rohaudio im Dienste von Produzenten und Redakteuren im Produktionsprozess.",
+      "example":""
+   },
+   {
+      "key":"Audio Production\/Studio Coordinator",
+      "group":" Audioproduktion",
+      "role":"Studiokoordinator",
+      "description":"Der Studiokoordinator verwaltet das Aufnahmestudio und die Tontechniker, die zum Zeitpunkt der Aufnahme im Studio arbeiten.",
+      "example":""
+   },
+   {
+      "key":"Audio Production\/Technical Director",
+      "group":" Audioproduktion",
+      "role":"Technischer Direktor",
+      "description":"Der Technische Direktor beaufsichtigt die Aufzeichnung und Produktion des Podcasts, da er mit Audiotechnologien einschließlich Hardware und Software zu tun hat, und verwaltet die in diesen Bereichen involvierten Rollen.",
+      "example":"Adam Raymonda on \"Celebuzz'd\""
+   },
+   {
+      "key":"Audio Production\/Technical Manager",
+      "group":" Audioproduktion",
+      "role":"Technischer Leiter",
+      "description":"Der Technische Leiter koordiniert ein Team von Toningenieuren und Studiomitarbeitern, die sich bei der Aufnahme und Produktion mit Audiotechnologien einschließlich Hard- und Software befassen.",
+      "example":""
+   },
+   {
+      "key":"Audio Production\/Audio Engineer",
+      "group":" Audioproduktion",
+      "role":"Tontechniker",
+      "description":"Der Tontechniker hilft beim Aufnehmen und Produzieren von Audio, indem er Aufnahmeumgebungen einrichtet, die Aufnahme überwacht und während des gesamten Vorgangs technische Anpassungen bereitstellt. Der Tontechniker ist während des Aufnahmeprozesses anwesend und nimmt meistens Anpassungen in Echtzeit vor. Der Tontechniker kann mit Gesprächen, Musik, Geräuschen oder jeder anderen Art von Audio arbeiten.",
+      "example":"Peter Leonard from \"Startup Podcast\""
+   },
+   {
+      "key":"Audio Production\/Remote Recording Engineer",
+      "group":" Audioproduktion",
+      "role":"Remote Tontechniker",
+      "description":"Der Remote Tontechniker stellt die ordnungsgemäße Aufzeichnung von Gesprächen sicher, die an mehreren Orten über eine Telefonleitung oder Internetverbindung stattfinden. Der Remote Tontechniker bewertet die verschiedenen Aufnahme-Setups und versucht, sie zu einem zusammenhängenden Sound zu vereinen, während er auch den Aufnahmeprozess überwacht, um das bestmögliche Audio aufzunehmen.",
+      "example":""
+   },
+   {
+      "key":"Audio Production\/Post Production Engineer",
+      "group":" Audioproduktion",
+      "role":"Nachbearbeitungstechniker",
+      "description":"Der Nachbearbeitungstechniker bewertet Audiotechnologien und ihre Anwendung in Bezug auf die letzten Schritte der Produktion und Veröffentlichung.",
+      "example":"Dick Wound for \"Queens Next Door\""
+   },
+   {
+      "key":"Audio Post-Production\/Audio Editor",
+      "group":" Audio Nachbearbeitung",
+      "role":"Audio Editor",
+      "description":"Der Audio-Editor schneidet und ordnet Audio für Klarheit und Storytelling-Zwecke neu. Der Audio-Editor kann auch allgemeine Audioverarbeitung und Mastering durchführen.",
+      "example":""
+   },
+   {
+      "key":"Audio Post-Production\/Sound Designer",
+      "group":" Audio Nachbearbeitung",
+      "role":"Sound Designer",
+      "description":"Der Sound Designer erstellt und komponiert eine Vielzahl von Audioelementen. Diese Elemente sind der Sprache meist untergeordnet, aber ein Sounddesigner kann Sprachelemente auf künstlerische Weise kreativ bearbeiten / produzieren.",
+      "example":""
+   },
+   {
+      "key":"Audio Post-Production\/Foley Artist",
+      "group":" Audio Nachbearbeitung",
+      "role":"Geräuschemacher",
+      "description":"Der Geräuschemacher macht Soundeffekte für einen Podcast und kann dies sowohl durch physische Aufnahme als auch durch digitale Verarbeitung oder eine Kombination aus beidem tun.",
+      "example":""
+   },
+   {
+      "key":"Audio Post-Production\/Composer",
+      "group":" Audio Nachbearbeitung",
+      "role":"Komponist",
+      "description":"Der Komponist schreibt ein Original-Musikstück (oder mehrere), das in der veröffentlichten Folge gespielt wird. Der Komponist wird oft auch der Interpret dieses Musikstücks sein.",
+      "example":"Marcus Thorne Bagala from \"This American Life\""
+   },
+   {
+      "key":"Audio Post-Production\/Theme Music",
+      "group":" Audio Nachbearbeitung",
+      "role":"Themenmusik",
+      "description":"Themenmusik ist ein Musikstück, das den Podcast über mehrere Episoden hinweg begleitet, meistens am Anfang einer Folge. Die Themenmusik wird verwendet, um den Podcast als Marke vorzustellen. Diese Rolle ist für den Ersteller des Themas Musik.",
+      "example":"Mark Philips from \"Startup Podcast\""
+   },
+   {
+      "key":"Audio Post-Production\/Music Production",
+      "group":" Audio Nachbearbeitung",
+      "role":"Musikproduktion",
+      "description":"Die Rolle der Musikproduktion hilft bei der kreativen Erstellung von Musik in einer Rolle, die vom Schreiben dieser Musik getrennt ist. Die Musikproduktion beinhaltet oft kreative Entscheidungen hinsichtlich der Methode, mit der Musik aufgenommen wird, der Anordnung von Instrumenten, der Verwendung von Effekten und mehr.",
+      "example":"Storm Duper for \"Faking Star Wars Radio\""
+   },
+   {
+      "key":"Audio Post-Production\/Music Contributor",
+      "group":" Audio Nachbearbeitung",
+      "role":"Music Contributor",
+      "description":"Der Music Contributor ist der Urheber von Musik, die für den Podcast verwendet, aber nicht unbedingt speziell für den Podcast produziert wurde. Oft verwendet ein Podcast ein vorhandenes Musikstück und nennt den ursprünglichen Schöpfer.",
+      "example":"Bobby Lord from \"Startup Podcast\""
+   },
+   {
+      "key":"Administration\/Production Coordinator",
+      "group":"Administration",
+      "role":"Produktionskoordinator",
+      "description":"Der Produktionskoordinator ist verantwortlich für die Verwaltung der Logistik des Produktionsprozesses von der Aufnahme bis zur Veröffentlichung, einschließlich der Einholung der erforderlichen Genehmigungen und Genehmigungen, der Verbindung der verschiedenen Produktions- und Aufnahmeteams, der Koordinierung der Erstellung von Postproduktions-Metadaten, der Budgetierung und mehr.",
+      "example":"Taneya Boyde on \"Ready For Change?\""
+   },
+   {
+      "key":"Administration\/Booking Coordinator",
+      "group":"Administration",
+      "role":"Buchungskoordinator",
+      "description":"Der Buchungskoordinator ist dafür verantwortlich, neue Gäste für Interviews zu gewinnen, einschließlich der Beschaffung von Gästen, der Planung von Interviews, Onboarding-Materialien und Prozessen nach der Veröffentlichung.",
+      "example":"Meryl Klemow for \"Campfire Sht Show\""
+   },
+   {
+      "key":"Administration\/Production Assistant",
+      "group":"Administration",
+      "role":"Produktionsassistent",
+      "description":"Der Produktionsassistent hilft bei der Unterstützung eines leitenden Mitglieds eines Podcasts (oft ein Regisseur oder Produzent) und hilft bei der Vorbereitung auf verschiedene Arten, einschließlich Planung, Logistik, Kommunikation und mehr.",
+      "example":"Wallace Mack for \"The Nod\""
+   },
+   {
+      "key":"Administration\/Content Manager",
+      "group":"Administration",
+      "role":"Content Manager",
+      "description":"Der Content Manager ist verantwortlich für die Verbreitung der Inhalte eines Podcasts innerhalb und außerhalb der Episode, einschließlich, aber nicht beschränkt auf Clips, Newsletter, Bilder, Cross-Promotions und mehr.",
+      "example":"Kenneth Lee Johnson II for \"Malice Corp Smack Talk\""
+   },
+   {
+      "key":"Administration\/Marketing Manager",
+      "group":"Administration",
+      "role":"Marketing Manager",
+      "description":"Der Marketing Manager ist verantwortlich für die Förderung des Inhalts eines Podcasts durch verschiedene Awareness-Strategien wie Social-Media-Kampagnen, die Pflege einer Webpräsenz, die Verwaltung von PR- und Kommunikationsstrategien und andere kreative Techniken zur Gewinnung und Bindung von Zuhörern.",
+      "example":""
+   },
+   {
+      "key":"Administration\/Sales Representative",
+      "group":"Administration",
+      "role":"Vertriebsmitarbeiter",
+      "description":"Der Vertriebsmitarbeiter ist für die Monetarisierung von Podcast-Inhalten durch die Verwaltung und den Verkauf von Werbeinventar verantwortlich.",
+      "example":""
+   },
+   {
+      "key":"Administration\/Sales Manager",
+      "group":"Administration",
+      "role":"Sales Manager",
+      "description":"Der Sales Manager ist für alle Aspekte der Podcast-Monetarisierung verantwortlich, wie z. B. die Beaufsichtigung von Vertriebsmitarbeitern, die Verwaltung von Werbeinventar und die Entwicklung von Monetarisierungsstrategien über Kanäle wie Affiliate-Partnerschaften, Waren, Live-Events und andere Einnahmestrategien.",
+      "example":""
+   },
+   {
+      "key":"Visuals\/Graphic Designer",
+      "group":"Design",
+      "role":"Grafikdesigner",
+      "description":"Der Grafikdesigner ist jemand, der benutzerdefinierte visuelle Elemente erstellt hat, um den Podcast auf verschiedene Weise zu begleiten.",
+      "example":"Sky Knight for \"The XP Billionaires\""
+   },
+   {
+      "key":"Visuals\/Cover Art Designer",
+      "group":"Design",
+      "role":"Cover Art Designer",
+      "description":"Der Cover Art Designer erstellt das angezeigte Cover eines Podcasts oder einer Folge. Zur Verdeutlichung ist das Cover-Art das Hauptbild (fast immer quadratisch), das den Podcast in Verzeichnissen begleitet, während Episoden-Cover-Art in ähnlicher Weise auf Episodenebene angezeigt wird. Diese Rolle kann ein digitaler Designer, Künstler, Fotograf oder ein anderer visueller Kreativer sein.",
+      "example":""
+   },
+   {
+      "key":"Community\/Social Media Manager",
+      "group":"Community",
+      "role":"Social Media Manager",
+      "description":"Der Social Media Manager betreibt die Social Media-Konten des Podcasts, einschließlich, aber nicht beschränkt auf die Erstellung von Inhalten, Postings, Antworten, Überwachung und mehr.",
+      "example":"Tom Joshi-Cale for \"World on a String\""
+   },
+   {
+      "key":"Misc.\/Consultant",
+      "group":"Sonstiges",
+      "role":"Berater",
+      "description":"Ein Berater ist eine externe Position, bei der jemand von außerhalb der Organisation an einem Projekt arbeitet und häufig ein spezifisches Fachwissen anbietet. Dies ist eine Modifikatorrolle und kann auf jeden Arbeitsbereich angewendet werden.",
+      "example":"Ross Wilcock for \"Being Kenzie-Feature Length Immersive Horror\""
+   },
+   {
+      "key":"Misc.\/Intern",
+      "group":"Sonstiges",
+      "role":"Praktikant",
+      "description":"Ein Praktikant ist eine Ausbildungsstelle, bei der jemand für eine begrenzte Zeit in einem Unternehmen arbeitet, um Arbeitserfahrung in einem bestimmten Bereich zu sammeln. Dies ist eine Modifikatorrolle und kann auf jeden Arbeitsbereich angewendet werden.",
+      "example":""
+   },
+   {
+      "key":"Video Production\/Camera Operator",
+      "group":"Videoproduktion",
+      "role":"Kameramann",
+      "description":"Ein Kameramann ist für die Erfassung und Aufzeichnung aller Aspekte einer Szene für Film und Fernsehen verantwortlich. Sie müssen die technischen Einzelheiten zur Bedienung einer Kamera verstehen, eine richtige Aufnahme in Bezug auf Beleuchtung und Inszenierung gestalten, das Objektiv fokussieren und ein visuelles Auge haben, um einen bestimmten Look zu erzielen.",
+      "example":""
+   },
+   {
+      "key":"Video Production\/Lighting Designer",
+      "group":"Videoproduktion",
+      "role":"Lichtdesigner",
+      "description":"Ein Lichtdesigner arbeitet mit dem DP und dem Regisseur zusammen, um unter Verwendung verschiedener Beleuchtungstechniken ein bestimmtes Erscheinungsbild einer Szene zu schaffen. Sie müssen in der Lage sein, die kreative Richtung zu interpretieren und mit Leben zu füllen.",
+      "example":""
+   },
+   {
+      "key":"Video Production\/Camera Grip",
+      "group":"Videoproduktion",
+      "role":"Kameraführer",
+      "description":"Ein Kameraführer ist verantwortlich für den Aufbau und die Wartung aller Teile einer Kamera und ihres Zubehörs wie Stative, Kräne, Dollies usw.",
+      "example":""
+   },
+   {
+      "key":"Video Production\/Assistant Camera",
+      "group":"Videoproduktion",
+      "role":"Kameraassistent",
+      "description":"Der erste Kameraassistent ist für die Kameraausrüstung verantwortlich, baut die Kameras vor Beginn eines jeden Tages auf, organisiert alle Teile und verschiedenes Zubehör, tauscht bei Bedarf Objektive aus und zieht auch den Fokus für die DP- und Kameraoperatoren. Der Kameraassistent wird auch jeden Tag abschließen, indem er die Kameras reinigt, Kameranotizen schreibt, die Medienkarten markiert und sie an das DIT liefert.",
+      "example":""
+   },
+   {
+      "key":"Video Post-Production\/Editor",
+      "group":"Videonachbearbeitung",
+      "role":"Fernsehredakteur",
+      "description":"Fernsehredakteure sind dafür verantwortlich, das aufgenommene Filmmaterial und die Clips zu nehmen und sie zusammenzufügen, um die Vision und das Geschichtenerzählen des Regisseurs zu entwickeln.",
+      "example":""
+   },
+   {
+      "key":"Video Post-Production\/Assistant Editor",
+      "group":"Videonachbearbeitung",
+      "role":"Redakteurassistent",
+      "description":"Der Redakteurassistent ist dafür verantwortlich, die Medien vom Set zu nehmen, sie in die vorgesehene Bearbeitungssoftware einzuspeisen und das Filmmaterial auf effiziente Weise für den Editor zu organisieren. Sie müssen auch genau darauf achten, dass Audio und Video synchronisiert sind und dass das gesamte Filmmaterial vom Set ordnungsgemäß aufgenommen wird.",
+      "example":""
+   }
+]
