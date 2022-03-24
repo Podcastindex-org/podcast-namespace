@@ -170,8 +170,62 @@ The following tags are being actively considered for adoption into the namespace
 
 
 <br><br><!-- Tag block -->
-### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
+### **\<podcast:socialInteract>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/327)</small>
+<b>
 
+```xml
+<podcast:socialInteract
+  protocol="[slug of social protocol being used([slug](socialprotocols.txt)]"
+  priority="[the order of rendering(int)]"
+  accountId="[account id of posting party(string)]"
+  accountUrl="[url to posting party's platform profile(string)]"
+>
+[url of root post/comment(string)]
+</podcast:socialInteract>
+```
+
+</b>
+
+#### Item
+
+#### (optional | multiple)
+
+This element allows a podcaster to attach a "root post" to an episode.  This "root post" is treated as the canonical location of where the comments and discussion around this
+episode will take place.  This can be thought of as the "official" social media comment space for this episode.  If a protocol such as "activitypub" is used, or some other
+protocol that allows programmatic API access, these comments can be directly pulled into the app, and replies can be posted back to it from the app itself.
+
+If multiple `<podcast:socialInteract>` tags are given for an `<item>`, the `priority` attribute is strongly recommended to give the app an indication as to which comments to
+display first.
+
+This tag can also be used as a signal to platforms and apps that the podcaster does not want public comments shown alongside this episode.  For this purpose a `protocol` value
+of "disabled" can be specified, with no other attributes or node value present.
+
+#### Attributes
+ - **protocol** (required) The [protocol](socialprotocols.txt) in use for interacting with the comment root post.
+ - **accountId** (recommended) The account id of the account that posted this root post.
+ - **accountUrl** (optional) The public url of the account.
+ - **priority** (optional) When multiple socialInteract tags are present, this integer gives order or priority in ascending order of importance.
+
+Example (simple):
+```xml
+<podcast:socialInteract protocol="activitypub" accountId="@dave">https://podcastindex.social/web/@dave/108013847520053258</podcast:socialInteract>
+```
+
+Example (complex):
+```xml
+<podcast:socialInteract priority="1" protocol="activitypub" accountId="@dave" accountUrl="https://podcastindex.social/web/@dave">https://podcastindex.social/web/@dave/108013847520053258</podcast:socialInteract>
+<podcast:socialInteract priority="2" protocol="twitter" accountId="@podcastindexorg" accountUrl="https://twitter.com/PodcastindexOrg">https://twitter.com/PodcastindexOrg/status/1507120226361647115</podcast:socialInteract>
+```
+
+Example (disabled):
+```xml
+<podcast:socialInteract protocol="disabled"></podcast:socialInteract>
+```
+
+
+
+<br><br><!-- Tag block -->
+### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
 <b>
 
 ```xml
@@ -214,7 +268,6 @@ Examples:
 
 <br><br><!-- Tag block -->
 ### **\<podcast:complete>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/351)</small>
-
 <b>
 
 ```xml
