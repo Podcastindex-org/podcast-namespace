@@ -175,7 +175,7 @@ The following tags are being actively considered for adoption into the namespace
 
 ```xml
 <podcast:socialInteract
-  protocol="[slug of social protocol being used([slug](socialprotocols.txt)]"
+  protocol="[slug of social protocol being used(slug]]"
   priority="[the order of rendering(int)]"
   accountId="[account id of posting party(string)]"
   accountUrl="[url to posting party's platform profile(string)]"
