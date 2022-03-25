@@ -190,7 +190,7 @@ The following tags are being actively considered for adoption into the namespace
 
 #### (optional | multiple)
 
-This element allows a podcaster to attach a "root post" to an episode.  This "root post" is treated as the canonical location of where the comments and discussion around this
+This element allows a podcaster to attach the "root post" of a comment thread to an episode.  This "root post" is treated as the canonical location of where the comments and discussion around this
 episode will take place.  This can be thought of as the "official" social media comment space for this episode.  If a protocol such as "activitypub" is used, or some other
 protocol that allows programmatic API access, these comments can be directly pulled into the app, and replies can be posted back to it from the app itself.
 
