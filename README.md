@@ -175,13 +175,12 @@ The following tags are being actively considered for adoption into the namespace
 
 ```xml
 <podcast:socialInteract
+  uri="[uri of root post/comment(string)]"
   protocol="[slug of social protocol being used(slug)]"
   accountId="[account id of posting party(string)]"
   accountUrl="[url to posting party's platform profile(string)]"
   priority="[the order of rendering(int)]"
->
-[url of root post/comment(string)]
-</podcast:socialInteract>
+/>
 ```
 
 </b>
@@ -201,25 +200,27 @@ This tag can also be used as a signal to platforms and apps that the podcaster d
 of "disabled" can be specified, with no other attributes or node value present.
 
 #### Attributes
+ - **uri** (required) The uri/url of root post comment.
  - **protocol** (required) The [protocol](socialprotocols.txt) in use for interacting with the comment root post.
  - **accountId** (recommended) The account id (on the commenting platform) of the account that created this root post.
  - **accountUrl** (optional) The public url (on the commenting platform) of the account that created this root post.
  - **priority** (optional) When multiple socialInteract tags are present, this integer gives order or priority in ascending order of importance.  A lower number means higher priority.
 
+
 Example (simple):
 ```xml
-<podcast:socialInteract protocol="activitypub" accountId="@dave">https://podcastindex.social/web/@dave/108013847520053258</podcast:socialInteract>
+<podcast:socialInteract uri="https://podcastindex.social/web/@dave/108013847520053258" protocol="activitypub" accountId="@dave" />
 ```
 
 Example (complex):
 ```xml
-<podcast:socialInteract priority="1" protocol="activitypub" accountId="@dave" accountUrl="https://podcastindex.social/web/@dave">https://podcastindex.social/web/@dave/108013847520053258</podcast:socialInteract>
-<podcast:socialInteract priority="2" protocol="twitter" accountId="@podcastindexorg" accountUrl="https://twitter.com/PodcastindexOrg">https://twitter.com/PodcastindexOrg/status/1507120226361647115</podcast:socialInteract>
+<podcast:socialInteract priority="1" uri="https://podcastindex.social/web/@dave/108013847520053258" protocol="activitypub" accountId="@dave" accountUrl="https://podcastindex.social/web/@dave" />
+<podcast:socialInteract priority="2" uri="https://twitter.com/PodcastindexOrg/status/1507120226361647115" protocol="twitter" accountId="@podcastindexorg" accountUrl="https://twitter.com/PodcastindexOrg" />
 ```
 
 Example (disabled):
 ```xml
-<podcast:socialInteract protocol="disabled"></podcast:socialInteract>
+<podcast:socialInteract protocol="disabled" />
 ```
 
 
