@@ -170,7 +170,7 @@ The following tags are being actively considered for adoption into the namespace
 
 
 <br><br><!-- Tag block -->
-### **\<podcast:socialInteract>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/327)</small>
+### **\<podcast:socialInteract>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/357)</small>
 <b>
 
 ```xml
