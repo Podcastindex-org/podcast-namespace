@@ -62,8 +62,6 @@ Multiple
  - **duration:** (UNCHANGED) How long is the soundbite (recommended between 15 and 120 seconds)
  - **title:** (Now required, was a node value now a named attribute) Used as free form string from the podcast creator to specify a title for the soundbite. Please do not exceed `128 characters` for the title value or it may be truncated by aggregators.
  - **url**: Source Audio file URL
- - **feed**: The RSS Feed of the podcast the Soundbite is for
- - **episode**: The episode number of the podcast the Soundbite is for
 
  ## Value Attributes
 
@@ -118,7 +116,7 @@ Value attributes are all optional, however if they are to be used, optional/requ
 </podcast:soundbites>
 ```
 
-#### JSON Example
+#### JSON Server File Example
 
 ```
 {
@@ -130,8 +128,6 @@ Value attributes are all optional, however if they are to be used, optional/requ
       "duration" : 42.25,
       "title" : "Why the Podcast Namespace Matters",
       "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
-      "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
-      "episode" : 10,
       {
         "name" : "A Soundbiter",
         "type" : "node",
@@ -145,8 +141,6 @@ Value attributes are all optional, however if they are to be used, optional/requ
       "duration" : 30.0,
       "title" : "Why Soundbites Matter",
       "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
-      "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
-      "episode" : 10,
       {
         "name" : "A Soundbiter again",
         "type" : "node",
@@ -159,15 +153,20 @@ Value attributes are all optional, however if they are to be used, optional/requ
 }
 ```
 
-TBD 4: Sharing format proposal
-
 ## Soundbite Sharing Specification
 
 Sharing a soundbite has to be easy for client or web applications to implement and for podcast hosts or podcast servers to ingest with tools to add/insert into the RSS/JSON for the source of truth RSS Feed.
 
 Two methods are suggested for sharing: JSON File and a Query string URL. In either scenario, only one soundbite may be shared per file/string. Each soundbite will be parsed individually.
 
-#### JSON File Example
+#### Sharing Attributes
+
+When submitting a Soundbite to the podcaster, it is necessary to include both the RSS Feed URL and the Episode number to make it easier to correlate the entry with the podcasters show. It should be possible to reverse look-up based on the Audio file URL provided however this is kinder approach to those implementing this and it should be transparent to the Soundbite creator anyhow.
+
+ - **feed**: The RSS Feed of the podcast the Soundbite is for
+ - **episode**: The episode number of the podcast the Soundbite is for
+
+#### JSON Sharing File Example
 
 ```
 {
@@ -201,11 +200,11 @@ Develop this and publish it
 
 #### Server Component (Soundbitten)
 
-Written in Go. Accepts API calls from a client, presents the soundbites for a podcaster to select from, download the ones you want to keep and name them in JSON file for inclusion/import into RSS feed.
+Accepts API calls from a client, presents the soundbites for a podcaster to select from, download the ones you want to keep and name them in JSON file for inclusion/import into RSS feed.
 
 #### Client Component (Soundbiter)
 
-Written in Go. Sends API call to Soundbitten service.
+Sends API call to Soundbitten service.
 
 
 Discussion here:
