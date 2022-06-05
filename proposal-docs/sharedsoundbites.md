@@ -62,6 +62,8 @@ Multiple
  - **duration:** (UNCHANGED) How long is the soundbite (recommended between 15 and 120 seconds)
  - **title:** (Now required, was a node value now a named attribute) Used as free form string from the podcast creator to specify a title for the soundbite. Please do not exceed `128 characters` for the title value or it may be truncated by aggregators.
  - **url**: Source Audio file URL
+ - **feed**: The RSS Feed of the podcast the Soundbite is for
+ - **episode**: The episode number of the podcast the Soundbite is for
 
  ## Value Attributes
 
@@ -120,14 +122,16 @@ Value attributes are all optional, however if they are to be used, optional/requ
 
 ```
 {
-	"version" : "1.0",
+	"version" : "1.0.0",
 	"soundbites" :
 	[
 		{
-      "startTime" : "1234.5",
-      "duration" : "42.25",
+      "startTime" : 1234.5,
+      "duration" : 42.25,
       "title" : "Why the Podcast Namespace Matters",
       "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
+      "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
+      "episode" : 10,
       {
         "name" : "A Soundbiter",
         "type" : "node",
@@ -137,10 +141,12 @@ Value attributes are all optional, however if they are to be used, optional/requ
       }
 		},
     {
-      "startTime" : "134.5",
-      "duration" : "30.0",
+      "startTime" : 134.5,
+      "duration" : 30.0,
       "title" : "Why Soundbites Matter",
       "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
+      "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
+      "episode" : 10,
       {
         "name" : "A Soundbiter again",
         "type" : "node",
@@ -165,10 +171,12 @@ Two methods are suggested for sharing: JSON File and a Query string URL. In eith
 
 ```
 {
-  "startTime" : "134.5",
-  "duration" : "30.0",
+  "startTime" : 134.5,
+  "duration" : 30.0,
   "title" : "Why Soundbites Matter",
   "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
+  "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
+  "episode" : 10,
   {
     "name" : "A Soundbiter again",
     "type" : "node",
