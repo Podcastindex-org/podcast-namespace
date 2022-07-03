@@ -20,6 +20,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 13. [Audioboom](https://twitter.com/Audioboom/status/1478378244638494733)
 14. [Caproni](https://caproni.fm/en)
 15. [Sounder.fm](https://support.sounder.fm/article/58-does-sounder-transcribe-my-content-how-much-does-it-cost)
+16. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -33,6 +34,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 9. [RSS.com Podcasting](https://rss.com)
 10. [Caproni](https://caproni.fm/en)
 11. [Castos](https://castos.com/introducing-podcast-2-0-support/)
+12. [RSS Blue](https://rssblue.com/help/podcast-metadata#locked)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -52,6 +54,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 15. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 16. [Caproni](https://caproni.fm/en)
 17. [Castos](https://castos.com/introducing-podcast-2-0-support/)
+18. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -67,6 +70,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [JustCast.com](https://twitter.com/thejustcast/status/1420783756156145664)
 12. [RSS.com Podcasting](https://rss.com)
 13. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
+14. [RSS Blue](https://rssblue.com/help/episode-metadata#chapters-data)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -80,6 +84,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [Castopod](https://podlibre.org/castopod-supports-the-location-tag/)
 3. [Podfriend](https://twitter.com/adamcurry/status/1357003546709938181)
 4. [Caproni](https://caproni.fm/en)
+5. [RSS Blue](https://rssblue.com/help/podcast-metadata#location)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
@@ -95,3 +100,5 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
 2. [usocial](http://usocial.me/history#v0.1.1)
+3. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
+4. [Alby](https://getalby.com/podcast-wallet)
