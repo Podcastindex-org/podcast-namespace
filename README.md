@@ -165,9 +165,15 @@ full implementation details.
 
 ## <u>Phase 5 (Closed as of 7/15/2022)</u>
 
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
+full implementation details.
+
+- **\<podcast:socialInteract>** <br>
+
 The following tags are under review for inclusion in this phase.  Changes to them are now frozen.  Any modifications will mean the tag needs
 to be reworked and submitted to Phase 6.
-
 
 <br><br><!-- Tag block -->
 ### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
