@@ -29,7 +29,7 @@ The podcast namespace is part of the larger "Podcasting 2.0" project which exist
 
 **Phase 4** - [Closed] Comment period closed on `12/1/2021` and [3 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-4-closed-on-1212021) were **formalized**.
 
-**Phase 5** - [Closed] Comment period closed on `7/15/2022`.  Tags [here](https://github.com/Podcastindex-org/podcast-namespace#phase-5-closed-on-7152022) are under active consideration.
+**Phase 5** - [Closed] Comment period closed on `7/15/2022`.  Tags [here](https://github.com/Podcastindex-org/podcast-namespace#phase-5-closed-as-of-7152022) are under active consideration.
 
 <br><br>
 
