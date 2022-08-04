@@ -183,7 +183,7 @@ to be reworked and submitted to Phase 6.
 
 ```xml
 <podcast:block
- exclude="[comma delimited list(string)]"
+ id="[single selection from [platform slug list](serviceslugs.txt)]"
 >
 [yes|no(bool)]
 </podcast:block>
