@@ -1,6 +1,6 @@
 # The "podcast:verify" Specification
 
-<small>Version 1.0 by @pofmagicfingers - 2022.08.03</small>
+<small>Version 1.0 by [@pofmagicfingers](https://github.com/pofmagicfingers) - 2022.08.03</small>
 
 <br>
 
