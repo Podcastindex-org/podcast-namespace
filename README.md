@@ -193,30 +193,42 @@ to be reworked and submitted to Phase 6.
 
 #### Channel
 
-#### (optional | single)
+#### (optional | multiple)
 
-This element allows a podcaster to express which platforms are allowed to publicly display this feed and it's contents.  In it's basic form, it is a direct drop-in
-replacement for `<itunes:block>` and functions identically.  The addition of the `exclude` attribute allows for a comma separated list of platforms from the [slug list](serviceslugs.txt)
-to be given which operates as an inversion of the intent expressed by the node value.
+This element allows a podcaster to express which platforms are allowed to publicly display this feed and it's contents.  
+In it's basic form, it is a direct drop-in replacement for the `<itunes:block>` tag, but allows for greater flexibility
+with the inclusion of the `id` attribute and/or multiple copies of itself.
+
+Platforms should not ingest a feed for public display/use if their slug exists in the `id` of a `yes` block tag, or if 
+an unbounded `yes` block tag exists (meaning block all public ingestion).  Conversely, if a platform finds their slug in
+the `id` of a `no` block tag, they are free to ingest that feed for public display/usage.
 
 #### Attributes
- - **exclude** (optional) A comma separated list of platforms that will be interpreted as a block list or an allow list based on the inversion of the node value (yes or no).
+ - **id** (optional) A single entry from the [platform slug list](serviceslugs.txt).
 
 Examples:
 ```xml
 <!-- This means "block everything" -->
 <podcast:block>yes</podcast:block>
-
-<!-- This means "block nothing" -->
-<podcast:block>no</podcast:block>
-
-<!-- This means "block everything except spotify and google" -->
-<podcast:block exclude="spotify,google">yes</podcast:block>
-
-<!-- This means "block nothing other than apple and podcast index" -->
-<podcast:block exclude="apple,podcastindex">no</podcast:block>
 ```
 
+```xml
+<!-- This means "block nothing" (same as not present) -->
+<podcast:block>no</podcast:block>
+```
+
+```xml
+<!-- This means "block only google and amazon" -->
+<podcast:block id="google">yes</podcast:block>
+<podcast:block id="amazon">yes</podcast:block>
+```
+
+```xml
+<!-- This means "block every platform _except_ google and amazon" -->
+<podcast:block>yes</podcast:block>
+<podcast:block id="google">no</podcast:block>
+<podcast:block id="amazon">no</podcast:block>
+```
 
 
 <br><br><!-- Tag block -->
