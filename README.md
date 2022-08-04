@@ -183,7 +183,7 @@ to be reworked and submitted to Phase 6.
 
 ```xml
 <podcast:block
- id="[single selection from [platform slug list](serviceslugs.txt)]"
+ id="[single selection from the platform slug list]"
 >
 [yes|no(bool)]
 </podcast:block>
