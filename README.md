@@ -171,64 +171,13 @@ The following tags have been formally adopted into the namespace.  They are full
 full implementation details.
 
 - **\<podcast:socialInteract>** <br>
+- **\<podcast:block>** <br>
 
 <br>
 
 The following tags are under review for inclusion in this phase.  Changes to them are now frozen.  Any modifications will mean the tag needs
 to be reworked and submitted to Phase 6.
 
-<br><br><!-- Tag block -->
-### **\<podcast:block>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/179)</small>
-<b>
-
-```xml
-<podcast:block
- id="[single selection from the platform slug list]"
->
-[yes|no(bool)]
-</podcast:block>
-```
-
-</b>
-
-#### Channel
-
-#### (optional | multiple)
-
-This element allows a podcaster to express which platforms are allowed to publicly display this feed and it's contents.  
-In it's basic form, it is a direct drop-in replacement for the `<itunes:block>` tag, but allows for greater flexibility
-with the inclusion of the `id` attribute and/or multiple copies of itself.
-
-Platforms should not ingest a feed for public display/use if their slug exists in the `id` of a `yes` block tag, or if 
-an unbounded `yes` block tag exists (meaning block all public ingestion).  Conversely, if a platform finds their slug in
-the `id` of a `no` block tag, they are free to ingest that feed for public display/usage.
-
-#### Attributes
- - **id** (optional) A single entry from the [platform slug list](serviceslugs.txt).
-
-Examples:
-```xml
-<!-- This means "block everything" -->
-<podcast:block>yes</podcast:block>
-```
-
-```xml
-<!-- This means "block nothing" (same as not present) -->
-<podcast:block>no</podcast:block>
-```
-
-```xml
-<!-- This means "block only google and amazon" -->
-<podcast:block id="google">yes</podcast:block>
-<podcast:block id="amazon">yes</podcast:block>
-```
-
-```xml
-<!-- This means "block every platform _except_ google and amazon" -->
-<podcast:block>yes</podcast:block>
-<podcast:block id="google">no</podcast:block>
-<podcast:block id="amazon">no</podcast:block>
-```
 
 
 <br><br><!-- Tag block -->
