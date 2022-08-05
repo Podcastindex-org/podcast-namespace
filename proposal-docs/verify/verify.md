@@ -24,7 +24,7 @@ and the email address within the RSS feed need not be the one used by your user.
 
 ## Check that quick-claiming is enabled in the RSS feed.
 ```xml
-<podcast:guard 
+<podcast:lock
 locked="yes" 
 owner="some@email.com" 
 auth="https://hostingprovider.com/claiming/" 
@@ -32,7 +32,7 @@ pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9q9UU8I5mEov
 />
 ```
 
-As above, you should see an `auth` field within the `<podcast:guard>` tag, this means the feed support quick claiming. 
+As above, you should see an `auth` field within the `<podcast:lock>` tag, this means the feed support quick claiming.
 The pub attribute is a public key you will use later to check the autenticity of the hosting provider response.
 
 ## Give them a "claim this with your podcast host" button
@@ -142,7 +142,7 @@ private key, and it can be verified using the `pub` attribute of the tag (put th
 You can verify the signature in PHP with a JWT library, if it fails to decode, it means the signature is wrong or the 
 token has expired:
 ```
-$result = JWT::decode($quickClaimResponse, $feed["podcast:guard"]["pub"]);
+$result = JWT::decode($quickClaimResponse, $feed["podcast:lock"]["pub"]);
 ```
 
 As a podcast directory/service you have now the confirmation the user was indeed authenticated, confirmed the 
@@ -163,7 +163,7 @@ their activity with you.
 
 If you're a podcast host wanting to add quick claiming for your customers, then here's how you can do it painlessly:
 
-## Add a `podcast:guard` tag in your RSS feeds
+## Add a `podcast:lock` tag in your RSS feeds
 
 The tag needs two attributes :
 
@@ -171,7 +171,7 @@ a. `auth` - a URL to a page that is protected on your server by customer login. 
             be an `https` address.
 b. `pub` - the public key corresponding to the private key you'll use to sign claiming requests.
 
-Example: `<podcast:guard auth="https://amazingpodcasthost.example.com/claiming" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
+Example: `<podcast:lock auth="https://amazingpodcasthost.example.com/claiming" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
 q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" />`
 
 
@@ -334,7 +334,7 @@ and **CREATOR** is a member of this show, allowed to claim the **PODCAST** on di
 
 ```xml
 <podcast:guid>ead4c236-bf58-58c6-a2c6-a6b28d128cb6</podcast:guid>
-<podcast:guard auth="https://host.com/studio/quick_claim/" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
+<podcast:lock auth="https://host.com/studio/quick_claim/" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
 q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" />
 ```
 
