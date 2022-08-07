@@ -4,45 +4,56 @@
 
 <br>
 
-## Purpose
+# Purpose
 
-"Claiming" a podcast in a podcast directory means that your customer can be authorized as the owner of that podcast in 
-that directory. You might claim a podcast in Podchaser to add host information, in GoodPods to be notified of comments,
-in Podcasterwallet to add value4value info, or in Spotify to add it to the Spotify dashboard for analytics.
+"Claiming" a podcast in a podcast directory, platform, app or service means that your customer is proving that 
+they are the owner of the podcast feed and have current control of it. You might claim a podcast in Apple to add to your
+iTunes Connect account, Podchaser to add host information, in GoodPods to be notified of comments, in 
+Podcasterwallet.com to add value4value info, or in Spotify to add it to the Spotify dashboard for analytics.
 
-A "quick-claim" is a programmatic way to claim a podcast, by taking your customer from a podcast directory to an 
-authenticated page on their podcast host.
+The "quick-claim" process described in this document, is a programmatic way to claim a podcast, by taking a podcast  
+owner from the claiming service to an authenticated page on their podcast host to prove ownership.
 
-# For podcast directories
-Run a podcast directory, and want to check that someone owns this podcast?
+To enable the quick claiming of a podcast, we propose a new `<podcast:verify>` tag to hold teh relevant URI's and key
+material.
 
-Benefits of using "quick-claim" are that it's one-click within a browser or webview, rather than sending a potential user an email. Assuming they are logged-in to their podcast host (or can log in), they can approve your request instantly and come back to your website within seconds.
+<br>
+
+# The Claiming Service
+Run a podcast directory, app, platform or service and want to check that someone is the owner of this podcast?
+
+Benefits of using "quick-claim" are that it's one-click within a browser or webview, rather than sending a potential 
+user an email. Assuming they are logged-in to their podcast host (or can log in), they can approve your request 
+instantly and come back to your service within seconds.
 
 Additional bnefits are:
-* Anyone authorised to access the podcast host dashboard can claim the show (subject the user having the right permissions)
-* Email confirmations are often subject to delay, fall into spam, or are blocked altogether
-* Email confirmation emails can be faked and lead to security concerns
-* The listing of an email address in an RSS feed leads to privacy issues and spam
+* Anyone authorized to access the podcast host dashboard can claim the show (subject to the user having the right 
+  permissions).
+* Email confirmations are often subject to delay, fall into spam, or are blocked altogether.
+* Email confirmation emails can be faked and lead to security concerns.
+* The listing of an email address in an RSS feed leads to privacy issues and spam.
 * Email confirmations often lead to around [25%](https://www.quora.com/What-is-a-typical-abandonment-rate-for-email-verifications) abandomnent
 
-## Check that quick-claiming is enabled in the RSS feed.
+<br>
+
+## 1. Check that quick-claiming is enabled in the RSS feed
 ```xml
-<podcast:lock
-locked="yes" 
-owner="some@email.com" 
+<podcast:verify
 auth="https://hostingprovider.com/claiming/" 
 pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg=="
 />
 ```
 
-As above, you should see an `auth` field within the `<podcast:lock>` tag, this means the feed support quick claiming.
-The pub attribute is a public key you will use later to check the autenticity of the hosting provider response.
+The presence of the `<podcast:verify>` tag means that this feed supports quick claiming. The `pub` attribute is the 
+public key you will use later to check the authenticity of the hosting provider's response.
 
-## Give them a "claim this with your podcast host" button
+<br>
+
+## 2. Give the podcaster a Quick Claim button
 
 You will redirect your user to the auth url present in the podcaster's RSS feed, with 1 to 3 URL parameters :
 
-### `consumer`
+### Param: `consumer`
 Your directory/service base URL of the return_path.
 
 It's recommanded to support open graph allowing the hosting provider to present a clean name and icon for your 
@@ -88,25 +99,17 @@ If the consumer is enough, you can omit it.
 #### `guid`
 If a `podcast:guid` is present in the RSS feed it SHOULD be included. If it's not we omit it or send an empty string.
 
-We keep it simple, we should trust the users of our spec (in this case the hosting providers) : if they don't include a `podcast:guid`, I don't see the point to calculate it and give it to them, as they most likely don't have it on their hand and probably don't use it. If they would, it would be included in the feed.
+We keep it simple, we should trust the users of our spec (in this case the hosting providers) : if they don't include 
+a `podcast:guid`, I don't see the point to calculate it and give it to them, as they most likely don't have it on their 
+hand and probably don't use it. If they would, it would be included in the feed.
 
-If we don't have any podcast:guid, maybe the hosting provider has only partial support of the podcasting 2.0 spec, maybe they only support claiming and include the guid in the auth url, maybe it's a wordpress extension and there is only one podcast and no need to "select a podcast" when you're logged in. We can't know and guess all usages.
-
-If we really want them to have a `podcast:guid` to use quick claiming, why not adding quick claiming _into_ `podcast:guid` ?
-
-```xml
-<podcast:guid 
-auth="https://hostingprovider.com/claiming/"
-pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==">
-    [here the podcast guid]
-</podcast:guid>
-```
-
-It kind of fits, as it's the feed identity control.
+If we don't have any podcast:guid, maybe the hosting provider has only partial support of the podcasting 2.0 spec. Maybe
+they only support claiming and include the guid in the auth url. Perhaps it's a Wordpress extension and there is only 
+one podcast and no need to "select a podcast" when you're logged in. We can't know and guess all usages.
 
 ### PHP Example
 
-Here's an example in PHP of your button:
+Here's a simple example, in PHP, of a quick claim button:
 
  ```php
 <a 
@@ -117,13 +120,16 @@ Claim this now
 </a>
  ```
 
-## Handle the response
+<br>
 
-If the user wants to claim the podcast, they will confirm it inside their hosting service. You will get a GET request to the return URL computed with the consumer and return_path.
+## 3. Handle the response from the hosting provider
 
-The GET request will contain only one parameter : `token`.
+If the podcaster wants to claim this podcast, they will confirm it inside their hosting service. You will receive a GET 
+request to the `return URL` computed from the `consumer` and `return_path`.
 
-This parameter will be a JSON Web Token including the following data :
+The GET request will contain only one parameter: `token`.
+
+This parameter will be a JSON Web Token ([JWT](https://jwt.io/)), and will include the following data :
 
 ```typescript
 type QuickClaimResponse = {
@@ -136,53 +142,62 @@ type QuickClaimResponse = {
 };
 ```
 
-Using JWT lets us ensure the hosting provider wrote the response. It also allow us to define or not an expiration 
-date and such. ([More info](https://jwt.io/))
+Using JWT lets us ensure the hosting provider wrote the response. It also allow us to define, or not, an expiration 
+date and such. ([More info on JWT](https://jwt.io/))
 
-The JWT must use an asymetric signing algorithm (ES256 for example). The response is signed by the hosting provider 
+The JWT must use an asymmetric signing algorithm (ES256 for example). The response is signed by the hosting provider 
 private key, and it can be verified using the `pub` attribute of the tag (put there by the same hosting provider).
 
-You can verify the signature in PHP with a JWT library, if it fails to decode, it means the signature is wrong or the 
+You can verify the signature in PHP with a JWT library. If it fails to decode, it means the signature is wrong or the 
 token has expired:
-```
+```php
 $result = JWT::decode($quickClaimResponse, $feed["podcast:lock"]["pub"]);
 ```
 
-As a podcast directory/service you have now the confirmation the user was indeed authenticated, confirmed the 
-operation, and that its the same entity giving you this information and producing the RSS feed.
+As a podcast directory, app, platform or service you now have the confirmation the user was indeed authenticated, 
+confirmed the operation, and that it's the same entity giving you this information and producing the RSS feed.
 
-# For podcast hosts
-Quick-claim is designed to allow your customers to demonstrate that they own their podcast on third-party services, 
-like Podchaser or Goodpods, as an example.
+<br><br>
 
-The benefits of using "quick-claim" are that it's one-click for your customers from the service they wish to claim, 
+# The Hosting Service
+Quick-claim is designed to allow your customers to demonstrate that they own their podcast on third-party services.
+
+The benefits of using quick claiming are that it's one-click for your customers from the service they wish to claim, 
 direct to you. You can monitor the services your users are using, and can give multiple people access to claiming a 
 podcast on a separate service based on your service's access levels.
 
-The email in your RSS feed need not be the registration email of the user on this third-party service, thus lowering 
-your customer support calls and streamlining access for your customers. Ease of use on third-party services retains 
-the customer with your company, thus lowering churn, and possibly giving them more access and interaction, prolonging 
-their activity with you.
+The email in your customer's RSS feed need not be the registration email of the user on this third-party service, thus 
+lowering your customer support calls and streamlining access for your customers. Ease of use on third-party services 
+retains the customer with your company, thus lowering churn, and possibly giving them more access and interaction, 
+prolonging their activity with you.
 
 If you're a podcast host wanting to add quick claiming for your customers, then here's how you can do it painlessly:
 
-## Add a `podcast:lock` tag in your RSS feeds
+<br>
+
+## 1. Add the `podcast:verify` tag to your RSS feeds
 
 The tag needs two attributes :
 
-a. `auth` - a URL to a page that is protected on your server by customer login. It is highly recommended that this 
+- a. `auth` - a URL to a page that is protected on your server by customer login. It is highly recommended that this 
             be an `https` address.
-b. `pub` - the public key corresponding to the private key you'll use to sign claiming requests.
+- b. `pub` - the public key corresponding to the private key you use to sign claiming requests.
 
-Example: `<podcast:lock auth="https://amazingpodcasthost.example.com/claiming" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
-q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" />`
+#### Example: 
+```xml
+<podcast:verify 
+  auth="https://amazingpodcasthost.example.com/claiming" 
+  pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" 
+/>
+```
 
+<br>
 
-## Host a page for a user to agree to "claim" a podcast
+## 2. Host a page for a user to agree to "claim" a podcast
 
-Your claiming auth url will be called with 1 to 3 parameters :
+Your claiming `auth` url will be called with 1 to 3 parameters :
 
-#### `consumer`
+### Param: `consumer`
 The directory/service base URL.
 
 This url must be used to present the permission asker to the user. It's recommanded for services to support 
@@ -192,11 +207,11 @@ you will most likely fallback to title and favicon, hostname only, or full url.
 Splitting the return url into a `consumer` and a `return_path` gives us control of which part of the url is used for 
 open graph data while ensuring the return path is tied to the hostname and identity presented to the user.
 
-#### `return_path`
+### Param: `return_path`
 A path relative to consumer parameter, to redirect with the result of the authentication.
 If the consumer is enough, you can omit it.
 
-Examples:
+#### Examples:
 
 `consumer=https://podcastindex.org/quick_claim` (no return path)
 ➡️ full return url will be `https://podcastindex.org/quick_claim?token=[token]`
@@ -207,10 +222,10 @@ Examples:
 `consumer=https://podcastindex.org/quick_claim&return_path=../claim.php`
 ➡️ full return url will be `https://podcastindex.org/claim.php?token=[token]`
 
-#### `guid`
-If a `podcast:guid` was present in the RSS feed.
+### Param: `guid`
+If a `<podcast:guid>` tag was present in the RSS feed.
 
-### Here's an example in PHP:
+### PHP Example:
 
  ```php
 <?php
@@ -323,10 +338,12 @@ TAGS;
 </form>
  ```
 
-The above will successfully check that your user is authenticated and send back the token to the directory service 
-if the user agrees.
+The above will successfully check that your user is authenticated and send back the JWT token to the directory service 
+if the user agreed.
 
-## Full example workflow
+<br><br>
+
+## Full Workflow Example
 
 This section will summarize everything into one big example.
 
@@ -337,26 +354,30 @@ and **CREATOR** is a member of this show, allowed to claim the **PODCAST** on di
 
 ```xml
 <podcast:guid>ead4c236-bf58-58c6-a2c6-a6b28d128cb6</podcast:guid>
-<podcast:lock auth="https://host.com/studio/quick_claim/" pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9
-q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" />
+<podcast:verify 
+  auth="https://host.com/studio/quick_claim/" 
+  pub="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEVs/o5+uQbTjL3chynL4wXgUg2R9q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==" 
+/>
 ```
 
-**DIRECTORY** presents a button "Quick claim".
+**DIRECTORY** presents a button labeled "Quick Claim".
 
 When **CREATOR** clicks on it, they are redirected to **HOST** with this URL :
-`https://host.com/studio/quick_claim/?guid=ead4c236-bf58-58c6-a2c6-a6b28d128cb6&consumer=https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6&return_path=/return`
+```
+https://host.com/studio/quick_claim/?guid=ead4c236-bf58-58c6-a2c6-a6b28d128cb6&consumer=https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6&return_path=/return
+```
 
-**HOST** can use consumer parameter to fetch some data (name, icon, description) through open graph. In this example 
-DIRECTORY use a consumer URL including podcast guid and could use it to add some podcast info into the open graph 
-description.
+**HOST** can use the `consumer` parameter to fetch some data (name, icon, description) through open graph. In this 
+example **DIRECTORY** uses the `consumer` URL, including podcast guid, and could use it to add some podcast info into the 
+open graph description.
 
-**HOST** asks for **CREATOR** confirmation in a logged only area after verifying on their own responsability if user 
-has indeed access to this podcast.
+**HOST** asks for **CREATOR** confirmation in a logged-in only area after verifying, on their own responsibility, if 
+this user account indeed has access to this podcast.
 
-When **CREATOR** accept the claim request, the **HOST** will generate a token, signed by their private key, 
-authenticating the CREATOR decision.
+When **CREATOR** agrees to the claim request, the **HOST** will generate a JWT token, signed by their private key, 
+authenticating the **CREATOR** decision.
 
-Unsigned :
+#### Unsigned JWT:
 ```json
 {
   "guid": "ead4c236-bf58-58c6-a2c6-a6b28d128cb6",
@@ -364,7 +385,10 @@ Unsigned :
 }
 ```
 
-Signed : `eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw`
+#### Signed JWT: 
+```json
+eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw
+```
 
 <details>
 <summary>Note : You can follow along and "translate" online</summary>
