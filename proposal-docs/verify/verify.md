@@ -416,17 +416,18 @@ q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==
 
 **CREATOR** are redirected to the **DIRECTORY** with this URL:
 
-`
-https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw`
+```text
+https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw
+```
 
 **DIRECTORY** can now check the token parameter to ensure it has been correctly signed with the private key 
 corresponding to the public key seen in the RSS feed, and in this case, the claiming request has been accepted.
 
 Other responses could be, for example :
 
-`
+```text
 https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOmZhbHNlLCJlcnJvciI6IlVzZXIgY2FuJ3QgYWNjZXNzIHRvIHRoaXMgc2hvdyJ9.MDkZanxlukjQRAj5zd2GoWetAwMWPZs1RU24HdSw8LJm3Z73kL2U4gHMOJUg62LtZdIoH3tktSR0w-1Ltuo4Ig
-`
+```
 
 ```json
 {
@@ -436,9 +437,11 @@ https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return
 }
 ```
 
-`
+```text
 https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOmZhbHNlLCJlcnJvciI6ImJhY2sifQ.TP8h8Hwh7oRpcuTPXOeqrO46sNwlwC4RLdyMtdFqZQfsS0pUT71_ljoUWq3a0o_hUjuVvPoWnDXar7o2BbLw6w
-`
+```
+
+...or...
 
 ```json
 {
@@ -448,6 +451,9 @@ https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return
 }
 ```
 
+<br><br>
+
+## Final Thoughts
 Here are my thoughs on this idea and how to implement it, feel free to make any remarks about it.
 
 JWT seems to me to be the middle ground between complexity and simplicity for a decentalized authorization system.
