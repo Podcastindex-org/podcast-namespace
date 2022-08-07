@@ -16,11 +16,14 @@ authenticated page on their podcast host.
 # For podcast directories
 Run a podcast directory, and want to check that someone owns this podcast?
 
-Benefits of using "quick-claim" are that it's one-click within a browser or webview, rather than sending a potential 
-user an email. Assuming they are logged-in to their podcast host (or can log in), they can approve your request 
-instantly and come back to your website within seconds, thus significantly lowering your abandoned shopping cart or 
-registration. Additional benefits are that anyone authorised to access the podcast host dashboard may claim the show; 
-and the email address within the RSS feed need not be the one used by your user.
+Benefits of using "quick-claim" are that it's one-click within a browser or webview, rather than sending a potential user an email. Assuming they are logged-in to their podcast host (or can log in), they can approve your request instantly and come back to your website within seconds.
+
+Additional bnefits are:
+* Anyone authorised to access the podcast host dashboard can claim the show (subject the user having the right permissions)
+* Email confirmations are often subject to delay, fall into spam, or are blocked altogether
+* Email confirmation emails can be faked and lead to security concerns
+* The listing of an email address in an RSS feed leads to privacy issues and spam
+* Email confirmations often lead to around [25%](https://www.quora.com/What-is-a-typical-abandonment-rate-for-email-verifications) abandomnent
 
 ## Check that quick-claiming is enabled in the RSS feed.
 ```xml
