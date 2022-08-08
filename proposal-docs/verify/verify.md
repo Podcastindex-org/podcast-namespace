@@ -26,7 +26,7 @@ Benefits of using "quick-claim" are that it's one-click within a browser or webv
 user an email. Assuming they are logged-in to their podcast host (or can log in), they can approve your request 
 instantly and come back to your service within seconds.
 
-Additional bnefits are:
+Additional benefits are:
 * Anyone authorized to access the podcast host dashboard can claim the show (subject to the user having the right 
   permissions).
 * Email confirmations are often subject to delay, fall into spam, or are blocked altogether.
