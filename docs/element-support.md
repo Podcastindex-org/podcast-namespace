@@ -103,6 +103,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [usocial](http://usocial.me/history#v0.1.1)
 3. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
 4. [Alby](https://getalby.com/podcast-wallet)
+5. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
