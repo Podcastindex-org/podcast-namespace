@@ -4,6 +4,7 @@
 
 <br>
 
+
 # Purpose
 
 "Claiming" a podcast in a podcast directory, platform, app or service means that your customer is proving that 
@@ -18,6 +19,7 @@ To enable the quick claiming of a podcast, we propose a new `<podcast:verify>` t
 material.
 
 <br>
+
 
 # The Claiming Service
 Run a podcast directory, app, platform or service and want to check that someone is the owner of this podcast?
@@ -44,8 +46,11 @@ Additional benefits are:
 />
 ```
 
-The presence of the `<podcast:verify>` tag means that this feed supports quick claiming. The `pub` attribute is the 
-public key you will use later to check the authenticity of the hosting provider's response.
+The presence of the `<podcast:verify>` tag means that this feed supports quick claiming. The tag will have two required
+attributes that must be present:
+
+ * `auth` (required):  The https URL of a "quick claim" page on the hosting provider that is protected by customer login.
+ * `pub` (required):  The public key corresponding to the private key the hosting provider users to sign claiming requests.
 
 <br>
 
@@ -54,7 +59,7 @@ public key you will use later to check the authenticity of the hosting provider'
 You will redirect your user to the `auth` url present in the podcaster's RSS feed, with 1 to 3 URL parameters, as
 defined below.
 
-<br>
+
 
 ### Param: `consumer`
 Your directory/service base URL of the return_path.
@@ -95,17 +100,17 @@ you can omit it.
 These are example calculations of what the return url will be with different inputs:
 
 `consumer=https://podcastindex.org/quick_claim` (no return path) ⤵ <br>
-```curl
+```http
 https://podcastindex.org/quick_claim?token=[token]
 ```
 
 `consumer=https://podcastindex.org/quick_claim&return_path=/claimed.php` ⤵ <br>
-```curl
+```http
 https://podcastindex.org/quick_claim/claimed.php?token=[token]
 ```
 
 `consumer=https://podcastindex.org/quick_claim&return_path=../claim.php` ⤵ <br>
-```curl
+```http
 https://podcastindex.org/claim.php?token=[token]
 ```
 
@@ -195,13 +200,6 @@ If you're a podcast host wanting to add quick claiming for your customers, then 
 
 ## 1. Add the `<podcast:verify>` tag to your RSS feeds
 
-The tag needs two attributes :
-
-- a. `auth` - a URL to a page that is protected on your server by customer login. It is highly recommended that this 
-            be an `https` address.
-- b. `pub` - the public key corresponding to the private key you use to sign claiming requests.
-
-#### Example: 
 ```xml
 <podcast:verify 
   auth="https://amazingpodcasthost.example.com/claiming" 
@@ -209,39 +207,56 @@ The tag needs two attributes :
 />
 ```
 
+The tag needs two attributes :
+
+* `auth` (required):  The URL of a secure page that is protected on your server by customer login.
+* `pub` (required):  The public key corresponding to the private key you use to sign claiming requests.
+
 <br>
 
-## 2. Host a page for a user to agree to "claim" a podcast
+## 2. Host a page for your customer to agree to "claim" a podcast
 
-Your claiming `auth` url will be called with 1 to 3 parameters :
+Your claiming `auth` url will be called with 1 to 3 parameters, as defined below:
 
 ### Param: `consumer`
 The directory/service base URL.
 
-This url must be used to present the permission asker to the user. It's recommanded for services to support 
+This url must be used to present the permission asker to the user. It's recommended for services to support 
 open graph on this URL allowing the hosting provider to present a clean name and icon. If open graph is not supported,
 you will most likely fallback to title and favicon, hostname only, or full url.
 
 Splitting the return url into a `consumer` and a `return_path` gives us control of which part of the url is used for 
 open graph data while ensuring the return path is tied to the hostname and identity presented to the user.
 
+<br>
+
 ### Param: `return_path`
-A path relative to consumer parameter, to redirect with the result of the authentication.
-If the consumer is enough, you can omit it.
+A path relative to the `consumer` parameter, to use as a callback to the `consumer` with the result of the authentication.
+If the `consumer` is enough, you can omit this parameter.
+
+These are example calculations of what the return url will be with different inputs:
 
 #### Examples:
 
-`consumer=https://podcastindex.org/quick_claim` (no return path)
-➡️ full return url will be `https://podcastindex.org/quick_claim?token=[token]`
+`consumer=https://podcastindex.org/quick_claim` (no return path) ⤵ <br>
+```http
+https://podcastindex.org/quick_claim?token=[token]
+```
 
-`consumer=https://podcastindex.org/quick_claim&return_path=/claimed.php`
-➡️ full return url will be `https://podcastindex.org/quick_claim/claimed.php?token=[token]`
+`consumer=https://podcastindex.org/quick_claim&return_path=/claimed.php` ⤵ <br>
+```http
+https://podcastindex.org/quick_claim/claimed.php?token=[token]
+```
 
-`consumer=https://podcastindex.org/quick_claim&return_path=../claim.php`
-➡️ full return url will be `https://podcastindex.org/claim.php?token=[token]`
+`consumer=https://podcastindex.org/quick_claim&return_path=../claim.php` ⤵ <br>
+```http
+https://podcastindex.org/claim.php?token=[token]
+```
+
+<br>
 
 ### Param: `guid`
-If a `<podcast:guid>` tag was present in the RSS feed.
+If a `<podcast:guid>` tag was present in the RSS feed, expect it to also be included as a parameter here.
 
 ### PHP Example:
 
@@ -387,7 +402,7 @@ This section will summarize everything into one big example.  Here are the defin
 When **CREATOR** clicks on the "Quick Claim" button on the page belonging to their **PODCAST**, they are redirected 
 to their **HOST** with this URL:
 
-```yaml
+```http
 https://host.com/studio/quick_claim/?guid=ead4c236-bf58-58c6-a2c6-a6b28d128cb6&consumer=https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6&return_path=/return
 ```
 
@@ -439,16 +454,16 @@ q9UU8I5mEovUf86QZ7kOBIjJwqnzD1omageEHWwHdBO6B+dFabmdT9POxg==
 
 **CREATOR** are redirected to the **DIRECTORY** with this URL:
 
-```text
+```http
 https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw
 ```
 
 **DIRECTORY** can now check the token parameter to ensure it has been correctly signed with the private key 
 corresponding to the public key seen in the RSS feed, and in this case, the claiming request has been accepted.
 
-Other responses could be, for example :
+Other responses could be, for example:
 
-```text
+```http
 https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOmZhbHNlLCJlcnJvciI6IlVzZXIgY2FuJ3QgYWNjZXNzIHRvIHRoaXMgc2hvdyJ9.MDkZanxlukjQRAj5zd2GoWetAwMWPZs1RU24HdSw8LJm3Z73kL2U4gHMOJUg62LtZdIoH3tktSR0w-1Ltuo4Ig
 ```
 
@@ -460,7 +475,7 @@ https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return
 }
 ```
 
-```text
+```http
 https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOmZhbHNlLCJlcnJvciI6ImJhY2sifQ.TP8h8Hwh7oRpcuTPXOeqrO46sNwlwC4RLdyMtdFqZQfsS0pUT71_ljoUWq3a0o_hUjuVvPoWnDXar7o2BbLw6w
 ```
 
@@ -477,9 +492,9 @@ https://directory.com/quick_claiming/ead4c236-bf58-58c6-a2c6-a6b28d128cb6/return
 <br><br>
 
 ## Final Thoughts
-Here are my thoughs on this idea and how to implement it, feel free to make any remarks about it.
+Here are my thoughts on this idea and how to implement it, feel free to make any remarks about it.
 
-JWT seems to me to be the middle ground between complexity and simplicity for a decentalized authorization system.
+JWT seems to me to be the middle ground between complexity and simplicity for a decentralized authorization system.
 It only requires the hosting provider to add a private key somewhere and print the pub key on the feed. 
 Signing/Verifying JWT is quick and easy and there are libraries in almost any languages. It basically falls down 
 to something like `[verify|sign]JWT(content, priv/pub_key)` in most languages.
@@ -490,5 +505,5 @@ We could also make this a kind of API spec, and add more data to the token.
 Maybe mimick oauth and add a scope param asking specifically for some data, permissions about the 
 feed. (`scope="stats,edit,delete,admin"` etc)
 
-That's a big subject and a spec of its own. That could be a nice addition but it has to be done in a way we can trust 
+That's a big subject and a spec of its own. That could be a nice addition, but it has to be done in a way we can trust 
 the system and all information it conveys.
