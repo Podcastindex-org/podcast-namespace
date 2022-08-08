@@ -14,7 +14,7 @@ Podcasterwallet.com to add value4value info, or in Spotify to add it to the Spot
 The "quick-claim" process described in this document, is a programmatic way to claim a podcast, by taking a podcast  
 owner from the claiming service to an authenticated page on their podcast host to prove ownership.
 
-To enable the quick claiming of a podcast, we propose a new `<podcast:verify>` tag to hold teh relevant URI's and key
+To enable the quick claiming of a podcast, we propose a new `<podcast:verify>` tag to hold the relevant URI's and key
 material.
 
 <br>
