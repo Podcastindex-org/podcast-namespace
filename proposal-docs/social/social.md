@@ -1,6 +1,24 @@
+<hr>
+
+<hr>
+
+<hr>
+
+# THIS IS NOT THE FINAL SPECIFICATION
+
+You [want to look here for that](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#social-interact)
+
+<hr>
+
+<hr>
+
+<hr>
+
 # The "podcast:social" Specification
 
 <small>Version 1.0 by Benjamin Bellamy - 2021.04.13</small>
+
+**This is not the final specification. You [want to look here for that](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#social-interact)**
 
 <br />
 
