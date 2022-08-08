@@ -96,9 +96,13 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 3. [Sounder.fm](https://feeds.sounder.fm/17048/rss.xml)
+4. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
 2. [usocial](http://usocial.me/history#v0.1.1)
 3. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
 4. [Alby](https://getalby.com/podcast-wallet)
+
+## Medium `<podcast:medium>`
+1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
