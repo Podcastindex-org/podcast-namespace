@@ -81,7 +81,7 @@ Claiming your podcast into The Podcast Index directory gives you cool stuff !
 This service would like to verify you are the owner of this podcast. Do you want us to confirm ?
 ```
 
-### `return_path`
+### Param: `return_path`
 A path relative to consumer parameter, to redirect with the result of the authentication.
 If the consumer is enough, you can omit it.
 
@@ -96,7 +96,7 @@ If the consumer is enough, you can omit it.
 `consumer=https://podcastindex.org/quick_claim&return_path=../claim.php`
 ➡️ full return url will be `https://podcastindex.org/claim.php?token=[token]`
 
-#### `guid`
+#### Param: `guid`
 If a `podcast:guid` is present in the RSS feed it SHOULD be included. If it's not we omit it or send an empty string.
 
 We keep it simple, we should trust the users of our spec (in this case the hosting providers) : if they don't include 
