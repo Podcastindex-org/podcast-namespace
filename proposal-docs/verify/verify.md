@@ -96,7 +96,7 @@ If the consumer is enough, you can omit it.
 `consumer=https://podcastindex.org/quick_claim&return_path=../claim.php`
 ➡️ full return url will be `https://podcastindex.org/claim.php?token=[token]`
 
-#### Param: `guid`
+### Param: `guid`
 If a `podcast:guid` is present in the RSS feed it SHOULD be included. If it's not we omit it or send an empty string.
 
 We keep it simple, we should trust the users of our spec (in this case the hosting providers) : if they don't include 
