@@ -135,8 +135,8 @@ Here's a simple example, in PHP, of a quick claim button:
 
  ```php
 <a 
-class="btn btn-default"
-href="<?php echo $feed_auth_url."?consumer=https://myservice.com/quick_claim&guid=".$feed_guid; ?>"
+  class="btn btn-default"
+  href="<?php echo $feed_auth_url."?consumer=https://myservice.com/quick_claim&guid=".$feed_guid; ?>"
 >
 Claim this now
 </a>
