@@ -33,6 +33,8 @@ Official:  [iTunes Namespace Reference](https://help.apple.com/itc/podcasts_conn
 <small>Archived from the [original](https://help.apple.com/itc/podcasts_connect/#/itcb54353390) in case of future link
 breakage.</small>
 
+<br>
+
 An RSS feed contains all the metadata of a podcast. This information governs what listeners will see about your podcast
 on Apple’s services: from the the show art, to whether a podcast shows up in relevant searches, to episode titles and
 descriptions.
