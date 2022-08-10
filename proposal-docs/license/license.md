@@ -42,9 +42,9 @@ This matter is very complex so this specification only intends to scratch its su
    - `url` (required): This is the url to the license file.
 
    Examples:
-   - `<podcast:licence url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
-   - `<podcast:licence url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
-   - `<podcast:licence url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
+   - `<podcast:license url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
+   - `<podcast:license url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
+   - `<podcast:license url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
  
    
    Discussion here:
