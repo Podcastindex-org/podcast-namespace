@@ -174,7 +174,7 @@ You can verify the signature in PHP with a JWT library. If it fails to decode, i
 token has expired:
 
 ```php
-$result = JWT::decode($quickClaimResponse, $feed["podcast:lock"]["pub"]);
+$result = JWT::decode($quickClaimResponse, $feed["podcast:verify"]["pub"]);
 ```
 
 As a podcast directory, app, platform or service you now have the confirmation the user was indeed authenticated, 
