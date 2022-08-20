@@ -450,39 +450,3 @@ One part of the message is the `extension`, a TLV (Type-Length-Value) stream. Ap
 
 A community maintained registry of known custom record types and formats, governed by satoshis.stream, can be found at the document [TLV record registry](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md). In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for the `customKey` and `customValue` attributes.
 
-
-#### Nano
-
-Specification for Value 4 Value integration with the [Nano](https://nano.org) cryptocurrency.
-
-For the `<podcast:value>` tag, the following attributes are applicable:
- - `type` (*required*): "nano"
- - `method` (*required*): "sendblock"
- - `suggested` (*optional*): A float representing the amount in nano (eg. 0.00025)
-
-For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
- - `type`: "account"
- - `address`: \<*destination nano_xxx address*\>
- - `split`: \<*the number of shares*\>
-
-##### Example
-***Note:** The following is a made up example, and the accounts shown are for demonstration purposes only.*
-
-```xml
-<channel>
-    <podcast:value type="nano" method="sendblock" suggested="0.0001">
-        <podcast:valueRecipient
-            name="John Doe (Host)"
-            type="account"
-            address="nano_3fegpdys1a3ncscmhagn3yxdrf5s9kb8drorsi75399omnwjbcp87cyibzyx"
-            split="50"
-        />
-        <podcast:valueRecipient
-            name="Jane Doe (Guest)"
-            type="account"
-            address="nano_1ero6egquwf3bkh4h5ksf7ghumehn3c131opqe65bsi5q17huwjsnhcp8kxd"
-            split="50"
-        />
-    </podcast:value>
-</channel>
-```
