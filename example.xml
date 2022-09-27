@@ -90,6 +90,12 @@
                 <podcast:source uri="ipfs://someRandomLowBitrateOpusFile03" />
             </podcast:alternateEnclosure>
 
+            <podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720" title="Video version">
+                <podcast:source uri="https://example.com/file-720.mp4" />
+                <podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" />
+                <podcast:integrity type="sri" value="sha384-ExVqijgYHm15PqQqdXfW95x+Rs6C+d6E/ICxyQOeFevnxNLR/wtJNrNYTjIysUBo" />
+            </podcast:alternateEnclosure>
+
             <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
                 <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="49" />
                 <podcast:valueRecipient name="hosting company" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="1" />
