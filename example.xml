@@ -22,6 +22,10 @@
         <podcast:license url="https://example.org/mypodcastlicense/full.pdf">my-podcast-license-v1</podcast:license>
 
         <podcast:locked owner="podcastowner@example.com">yes</podcast:locked>
+        <podcast:block>yes</podcast:block>
+        <podcast:block id="google">no</podcast:block>
+        <podcast:block id="amazon">no</podcast:block>
+
         <podcast:funding url="https://example.com/donate">Support the show!</podcast:funding>
 
         <podcast:location geo="geo:30.2672,97.7431" osm="R113314">Austin, TX</podcast:location>
