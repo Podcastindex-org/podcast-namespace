@@ -181,9 +181,6 @@ full implementation details.
 
 The [following tags](https://github.com/Podcastindex-org/podcast-namespace/labels/phase6) are under review for inclusion in this phase.  New tag submissions are welcome.
 
-<br>
-
-----
 
 <br>
 
