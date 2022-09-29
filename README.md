@@ -31,6 +31,8 @@ The podcast namespace is part of the larger "Podcasting 2.0" project which exist
 
 **Phase 5** - [Closed] Comment period closed on `7/15/2022` and [2 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-5-closed-as-of-7152022) were **formalized**.
 
+**Phase 6** - [Open] Comment period is now open as of `9/28/2022`.  Proposals are welcome.  The following tags are being considered:  [Phase 6 tag list](https://github.com/Podcastindex-org/podcast-namespace/labels/phase6)
+
 <br><br>
 
 
@@ -175,54 +177,11 @@ full implementation details.
 
 <br>
 
-The following tags are under review for inclusion in this phase.  Changes to them are now frozen.  Any modifications will mean the tag needs
-to be reworked and submitted to Phase 6.
+## <u>Phase 6 (Open as of 9/28/2022)</u>
 
-
-
-<br><br><!-- Tag block -->
-### **\<podcast:complete>** - <small>[Discuss](https://github.com/Podcastindex-org/podcast-namespace/issues/351)</small>
-<b>
-
-```xml
-<podcast:complete
- archive="[feed url(string)]"
->
-[yes|no(bool)]
-</podcast:complete>
-```
-
-</b>
-
-#### Channel
-
-#### (optional | single)
-
-This element allows a podcaster to signal to the world that this podcast will never publish another episode to this feed.  In it's basic form, it is a direct drop-in
-replacement for `<itunes:complete>` and functions identically.  The addition of the `archive` attribute allows for specifying the url of a complete archival feed of the
-podcast that contains every episode in case this feed does not.
-
-Specifying a value of `no` is the same as this tag not being present.
-
-#### Attributes
- - **archive** (optional) A url of a feed that contains every episode of this podcast.
-
-Examples:
-```xml
-<!-- This podcast will never publish again -->
-<podcast:complete>yes</podcast:complete>
-
-<!-- Redundant usage and not recommended -->
-<podcast:complete>no</podcast:complete>
-
-<!-- This podcast is over, and a complete episode archive feed is "here" -->
-<podcast:complete archive="https://example.org/rss/myarchive.xml">yes</podcast:complete>
-```
-
-
+The [following tags](https://github.com/Podcastindex-org/podcast-namespace/labels/phase6) are under review for inclusion in this phase.  New tag submissions are welcome.
 
 <br>
-
 
 ----
 
@@ -233,21 +192,6 @@ Examples:
 A list of the current proposed tags can be found in the issues section [here](https://github.com/Podcastindex-org/podcast-namespace/labels/proposal).
 
 <br><br>
-
-
-## Verification for Importing and Transferring
-
-If the "locked" element is present and set to "yes", podcasting hosts should not allow importing of this feed until the email listed in the element's owner="" attribute is
-contacted and subsequently changes the value of the element to "no".
-
-
-<br><br>
-
-
-## IDs
-
-There can be multiple **\<podcast:id>** elements to indicate a listing on multiple platforms, directories, hosts, apps and services.  The "platform" attribute shall be a slug
-representing the platform, directory, host, app or service. The full list is [here](serviceslugs.txt). More should be added by the community as needed.
 
 
 ## Badges and Media
