@@ -16,6 +16,8 @@ The podcast namespace is part of the larger "Podcasting 2.0" project which exist
 * Example Feed: There is an example feed [example.xml](example.xml) in this repository showing the podcastindex namespace side by side with the Apple itunes namespace.
 * [Other recommendations](docs/other-recommendations.md) when creating RSS podcast feeds.
 
+The "podcast" namespace is in the public domain under a CC0 v1.0 [license](LICENSE.md) so as to remove all barriers to adoption, development and contribution.
+
 <br><br>
 
 
