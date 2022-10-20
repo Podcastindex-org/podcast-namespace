@@ -32,7 +32,7 @@
         <podcast:medium>podcast</podcast:medium>
 
         <itunes:author>John Doe</itunes:author>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>false</itunes:explicit>
         <itunes:type>episodic</itunes:type>
         <itunes:category text="News"/>
         <itunes:category text="Technology"/>
@@ -76,7 +76,7 @@
                                         https://example.com/images/ep3/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep3/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep3/pci_avatar-tiny.jpg 150w" />
-            <itunes:explicit>no</itunes:explicit>
+            <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>3</podcast:episode>
             <podcast:chapters url="https://example.com/ep3_chapters.json" type="application/json"/>
@@ -137,7 +137,7 @@
                                         https://example.com/images/ep2/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep2/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep2/pci_avatar-tiny.jpg 150w" />
-            <itunes:explicit>no</itunes:explicit>
+            <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>2</podcast:episode>
             <podcast:chapters url="https://example.com/ep2_chapters.json" type="application/json"/>
@@ -188,7 +188,7 @@
                                         https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep1/pci_avatar-small.jpg 300w,
                                         https://example.com/images/ep1/pci_avatar-tiny.jpg 150w" />
-            <itunes:explicit>no</itunes:explicit>
+            <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>1</podcast:episode>
             <podcast:chapters url="https://example.com/ep1_chapters.json" type="application/json"/>
