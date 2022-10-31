@@ -191,10 +191,11 @@ full implementation details.
 
 Tags [listed here](https://github.com/Podcastindex-org/podcast-namespace/labels/phase6) are under consideration for inclusion in this phase.  New tag submissions are welcome.
 
-Additionally, the following tags have been formally adopted into the namespace in this phase.  They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for
-full implementation details.
+Additionally, the following tags have been formally adopted into the namespace in this phase:
 
 - **\<podcast:txt>** <br>
+
+They are fully documented in the XMLNS document located [here](docs/1.0.md).  Please see that file for full implementation details.
 
 
 <br>
