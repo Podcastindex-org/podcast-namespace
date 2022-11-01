@@ -106,7 +106,7 @@ this larger namespace.  But, we don't want to be so general that the spec become
 
 ## License
 
-The "podcast" namespace is in the public domain under a CC0 v1.0 [license](LICENSE.md) so as to remove all barriers to adoption, development and contribution.
+The "podcast" namespace is in the public domain under a CC0 v1.0 [license](LICENSE.txt) so as to remove all barriers to adoption, development and contribution.
 
 
 <br><br>
