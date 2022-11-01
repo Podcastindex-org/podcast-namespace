@@ -104,9 +104,9 @@ this larger namespace.  But, we don't want to be so general that the spec become
 <br><br>
 
 
-## License
+## Copying information
 
-The "podcast" namespace is in the public domain under a CC0 v1.0 [license](LICENSE.txt) so as to remove all barriers to adoption, development and contribution.
+The "podcast" namespace is [dedicated to the public domain using CC0 v1.0](COPYING.txt) so as to remove all barriers to adoption, development and contribution.
 
 
 <br><br>
