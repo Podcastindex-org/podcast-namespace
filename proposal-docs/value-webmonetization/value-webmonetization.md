@@ -33,7 +33,7 @@ Both SPSP and Open Payments use a recipient address in the form of a [Payment Po
 </podcast:value>
 ```
 
-While payments in WM are streamed to a single payment pointer at a time, the WM authors suggest splits can be implemented using [Probabilistic Revenue Sharing](https://webmonetization.org/docs/probabilistic-rev-sharing) or perhaps for WM should be [implemented at the payment pointer](https://github.com/Podcastindex-org/podcast-namespace/issues/132#issuecomment-780145285) rather than expecting the client to be responsible.  In either case, the `podcast:value` and `podcast:valueRecipient` tags can provide sufficient information for a web player or page to setup Web Monetization for the podcast.
+While payments in WM are streamed to a single payment pointer at a time, the WM authors suggest splits can be implemented using [Probabilistic Revenue Sharing](https://webmonetization.org/docs/probabilistic-rev-sharing) or perhaps it should be [implemented at the payment pointer](https://github.com/Podcastindex-org/podcast-namespace/issues/132#issuecomment-780145285) rather than expecting the client to be responsible. In either case, the `podcast:value` and `podcast:valueRecipient` tags can provide sufficient information for a web player or page to setup Web Monetization for the podcast.
 
 ------
 
