@@ -1,4 +1,4 @@
-# The "podcast:podping" Sepcification
+# The "podcast:podping" Specification
 
 <small>Version 1.0 by Brian of London - 2021.06.08</small>
 
