@@ -63,8 +63,6 @@ the payments, and a suggested amount denominated in the given cryptocurrency.
 
 This element can exist at either the `<channel>` or `<item>` level.
 
-Currently, there can be only a single copy of this element at each level.
-
 <br>
 
 #### Structure:
