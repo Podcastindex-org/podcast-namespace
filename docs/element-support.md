@@ -107,3 +107,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
+
+## Txt `<podcast:txt>` 
+1. [Transistor](https://transistor.fm/changelog/verification-code)
+2. [RSS Blue](https://rssblue.com/help/podcast-metadata#txt-records)
