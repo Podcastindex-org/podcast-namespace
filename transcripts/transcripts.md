@@ -1,6 +1,8 @@
 ## Transcript File Format Details
 
-This is the initial spec for the podcast transcript format.  There are four possible formats detailed below.
+This is the initial spec for the podcast transcript format. There are four possible formats detailed below.
+
+* Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/), to ensure that transcripts are available within browser-based players.
 
 
 <br><br>
