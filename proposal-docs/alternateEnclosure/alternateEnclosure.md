@@ -31,7 +31,7 @@ Lastly, I propose optional information to verify integrity of downloaded media v
       rel="[(string)]"
       codecs="[(string)]"
       default="[(boolean)]">
-    [one or more of <podcst:source> and <podcast:integrity>]
+    [one or more of <podcast:source> and <podcast:integrity>]
     </podcast:alternateEnclosure>
     ```
 
