@@ -27,7 +27,8 @@ The node value is a free-form string, which might be displayed alongside other i
 
 ## Attributes
 * **complete (optional):** Boolean specifying if the podcast has no intention to release further episodes. If not set, this should be assumed to be false.
-* **rrule (optional):** A recurrence rule as defined in [iCalendar RFC 5545 Section 3.3.10](https://www.rfc-editor.org/rfc/rfc5545#section-3.3.10). Podcasters should not be expected to be able to write a valid recurrence rule themselves. There are [several libraries](https://github.com/topics/rrule) to generate valid recurrence rules from form data or natural language text inputs.
+* **dtstart (optional):** The `date` or `datetime` the recurrence rule begins. If the `rrule` contains a value for `COUNT`, then this attribute is required. If the `rrule` contains a value for `UNTIL`, then the value of this attribute must be formatted to the same date/datetime standard.
+* **rrule (recommended):** A recurrence rule as defined in [iCalendar RFC 5545 Section 3.3.10](https://www.rfc-editor.org/rfc/rfc5545#section-3.3.10). Podcasters should not be expected to be able to write a valid recurrence rule themselves. There are [several libraries](https://github.com/topics/rrule) to generate valid recurrence rules from form data or natural language text inputs.
 
 ## Examples
 
@@ -44,7 +45,7 @@ Recreating most of Apple Podcasts Connect’s “Update Frequency” values is e
 
 However, greater precision can be easily communicated:
 ```xml
-<podcast:updateFrequency rrule="FREQ=DAILY;INTERVAL=1;WKST=MO;BYDAY=MO,TU,WE,TH,FR">Every weekday</podcast:updateFrequency>
+<podcast:updateFrequency rrule="FREQ=DAILY;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR">Every weekday</podcast:updateFrequency>
 <podcast:updateFrequency rrule="FREQ=WEEKLY;BYDAY=MO,WE">Every Monday and Wednesday</podcast:updateFrequency>
 <podcast:updateFrequency rrule="FREQ=WEEKLY;BYDAY=FR;BYMONTHDAY=13">Every friday the 13th</podcast:updateFrequency>
 <podcast:updateFrequency rrule="FREQ=YEARLY;BYDAY=+4TH;BYMONTH=11">Every year on American Thanksgiving</podcast:updateFrequency>
@@ -52,7 +53,7 @@ However, greater precision can be easily communicated:
 
 Limited-run series can set expectations clearly:
 ```xml
-<podcast:updateFrequency rrule="FREQ=WEEKLY;INTERVAL=2;COUNT=10">Every other week for 10 episodes</podcast:updateFrequency>
+<podcast:updateFrequency rrule="FREQ=WEEKLY;INTERVAL=2;BYDAY=MO;COUNT=10" dtstart="20230828">Every other Monday for 10 episodes starting on Aug 28, 2023</podcast:updateFrequency>
 <podcast:updateFrequency rrule="FREQ=WEEKLY;UNTIL=20231231;BYDAY=MO">Every Monday until Dec 31, 2023</podcast:updateFrequency>
 ```
 
