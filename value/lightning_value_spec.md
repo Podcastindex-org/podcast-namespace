@@ -45,6 +45,20 @@ The `lnaddress`, which resembles an email address, should resolve to an http GET
 }
 ```
 
+In addition, if the server is handling multiple accounts, it can signal that it is a Keysend provider by having the bare end point:
+
+`https://api.v4v.app/.well-known/keysend/`
+
+return `status` `ok` and a human readable `message` such as:
+
+```json
+{
+  "status": "ok",
+  "message": "this site supports.well-known/keysend/<hive_accname> for all Hive accounts"
+}
+```
+
+
 ## Version 1.0.0
 
 For the `<podcast:value>` tag, the following attributes MUST be used:
