@@ -21,42 +21,36 @@ For the `<podcast:valueRecipient>` tag, the following attributes MUST be used:
  - `split`: \<the number of shares\>
  - `lnaddress` (optional): \<the destination node's Lightning Address\>
 
-The `lnaddress`, which resembles an email address, should resolve to an http GET request as follows:
 
-`lnaddress`: `podcastindexorg@v4v.app`
+Providers (say, `example.com`) supporting `.well-known/keysend` lookup scheme should implement the following:
+## GET `https://example.com/.well-known/keysend`
+GET request to `https://example.com/.well-known/keysend` should return HTTP status code 200 and a JSON with at least the following fields
 
- resolves to:
+* `status` (required): "OK"
+* `message` (required): string describing what information is returned through this lookup scheme
 
- `https://v4v.app/.well-known/keysend/podcastindexorg`
+## GET `https://example.com/.well-known/keysend/{lightningUsername}`
+GET request to `https://example.com/.well-known/keysend/{lightningUsername}` should return the following based on the value of `{lightningUsername}`:
 
- Which returns:
+* If Ligthning address `{lightningUsername}@example.com` exists, HTTP status code 200 and a JSON with at least the following fields should be returned:
 
- ```json
- {
-  "status": "OK",
-  "tag": "keysend",
-  "pubkey": "0266ad2656c7a19a219d37e82b280046660f4d7f3ae0c00b64a1629de4ea567668",
-  "customData": [
-    {
-      "customKey": 818818,
-      "customValue": "podcastindexorg"
-    }
-  ]
-}
-```
+  * `status` (required): "OK"
+  * `tag` (required): "keysend"
+  * `pubkey` (required): string representing destination node's public key
+  * `customData` (optional): array of `CustomData`, which has fields
 
-In addition, if the server is handling multiple accounts, it can signal that it is a Keysend provider by having the bare end point:
+    * `customKey` (required): number
+    * `customValue` (required): string
 
-`https://api.v4v.app/.well-known/keysend/`
+* Optionally, if the syntax for the Lightning address at `example.com` does not allow username `{lightningUsername}`, HTTP status code 422 and a JSON with at least the following fields should be returned:
 
-return `status` `ok` and a human readable `message` such as:
+  * `status` (required): "UNPROCESSABLE_ENTITY"
+  * `tag` (required): "keysend"
+  * `message` (optional): string describing why the username is invalid
 
-```json
-{
-  "status": "ok",
-  "message": "this site supports.well-known/keysend/<hive_accname> for all Hive accounts"
-}
-```
+* In any other case, HTTP status code 404 and a JSON with at least the following fields should be returned:
+  * `status` (required): "NOT_FOUND"
+  * `tag` (required): "keysend"
 
 
 ## Version 1.0.0
