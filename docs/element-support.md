@@ -19,8 +19,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 12. [RSS.com](https://rss.com)
 13. [Audioboom](https://twitter.com/Audioboom/status/1478378244638494733)
 14. [Caproni](https://caproni.fm/en)
-15. [Sounder.fm](https://support.sounder.fm/article/58-does-sounder-transcribe-my-content-how-much-does-it-cost)
-16. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
+15. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -90,13 +89,11 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
-4. [Sounder.fm](https://feeds.sounder.fm/17048/rss.xml)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
-3. [Sounder.fm](https://feeds.sounder.fm/17048/rss.xml)
-4. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
+3. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -108,6 +105,6 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
 
-## Txt `<podcast:txt>` 
+## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
 2. [RSS Blue](https://rssblue.com/help/podcast-metadata#txt-records)
