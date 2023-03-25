@@ -20,6 +20,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 13. [Audioboom](https://twitter.com/Audioboom/status/1478378244638494733)
 14. [Caproni](https://caproni.fm/en)
 15. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
+16. [RedCircle](https://redcircle.com)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -34,6 +35,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 10. [Caproni](https://caproni.fm/en)
 11. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 12. [RSS Blue](https://rssblue.com/help/podcast-metadata#locked)
+13. [RedCircle](https://redcircle.com)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -54,6 +56,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 16. [Caproni](https://caproni.fm/en)
 17. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 18. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
+19. [RedCircle](https://redcircle.com)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -94,6 +97,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 3. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
+4. [RedCircle](https://redcircle.com)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
