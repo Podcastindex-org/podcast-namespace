@@ -444,7 +444,7 @@ and guest.
 
 Lightning payments are performed using lightning messages as specified in [BOLT #1: Base Protocol](https://github.com/lightningnetwork/lightning-rfc/blob/master/01-messaging.md).
 
-One part of the message is the `extension`, a TLV (Type-Length-Value) stream. Application specific data can be added to transactions using _custom records_ on the TLV Stream.
+One part of the message is the `extension`, a TLV (Type-Length-Value) stream. Podcast specific data can be added to transactions using the key **7629169** with the value described in [bLIP 10](blip-0010.md)
 
-A community maintained registry of known custom record types and formats, governed by satoshis.stream, can be found at the document [TLV record registry](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md). In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for the `customKey` and `customValue` attributes.
+A community maintained registry of additional known custom record types and formats, governed by satoshis.stream, can be found at the document [TLV record registry](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md). In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for the `customKey` and `customValue` attributes.
 
