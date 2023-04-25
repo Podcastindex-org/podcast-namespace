@@ -506,11 +506,11 @@ the `customKey` and `customValue` attributes.
 There are currently 3 payment "actions" that are defined in the BLIP-10 TLV extension that is embedded in the payment
 payload:  "stream", "boost" and "auto".
 
-* "stream" - This means the payment is a timed interval payment (i.e. - every minute) that is sent or queued while the
+* `stream` - This means the payment is a timed interval payment (i.e. - every minute) that is sent or queued while the
              user is engaged in active listening/viewing of the content.
-* "boost"  - This means the payment is a user generated one-time payment that happens in response to a user initiated
+* `boost`  - This means the payment is a user generated one-time payment that happens in response to a user initiated
              action like a "Boost" button push, or some other clearly labeled payment initiation function.  These
              types of payments can contain textual messages (i.e. - a boostagram).
-* "auto"   - This means the payment was an app initiated payment that recurs at a specific long-form interval such as 
+* `auto`   - This means the payment was an app initiated payment that recurs at a specific long-form interval such as 
              weekly, monthly, yearly, etc.  The user configures an interval and payment amount in the app and the app
              then sends that amount at the specified time when each interval passes.
