@@ -487,7 +487,7 @@ and guest.
 
 <br>
 
-##### Appendix A - TLV Records and Extensions
+### Appendix A - TLV Records and Extensions
 
 Lightning payments are performed using lightning messages as specified
 in [BOLT #1: Base Protocol](https://github.com/lightningnetwork/lightning-rfc/blob/master/01-messaging.md).
@@ -500,8 +500,9 @@ found at the document [TLV record registry](https://github.com/satoshisstream/sa
 . In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for
 the `customKey` and `customValue` attributes.
 
+<br>
 
-##### Appendix B - Payment Actions
+### Appendix B - Payment Actions
 
 There are currently 3 payment "actions" that are defined in the BLIP-10 TLV extension that is embedded in the payment
 payload:  "stream", "boost" and "auto".
