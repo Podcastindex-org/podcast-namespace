@@ -112,3 +112,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
 2. [RSS Blue](https://rssblue.com/help/podcast-metadata#txt-records)
+3. [Simplecast](https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification)
