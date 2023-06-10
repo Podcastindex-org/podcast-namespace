@@ -28,23 +28,21 @@ protocols back into the hands of the open podcasting community.  A good overview
 
 ## Current Roadmap
 
-**Phase 1** - [Closed] Comment period closed on `11/15/2020`
-and [5 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-1-closed-on-111520) were **formalized**.
+**Phase 1** - [Closed] Comment period closed on `11/15/2020` and [5 tags](#phase-1-closed-on-111520) were 
+**formalized**.
 
-**Phase 2** - [Closed] Comment period closed on `1/31/2021`
-and [4 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-2-closed-on-13121) were **formalized**.
+**Phase 2** - [Closed] Comment period closed on `1/31/2021` and [4 tags](#phase-2-closed-on-13121) were **formalized**.
 
-**Phase 3** - [Closed] Comment period closed on `6/1/2021`
-and [5 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-3-closed-on-6121) were **formalized**.
+**Phase 3** - [Closed] Comment period closed on `6/1/2021` and [5 tags](#phase-3-closed-on-6121) were **formalized**.
 
-**Phase 4** - [Closed] Comment period closed on `12/1/2021`
-and [3 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-4-closed-on-1212021) were **formalized**.
+**Phase 4** - [Closed] Comment period closed on `12/1/2021` and [3 tags](#phase-4-closed-on-1212021) were 
+**formalized**.
 
-**Phase 5** - [Closed] Comment period closed on `7/15/2022`
-and [2 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-5-closed-as-of-7152022) were **formalized**.
+**Phase 5** - [Closed] Comment period closed on `7/15/2022` and [2 tags](#phase-5-closed-as-of-7152022) were 
+**formalized**.
 
-**Phase 6** - [Closed] Comment period closed on `6/1/2023`
-and [6 tags](https://github.com/Podcastindex-org/podcast-namespace#phase-6-closed-as-of-612023) were **formalized**. 
+**Phase 6** - [Closed] Comment period closed on `6/1/2023` and [6 tags](#phase-6-closed-as-of-612023) were 
+**formalized**. 
 
 <br><br>
 
