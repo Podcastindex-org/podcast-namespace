@@ -1,7 +1,7 @@
 # The "podcast" Namespace
 
-A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces.  
-The broad goal is to create a single, compact, efficient namespace that is easily extensible, community 
+A wholistic rss namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces. The 
+broad goal is to create a single, compact, efficient namespace that is easily extensible, community 
 controlled/authored and addresses the needs of the independent podcast industry now and in the future. Our hope is 
 that this namespace will become the framework that the independent podcast community needs to deliver new 
 functionality to apps and aggregators.
