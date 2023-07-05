@@ -87,6 +87,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podfriend](https://twitter.com/adamcurry/status/1357003546709938181)
 4. [Caproni](https://caproni.fm/en)
 5. [RSS Blue](https://rssblue.com/help/podcast-metadata#location)
+6. [RSS.com](https://rss.com)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
