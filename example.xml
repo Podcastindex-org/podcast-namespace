@@ -45,8 +45,21 @@
         <itunes:image>https://example.com/images/pci_avatar-massive.jpg</itunes:image>
 
         <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
-            <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="99" />
-            <podcast:valueRecipient name="hosting company" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="1" />
+            <podcast:valueRecipient
+                    name="podcaster"
+                    type="node"
+                    address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57"
+                    split="85" />
+            <podcast:valueRecipient
+                    name="guest"
+                    type="node"
+                    address="02453e4e93322d60219808c00c2e6d1f1c673420e95b5511a33c40cfb4df5e9148"
+                    split="10" />
+            <podcast:valueRecipient
+                    name="hosting company"
+                    type="node"
+                    address="030a58b8653d32b99200a2334cfe913e51dc7d155aa0116c176657a4f1722677a3"
+                    split="5" />
         </podcast:value>
 
         <podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3">Coming April 1st, 2021</podcast:trailer>
@@ -63,6 +76,13 @@
             <podcast:contentLink href="https://youtube.com/pc20/livestream">YouTube!</podcast:contentLink>
             <podcast:contentLink href="https://twitch.com/pc20/livestream">Twitch!</podcast:contentLink>
         </podcast:liveItem>
+
+        <podcast:remoteItem
+                feedGuid="917393e3-1b1e-5cef-ace4-edaa54e1f810"
+                feedUrl="https://feeds.example.org/917393e3-1b1e-5cef-ace4-edaa54e1f810/rss.xml"
+                itemGuid="asdf089j0-ep240-20230510"
+                medium="music"
+        />
 
         <item>
             <title>Episode 3 - The Future</title>
