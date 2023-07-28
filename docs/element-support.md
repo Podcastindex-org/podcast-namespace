@@ -21,6 +21,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 14. [Caproni](https://caproni.fm/en)
 15. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
 16. [RedCircle](https://redcircle.com)
+17. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -36,6 +37,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 12. [RSS Blue](https://rssblue.com/help/podcast-metadata#locked)
 13. [RedCircle](https://redcircle.com)
+14. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -57,6 +59,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 17. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 18. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
 19. [RedCircle](https://redcircle.com)
+20. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -93,12 +96,14 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
+4. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
 2. [Castos](https://castos.com/introducing-podcast-2-0-support/)
 3. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
 4. [RedCircle](https://redcircle.com)
+5. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -106,9 +111,11 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
 4. [Alby](https://getalby.com/podcast-wallet)
 5. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
+6. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
+2. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 
 ## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
