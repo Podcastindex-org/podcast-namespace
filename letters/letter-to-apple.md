@@ -64,6 +64,7 @@ Podping is currently being used by the following podcast hosts and the *podpings
 - rss.com
 - Captivate.fm
 - podserve.fm
+- Cast.Garden
 - 3speak.tv
 - podnews.net
 
