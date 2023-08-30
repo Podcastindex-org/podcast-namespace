@@ -20,6 +20,7 @@ The <social> and <socialInteract> elements both contain a platform and protocol 
 | instagram  | instagram         |
 | slack      | slack             |
 | discord    | discord           |
+| castgarden | hive              |
 | 3speak     | hive              |
 | peakd      | hive              |
 | fountain   | lightningcomments |
@@ -34,6 +35,7 @@ The <social> and <socialInteract> elements both contain a platform and protocol 
        - instagram
        - slack
        - discord
+       - cast.garden
        - 3speak
        - peakd.com
        - fountain
