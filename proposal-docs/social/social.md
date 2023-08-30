@@ -56,6 +56,7 @@ There are three elements:
        - instagram
        - slack
        - discord
+       - cast.garden
        - 3speak
        - peakd.com
        - …
@@ -112,6 +113,7 @@ There are three elements:
        - instagram
        - slack
        - discord
+       - cast.garden
        - 3speak
        - peakd
        - fountain
