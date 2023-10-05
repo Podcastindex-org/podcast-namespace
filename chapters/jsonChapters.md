@@ -158,8 +158,7 @@ chapter list, but allows for different artwork to be shown:
         },
         {
             "startTime": 168,
-            "title": "Hearing Aids",
-            "hasArtwork": "chapter1.jpg"
+            "title": "Hearing Aids"
         },
         {
             "startTime": 260,
