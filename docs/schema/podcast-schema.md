@@ -94,7 +94,7 @@ This is, in fact, how the RSS feed works. To add our Podcast namespace to this f
         <podcast:location geo="geo:30.2672,97.7431" osm="R113314">Austin, TX</podcast:location>
 
         <itunes:author>John Doe</itunes:author>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>false</itunes:explicit>
         <itunes:type>episodic</itunes:type>
         <itunes:category text="News"/>
         <itunes:category text="Technology"/>
