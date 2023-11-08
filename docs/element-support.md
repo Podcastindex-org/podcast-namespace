@@ -22,6 +22,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 15. [RSS Blue](https://rssblue.com/help/episode-metadata#transcript)
 16. [RedCircle](https://redcircle.com)
 17. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+18. [Podhome](https://www.podhome.fm/docs/transcripts)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -38,6 +39,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 12. [RSS Blue](https://rssblue.com/help/podcast-metadata#locked)
 13. [RedCircle](https://redcircle.com)
 14. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+15. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -60,6 +62,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 18. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
 19. [RedCircle](https://redcircle.com)
 20. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+21. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -76,6 +79,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 12. [RSS.com](https://rss.com)
 13. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 14. [RSS Blue](https://rssblue.com/help/episode-metadata#chapters-data)
+15. [Podhome](https://www.podhome.fm/docs/chapters)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -83,6 +87,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [LehmanCreations Podcast Namespace Wordpress Plugin](https://github.com/Lehmancreations/Podcast-Namespace-Wordpress-Plugin)
 4. [Castopod](https://podlibre.org/castopod-supports-soundbite-tag/)
 5. [RSS.com](https://rss.com)
+6. [Podhome](https://www.podhome.fm/docs/clips)
 
 ## Location `<podcast:location>`
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
@@ -97,6 +102,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
 4. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+5. [Podhome](https://www.podhome.fm/docs/people)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -104,6 +110,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [RSS Blue](https://rssblue.com/help/podcasting-2.0#progress-2)
 4. [RedCircle](https://redcircle.com)
 5. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+6. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -112,12 +119,15 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Alby](https://getalby.com/podcast-wallet)
 5. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
 6. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+7. [Podhome](https://www.podhome.fm/docs/use-value-4-value)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
 2. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+3. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 
 ## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
 2. [RSS Blue](https://rssblue.com/help/podcast-metadata#txt-records)
 3. [Simplecast](https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification)
+4. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
