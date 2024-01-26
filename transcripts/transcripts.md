@@ -2,8 +2,12 @@
 
 This is the initial spec for the podcast transcript format. There are four possible formats detailed below.
 
-* Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/), to ensure that transcripts are available within browser-based players.
+Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 
+are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/), 
+to ensure that transcripts are available within browser-based players.
 
+The examples given below are just for convenience.  In production you should ensure you are conforming to the actual 
+spec for each format as defined in it's own documentation.
 
 <br><br>
 
@@ -167,7 +171,7 @@ Web Video Text Tracks Format (WebVTT) are an alternative to SRT primarily design
 WEBVTT
 
 00:00:00.000 --> 00:00:02.760
-Sarah: In today's episode,
+<v Sarah> In today's episode,
 you'll learn whether or not you
 
 00:00:02.760 --> 00:00:06.090
@@ -187,7 +191,7 @@ podcast. This week's question
 comes from Gillian.
 
 00:00:19.080 --> 00:00:21.450
-Gillian: Hi Buzzsprout, Gillian
+<v Gillian> Hi Buzzsprout, Gillian
 here from breaking through
 
 00:00:21.450 --> 00:00:25.350
