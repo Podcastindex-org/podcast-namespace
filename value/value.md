@@ -225,16 +225,20 @@ the player to your app, and for which nothing already exists, add your own.
 
 ### Payment calculation
 
-A given recipient will receive
+When all combined, together the recipients will receive
 ```
-(Payment amount) * (Interval payout) * (Interval count)
+(Batch payout) = (Interval count) * (Unit amount)
 ```
 
-`Payment amount` is calculated differently depending on whether `fee` is `true` of `false`.
+`Unit amount` refers to one of the following
+- either the amount of a one-time payment (with `Interval count` usually being 1)
+- or the amount being streamed per minute (with `Interval count` referring to the interval in minutes at which the payouts are made)
+
+How `Batch payout` is divided between the recipients depends on their `split` and `fee` values.
 
 For `fee=false` recipients $X_1, X_2, \ldots, X_m$ with splits $x_1, x_2, \ldots, x_m$ and `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ with splits $y_1, y_2, \ldots, y_n$:
 
-1. Firstly, `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ will receive $y_1\\%$, $y_2\\%$, $\ldots$, $y_n\\%$ of the transaction.
+1. Firstly, `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ will receive $y_1\\%$, $y_2\\%$, $\ldots$, $y_n\\%$ of the total batch payout.
 2. Then, the remaining amount will be distributed among `fee=false` recipients $X_1, X_2, \ldots, X_m$ in the ratio $x_1 : x_2 : \ldots : x_m$.
 
 #### Example 1: no fees, splits add up to 100
@@ -274,10 +278,9 @@ I.e., for recipients `A`, `B`, and `C`, the payment should be divided in the rat
 In this case, because splits add up to 100 (that is, $50 + 40 + 10 = 100$), the splits happen to correspond to the percentage values that each recipient will receive.
 However, in general, it should never be assumed or expected that splits add up to 100.
 
-Suppose that the listener chose to pay 300 sats per minute.
-Each minute, the payment calculation would be:
+Suppose that the listener chose to pay 300 sats per minute with the app sending out the payments each minute. Then:
 
-Interval payout: **300 sats**
+Batch payout: **300 sats**
   
 - Recipient `A` gets a payment of 150 sats (calculated using $300 \cdot \dfrac{50}{50 + 40 + 10} = 150$)
 - Recipient `B` gets a payment of 120 sats (calculated using $300 \cdot \dfrac{40}{50 + 40 + 10} = 120$)
@@ -285,7 +288,7 @@ Interval payout: **300 sats**
 
 If an app chooses to only make a payout once every 5 minutes of listening/watching, the calculation would be the same after multiplying the per-minute payment by 5:
 
-Interval payout: **1500 sats** (calculated using $5 \cdot 300 = 1500$)
+Batch payout: **1500 sats** (calculated using $5 \cdot 300 = 1500$)
 
 - Recipient `A` gets a payment of 750 sats (calculated using $1500 \cdot \dfrac{50}{50 + 40 + 10} = 750$)
 - Recipient `B` gets a payment of 600 sats (calculated using $1500 \cdot \dfrac{40}{50 + 40 + 10} = 600$)
@@ -332,7 +335,7 @@ In this specific case, it allows `B` to receive $49.5\\%$ and `C` to receive $0.
 
 Suppose that the listener chose to send a 1000-sat boost, which the app decides to distribute immediately among the recipients:
 
-Interval payout: **1000 sats**
+Batch payout: **1000 sats**
   
 - Recipient `A` gets a payment of 500 sats (calculated using $1000 \cdot \dfrac{100}{100 + 99 + 1} = 500$)
 - Recipient `B` gets a payment of 495 sats (calculated using $1000 \cdot \dfrac{99}{100 + 99 + 1} = 495$)
@@ -379,7 +382,7 @@ In this case, there are two `fee=true` recipients, so the calculation will have 
 
 Suppose that the listener chose to send a 2500-sat boost, which the app decides to distribute immediately among the recipients:
 
-Interval payout: **2500 sats**
+Batch payout: **2500 sats**
 
 1. `fee=true` recipients are paid first:
   - Recipient `C` gets a payment of 400 sats (calculated using $2500 \cdot 0.16 = 400$)
