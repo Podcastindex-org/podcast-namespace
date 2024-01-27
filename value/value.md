@@ -172,8 +172,8 @@ There is no limit on how many `valueRecipient` elements can be present in a give
   the `customKey`.
 - `type` (required) A slug that represents the type of receiving address that will receive the payment.
 - `address` (required) This denotes the receiving address of the payee.
-- `split` (required) The number of shares of the payment this recipient will receive.
-- `fee` (optional) If this attribute is not specified, it is assumed to be false.
+- `split` (required) The number of shares or, if `fee` is `true`, the percentage of the payment that this recipient will receive.
+- `fee` (optional) Indicates whether the recipient should instead receive a percentage amount off the top of each payment. If this attribute is not specified, it is assumed to be false.
 
 <br>
 
@@ -196,18 +196,12 @@ Payments must be sent to a valid destination which is given in the `address` att
 depending on
 the underlying currency being used.
 
-The `split` attribute denotes an amount of "shares" of the total payment that the recipient will receive when each timed
-payment is made.
-When a single `<podcast:valueRecipient>` is present, it should be assumed that the `split` for that recipient is 100%,
-and the "split" should
-be ignored. When multiple recipients are present, a share calculation (see below) should be made to determine how much
-to send to each recipient's address.
+The meaning of `split` depends on the value of `fee`:
+- When `fee=true`, `split` denotes the percent value that should be taken off each transaction for the recipient.
+- When `fee=false`, `split` denotes the number of "shares" for the recipient—splits among non-fee recipients represent the ratios in which the remaining amount (*after* the `fee=true` recipients receive their payments) must be distributed.
 
-The `fee` attribute tells apps whether this split should be treated as a "fee", or a normal split. If this attribute is
-true, then this split should be calculated
-as a fee, meaning its percentage (as calculated from the shares) should be taken off the top of the entire transaction
-amount. This is the preferred way for service
-providers such as apps, hosting companies, API's and third-party value add providers to add their fee to a value block.
+`fee=true` is the preferred way for service providers such as apps, hosting companies, APIs, and third-party value-add providers to add their fee to a value block.
+Because when `fee=true`, `split` represents *percentage* value, the sum of splits for `fee=true` recipients cannot exceed 100.
 
 #### Custom Key/Value Pairs
 
