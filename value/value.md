@@ -236,10 +236,10 @@ When all combined, together the recipients will receive
 
 How `Batch payout` is divided between the recipients depends on their `split` and `fee` values.
 
-For `fee=false` recipients $X_1, X_2, \ldots, X_m$ with splits $x_1, x_2, \ldots, x_m$ and `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ with splits $y_1, y_2, \ldots, y_n$:
+For `fee=true` recipients $X_1, X_2, \ldots, X_m$ with splits $x_1, x_2, \ldots, x_m$ and `fee=false` recipients $Y_1, Y_2, \ldots, Y_n$ with splits $y_1, y_2, \ldots, y_n$:
 
-1. Firstly, `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ will receive $y_1\\%$, $y_2\\%$, $\ldots$, $y_n\\%$ of the total batch payout.
-2. Then, the remaining amount will be distributed among `fee=false` recipients $X_1, X_2, \ldots, X_m$ in the ratio $x_1 : x_2 : \ldots : x_m$.
+1. Firstly, `fee=true` recipients $X_1, X_2, \ldots, X_n$ will receive $x_1\\%$, $x_2\\%$, $\ldots$, $x_n\\%$ of the total batch payout.
+2. Then, the remaining amount will be distributed among `fee=false` recipients $Y_1, Y_2, \ldots, Y_m$ in the ratio $y_1 : y_2 : \ldots : y_m$.
 
 #### Example 1: no fees, splits add up to 100
 
