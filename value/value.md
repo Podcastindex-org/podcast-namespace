@@ -230,9 +230,9 @@ When all combined, together the recipients will receive
 (Batch payout) = (Listener payment) * (Interval count)
 ```
 
-`Unit amount` refers to one of the following
-- either the amount of a one-time payment (with `Interval count` usually being 1)
-- or the amount being streamed per minute (with `Interval count` referring to the interval in minutes at which the payouts are made)
+`Listener payment` and `Interval count` refer to one of the following scenarios:
+- either the amount of a one-time payment made by the listener (with `Interval count` usually being 1)
+- or the amount being streamed per-minute by the listener (with `Interval count` referring to the interval in minutes at which payments are sent by their client)
 
 How `Batch payout` is divided between the recipients depends on their `split` and `fee` values.
 
