@@ -227,7 +227,7 @@ the player to your app, and for which nothing already exists, add your own.
 
 A given recipient will receive
 ```
-Payment amount * Interval payout * Interval count
+(Payment amount) * (Interval payout) * (Interval count)
 ```
 
 `Payment amount` is calculated differently depending on whether `fee` is `true` of `false`.
@@ -365,7 +365,7 @@ Interval payout: **1000 sats**
     <podcast:valueRecipient
             name="D"
             type="node"
-            address="309e2bd74dadb4a50c3be632a5068cbc820d520635acc5c527a2171ab6cab43a9c"
+            address="039e2bd74dadb4a50c3be632a5068cbc820d520635acc5c527a2171ab6cab43a9c"
             split="4"
             fee="true"
     />
@@ -384,7 +384,7 @@ Interval payout: **2500 sats**
 1. `fee=true` recipients are paid first:
   - Recipient `C` gets a payment of 400 sats (calculated using $2500 \cdot 0.16 = 400$)
   - Recipient `D` gets a payment of 100 sats (calculated using $2500 \cdot 0.04 = 100$)
-2. After that, `fee=false` recipients distribute the remaining amount of 2000 sats (calculated using $2500 - 400 - 100 = 2000$)
+2. After that, `fee=false` recipients get the remaining amount of 2000 sats (calculated using $2500 - 400 - 100 = 2000$):
   - Recipient `A` gets a payment of 1010 sats (calculated using $2000 \cdot \dfrac{101}{101 + 99} = 1010$)
   - Recipient `B` gets a payment of 990 sats (calculated using $2000 \cdot \dfrac{99}{101 + 99} = 990$)
 
