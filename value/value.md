@@ -338,6 +338,56 @@ Interval payout: **1000 sats**
 - Recipient `B` gets a payment of 495 sats (calculated using $1000 \cdot \dfrac{99}{100 + 99 + 1} = 495$)
 - Recipient `C` gets a payment of 5 sats (calculated using $1000 \cdot \dfrac{1}{100 + 99 + 1} = 5$)
 
+#### Example 3: recipients with `fee=true`
+
+```xml
+
+<podcast:value type="lightning" method="keysend" suggested="0.00000015000">
+    <podcast:valueRecipient
+            name="A"
+            type="node"
+            address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
+            split="101"
+    />
+    <podcast:valueRecipient
+            name="B"
+            type="node"
+            address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
+            split="99"
+    />
+    <podcast:valueRecipient
+            name="C"
+            type="node"
+            address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
+            split="16"
+            fee="true"
+    />
+    <podcast:valueRecipient
+            name="D"
+            type="node"
+            address="309e2bd74dadb4a50c3be632a5068cbc820d520635acc5c527a2171ab6cab43a9c"
+            split="4"
+            fee="true"
+    />
+</podcast:value>
+```
+
+In this case, there are two `fee=true` recipients, so the calculation will have to be done in two steps:
+
+1. `C` will receive $16\\%$ and `D` will receive $4\\%$ off the top of each payment.
+2. The rest of the payment (i.e., $100\\% - 16\\% - 4\\% = 80\\%$) will be distributed among `A` and `B` in the ratio $101 : 99$.
+
+Suppose that the listener chose to send a 2500-sat boost, which the app decides to distribute immediately among the recipients:
+
+Interval payout: **2500 sats**
+
+1. `fee=true` recipients are paid first:
+  - Recipient `C` gets a payment of 400 sats (calculated using $2500 \cdot 0.16 = 400$)
+  - Recipient `D` gets a payment of 100 sats (calculated using $2500 \cdot 0.04 = 100$)
+2. After that, `fee=false` recipients distribute the remaining amount of 2000 sats (calculated using $2500 - 400 - 100 = 2000$)
+  - Recipient `A` gets a payment of 1010 sats (calculated using $2000 \cdot \dfrac{101}{101 + 99} = 1010$)
+  - Recipient `B` gets a payment of 990 sats (calculated using $2000 \cdot \dfrac{99}{101 + 99} = 990$)
+
 <br><br>
 
 <div class="page"/>
