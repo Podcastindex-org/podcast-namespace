@@ -378,7 +378,7 @@ Batch payout: **1000 sats**
 In this case, there are two `fee=true` recipients, so the calculation will have to be done in two steps:
 
 1. `C` will receive $16\\%$ and `D` will receive $4\\%$ off the top of each payment.
-2. The rest of the payment (i.e., $100\\% - 16\\% - 4\\% = 80\\%$) will be distributed among `A` and `B` in the ratio $101 : 99$.
+2. The rest of the payment (i.e., $100\\% - (16\\% + 4\\%) = 80\\%$) will be distributed among `A` and `B` in the ratio $101 : 99$.
 
 Suppose that the listener chose to send a 2500-sat boost, which the app decides to distribute immediately among the recipients:
 
