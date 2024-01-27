@@ -274,7 +274,8 @@ I.e., for recipients `A`, `B`, and `C`, the payment should be divided in the rat
 In this case, because splits add up to 100 (that is, $50 + 40 + 10 = 100$), the splits happen to correspond to the percentage values that each recipient will receive.
 However, in general, it should never be assumed or expected that splits add up to 100.
 
-Suppose that the listener chose to pay 300 sats per minute. Each minute, the payment calculation would be:
+Suppose that the listener chose to pay 300 sats per minute.
+Each minute, the payment calculation would be:
 
 Interval payout: **300 sats**
   
@@ -292,6 +293,50 @@ Interval payout: **1500 sats** (calculated using $5 \cdot 300 = 1500$)
 
 As shown above, the once per minute calculation does not have to actually be sent every minute.
 A longer payout period can be chosen. But, the once-per-minute nature of the payout still remains in order for listeners and creators to have an easy way to measure and calculate how much they will spend and charge.
+
+#### Example 2: no fees, splits don't add up to 100
+
+```xml
+
+<podcast:value type="lightning" method="keysend" suggested="0.00000015000">
+    <podcast:valueRecipient
+            name="A"
+            type="node"
+            address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
+            split="100"
+    />
+    <podcast:valueRecipient
+            name="B"
+            type="node"
+            address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
+            split="99"
+    />
+    <podcast:valueRecipient
+            name="C"
+            type="node"
+            address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
+            split="1"
+    />
+</podcast:value>
+```
+
+Again, there are no `fee=true` recipients, so step 1 of the calculation can be skipped.
+The splits represent the ratios in which the payment should be divided.
+I.e., for recipients `A`, `B`, and `C`, the payment should be divided in the ratio $100:99:1$:
+- `A` will receive $\dfrac{100}{100 + 99 + 1} = 0.5 = 50\\%$ of the payment
+- `B` will receive $\dfrac{99}{100 + 99 + 1} = 0.495 = 49.5\\%$ of the payment
+- `C` will receive $\dfrac{1}{100 + 99 + 10} = 0.005 = 0.5\\%$ of the payment
+
+This example demonstrates why splits should not be required to add up to 100—it allows for recipients to receive payments that are not just integer percent values.
+In this specific case, it allows `B` to receive $49.5\\%$ and `C` to receive $0.5\\%$.
+
+Suppose that the listener chose to send a 1000-sat boost, which the app decides to distribute immediately among the recipients:
+
+Interval payout: **1000 sats**
+  
+- Recipient `A` gets a payment of 500 sats (calculated using $1000 \cdot \dfrac{100}{100 + 99 + 1} = 500$)
+- Recipient `B` gets a payment of 495 sats (calculated using $1000 \cdot \dfrac{99}{100 + 99 + 1} = 495$)
+- Recipient `C` gets a payment of 5 sats (calculated using $1000 \cdot \dfrac{1}{100 + 99 + 1} = 5$)
 
 <br><br>
 
