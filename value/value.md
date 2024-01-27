@@ -225,9 +225,18 @@ the player to your app, and for which nothing already exists, add your own.
 
 ### Payment calculation
 
-The interval payment calculation is:
+A given recipient will receive
+```
+Payment amount * Interval payout * Interval count
+```
 
-    (Number of shares / Share total) * Interval payout * Interval count
+`Payment amount` is calculated differently depending on whether `fee` is `true` of `false`.
+
+For `fee=false` recipients $X_1, X_2, \ldots, X_m$ with splits $x_1, x_2, \ldots, x_m$ and `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ with splits $y_1, y_2, \ldots, y_n$:
+
+1. Firstly, `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ will receive $y_1\\%$, $y_2\\%$, $\ldots$, $y_n\\%$ of the transaction.
+2. Then, the remaining amount will be distributed among `fee=false` recipients $X_1, X_2, \ldots, X_m$ in the ratio $x_1 : x_2 : \ldots : x_m$.
+
 
 To calculate payouts, let's take the following value block as an example:
 
