@@ -227,7 +227,7 @@ the player to your app, and for which nothing already exists, add your own.
 
 When all combined, together the recipients will receive
 ```
-(Batch payout) = (Interval count) * (Unit amount)
+(Batch payout) = (Listener payment) * (Interval count)
 ```
 
 `Unit amount` refers to one of the following
