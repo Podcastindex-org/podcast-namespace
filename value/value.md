@@ -237,26 +237,25 @@ For `fee=false` recipients $X_1, X_2, \ldots, X_m$ with splits $x_1, x_2, \ldots
 1. Firstly, `fee=true` recipients $Y_1, Y_2, \ldots, Y_n$ will receive $y_1\\%$, $y_2\\%$, $\ldots$, $y_n\\%$ of the transaction.
 2. Then, the remaining amount will be distributed among `fee=false` recipients $X_1, X_2, \ldots, X_m$ in the ratio $x_1 : x_2 : \ldots : x_m$.
 
-
-To calculate payouts, let's take the following value block as an example:
+#### Example 1: no fees, splits add up to 100
 
 ```xml
 
 <podcast:value type="lightning" method="keysend" suggested="0.00000015000">
     <podcast:valueRecipient
-            name="Host"
+            name="A"
             type="node"
             address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
             split="50"
     />
     <podcast:valueRecipient
-            name="Co-Host"
+            name="B"
             type="node"
             address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
             split="40"
     />
     <podcast:valueRecipient
-            name="Producer"
+            name="C"
             type="node"
             address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
             split="10"
@@ -264,45 +263,35 @@ To calculate payouts, let's take the following value block as an example:
 </podcast:value>
 ```
 
-This block designates three payment recipients. On each timed payment interval, the total payment will be split into 3
-smaller
-payments according to the shares listed in the split for each recipient. So, in this case, if the listener decided to
-pay 100 sats per minute for listening
-to this podcast, then once per minute the "Host" would be sent 50 sats, the "Co-Host" would be sent 40 sats and the
-"Producer" would be sent 10 sats - all to their respective lightning node addresses using the "keysend" protocol.
+This block designates three payment recipients.
+On each timed payment interval, the total payment will be split into 3 smaller payments according to the `split` of each recipient.
+Because there are no `fee=true` recipients, step 1 of the calculation can be skipped—the splits represent the ratios in which the payment should be divided.
+I.e., for recipients `A`, `B`, and `C`, the payment should be divided in the ratio $50:40:10$:
+- `A` will receive $\dfrac{50}{50 + 40 + 10} = 0.5 = 50\\%$ of the payment
+- `B` will receive $\dfrac{40}{50 + 40 + 10} = 0.4 = 40\\%$ of the payment
+- `C` will receive $\dfrac{10}{50 + 40 + 10} = 0.1 = 10\\%$ of the payment
 
-If, instead of a 50/40/10 (total of 100) split, the splits were given as 190/152/38 (total of 380), the respective
-payment amounts each minute would still
-be 50 sats, 40 sats and 10 sats because the listener chose to pay 100 sats per minute, and the respective shares (as a
-percentage of the total) would remain the same.
+In this case, because splits add up to 100 (that is, $50 + 40 + 10 = 100$), the splits happen to correspond to the percentage values that each recipient will receive.
+However, in general, it should never be assumed or expected that splits add up to 100.
 
-On a 190/152/38 split, each minute the payment calculation would be:
+Suppose that the listener chose to pay 300 sats per minute. Each minute, the payment calculation would be:
 
-- Interval payout: 100 sats
+Interval payout: **300 sats**
+  
+- Recipient `A` gets a payment of 150 sats (calculated using $300 \cdot \dfrac{50}{50 + 40 + 10} = 150$)
+- Recipient `B` gets a payment of 120 sats (calculated using $300 \cdot \dfrac{40}{50 + 40 + 10} = 120$)
+- Recipient `C` gets a payment of 30 sats (calculated using $300 \cdot \dfrac{10}{50 + 40 + 10} = 30$)
 
-- Share total: 380
+If an app chooses to only make a payout once every 5 minutes of listening/watching, the calculation would be the same after multiplying the per-minute payment by 5:
 
-    - Recipient #1 gets a payment of: 50 sats (190 / 380 * 100)
-    - Recipient #2 gets a payment of: 40 sats (152 / 380 * 100)
-    - Recipient #3 gets a payment of: 10 sats (38 / 380 * 100)
+Interval payout: **1500 sats** (calculated using $5 \cdot 300 = 1500$)
 
-If an app chooses to only make a payout once every 30 minutes of listening/watching, the calculation would be the same
-after multiplying
-the per-minute payment by 30:
+- Recipient `A` gets a payment of 750 sats (calculated using $1500 \cdot \dfrac{50}{50 + 40 + 10} = 750$)
+- Recipient `B` gets a payment of 600 sats (calculated using $1500 \cdot \dfrac{40}{50 + 40 + 10} = 600$)
+- Recipient `C` gets a payment of 150 sats (calculated using $1500 \cdot \dfrac{10}{50 + 40 + 10} = 150$)
 
-- Interval payout: 3000 sats (100 * 30)
-
-- Shares total: 380
-
-    - Recipient #1 gets a payment of: 1500 sats (190 / 380 * 3000)
-    - Recipient #2 gets a payment of: 1200 sats (152 / 380 * 3000)
-    - Recipient #3 gets a payment of: 300 sats (38 / 380 * 3000)
-
-As shown above, the once per minute calculation does not have to actually be sent every minute. A longer payout period
-can be chosen. But,
-the once-per-minute nature of the payout still remains in order for listeners and creators to have an easy way to
-measure and calculate how much
-they will spend and charge.
+As shown above, the once per minute calculation does not have to actually be sent every minute.
+A longer payout period can be chosen. But, the once-per-minute nature of the payout still remains in order for listeners and creators to have an easy way to measure and calculate how much they will spend and charge.
 
 <br><br>
 
