@@ -387,7 +387,7 @@ Batch payout: **2500 sats**
 1. `fee=true` recipients are paid first:
   - Recipient `C` gets a payment of 400 sats (calculated using $2500 \cdot 0.16 = 400$)
   - Recipient `D` gets a payment of 100 sats (calculated using $2500 \cdot 0.04 = 100$)
-2. After that, `fee=false` recipients get the remaining amount of 2000 sats (calculated using $2500 - 400 - 100 = 2000$):
+2. After that, `fee=false` recipients get the remaining amount of 2000 sats (calculated using $2500 - (400 + 100) = 2000$):
   - Recipient `A` gets a payment of 1010 sats (calculated using $2000 \cdot \dfrac{101}{101 + 99} = 1010$)
   - Recipient `B` gets a payment of 990 sats (calculated using $2000 \cdot \dfrac{99}{101 + 99} = 990$)
 
