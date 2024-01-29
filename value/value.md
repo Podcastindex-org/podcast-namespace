@@ -231,8 +231,8 @@ When all combined, together the recipients will receive
 ```
 
 `Listener payment` and `Interval count` refer to one of the following scenarios:
-- either the amount of a one-time payment made by the listener (with `Interval count` usually being 1)
-- or the amount being streamed per-minute by the listener (with `Interval count` referring to the interval in minutes at which payments are sent by their client)
+- `Listener payment` is either the amount of a one-time payment made by the listener (with `Interval count` usually being 1)
+- or `Listener payment` is the amount being streamed per-minute by the listener (with `Interval count` referring to the interval in minutes at which payments are sent by their client)
 
 How `Batch payout` is divided between the recipients depends on their `split` and `fee` values.
 
