@@ -171,32 +171,25 @@ Web Video Text Tracks Format (WebVTT) are an alternative to SRT primarily design
 WEBVTT
 
 00:00:00.000 --> 00:00:02.760
-<v Sarah> In today's episode,
-you'll learn whether or not you
+<v Sarah>In today's episode, you'll learn whether or not you
 
 00:00:02.760 --> 00:00:06.090
-should have a podcast trailer.
-And if so, what should you
+<v Sarah>should have a podcast trailer. And if so, what should you
 
 00:00:06.090 --> 00:00:11.610
-include in one? Welcome to
-Podcasting Q&A, where you learn
+<v Sarah>include in one? Welcome to Podcasting Q&amp;A, where you learn
 
 00:00:11.610 --> 00:00:15.750
-the best tips and strategies to
-launch, grow and monetize your
+<v Sarah>the best tips and strategies to launch, grow and monetize your
 
 00:00:15.750 --> 00:00:18.630
-podcast. This week's question
-comes from Gillian.
+<v Sarah>podcast. This week's question comes from Gillian.
 
 00:00:19.080 --> 00:00:21.450
-<v Gillian> Hi Buzzsprout, Gillian
-here from breaking through
+<v Gillian>Hi Buzzsprout, Gillian here from breaking through
 
 00:00:21.450 --> 00:00:25.350
-careers podcast. My question is,
-do we need a podcast trailer?
+<v Gillian>careers podcast. My question is, do we need a podcast trailer?
 ```
 
 Example file:  [example.vtt](example.vtt)
