@@ -24,6 +24,7 @@
     "link": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
+    "name": "Creative Commons Attribution - NonCommercial",
     "shortname": "CC-BY-NC-4.0",
     "version": "4.0",
     "description": "You are free to copy and redistribute the material in any medium or format.  You are free to remix, transform, and build upon the material.  You must give appropriate credit , provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
@@ -31,6 +32,7 @@
     "link": "https://creativecommons.org/licenses/by-nc/4.0/deed.en"
   },
   {
+    "name": "Creative Commons Attribution - NonCommercial - NoDerivs",
     "shortname": "CC-BY-NC-ND-4.0",
     "version": "4.0",
     "description": "You are free to copy and redistribute the material in any medium or format.  You must give appropriate credit , provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
