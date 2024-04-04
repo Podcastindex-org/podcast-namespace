@@ -162,34 +162,32 @@ Web Video Text Tracks Format (WebVTT) are an alternative to SRT primarily design
 - Cue settings allow the customization of cue positioning on the video
 
 #### Properties:
-- Max number of lines: 2
-- Max characters per line: 32
-- Speaker names (optional): Start a new card when the speaker changes. Include the speaker's name, followed by a colon.
+- Speaker names (optional): Speakers can be included in a voice span tag `<v>` at the beginning of each caption.
 
 #### Snippet:
 ```
 WEBVTT
 
-00:00:00.000 --> 00:00:02.760
-<v Sarah>In today's episode, you'll learn whether or not you
+00:00:00.000 --> 00:00:05.000
+<v John>Podcasting 2.0 is really changing the game.
 
-00:00:02.760 --> 00:00:06.090
-<v Sarah>should have a podcast trailer. And if so, what should you
+00:00:05.000 --> 00:00:10.000
+<v Tom>Yeah, absolutely. The new features are incredible.
 
-00:00:06.090 --> 00:00:11.610
-<v Sarah>include in one? Welcome to Podcasting Q&amp;A, where you learn
+00:00:10.000 --> 00:00:15.000
+<v Tom>It's amazing how it's empowering creators like never before.
 
-00:00:11.610 --> 00:00:15.750
-<v Sarah>the best tips and strategies to launch, grow and monetize your
+00:00:15.000 --> 00:00:20.000
+<v Tom>And the enhanced monetization options are a game-changer.
 
-00:00:15.750 --> 00:00:18.630
-<v Sarah>podcast. This week's question comes from Gillian.
+00:00:20.000 --> 00:00:25.000
+<v John>Exactly, Tom. It's revolutionizing the industry.
 
-00:00:19.080 --> 00:00:21.450
-<v Gillian>Hi Buzzsprout, Gillian here from breaking through
+00:00:25.000 --> 00:00:30.000
+<v Tom>No doubt about it. Podcasting 2.0 is the future.
 
-00:00:21.450 --> 00:00:25.350
-<v Gillian>careers podcast. My question is, do we need a podcast trailer?
+00:00:30.000 --> 00:00:35.000
+<v John>Couldn't agree more, Tom. The future looks bright.
 ```
 
 Example file:  [example.vtt](example.vtt)
