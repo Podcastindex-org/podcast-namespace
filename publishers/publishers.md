@@ -3,7 +3,7 @@ v1.0 - April 5, 2024
 
 <br>
 
-Below, you will find implementation details about using the `publisher` value in the `<podcast:medium>` tag to 
+Below, you will find implementation details about using the `publisher` value in the [`<podcast:medium>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#medium) tag to 
 create "publisher feeds".
 
 <br>
@@ -34,13 +34,14 @@ discarded.
 A publisher feed must have the following parts:
 
 1. A `<podcast:medium>` tag with a value of `publisher`.
-2. A valid `<podcast:guid>`.
-3. One or more `<podcast:remoteItem>` tags that link to podcast feeds.
+2. A valid [`<podcast:guid>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid).
+3. One or more [`<podcast:remoteItem>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#remoteItem) tags that link to podcast feeds.
 
 ### Example
 
 The following example shows a publisher feed that links to all of the feeds published by the "AgileSet Media" entity.
-This feed also makes use of the `<podcast:person>` tag to define a responsible person at the publishing entity.
+This feed also makes use of the [`<podcast:person>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#person) tag to define a responsible person at the 
+publishing entity.
 
 ```xml
 <rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" version="2.0">
