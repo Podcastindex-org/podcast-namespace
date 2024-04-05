@@ -1,6 +1,8 @@
 # The Publisher Medium
 v1.0 - April 5, 2024
 
+<br>
+
 Below, you will find implementation details about using the `publisher` value in the `<podcast:medium>` tag to 
 create "publisher feeds".
 
