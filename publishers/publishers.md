@@ -31,9 +31,9 @@ discarded.
 
 ## Publisher Feed Requirements
 
-A publisher feed must have the following parts:
+A publisher feed must have the following parts in it's `<channel>`:
 
-1. A `<podcast:medium>` tag with a value of `publisher`.
+1. A [`<podcast:medium>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#medium) tag with a value of `publisher`.
 2. A valid [`<podcast:guid>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid).
 3. One or more [`<podcast:remoteItem>`](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#remoteItem) tags that link to podcast feeds.
 
