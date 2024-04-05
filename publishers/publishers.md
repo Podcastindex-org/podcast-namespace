@@ -1,11 +1,12 @@
-## Publisher medium details
+# The Publisher Medium
+v1.0 - April 5, 2024
 
 Below, you will find implementation details about using the `publisher` value in the `<podcast:medium>` tag to 
 create "publisher feeds".
 
 <br>
 
-### Overview
+## Overview
 
 The idea of a "publisher" is that a single entity (person, organization, record label, etc) might be the responsible 
 party which produces multiple podcast feeds.  In such a case it would be useful to be able to see all of a 
@@ -26,7 +27,7 @@ discarded.
 
 <br>
 
-### Publisher Feed Requirements
+## Publisher Feed Requirements
 
 A publisher feed must have the following parts:
 
@@ -34,7 +35,7 @@ A publisher feed must have the following parts:
 2. A valid `<podcast:guid>`.
 3. One or more `<podcast:remoteItem>` tags that link to podcast feeds.
 
-#### Example
+### Example
 
 The following example shows a publisher feed that links to all of the feeds published by the "AgileSet Media" entity.
 This feed also makes use of the `<podcast:person>` tag to define a responsible person at the publishing entity.
@@ -64,13 +65,13 @@ This feed also makes use of the `<podcast:person>` tag to define a responsible p
 
 <br>
 
-### Linking to Publisher Feeds
+## Linking to Publisher Feeds
 
 While not strictly required, adding a reference to the publisher feed from the "child" feeds is a good idea, as it 
 makes discovery of your other content much easier.  Podcast apps can see this linkage and "walk back up the chain" 
 to your publisher feed and then recommend your other podcast content to a listener.
 
-#### Example
+### Example
 
 The following example snippet shows a podcast feed produced by "AgileSet Media" that links to the publisher feed 
 example above.
