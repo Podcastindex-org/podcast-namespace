@@ -76,7 +76,7 @@ The JSON representation is a flexible format that accomodates various degrees of
       "speaker": "Darth Vader",
       "startTime": 2.25,
       "endTime": 2.50,
-      "body": "father."
+      "body": "father.\n"
     },
     {
       "speaker": "Luke",
