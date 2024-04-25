@@ -111,6 +111,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [RedCircle](https://redcircle.com)
 5. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 6. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+7. [RSS.com](https://rss.com)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -131,3 +132,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 2. [RSS Blue](https://rssblue.com/help/podcast-metadata#txt-records)
 3. [Simplecast](https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification)
 4. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+5. [RSS.com](https://rss.com)
