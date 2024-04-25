@@ -72,7 +72,10 @@ publishing entity.
 
 While not strictly required, adding a reference to the publisher feed from the "child" feeds is a good idea, as it 
 makes discovery of your other content much easier.  Podcast apps can see this linkage and "walk back up the chain" 
-to your publisher feed and then recommend your other podcast content to a listener.
+to your publisher feed and then recommend your other podcast content to a listener.  To do this, you will need to 
+add a `<podcast:publisher>` tag in the `<channel>` of the "child" feed that will contain a `<podcast:remoteItem>` link to 
+the 
+publisher feed.
 
 ### Example
 
@@ -89,7 +92,9 @@ example above.
         <podcast:person href="https://mikeneumann.net" group="cast" role="host" img="https://itsamood.org/assets/static/MikeNeumann_202310.jpg">Mike Neumann</podcast:person>
         <podcast:guid>469b403f-db2d-574c-9db9-96dbb3f6561c</podcast:guid>
         <podcast:medium>podcast</podcast:medium>
-        <podcast:remoteItem medium="publisher" feedGuid="003af0a0-6a45-55bf-b765-68e3d349551a" feedUrl="https://agilesetmedia.com/assets/static/feeds/publisher.xml"/>
+        <podcast:publisher>
+            <podcast:remoteItem medium="publisher" feedGuid="003af0a0-6a45-55bf-b765-68e3d349551a" feedUrl="https://agilesetmedia.com/assets/static/feeds/publisher.xml"/>            
+        </podcast:publisher>
         <item>
             <title><![CDATA[Runnin']]></title>
             <pubDate>Wed, 03 Apr 2024 02:06:28 +0000</pubDate>
