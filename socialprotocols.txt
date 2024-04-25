@@ -2,3 +2,4 @@ disabled
 activitypub
 twitter
 lightning
+bluesky
