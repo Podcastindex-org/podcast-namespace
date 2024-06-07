@@ -45,7 +45,8 @@ protocols back into the hands of the open podcasting community.  A good overview
 **formalized**. 
 
 **Phase 7** - [Closed] Comment period closed on `7/1/2023` and [the following](https://github.
-com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being considered for formalization.
+com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being considered for formalization.  Two tags 
+[have already been](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) formalized.
 
 <br><br>
 
@@ -216,6 +217,8 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 ## <u>Phase 6 (Closed as of 6/1/2023)</u>
 
+<br>
+
 The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
 located [here](docs/1.0.md).  Please see that file for full implementation details.
 
@@ -225,6 +228,19 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 - **\<podcast:updateFrequency>** <br>
 - **\<podcast:podping>** <br>
 - **\<podcast:valueTimeSplit>** <br>
+
+<br>
+
+## <u>Phase 7 (Closed as of 6/1/2024)</u>
+
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document
+located [here](docs/1.0.md).  Please see that file for full implementation details.
+
+- **\<podcast:publisher>** <br>
+- **\<podcast:chat>** <br>
+
 
 <br>
 
