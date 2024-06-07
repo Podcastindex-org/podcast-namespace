@@ -248,8 +248,8 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 ## Other Proposals
 
-A list of the current proposed tags can be found in the issues
-section [here](https://github.com/Podcastindex-org/podcast-namespace/labels/proposal).
+A list of the current and past proposals can be found in the Discussions
+section [here](https://github.com/Podcastindex-org/podcast-namespace/discussions).
 
 <br><br>
 
