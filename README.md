@@ -44,9 +44,11 @@ protocols back into the hands of the open podcasting community.  A good overview
 **Phase 6** - [Closed] Comment period closed on `6/1/2023` and [6 tags](#phase-6-closed-as-of-612023) were 
 **formalized**. 
 
-**Phase 7** - [Closed] Comment period closed on `7/1/2023` and [the following](https://github.
-com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being considered for formalization.  Two tags 
-[have already been](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) formalized.
+**Phase 7** - [Closed] Comment period closed on `7/1/2023` and 
+[the following](https://github.com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being 
+considered for formalization.  Two tags 
+[have already been](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) 
+formalized.
 
 <br><br>
 
