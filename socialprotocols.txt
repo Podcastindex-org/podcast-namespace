@@ -3,3 +3,6 @@ activitypub
 twitter
 lightning
 bluesky
+hive
+matrix
+nostr
