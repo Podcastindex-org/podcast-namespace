@@ -487,7 +487,7 @@ and guest.
 
 <br>
 
-### Appendix A - TLV Records and Extensions
+### TLV Records and Extensions
 
 Lightning payments are performed using lightning messages as specified
 in [BOLT #1: Base Protocol](https://github.com/lightningnetwork/lightning-rfc/blob/master/01-messaging.md).
@@ -502,7 +502,7 @@ the `customKey` and `customValue` attributes.
 
 <br>
 
-### Appendix B - Payment Actions
+### Payment Actions
 
 There are currently 3 payment "actions" that are defined in the BLIP-10 TLV extension that is embedded in the payment
 payload:  "stream", "boost" and "auto".
@@ -515,3 +515,17 @@ payload:  "stream", "boost" and "auto".
 * `auto`   - This means the payment was an app initiated payment that recurs at a specific long-form interval such as 
              weekly, monthly, yearly, etc.  The user configures an interval and payment amount in the app and the app
              then sends that amount at the specified time when each interval passes.
+
+<br>
+
+### Value Recipient Address Types
+
+There are a few different available recipient address types:
+
+* `node` - The public address of a node.  For instance, in the `lightning` value type this would represent a node's 
+           public address.
+* `lnaddress` - A so-called "lightning address", which takes the form of an email address that gets resolved into an 
+                options file which holds the underlying destinations for payment.  See the full document 
+                [here](lnaddress.md) for explanation.
+
+More recipient address types will be added in the future.
