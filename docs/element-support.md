@@ -106,7 +106,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
 4. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 5. [Podhome](https://www.podhome.fm/docs/people)
-6. [Podhome](https://www.pinepods.online/docs/Features/Person)
+6. [Pinepods](https://www.pinepods.online/docs/Features/Person)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
