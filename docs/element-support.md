@@ -23,6 +23,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 16. [RedCircle](https://redcircle.com)
 17. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 18. [Podhome](https://www.podhome.fm/docs/transcripts)
+19. [Pinepods](https://www.pinepods.online/docs/Features/Transcript)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -63,6 +64,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 19. [RedCircle](https://redcircle.com)
 20. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 21. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+22. [Pinepods](https://www.pinepods.online/docs/Features/Funding)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -80,6 +82,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 13. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
 14. [RSS Blue](https://rssblue.com/help/episode-metadata#chapters-data)
 15. [Podhome](https://www.podhome.fm/docs/chapters)
+16. [Pinepods](https://www.pinepods.online/docs/Features/Chapters)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -103,6 +106,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
 4. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 5. [Podhome](https://www.podhome.fm/docs/people)
+6. [Pinepods](https://www.pinepods.online/docs/Features/Person)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
