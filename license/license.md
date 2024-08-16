@@ -31,7 +31,7 @@ This matter is very complex so this specification only intends to scratch its su
 
 ## Specification
 
-- **\<podcast:license url="[url to license]" />[License Slug from SPDX List]</podcast:license>**
+- **\<podcast:license url="[url to license]" />[License Slug from [License List](/license/licenseslugs.txt) or Custom Liense name]</podcast:license>**
 
     Channel (optional | single)
 
@@ -50,5 +50,3 @@ This matter is very complex so this specification only intends to scratch its su
    Discussion here:
    - (https://github.com/Podcastindex-org/podcast-namespace/issues/177)
    - (https://podcastindex.social/web/statuses/105839486748529374)
-   - (https://spdx.org/licenses/)
-   

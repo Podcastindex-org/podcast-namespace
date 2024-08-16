@@ -40,11 +40,11 @@
     "link": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"
   },
   {
-    "name": "V4V Podcast License",
-    "shortname": "V4V-1.0",
+    "name": "Podcast V4V License",
+    "shortname": "POD-V4V-1.0",
     "version": "1.0",
     "description": "",
-    "commercial": false,
+    "commercial": true,
     "attribution": true,
     "derivatives": false,
     "link": "/license/v4v-4.0.md"
