@@ -24,6 +24,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 17. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 18. [Podhome](https://www.podhome.fm/docs/transcripts)
 19. [Pinepods](https://www.pinepods.online/docs/Features/Transcript)
+20. [AiPodNav](https://www.aipodnav.com/discover/new-podcast-transcript)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -83,6 +84,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 14. [RSS Blue](https://rssblue.com/help/episode-metadata#chapters-data)
 15. [Podhome](https://www.podhome.fm/docs/chapters)
 16. [Pinepods](https://www.pinepods.online/docs/Features/Chapters)
+17. [AiPodNav](https://www.aipodnav.com/)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -91,6 +93,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Castopod](https://podlibre.org/castopod-supports-soundbite-tag/)
 5. [RSS.com](https://rss.com)
 6. [Podhome](https://www.podhome.fm/docs/clips)
+7. [AiPodNav](https://www.aipodnav.com/)
 
 ## Location `<podcast:location>`
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
