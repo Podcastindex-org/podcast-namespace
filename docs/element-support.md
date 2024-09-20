@@ -24,6 +24,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 17. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 18. [Podhome](https://www.podhome.fm/docs/transcripts)
 19. [Pinepods](https://www.pinepods.online/docs/Features/Transcript)
+20. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -41,6 +42,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 13. [RedCircle](https://redcircle.com)
 14. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 15. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+16. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -56,15 +58,15 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 11. [Hypercatcher](https://hypercatcher.com)
 12. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/releases/tag/3.3.1)
 13. [Podcat](https://twitter.com/podlove_org/status/1363586304643133442)
-14. [RSS.com](https://rss.com)
-15. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
-16. [Caproni](https://caproni.fm/en)
-17. [Castos](https://castos.com/introducing-podcast-2-0-support/)
-18. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
-19. [RedCircle](https://redcircle.com)
-20. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
-21. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
-22. [Pinepods](https://www.pinepods.online/docs/Features/Funding)
+15. [RSS.com](https://rss.com)
+16. [Anytime Podcast Player](https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime)
+17. [Caproni](https://caproni.fm/en)
+18. [Castos](https://castos.com/introducing-podcast-2-0-support/)
+19. [RSS Blue](https://rssblue.com/help/podcast-metadata#funding-url)
+20. [RedCircle](https://redcircle.com)
+21. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
+22. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+23. [Pinepods](https://www.pinepods.online/docs/Features/Funding)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -99,6 +101,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Caproni](https://caproni.fm/en)
 5. [RSS Blue](https://rssblue.com/help/podcast-metadata#location)
 6. [RSS.com](https://rss.com)
+7. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
@@ -107,6 +110,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 5. [Podhome](https://www.podhome.fm/docs/people)
 6. [Pinepods](https://www.pinepods.online/docs/Features/Person)
+7. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -116,6 +120,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 6. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 7. [RSS.com](https://rss.com)
+8. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -130,6 +135,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
 2. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 3. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
+4. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 
 ## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
@@ -137,3 +143,4 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 3. [Simplecast](https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification)
 4. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 5. [RSS.com](https://rss.com)
+6. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
