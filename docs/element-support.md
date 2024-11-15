@@ -25,6 +25,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 18. [Podhome](https://www.podhome.fm/docs/transcripts)
 19. [Pinepods](https://www.pinepods.online/docs/Features/Transcript)
 20. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+21. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+22. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/blog/podcast-locking)
@@ -43,6 +45,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 14. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 15. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 16. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+17. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+18. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Funding `<podcast:funding>`
 1. [Buzzsprout](https://www.buzzsprout.com/)
@@ -67,6 +71,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 21. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 22. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 23. [Pinepods](https://www.pinepods.online/docs/Features/Funding)
+24. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+25. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Chapters `<podcast:chapters>`
 1. [Podcast Chapters](https://chaptersapp.com/faq/jsonExport.html)
@@ -85,6 +91,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 14. [RSS Blue](https://rssblue.com/help/episode-metadata#chapters-data)
 15. [Podhome](https://www.podhome.fm/docs/chapters)
 16. [Pinepods](https://www.pinepods.online/docs/Features/Chapters)
+17. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+18. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -93,6 +101,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Castopod](https://podlibre.org/castopod-supports-soundbite-tag/)
 5. [RSS.com](https://rss.com)
 6. [Podhome](https://www.podhome.fm/docs/clips)
+7. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+8. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Location `<podcast:location>`
 1. [Buzzsprout](https://twitter.com/buzzsprout/status/1357020753745633282)
@@ -102,6 +112,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [RSS Blue](https://rssblue.com/help/podcast-metadata#location)
 6. [RSS.com](https://rss.com)
 7. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+8. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+9. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Person `<podcast:person>`
 1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
@@ -121,6 +133,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 7. [RSS.com](https://rss.com)
 8. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+9. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+10. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
@@ -130,12 +144,16 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
 6. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 7. [Podhome](https://www.podhome.fm/docs/use-value-4-value)
+8. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+9. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata#medium)
 2. [CastGarden](https://cast.garden/feeds/podcast/videos.xml?videoChannelId=37)
 3. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 4. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+5. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+6. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Txt `<podcast:txt>`
 1. [Transistor](https://transistor.fm/changelog/verification-code)
@@ -144,3 +162,11 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 4. [Podhome](https://www.podhome.fm/docs/podcasting-2-0)
 5. [RSS.com](https://rss.com)
 6. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+
+## Alternate Enclosure `<podcast:alternateEnclosure>`
+1. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+2. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+
+## Content Link `<podcast:contentLink>`
+1. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+2. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
