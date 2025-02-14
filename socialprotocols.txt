@@ -2,7 +2,7 @@ disabled
 activitypub
 twitter
 lightning
-bluesky
+atproto
 hive
 matrix
 nostr
