@@ -42,7 +42,7 @@
         <itunes:email>johndoe@example.com</itunes:email>
         </itunes:owner>
 
-        <itunes:image>https://example.com/images/pci_avatar-massive.jpg</itunes:image>
+        <itunes:image href="https://example.com/images/pci_avatar-massive.jpg"/>
 
         <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
             <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="99" />
@@ -71,7 +71,7 @@
             <guid isPermaLink="true">https://example.com/ep0003</guid>
             <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
-            <itunes:image>https://example.com/ep0003/artMd.jpg</itunes:image>
+            <itunes:image href="https://example.com/ep0003/artMd.jpg"/>
             <podcast:images srcset="https://example.com/images/ep3/pci_avatar-massive.jpg 1500w,
                                         https://example.com/images/ep3/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep3/pci_avatar-small.jpg 300w,
@@ -132,7 +132,7 @@
             <guid isPermaLink="true">https://example.com/ep0002</guid>
             <pubDate>Thu, 08 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
-            <itunes:image>https://example.com/ep0002/artMd.jpg</itunes:image>
+            <itunes:image href="https://example.com/ep0002/artMd.jpg"/>
             <podcast:images srcset="https://example.com/images/ep2/pci_avatar-massive.jpg 1500w,
                                         https://example.com/images/ep2/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep2/pci_avatar-small.jpg 300w,
@@ -183,7 +183,7 @@
             <guid isPermaLink="true">https://example.com/ep0001</guid>
             <pubDate>Wed, 07 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
-            <itunes:image>https://example.com/ep0001/artMd.jpg</itunes:image>
+            <itunes:image href="https://example.com/ep0001/artMd.jpg"/>
             <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
                                         https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
                                         https://example.com/images/ep1/pci_avatar-small.jpg 300w,
