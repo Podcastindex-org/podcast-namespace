@@ -30,7 +30,7 @@ Only one entry per `<item>` is valid:
 
 ## Episode Description and Summary
 
-If you use `<itunes:summary>`, it should an actually summary of the episode in one or two sentences and not a copy of the description. Be aware that Apple dropped `<itunes:summary>` from [their spec](https://help.apple.com/itc/podcasts_connect/#/itcb54353390) but many other clients still support it.
+If you use `<itunes:summary>`, it should be an actual summary of the episode, in one or two sentences, and not a copy of the description. Be aware that Apple dropped `<itunes:summary>` from [their spec](https://help.apple.com/itc/podcasts_connect/#/itcb54353390) but many other clients still support it.
 
 The [original RSS specification](https://cyber.harvard.edu/rss/rss.html#hrelementsOfLtitemgt) defined `description` as follows:
 > A channel may contain any number of `<item>`s. An item may represent a "story" -- much like a story in a newspaper or magazine; if so its description is a synopsis of the story, and the link points to the full story. An item may also be complete in itself, if so, the description contains the text (entity-encoded HTML is allowed; see examples) …
@@ -62,9 +62,6 @@ parent `<channel>`:
 <atom:link rel="first" href="https://freakshow.fm/feed/mp3" />
 <atom:link rel="last" href="https://freakshow.fm/feed/mp3?paged=9" />
 ```
-
-
-
 
 
 
