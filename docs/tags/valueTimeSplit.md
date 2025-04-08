@@ -2,15 +2,15 @@
 
 `<podcast:valueTimeSplit>`
 
-This element allows different value splits for a certain period of time. It is a combination of the concept of <podcast:soundbite> and <podcast:remoteItem> where a start time and a duration is supplied with alternative value recipients. The alternative value recipients are not required to be remote, as the recipients may not have an RSS feed/item of their own to reference.
+This element allows different value splits for a certain period of time. It is a combination of the concept of [`<podcast:soundbite>`](soundbite.md) and [`<podcast:remoteItem>`](remoteItem.md) where a start time and a duration is supplied with alternative value recipients. The alternative value recipients are not required to be remote, as the recipients may not have an RSS feed/item of their own to reference.
 
 The `<podcast:valueTimeSplit>` element allows time-based changes of value recipient information during playback of a feed's enclosure content.
 
-This can either contain one or more `<podcast:valueRecipient>` tags _or_ exactly one `<podcast:remoteItem>` tag. If a `<podcast:remoteItem>` tag is present, the `remotePercentage` attribute can be defined to control how much the remote value block's `<podcast:valueRecipient>` tags will receive as a whole on top of the default, non-fee `<podcast:valueRecipient>` tags.
+This can either contain one or more [`<podcast:valueRecipient>`](valueRecipient.md) tags _or_ exactly one [`<podcast:remoteItem>`](remoteItem.md) tag. If a [`<podcast:remoteItem>`](remoteItem.md) tag is present, the `remotePercentage` attribute can be defined to control how much the remote value block's [`<podcast:valueRecipient>`](valueRecipient.md) tags will receive as a whole on top of the default, non-fee [`<podcast:valueRecipient>`](valueRecipient.md) tags.
 
 If the remote value block contains any `<podcast:valueTimeSplit>` tags, they should be ignored even if the `remoteStartTime` indicates it's in a position that would invoke them. When referencing a remote value block, only the root level block splits should be used and any `<podcast:valueTimeSplit>` children are to be ignored.
 
-Fees from the default `<podcast:valueRecipient>` tags should remain to be calculated before anything is taken out from `<podcast:valueTimeSplit>`.
+Fees from the default [`<podcast:valueRecipient>`](valueRecipient.md) tags should remain to be calculated before anything is taken out from `<podcast:valueTimeSplit>`.
 
 ### Parent
 
@@ -22,14 +22,14 @@ Multiple
 
 ### Node Value
 
-A single `<podcast:remoteItem>` element OR one or more `<podcast:valueRecipient>` elements.
+A single [`<podcast:remoteItem>`](remoteItem.md) element OR one or more [`<podcast:valueRecipient>`](valueRecipient.md) elements.
 
 ### Attributes
 
 - `startTime` (required) - The time, in seconds, to stop using the currently active value recipient information and start using the value recipient information contained in this element.
 - `duration` (required) - How many seconds the playback app should use this element's value recipient information before switching back to the value recipient information of the parent feed.
 - `remoteStartTime` (optional) - The time in the remote item where the value split begins. Allows the timestamp to be set correctly in value metadata. If not defined, defaults to 0.
-- `remotePercentage` (optional) - The percentage of the payment the remote recipients will receive if a `<podcast:remoteItem>` is present. If not defined, defaults to 100. If the value is less than 0, 0 is assumed. If the value is greater than 100, 100 is assumed.
+- `remotePercentage` (optional) - The percentage of the payment the remote recipients will receive if a [`<podcast:remoteItem>`](remoteItem.md) is present. If not defined, defaults to 100. If the value is less than 0, 0 is assumed. If the value is greater than 100, 100 is assumed.
 
 ### Example (Remote Item)
 

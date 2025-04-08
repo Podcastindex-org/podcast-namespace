@@ -10,9 +10,9 @@ This element specifies a person of interest to the podcast. It is primarily inte
 
 It is suggested that `<channel>` is always populated, and `<item>` is populated where needed for an individual episode. Where present, people information in `<item>` wholly replaces all information from the `<channel>`.
 
-Publishers are expected to use the `podcast:person` element in the `<channel>` parent to set the _regular_ people involved in the podcast: the detail that would be expected to be seen in an overview of the show.
+Publishers are expected to use the `<podcast:person>` element in the `<channel>` parent to set the _regular_ people involved in the podcast: the detail that would be expected to be seen in an overview of the show.
 
-Publishers are expected to use the `podcast:person` in the `<item>` parent to **replace** all existing information for an individual episode.
+Publishers are expected to use the `<podcast:person>` in the `<item>` parent to **replace** all existing information for an individual episode.
 
 #### For example: _Terry and June_
 

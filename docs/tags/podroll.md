@@ -14,7 +14,7 @@ Single
 
 ### Node value
 
-The node value must be one or more `<podcast:remoteItem>` elements.
+The node value must be one or more [`<podcast:remoteItem>`](remoteItem.md) elements.
 
 ### Example
 

@@ -25,7 +25,7 @@ The node value is a string denoting one of the following possible values:
 - `audiobook` - Specific types of audio with one item per feed, or where items represent chapters within the book.
 - `newsletter` - Describes a feed of curated written articles. Newsletter articles now sometimes have an spoken version audio enclosure attached.
 - `blog` - Describes a feed of informally written articles. Similar to `newsletter` but more informal as in a traditional blog platform style.
-- `publisher` - Describes a feed that links to other feeds a publisher owns using the `<podcast:remoteItem>` element. To understand the structure of how "publisher" feeds work, please see the dedicated document [here](../../publishers/publishers.md) and the `<podcast:publisher>` tag [here](./publisher.md).
+- `publisher` - Describes a feed that links to other feeds a publisher owns using the [`<podcast:remoteItem>`](remoteItem.md) element. To understand the structure of how "publisher" feeds work, please see the dedicated document [here](../../publishers/publishers.md) and the [`<podcast:publisher>`](publisher.md) tag [here](./publisher.md).
 - `course` - A feed of training material (audio or video courses) with each item being a session or chapter of the course or conference track.
 
 ### List Mediums
@@ -34,9 +34,9 @@ In addition to the above mediums, each medium also has a counterpart "list" vari
 
 There is also a dedicated list medium for mixed content:
 
-- `mixed` - This list medium type describes a feed of `<podcast:remoteItem>`'s that point to different remote medium types. For instance, a single list feed might point to music, podcast and audiobook items in other feeds. An example would be a personal consumption history feed.
+- `mixed` - This list medium type describes a feed of [`<podcast:remoteItem>`](remoteItem.md)'s that point to different remote medium types. For instance, a single list feed might point to music, podcast and audiobook items in other feeds. An example would be a personal consumption history feed.
 
-A "list" medium feed should not be expected to have regular `<item>`'s,`<podcast:liveItem>`'s, or any future similar new item type. Rather, a "List" feed is intended to exclusively contain one or more `<podcast:remoteItem>`'s, allowing one to reference a feed by its `<podcast:guid>` and the guid of an item.
+A "list" medium feed should not be expected to have regular `<item>`'s,[`<podcast:liveItem>`](liveItem.md)'s, or any future similar new item type. Rather, a "List" feed is intended to exclusively contain one or more [`<podcast:remoteItem>`](remoteItem.md)'s, allowing one to reference a feed by its [`<podcast:guid>`](guid.md) and the guid of an item.
 
 ### Examples
 

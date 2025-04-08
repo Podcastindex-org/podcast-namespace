@@ -59,4 +59,4 @@ A working example is https://podnews.net/podcast/i8xe9/listen#fastfollow-podcast
 
 When scanned on a mobile phone's camera app, this link will go to the specified podcast website. Behavior of this website is up to the creator: some may use a default homepage, others may sniff the useragent and open a default podcast app on a device. In the working example, above, an iPhone user may be taken to Apple Podcasts; an Android user may be taken to Google Podcasts; and another device will be given a page with a player.
 
-When scanned on a QR code reader inside a podcast app, like [CurioCaster](https://curiocaster.com/), the app can parse the `podcast:guid` value from the URL, allowing the podcast to be opened within the application.
+When scanned on a QR code reader inside a podcast app, like [CurioCaster](https://curiocaster.com/), the app can parse the `<podcast:guid>` value from the URL, allowing the podcast to be opened within the application.

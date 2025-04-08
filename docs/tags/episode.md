@@ -2,7 +2,7 @@
 
 `<podcast:episode>`
 
-This element exists largely for compatibility with the `season` tag. But, it also allows for a similar idea to what "name" functions as in that element.
+This element exists largely for compatibility with the [`<podcast:season>`](season.md) tag. But, it also allows for a similar idea to what "name" functions as in that element.
 
 ### Parent
 

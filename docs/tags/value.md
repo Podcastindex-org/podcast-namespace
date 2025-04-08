@@ -18,7 +18,7 @@ Multiple
 
 ### Node Value
 
-The node value must be one or more `<podcast:valueRecipient>` elements.
+The node value must be one or more [`<podcast:valueRecipient>`](valueRecipient.md) elements.
 
 ### Attributes
 

@@ -26,7 +26,7 @@ The node value is a string, which is the title of the trailer. It is required. P
 - **type:** (recommended) The mime type of the file. This attribute is a string.
 - **season:** (optional) If this attribute is present it specifies that this trailer is for a particular season number. This attribute is a number.
 
-If the `season` attribute is present, it must be a number that matches the format of the `<podcast:season>` tag. So, for a podcast that has 3 published seasons, a new `<podcast:trailer season="4">` tag can be put in the channel to later be matched up with a `<podcast:season>4<podcast:season>` tag when it is published within a new `<item>`.
+If the `season` attribute is present, it must be a number that matches the format of the [`<podcast:season>`](season.md) tag. So, for a podcast that has 3 published seasons, a new `<podcast:trailer season="4">` tag can be put in the channel to later be matched up with a `<podcast:season>4<podcast:season>` tag when it is published within a new `<item>`.
 
 #### Examples
 

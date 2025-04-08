@@ -2,11 +2,11 @@
 
 `<podcast:source>`
 
-This element defines a uri location for a `<podcast:alternateEnclosure>` media file. It is meant to be used as a child of the `<podcast:alternateEnclosure>` element. At least one `<podcast:source>` element must be present within every `<podcast:alternateEnclosure>` element.
+This element defines a uri location for a [`<podcast:alternateEnclosure>`](alternateEnclosure.md) media file. It is meant to be used as a child of the [`<podcast:alternateEnclosure>`](alternateEnclosure.md) element. At least one `<podcast:source>` element must be present within every [`<podcast:alternateEnclosure>`](alternateEnclosure.md) element.
 
 ### Parent
 
-`<podcast:alternateEnclosure>`
+[`<podcast:alternateEnclosure>`](alternateEnclosure.md)
 
 ### Count
 
