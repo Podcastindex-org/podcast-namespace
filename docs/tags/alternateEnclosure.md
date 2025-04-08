@@ -16,7 +16,7 @@ Multiple
 
 ### Node Value
 
-The node value must be one or more `<podcast:source>` elements that each define a uri where the media file can be downloaded or streamed. A single, optional `<podcast:integrity>` element may also be included to allow for file integrity checking.
+The node value must be one or more [`<podcast:source>`](source.md) elements that each define a uri where the media file can be downloaded or streamed. A single, optional [`<podcast:integrity>`](integrity.md) element may also be included to allow for file integrity checking.
 
 ### Attributes
 
