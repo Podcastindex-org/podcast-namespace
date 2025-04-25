@@ -3,8 +3,8 @@
 `<podcast:location>`
 
 This tag is intended to describe the location of editorial focus, or the source of production 
-for a podcast's content (i.e. "what place is this podcast about?"). The tag has many use cases 
-and is one of the more complex ones. You are **highly encouraged** to read the 
+for a podcast's content; answering the question "where is this podcast about?" or "where was the podcast made?". 
+The tag has many use cases and is one of the more complex ones. You are **highly encouraged** to read the 
 full [implementation document](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) 
 before starting to code for it.
 
@@ -21,7 +21,7 @@ Multiple
 This is a free-form string meant to be a human readable location. It may conform to conventional location 
 verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific way. This value 
 cannot be blank. Please do not exceed `128 characters` for the node value or it may be truncated by aggregators.  This
-value is mostly intended as a "display" value and it's highly encouraged to use the other recommended attributes to
+value is mostly intended as a "display" value and it's **highly encouraged** to use the other recommended attributes to
 define the actual location parameters.
 
 ### Attributes
