@@ -33,7 +33,7 @@ If the `season` attribute is present, it must be a number that matches the forma
 ```xml
 <podcast:trailer
         pubdate="Thu, 01 Apr 2021 08:00:00 EST"
-        url="https://example.org/trailers/teaser"
+        url="https://example.org/trailers/teaser.mp3"
         length="12345678"
         type="audio/mp3
 ">Coming April 1st, 2021</podcast:trailer>
@@ -42,7 +42,7 @@ If the `season` attribute is present, it must be a number that matches the forma
 ```xml
 <podcast:trailer
         pubdate="Thu, 01 Apr 2021 08:00:00 EST"
-        url="https://example.org/trailers/season4teaser"
+        url="https://example.org/trailers/season4teaser.mp4"
         length="12345678"
         type="video/mp4"
         season="4"
