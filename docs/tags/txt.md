@@ -21,6 +21,7 @@ Multiple
 The following are a list of strings known to be in common use. This list is in no way exhaustive. As new purposes come into common use, this list will be updated by the community to reflect that.
 
 - `verify` - The node value is expected to contain a string that is given by a third party platform to a podcaster in order to prove that they are the owner of the feed and are in control of it. This is meant to replace the need for emails to exist in feeds. See example section below.
+- `applepodcastsverify` - Same as above but [used by Apple](https://help.apple.com/itc/podcasts_connect/#/itcb54353390:~:text=podcast%3Atxt%20purpose%3D%E2%80%9C-,applepodcastsverify,-%E2%80%9D%3E).
 
 ### Node value
 
@@ -34,6 +35,10 @@ This is a free form string. Please do not exceed `4000 characters` for the node 
 
 ```xml
 <podcast:txt purpose="verify">S6lpp-7ZCn8-dZfGc-OoyaG</podcast:txt>
+```
+
+```xml
+<podcast:txt purpose="applepodcastsverify">05124</podcast:txt>
 ```
 
 ```xml
