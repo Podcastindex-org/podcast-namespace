@@ -10,7 +10,7 @@ This tag is intended to describe the location of either:
 a) the editorial focus for a podcast's content - i.e. "what place is this podcast about?"  
 b) the place of production for a podcast's content - i.e. "where was this podcast made?"
 
-It can exist in the `channel` level, the `item` level or the `liveItem` level.
+It can exist in the `channel` level, the `item` level or the `liveItem` level (i.e. it can exist to give a location for a whole podcast, or for one specific episode).
 
 If a location exists in the `channel` level, a location of the same type (creator or subject) in the `item` or `liveItem` level may overwrite it for specific items. (i.e. "this podcast is normally recorded in Austin TX, but this episode was recorded in Birmingham AL").
 
