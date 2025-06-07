@@ -2,11 +2,11 @@
 
 `<podcast:integrity>`
 
-This element defines a method of verifying integrity of the media given either an [SRI-compliant integrity string](https://www.w3.org/TR/SRI/) (preferred) or a base64 encoded PGP signature. This element is optional within a [`<podcast:alternateEnclosure>`](alternateEnclosure.md) element. It allows to ensure that the file has not been tampered with.
+This element defines a method of verifying integrity of the media given either an [SRI-compliant integrity string](https://www.w3.org/TR/SRI/) (preferred) or a base64 encoded PGP signature. This element is optional within a [`<podcast:alternateEnclosure>`](alternate-enclosure.md) element. It allows to ensure that the file has not been tampered with.
 
 ### Parent
 
-[`<podcast:alternateEnclosure>`](alternateEnclosure.md)
+[`<podcast:alternateEnclosure>`](alternate-enclosure.md)
 
 ### Count
 
