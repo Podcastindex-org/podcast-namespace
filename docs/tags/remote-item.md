@@ -8,7 +8,7 @@ Using the `feedGuid` attribute is the preferred way to address a remote feed sin
 
 ### Parent
 
-`<channel>` or [`<podcast:podroll>`](podroll.md) or [`<podcast:valueTimeSplit>`](valueTimeSplit.md) or [`<podcast:publisher>`](publisher.md)
+`<channel>` or [`<podcast:podroll>`](podroll.md) or [`<podcast:valueTimeSplit>`](value-time-split.md) or [`<podcast:publisher>`](publisher.md)
 
 ### Count
 
