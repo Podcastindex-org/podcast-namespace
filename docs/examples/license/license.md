@@ -31,22 +31,23 @@ This matter is very complex so this specification only intends to scratch its su
 
 ## Specification
 
-- **\<podcast:license url="[url to license]" />[License Slug from [License List](/license/licenseslugs.txt) or Custom Liense name]</podcast:license>**
+- **\<podcast:license url="[url to license]" />[License Slug from [License List](licenseslugs.txt) or Custom Liense name]</podcast:license>**
 
-    Channel (optional | single)
+  Channel (optional | single)
 
-    Item (optional | single)
+  Item (optional | single)
 
-   This element allows a podcaster to specify a license for a podcast or an episode.
+  This element allows a podcaster to specify a license for a podcast or an episode.
 
-   - `url` (required): This is the url to the license file.
+  - `url` (required): This is the url to the license file.
 
-   Examples:
-   - `<podcast:license url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
-   - `<podcast:license url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
-   - `<podcast:license url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
- 
-   
-   Discussion here:
-   - (https://github.com/Podcastindex-org/podcast-namespace/issues/177)
-   - (https://podcastindex.social/web/statuses/105839486748529374)
+  Examples:
+
+  - `<podcast:license url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
+  - `<podcast:license url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
+  - `<podcast:license url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
+
+  Discussion here:
+
+  - (https://github.com/Podcastindex-org/podcast-namespace/issues/177)
+  - (https://podcastindex.social/web/statuses/105839486748529374)
