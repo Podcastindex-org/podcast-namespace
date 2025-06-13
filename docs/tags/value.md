@@ -6,7 +6,7 @@ This element designates the cryptocurrency or payment layer that will be used, t
 
 This element can exist at either the `<channel>` or `<item>` level. When it exists at the `<item>` level, it should be treated as an "override" of whatever is defined at the `<channel>` level.
 
-This is a complex tag, so implementors are HIGHLY encouraged to read the companion [document](https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md) for a complete understanding of how this tag works and what it is capable of.
+This is a complex tag, so implementors are HIGHLY encouraged to read the companion [document](../examples/value/value.md) for a complete understanding of how this tag works and what it is capable of.
 
 ### Parent
 

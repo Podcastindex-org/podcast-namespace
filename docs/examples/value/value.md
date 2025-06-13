@@ -4,8 +4,6 @@
 , [Evan Feenstra](https://github.com/evanfeenstra) & [Paul Itoi](https://github.com/pitoi)</small><br>
 <small>September 1st, 2021</small>
 
-<br>
-
 ## Purpose
 
 Here we describe an additional "block" of XML that gives podcasters (and other media creators) a way to receive direct
@@ -20,8 +18,6 @@ describes (within the feed) where and how they would like payments to be sent ba
 of that media. The format is designed to be flexible enough to handle many scenarios of direct payment streaming. Even
 the use of fiat currency, if there is an API that is capable of interfacing as a receiver within this format.
 
-<br>
-
 ## Play to Pay
 
 This system can be thought of as Play-to-pay, rather than the traditional Pay-to-play paywall approach. When a
@@ -29,8 +25,6 @@ media listener (such as within a podcast app) presses the play button on an epis
 block, a compatible app will be expected to begin streaming micro-payments to the designated recipients on a time
 interval that makes sense for the app. The amount of each payment can be any amount the listener chooses, including
 zero. If the listener chooses not to pay to listen to this media, then the app can ignore the value block of that feed.
-
-<br>
 
 ## Payment Intervals
 
@@ -48,17 +42,11 @@ like this also helps to minimize the impact of transaction fees on the underlyin
 Note that playback speed is not a factor in this calculation. The "one minute payment interval" refers to the minutes
 that make up the total runtime of the content, thus all payment calculations are independent of playback speed.
 
-<div class="page"/>
-
-<br><br>
-
 ## Elements
 
 There are two elements that make up what we refer to as the "value block". They are a parent element that specifies the
 currency to use, and one or more child elements that specify who to pay using the currency and protocol described by the
 parent.
-
-<br>
 
 ### Value Element
 
@@ -67,8 +55,6 @@ transacting
 the payments, and a suggested amount denominated in the given cryptocurrency.
 
 This element can exist at either the `<channel>` or `<item>` level.
-
-<br>
 
 #### Structure:
 
@@ -83,15 +69,11 @@ This element can exist at either the `<channel>` or `<item>` level.
 </podcast:value>
 ```
 
-<br>
-
 #### Attributes:
 
 - `type` (required) This is the service slug of the cryptocurrency or protocol layer.
 - `method` (required) This is the transport mechanism that will be used.
 - `suggested` (optional) This is an optional suggestion on how much cryptocurrency to send with each payment.
-
-<br>
 
 #### Explanation:
 
@@ -131,10 +113,6 @@ the Lightning Network is a millisat, which is a thousandth of a sat.
 ></podcast:value>
 ```
 
-<br><br>
-
-<div class="page"/>
-
 ### Value Recipient Element
 
 The `valueRecipient` tag designates various destinations for payments to be sent to during consumption of the enclosed
@@ -144,8 +122,6 @@ in the `split` attribute.
 This element may only exist within a parent `<podcast:value>` element.
 
 There is no limit on how many `valueRecipient` elements can be present in a given `<podcast:value>` element.
-
-<br>
 
 #### Structure:
 
@@ -162,8 +138,6 @@ There is no limit on how many `valueRecipient` elements can be present in a give
         />
 ```
 
-<br>
-
 #### Attributes:
 
 - `name` (recommended) A free-form string that designates who or what this recipient is.
@@ -174,8 +148,6 @@ There is no limit on how many `valueRecipient` elements can be present in a give
 - `address` (required) This denotes the receiving address of the payee.
 - `split` (required) The number of shares of the payment this recipient will receive.
 - `fee` (optional) If this attribute is not specified, it is assumed to be false.
-
-<br>
 
 #### Explanation:
 
@@ -224,10 +196,6 @@ documented [in the list maintained by Satoshis Stream](https://github.com/satosh
 
 If your specific application would benefit from your own `customKey:customValue` pair which will be passed along from
 the player to your app, and for which nothing already exists, add your own.
-
-<br><br>
-
-<div class="page"/>
 
 ### Payment calculation
 
@@ -279,31 +247,27 @@ On a 190/152/38 split, each minute the payment calculation would be:
 
 - Share total: 380
 
-    - Recipient #1 gets a payment of: 50 sats (190 / 380 * 100)
-    - Recipient #2 gets a payment of: 40 sats (152 / 380 * 100)
-    - Recipient #3 gets a payment of: 10 sats (38 / 380 * 100)
+  - Recipient #1 gets a payment of: 50 sats (190 / 380 \* 100)
+  - Recipient #2 gets a payment of: 40 sats (152 / 380 \* 100)
+  - Recipient #3 gets a payment of: 10 sats (38 / 380 \* 100)
 
 If an app chooses to only make a payout once every 30 minutes of listening/watching, the calculation would be the same
 after multiplying
 the per-minute payment by 30:
 
-- Interval payout: 3000 sats (100 * 30)
+- Interval payout: 3000 sats (100 \* 30)
 
 - Shares total: 380
 
-    - Recipient #1 gets a payment of: 1500 sats (190 / 380 * 3000)
-    - Recipient #2 gets a payment of: 1200 sats (152 / 380 * 3000)
-    - Recipient #3 gets a payment of: 300 sats (38 / 380 * 3000)
+  - Recipient #1 gets a payment of: 1500 sats (190 / 380 \* 3000)
+  - Recipient #2 gets a payment of: 1200 sats (152 / 380 \* 3000)
+  - Recipient #3 gets a payment of: 300 sats (38 / 380 \* 3000)
 
 As shown above, the once per minute calculation does not have to actually be sent every minute. A longer payout period
 can be chosen. But,
 the once-per-minute nature of the payout still remains in order for listeners and creators to have an easy way to
 measure and calculate how much
 they will spend and charge.
-
-<br><br>
-
-<div class="page"/>
 
 ### Supported Currencies and Protocols
 
@@ -320,8 +284,6 @@ more robust and larger payments. However, it is still in beta and thus not
 widely implemented as of now.
 
 [AMP]: https://bitcoinops.org/en/topics/multipath-payments/
-
-<br>
 
 #### Lightning
 
@@ -358,8 +320,6 @@ When sending a payment containing application specific data, the client must use
 - There is at least one known shared node ([satoshis.stream](https://satoshis.stream/)) that requires, in addition to
   this specification, the inclusion of the TLV record with type `7629169`, as
   defined [here](blip-0010.md), in order to correctly route the payment to the corresponding receiver
-
-<br>
 
 ##### Example
 
@@ -485,8 +445,6 @@ and guest.
 </channel>
 ```
 
-<br>
-
 ### TLV Records and Extensions
 
 Lightning payments are performed using lightning messages as specified
@@ -500,32 +458,28 @@ found at the document [TLV record registry](https://github.com/satoshisstream/sa
 . In special, the section _Fields used in customKey / customValue Pairs_ documents the known use cases for
 the `customKey` and `customValue` attributes.
 
-<br>
-
 ### Payment Actions
 
 There are currently 3 payment "actions" that are defined in the BLIP-10 TLV extension that is embedded in the payment
-payload:  "stream", "boost" and "auto".
+payload: "stream", "boost" and "auto".
 
-* `stream` - This means the payment is a timed interval payment (i.e. - every minute) that is sent or queued while the
-             user is engaged in active listening/viewing of the content.
-* `boost`  - This means the payment is a user generated one-time payment that happens in response to a user initiated
-             action like a "Boost" button push, or some other clearly labeled payment initiation function.  These
-             types of payments can contain textual messages (i.e. - a boostagram).
-* `auto`   - This means the payment was an app initiated payment that recurs at a specific long-form interval such as 
-             weekly, monthly, yearly, etc.  The user configures an interval and payment amount in the app and the app
-             then sends that amount at the specified time when each interval passes.
-
-<br>
+- `stream` - This means the payment is a timed interval payment (i.e. - every minute) that is sent or queued while the
+  user is engaged in active listening/viewing of the content.
+- `boost` - This means the payment is a user generated one-time payment that happens in response to a user initiated
+  action like a "Boost" button push, or some other clearly labeled payment initiation function. These
+  types of payments can contain textual messages (i.e. - a boostagram).
+- `auto` - This means the payment was an app initiated payment that recurs at a specific long-form interval such as
+  weekly, monthly, yearly, etc. The user configures an interval and payment amount in the app and the app
+  then sends that amount at the specified time when each interval passes.
 
 ### Value Recipient Address Types
 
 There are a few different available recipient address types:
 
-* `node` - The public address of a node.  For instance, in the `lightning` value type this would represent a node's 
-           public address.
-* `lnaddress` - A so-called "lightning address", which takes the form of an email address that gets resolved into an 
-                options file which holds the underlying destinations for payment.  See the full document 
-                [here](lnaddress.md) for explanation.
+- `node` - The public address of a node. For instance, in the `lightning` value type this would represent a node's
+  public address.
+- `lnaddress` - A so-called "lightning address", which takes the form of an email address that gets resolved into an
+  options file which holds the underlying destinations for payment. See the full document
+  [here](lnaddress.md) for explanation.
 
 More recipient address types will be added in the future.
