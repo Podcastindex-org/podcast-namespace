@@ -19,9 +19,8 @@ protocols back into the hands of the open podcasting community.  A good overview
 * List of platforms and apps that currently implement some or all of these 
   tags: [Supporting Platforms and Apps](docs/element-support.md).
 * Example Feed: There is an example feed [example.xml](example.xml) in this repository showing the podcastindex 
-  namespace side by side with the Apple itunes namespace. * [Other recommendations](docs/other-recommendations.md) 
-  when creating RSS podcast feeds.
-
+  namespace side by side with the Apple itunes namespace.
+* [Other recommendations](docs/other-recommendations.md) when creating RSS podcast feeds.
 
 <br><br>
 
@@ -44,7 +43,7 @@ protocols back into the hands of the open podcasting community.  A good overview
 **Phase 6** - [Closed] Comment period closed on `6/1/2023` and [6 tags](#phase-6-closed-as-of-612023) were 
 **formalized**. 
 
-**Phase 7** - [Closed] Comment period closed on `7/1/2023` and 
+**Phase 7** - [Closed] Comment period closed on `7/1/2024` and 
 [the following](https://github.com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being 
 considered for formalization.  Two tags 
 [have already been](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) 
