@@ -27,27 +27,26 @@ protocols back into the hands of the open podcasting community.  A good overview
 
 ## Current Roadmap
 
-**Phase 1** - [Closed] Comment period closed on `11/15/2020` and [5 tags](#phase-1-closed-on-111520) were 
+**Phase 1** - [Closed] Comment period closed on `11/15/2020` and [5 tags](#phase-1) were 
 **formalized**.
 
-**Phase 2** - [Closed] Comment period closed on `1/31/2021` and [4 tags](#phase-2-closed-on-13121) were **formalized**.
+**Phase 2** - [Closed] Comment period closed on `1/31/2021` and [4 tags](#phase-2) were **formalized**.
 
-**Phase 3** - [Closed] Comment period closed on `6/1/2021` and [5 tags](#phase-3-closed-on-6121) were **formalized**.
+**Phase 3** - [Closed] Comment period closed on `6/1/2021` and [5 tags](#phase-3) were **formalized**.
 
-**Phase 4** - [Closed] Comment period closed on `12/1/2021` and [3 tags](#phase-4-closed-on-1212021) were 
+**Phase 4** - [Closed] Comment period closed on `12/1/2021` and [3 tags](#phase-4) were 
 **formalized**.
 
-**Phase 5** - [Closed] Comment period closed on `7/15/2022` and [2 tags](#phase-5-closed-as-of-7152022) were 
+**Phase 5** - [Closed] Comment period closed on `7/15/2022` and [2 tags](#phase-5) were 
 **formalized**.
 
-**Phase 6** - [Closed] Comment period closed on `6/1/2023` and [6 tags](#phase-6-closed-as-of-612023) were 
+**Phase 6** - [Closed] Comment period closed on `6/1/2023` and [6 tags](#phase-6) were 
 **formalized**. 
 
-**Phase 7** - [Closed] Comment period closed on `7/1/2024` and 
-[the following](https://github.com/Podcastindex-org/podcast-namespace/discussions/554) adoptions are being 
-considered for formalization.  Two tags 
-[have already been](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) 
-formalized.
+**Phase 7** - [Closed] Comment period closed on `7/1/2024` and [2 tags](#phase-7) were **formalized**.
+
+Beyond new tag adoption, more changes can be made during a phase such as errata, new attributes, new parent node 
+allowances, etc.  Please see the [Changes Made](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) thread for up to date information.
 
 <br><br>
 
@@ -143,7 +142,7 @@ to adoption, development and contribution.
 
 ## Element List
 
-### <u>Phase 1 (Closed on 11/15/20)</u>
+### <u>Phase 1</u>
 
 <br>
 
@@ -158,7 +157,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 <br>
 
-### <u>Phase 2 (Closed on 1/31/21)</u>
+### <u>Phase 2</u>
 
 <br>
 
@@ -173,7 +172,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 <br>
 
 
-### <u>Phase 3 (Closed on 6/1/21)</u>
+### <u>Phase 3</u>
 
 <br>
 
@@ -190,7 +189,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 <br>
 
 
-## <u>Phase 4 (Closed on 12/1/2021)</u>
+## <u>Phase 4</u>
 
 <br>
 
@@ -204,7 +203,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 <br>
 
 
-## <u>Phase 5 (Closed as of 7/15/2022)</u>
+## <u>Phase 5</u>
 
 <br>
 
@@ -216,7 +215,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 <br>
 
-## <u>Phase 6 (Closed as of 6/1/2023)</u>
+## <u>Phase 6</u>
 
 <br>
 
@@ -232,7 +231,7 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 <br>
 
-## <u>Phase 7 (Closed as of 6/1/2024)</u>
+## <u>Phase 7</u>
 
 <br>
 
