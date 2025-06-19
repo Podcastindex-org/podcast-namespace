@@ -4,7 +4,7 @@
 
 This tag is used to link to a transcript or closed captions file. Multiple tags can be present for multiple transcript formats.
 
-Detailed file format information and example files are [here](../../transcripts/transcripts.md).
+Detailed file format information and example files are [here](../examples/transcripts/transcripts.md).
 
 ### Parent
 

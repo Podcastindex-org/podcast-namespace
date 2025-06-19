@@ -2,9 +2,9 @@
 
 `<podcast:publisher>`
 
-This element allows a podcast feed to link to it's "publisher feed" parent. This is useful when a parent publishing entity wants to attest ownership over all of the podcast feeds it owns/publishes. This element must contain exactly one `<podcast:remoteItem medium="publisher">` element pointing to the publisher feed. For widest compatibility, it is highly recommended to use the `feedUrl` attribute of the [`<podcast:remoteItem>`](remoteItem.md) element in this capacity.
+This element allows a podcast feed to link to it's "publisher feed" parent. This is useful when a parent publishing entity wants to attest ownership over all of the podcast feeds it owns/publishes. This element must contain exactly one `<podcast:remoteItem medium="publisher">` element pointing to the publisher feed. For widest compatibility, it is highly recommended to use the `feedUrl` attribute of the [`<podcast:remoteItem>`](remote-item.md) element in this capacity.
 
-For complete implementation details regarding publisher feeds and how to create them, please see the full publisher feed [documentation](../../publishers/publishers.md) and the `publisher` medium [here](./medium.md#medium).
+For complete implementation details regarding publisher feeds and how to create them, please see the full publisher feed [documentation](../examples/publishers/publishers.md) and the `publisher` medium [here](./medium.md).
 
 ### Parent
 

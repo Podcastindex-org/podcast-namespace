@@ -8,7 +8,7 @@ This element may only exist within a parent [`<podcast:value>`](value.md) elemen
 
 There is no limit on how many `valueRecipient` elements can be present in a given [`<podcast:value>`](value.md) element.
 
-This is a complex tag, so implementors are HIGHLY encouraged to read the companion [document](https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md) for a complete understanding of how this tag works and what it is capable of.
+This is a complex tag, so implementors are HIGHLY encouraged to read the companion [document](../examples/value/value.md) for a complete understanding of how this tag works and what it is capable of.
 
 ### Parent
 

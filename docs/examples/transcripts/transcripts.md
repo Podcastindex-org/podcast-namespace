@@ -2,13 +2,13 @@
 
 This is the initial spec for the podcast transcript format. There are four possible formats detailed below.
 
-Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 
-are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/), 
+Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/),
 to ensure that transcripts are available within browser-based players.
 
-* **Want to support only one format?** WebVTT is used by Apple Podcasts for ingest, and also natively supported by web browsers. Because the WebVTT format is the most flexible, it's an ideal choice if you can only support one format.
+- **Want to support only one format?** WebVTT is used by Apple Podcasts for ingest, and also natively supported by web browsers. Because the WebVTT format is the most flexible, it's an ideal choice if you can only support one format.
 
-The examples given below are just for convenience.  In production you should ensure you are conforming to the actual spec for each format as defined in its own documentation.
+The examples given below are just for convenience. In production you should ensure you are conforming to the actual spec for each format as defined in its own documentation.
 
 ## WebVTT
 
@@ -21,7 +21,8 @@ While there is no defined maximum line-length, to ensure that displaying WebVTT 
 The full specification includes formatting features; these are typically not used in podcasting applications.
 
 #### Snippet:
-```
+
+```vtt
 WEBVTT
 
 00:00:00.000 --> 00:00:05.000
@@ -46,13 +47,13 @@ And the enhanced monetization options are a game-changer.
 <v John>Couldn't agree more, Tom. The future looks bright.
 ```
 
-Example file:  [example.vtt](example.vtt)
+Example file: [example.vtt](example.vtt)
 
 #### Web browser support example
 
 This example code will add an audio player on a web page, and display the accompanying WebVTT file as the audio plays. (Note that this basic code will not show speaker names).
 
-```
+```html
 <div style="height:111px;text-align:center;">
   <audio id="vttplayer" controls preroll="none" src="https://podnews.net/audio/podnews240125.mp3?_from=P20spec">
   <track default src="https://podnews.net/audio/podnews240125.mp3.vtt">
@@ -70,8 +71,6 @@ document.getElementById('vttplayer').textTracks[0].addEventListener('cuechange',
 </script>
 ```
 
-<br><br>
-
 ## SRT
 
 The SRT format was designed for video captions but provides a suitable solution for podcast transcripts. The SRT format contains medium-fidelity timestamps and are a
@@ -80,12 +79,14 @@ popular export option from transcription services. An SRT file can be generated 
 SRT transcripts used for podcasts should adhere to the following specifications:
 
 #### Properties:
+
 - Max number of lines: 2
 - Max characters per line: 32
 - Speaker names (optional): Start a new card when the speaker changes. Include the speaker's name, followed by a colon.
 
 #### Snippet:
-```
+
+```srt
 1
 00:00:00,000 --> 00:00:02,760
 Sarah: In today's episode,
@@ -122,14 +123,14 @@ careers podcast. My question is,
 do we need a podcast trailer?
 ```
 
-Example file:  [example.srt](example.srt)
-
+Example file: [example.srt](example.srt)
 
 ## JSON
 
 The JSON representation is a flexible format that accomodates various degrees of fidelity in a concise way. At the most precise, it enables word-by-word highlighting. This format for podcast transcripts should adhere to the following specifications.
 
 #### Elements included in this representation:
+
 - `<version>`: The version of JSON transcript specification
 - `<segments>`: An array of dialogue elements (segments)
 - `<speaker>`: Speaker
@@ -138,6 +139,7 @@ The JSON representation is a flexible format that accomodates various degrees of
 - `<body>`: Dialogue content
 
 #### Snippet:
+
 ```json
 {
   "version": "1.0.0",
@@ -163,7 +165,7 @@ The JSON representation is a flexible format that accomodates various degrees of
     {
       "speaker": "Darth Vader",
       "startTime": 2.25,
-      "endTime": 2.50,
+      "endTime": 2.5,
       "body": "father.\n"
     },
     {
@@ -176,29 +178,30 @@ The JSON representation is a flexible format that accomodates various degrees of
 }
 ```
 
-Example file:  [example.json](example.json)
-
-<br><br>
+Example file: [example.json](example.json)
 
 ## HTML
 
 The HTML transcript format provides a solution when a transcript is available but no or limited timecode data is available. HTML transcript files are considered low-fidelity and are designed to serve as an accessibility aid and provide searchable episode content. The HTML format used for podcast transcripts should adhere to the following specifications.
 
 #### HTML tags used:
+
 - `<cite>`: Name of the speaker (if available)
 - `<time>`: Start time of monologue (if available)
 - `<p>`: Content of monologue
 
 #### Snippet:
+
 ```html
 <cite>Kevin:</cite>
 <time>0:00</time>
-<p>We have an update planned where we would like to give the ability to upload an artwork file for these videos</p>
+<p>
+  We have an update planned where we would like to give the ability to upload an
+  artwork file for these videos
+</p>
 <cite>Alban :</cite>
 <time>0:09</time>
 <p>You're triggering Tom right now with a hey, here's a cool feature.</p>
 ```
 
-Example file:  [example.html](example.html)
-
-<br><br>
+Example file: [example.html](example.html)

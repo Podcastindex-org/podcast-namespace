@@ -2,15 +2,15 @@
 
 `<podcast:chat>`
 
-This element allows a podcaster to attach information to either the `<channel>`, `<item>` or [`<podcast:liveItem>`](liveItem.md) about where the "official" chat for either the podcast or a specific episode or live event is to be found. Just like [`<podcast:socialInteract>`](socialInteract.md) functions for social media, the `<podcast:chat>` tag will function for ephemeral chat. There are many protocols in use across the internet for chat based communication. This tag is meant to be flexible enough to adapt to whichever protocol the podcaster wants to use.
+This element allows a podcaster to attach information to either the `<channel>`, `<item>` or [`<podcast:liveItem>`](live-item.md) about where the "official" chat for either the podcast or a specific episode or live event is to be found. Just like [`<podcast:socialInteract>`](social-interact.md) functions for social media, the `<podcast:chat>` tag will function for ephemeral chat. There are many protocols in use across the internet for chat based communication. This tag is meant to be flexible enough to adapt to whichever protocol the podcaster wants to use.
 
-This element's presence at a particular level governs how it should be treated. If found at the `<item>` or [`<podcast:liveItem>`](liveItem.md) level, this should be treated as the information for that specific episode, overriding what is at the `<channel>` level. If this tag is found at the `<channel>` level, it would be considered the chat for the entire podcast and is recommended to be an "always on" chat room experience.
+This element's presence at a particular level governs how it should be treated. If found at the `<item>` or [`<podcast:liveItem>`](live-item.md) level, this should be treated as the information for that specific episode, overriding what is at the `<channel>` level. If this tag is found at the `<channel>` level, it would be considered the chat for the entire podcast and is recommended to be an "always on" chat room experience.
 
-If a podcast has an "always on" style chat service it is recommended to link that at the `<channel>` level and do not use the `<podcast:chat>` tag at the `<item>` or [`<podcast:liveItem>`](liveItem.md) level.
+If a podcast has an "always on" style chat service it is recommended to link that at the `<channel>` level and do not use the `<podcast:chat>` tag at the `<item>` or [`<podcast:liveItem>`](live-item.md) level.
 
 ### Parent
 
-`<channel>` or `<item>` or [`<podcast:liveItem>`](liveItem.md)
+`<channel>` or `<item>` or [`<podcast:liveItem>`](live-item.md)
 
 ### Count
 
@@ -19,7 +19,7 @@ Single
 ### Attributes
 
 - `server` (required) The fqdn of a chat server that serves as the "bootstrap" server to connect to.
-- `protocol` (required) The [protocol](../../chatprotocols.txt) in use on the server.
+- `protocol` (required) The [protocol](../chatprotocols.txt) in use on the server.
 - `accountId` (recommended) The account id of the podcaster on the server or platform being connected to.
 - `space` (optional) Some chat systems have a notion of a chat "space" or "room" or "topic". This attribute will serve that purpose.
 

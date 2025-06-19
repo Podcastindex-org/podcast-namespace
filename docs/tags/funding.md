@@ -6,7 +6,7 @@ This tag lists possible donation/funding links for the podcast. The content of t
 
 ### Parent
 
-`<channel>`, `<item>` or [`<podcast:liveItem>`](liveItem.md)
+`<channel>`, `<item>` or [`<podcast:liveItem>`](live-item.md)
 
 ### Count
 
