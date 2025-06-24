@@ -2,7 +2,7 @@
 
 `<podcast:images>`
 
-**Important: This tag is now deprecated.  The new [podcast:image](image.md) tag should be used instead.**
+*Important: This tag is now deprecated.  The new [podcast:image](image.md) tag should be used instead*
 
 This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or channel level. The syntax is borrowed from the HTML5 [srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attributes) syntax. It allows for describing multiple image sources with width and pixel hints directly in the attribute. Although the HTML5 `srcset` attribute allows relative urls, absolute urls are required in this tag - since the feed url may not represent an appropriate base url for relativization.
 
