@@ -1,12 +1,14 @@
-## Image
-`<podcast:image>`<br>
+# Image
+
+`<podcast:image>`
+
 This tag allows for the delivering of images of various sizes and use cases.  It is cross-compatible with the `<itunes:image>` tag but expands the use cases for delivering more than just square channel or episode art.
 
 ### Parent
-&nbsp; `<channel>` or `<item>` or `<podcast:liveItem>`
+`<channel>` or `<item>` or `<podcast:liveItem>`
 
 ### Count
-&nbsp; Multiple
+Multiple
 
 ### Attributes
 - href (required): The URL to the media you want to embed.
@@ -38,8 +40,6 @@ Anyone may define a token and its requirements. For instance, an app might defin
 | cover | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
 | publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/896-artwork-requirements#channels) |
 | circular | Recommended for times when an image is expected to be cropped to a full circle. This should be a "circle safe" image. |
-
-<br><br>
 
 ## Examples
 
