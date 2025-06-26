@@ -45,6 +45,8 @@ protocols back into the hands of the open podcasting community.  A good overview
 
 **Phase 7** - [Closed] Comment period closed on `7/1/2024` and [2 tags](#phase-7) were **formalized**.
 
+**Phase 8** - [Open] Discussions are [open](https://github.com/Podcastindex-org/podcast-namespace/discussions/671) for new proposals and changes...
+
 Beyond new tag adoption, more changes can be made during a phase such as errata, new attributes, new parent node 
 allowances, etc.  Please see the [Changes Made](https://github.com/Podcastindex-org/podcast-namespace/discussions/categories/announcements-changes-made) thread for up to date information.
 
