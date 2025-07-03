@@ -1,5 +1,7 @@
 # Image
-by <author>[Nathan Gathright](https://nathangathright.com/)</author>
+<small>by <author>[Nathan Gathright](https://nathangathright.com/)</author></small>
+
+<br>
 
 `<podcast:image>`
 
