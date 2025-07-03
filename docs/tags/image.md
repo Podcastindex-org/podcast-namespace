@@ -1,4 +1,5 @@
 # Image
+by <author>[Nathan Gathright](https://nathangathright.com/)</author>
 
 `<podcast:image>`
 
@@ -20,7 +21,7 @@ Multiple
 - purpose (optional): An unordered set of case-insensative, space-separated tokens following the equivalent [W3C syntax](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens). This value should not exceed 128 characters. This allows podcasters to indicate the suggested uses of this media.
 
 ### Notes
-The only required attribute is `href`, specifying the url of the asset being delivered.  For accessibility, `alt` is also encouraged.
+The only required attribute is `href`, specifying the url of the asset being delivered.  If no further attributes are defined, such as `aspect-ratio` or `purpose`, the image is assumed to be square (1:1).  For accessibility, `alt` is also encouraged.
 
 The `aspect-ratio` and `width` are also encouraged, as they give app developers important information about how they can display your image within their UI.  A `height` attribute is also available, but not critical if `aspect-ratio` and `width` are provided.
 
@@ -40,6 +41,9 @@ Anyone may define a token and its requirements. For instance, an app might defin
 | cover | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
 | publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/896-artwork-requirements#channels) |
 | circular | Recommended for times when an image is expected to be cropped to a full circle. This should be a "circle safe" image. |
+
+### Demo Tool
+In addition to the examples below, a [demo tool](https://nathangathright.github.io/podcastimage/) is provided to help get started with a few common image tag scenarios.  The tool is provided by Nathan Gathright. 
 
 ## Examples
 
