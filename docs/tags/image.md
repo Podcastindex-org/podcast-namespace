@@ -106,7 +106,7 @@ Standard square image.  Assumed to be 1/1 aspect ratio intended for either podca
 ### Using `purpose` to target a specific platform (ex. [Apple](https://podcasters.apple.com/support/5522-show-hero-template))
 ```xml
 <podcast:image
-  purpose="apple/hero"
+  purpose="apple/showcase-hero"
   width="4320"
   href="https://example.com/images/today_explained.jpg"
 />
