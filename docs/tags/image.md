@@ -178,6 +178,7 @@ Multiple image tags in the feed allow apps to select from multiple aspect ratios
 ### Credits
 
 * [Nathan Gathright](https://nathangathright.com/) - <small>Author</small>
+* [Russell Harrower](https://github.com/redimongo) - <small>Contributor</small>
 * [James Cridland](https://james.cridland.net/) - <small>Contributor</small>
 * [Daniel J. Lewis](https://danieljlewis.com/) - <small>Contributor</small>
 * [Dave Jones](https://davejones.blog) - <small>Contributor</small>
