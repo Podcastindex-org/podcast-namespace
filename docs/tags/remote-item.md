@@ -16,11 +16,11 @@ Multiple
 
 ### Attributes
 
-- **feedGuid** (required) The [`<podcast:guid>`](guid.md) of the remote feed being pointed to.
-- **feedUrl** (optional) The url of the remote feed being pointed to.
-- **itemGuid** (optional) If this remote item element is intended to point to an `<item>` in the remote feed, this attribute should contain the value of the `<guid>` of that `<item>`.
-- **medium** (optional) If the feed being pointed to is not of medium type 'podcast', this attribute should contain it's [`<podcast:medium>`](medium.md) type from the [list](./medium.md#medium) of types available in this document. The reason this is helpful is to give the app a heads up on what type of data this is expected to be since that may affect the way it approaches fetch and display.
-- **title** (optional) A string that represents the title of the remote item. The purpose of this attribute is to give a hint to apps so that they can display the title without having to do a remote lookup.
+- `feedGuid` **(required)**: The [`<podcast:guid>`](guid.md) of the remote feed being pointed to.
+- `feedUrl` (optional): The url of the remote feed being pointed to.
+- `itemGuid` (optional): If this remote item element is intended to point to an `<item>` in the remote feed, this attribute should contain the value of the `<guid>` of that `<item>`.
+- `medium` (optional): If the feed being pointed to is not of medium type 'podcast', this attribute should contain it's [`<podcast:medium>`](medium.md) type from the [list](./medium.md#medium) of types available in this document. The reason this is helpful is to give the app a heads up on what type of data this is expected to be since that may affect the way it approaches fetch and display.
+- `title` (optional): A string that represents the title of the remote item. The purpose of this attribute is to give a hint to apps so that they can display the title without having to do a remote lookup.
 
 ### Examples
 

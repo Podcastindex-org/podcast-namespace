@@ -18,7 +18,7 @@ This is a free form string supplied by the creator which they expect to be displ
 
 ### Attributes
 
-- **url (required):** The URL to be followed to fund the podcast.
+- `url` **(required)**: The URL to be followed to fund the podcast.
 
 ### Examples
 

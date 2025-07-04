@@ -30,9 +30,9 @@ The function of `<guid>` within a live item tag is the same as it is within a re
 
 ### Attributes
 
-- **status** (required) A string that must be one of `pending`, `live` or `ended`.
-- **start** (required) A string representing an ISO8601 timestamp that denotes the time when the stream is intended to start.
-- **end** (recommended) A string representing an ISO8601 timestamp that denotes the time when the stream is intended to end.
+- `status` **(required)**: A string that must be one of `pending`, `live` or `ended`.
+- `start` **(required)**: A string representing an ISO8601 timestamp that denotes the time when the stream is intended to start.
+- `end` (recommended): A string representing an ISO8601 timestamp that denotes the time when the stream is intended to end.
 
 The `start` and `end` attributes denote when the live stream "should" start and end. But, real life dictates that those times might not be adhered to. Apps are therefore encouraged not to rely solely on those times as anything more than an approximation. The canonical way to know if a stream has started is with the `status` attribute. If `status` is "live" then the stream has started.
 

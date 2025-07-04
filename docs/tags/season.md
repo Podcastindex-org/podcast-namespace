@@ -18,7 +18,7 @@ The node value is an integer, and represents the season "number". It is required
 
 ### Attributes
 
-- **name:** (optional) - This is the "name" of the season. If this attribute is present, applications are free to **not** show the season number to the end user, and may use it simply for chronological sorting and grouping purposes.
+- `name` (optional): This is the "name" of the season. If this attribute is present, applications are free to **not** show the season number to the end user, and may use it simply for chronological sorting and grouping purposes.
 
 Please do not exceed `128 characters` for the name attribute.
 
