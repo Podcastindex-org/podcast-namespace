@@ -243,6 +243,16 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 - **\<podcast:publisher>** <br>
 - **\<podcast:chat>** <br>
 
+<br>
+
+## <u>Phase 8</u>
+
+<br>
+
+The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document
+located [here](docs/1.0.md).  Please see that file for full implementation details.
+
+- **\<podcast:image>** <br>
 
 <br>
 
