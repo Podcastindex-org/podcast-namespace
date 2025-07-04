@@ -110,7 +110,6 @@ Standard square image.  Assumed to be 1/1 aspect ratio intended for either podca
 ```xml
 <podcast:image
   purpose="apple/showcase-hero"
-  width="4320"
   href="https://example.com/images/today_explained.jpg"
 />
 ```
