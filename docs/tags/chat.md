@@ -18,10 +18,10 @@ Single
 
 ### Attributes
 
-- `server` (required) The fqdn of a chat server that serves as the "bootstrap" server to connect to.
-- `protocol` (required) The [protocol](../chatprotocols.txt) in use on the server.
-- `accountId` (recommended) The account id of the podcaster on the server or platform being connected to.
-- `space` (optional) Some chat systems have a notion of a chat "space" or "room" or "topic". This attribute will serve that purpose.
+- `server` **(required)**: The fqdn of a chat server that serves as the "bootstrap" server to connect to.
+- `protocol` **(required)**: The [protocol](../chatprotocols.txt) in use on the server.
+- `accountId` (recommended): The account id of the podcaster on the server or platform being connected to.
+- `space` (optional): Some chat systems have a notion of a chat "space" or "room" or "topic". This attribute will serve that purpose.
 
 ### Example (IRC):
 

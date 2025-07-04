@@ -18,7 +18,7 @@ The node value is a decimal number. It is required.
 
 ### Attributes
 
-- **display:** (optional) - If this attribute is present, podcast apps and aggregators are encouraged to show its value instead of the purely numerical node value. This attribute is a string.
+- `display` (optional): If this attribute is present, podcast apps and aggregators are encouraged to show its value instead of the purely numerical node value. This attribute is a string.
 
 The episode numbers are decimal, so numbering such as `100.5` is acceptable if there was a special mini-episode published between two other episodes. In that scenario, the number would help with proper chronological sorting, while the `display` attribute could specify an alternate special "number" (a moniker) to display for the episode in a podcast player app UI.
 

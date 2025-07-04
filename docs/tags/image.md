@@ -11,13 +11,13 @@ This tag allows for the delivering of images of various sizes and use cases.  It
 Multiple
 
 ### Attributes
-- href (required): The URL to the media you want to embed.
-- alt (recommended): A clear and concise accessibility focused text replacement for the image’s content.
-- aspect-ratio (recommended): A ratio value such as 1/1, 16/9, 4/1 following the equivalent [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio). This allows podcasters to provide multiple art directions for the same media.
-- width (recommended): The width of the asset in pixels.
-- height (optional): The height of the asset in pixels.
-- type (optional): Mime type of the media such as image/jpeg or video/mp4.
-- purpose (optional): An unordered set of case-insensative, space-separated tokens following the equivalent [W3C syntax](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens). This value should not exceed 128 characters. This allows podcasters to indicate the suggested uses of this media.
+- `href` **(required)**: The URL to the media you want to embed.
+- `alt` (recommended): A clear and concise accessibility focused text replacement for the image’s content.
+- `aspect-ratio` (recommended): A ratio value such as 1/1, 16/9, 4/1 following the equivalent [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio). This allows podcasters to provide multiple art directions for the same media.
+- `width` (recommended): The width of the asset in pixels.
+- `height` (optional): The height of the asset in pixels.
+- `type` (optional): Mime type of the media such as image/jpeg or video/mp4.
+- `purpose` (optional): An unordered set of case-insensative, space-separated tokens following the equivalent [W3C syntax](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens). This value should not exceed 128 characters. This allows podcasters to indicate the suggested uses of this media.
 
 ### Notes
 The only required attribute is `href`, specifying the url of the asset being delivered.  If no further attributes are defined, such as `aspect-ratio` or `purpose`, the image is assumed to be square (1:1).  For accessibility, `alt` is also encouraged.

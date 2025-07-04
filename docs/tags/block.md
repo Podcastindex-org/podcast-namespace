@@ -22,7 +22,7 @@ Multiple
 
 ### Attributes
 
-- **id** (optional) A single entry from the [service slug list](https://github.com/Podcastindex-org/podcast-namespace/blob/main/serviceslugs.txt).
+- `id` (optional): A single entry from the [service slug list](https://github.com/Podcastindex-org/podcast-namespace/blob/main/serviceslugs.txt).
 
 ### Node value
 

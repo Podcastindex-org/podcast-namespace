@@ -18,7 +18,7 @@ The node value must be "yes" or "no".
 
 ### Attributes
 
-- **owner (optional):** The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations. This could be a public email or a virtual email address at the hosting provider that redirects to the owner's true email address.
+- `owner` (optional): The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations. This could be a public email or a virtual email address at the hosting provider that redirects to the owner's true email address.
 
 ### Examples
 

@@ -20,15 +20,15 @@ The node value must be one or more [`<podcast:source>`](source.md) elements that
 
 ### Attributes
 
-- **type:** (required) Mime type of the media asset.
-- **length:** (recommended) Length of the file in bytes.
-- **bitrate:** (optional) Average encoding bitrate of the media asset, expressed in bits per second.
-- **height:** (optional) Height of the media asset for video formats.
-- **lang:** (optional) An [IETF language tag (BCP 47)](https://en.wikipedia.org/wiki/BCP_47) code identifying the language of this media.
-- **title:** (optional) A human-readable string identifying the name of the media asset. Should be limited to 32 characters for UX.
-- **rel:** (optional) Provides a method of offering and/or grouping together different media elements. If not set, or set to "default", the media will be grouped with the enclosure and assumed to be an alternative to the enclosure's encoding/transport. This attribute can and should be the same for items with the same content encoded by different means. Should be limited to 32 characters for UX.
-- **codecs:** (optional) An [RFC 6381](https://tools.ietf.org/html/rfc6381) string specifying the codecs available in this media.
-- **default:** (optional) Boolean specifying whether or not the given media is the same as the file from the enclosure element and should be the preferred media element. The primary reason to set this is to offer alternative transports for the enclosure. If not set, this should be assumed to be false.
+- `type` (**required**): Mime type of the media asset.
+- `length` (recommended): Length of the file in bytes.
+- `bitrate` (optional): Average encoding bitrate of the media asset, expressed in bits per second.
+- `height` (optional): Height of the media asset for video formats.
+- `lang` (optional): An [IETF language tag (BCP 47)](https://en.wikipedia.org/wiki/BCP_47) code identifying the language of this media.
+- `title` (optional): A human-readable string identifying the name of the media asset. Should be limited to 32 characters for UX.
+- `rel` (optional): Provides a method of offering and/or grouping together different media elements. If not set, or set to "default", the media will be grouped with the enclosure and assumed to be an alternative to the enclosure's encoding/transport. This attribute can and should be the same for items with the same content encoded by different means. Should be limited to 32 characters for UX.
+- `codecs` (optional): An [RFC 6381](https://tools.ietf.org/html/rfc6381) string specifying the codecs available in this media.
+- `default` (optional): Boolean specifying whether or not the given media is the same as the file from the enclosure element and should be the preferred media element. The primary reason to set this is to offer alternative transports for the enclosure. If not set, this should be assumed to be false.
 
 ### Examples
 

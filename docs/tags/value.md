@@ -22,9 +22,9 @@ The node value must be one or more [`<podcast:valueRecipient>`](value-recipient.
 
 ### Attributes
 
-- **type:** (required) This is the service slug of the cryptocurrency or protocol layer.
-- **method:** (required) This is the transport mechanism that will be used.
-- **suggested:** (optional) This is an optional suggestion on how much cryptocurrency to send with each payment.
+- `type` **(required)**: This is the service slug of the cryptocurrency or protocol layer.
+- `method` **(required)**: This is the transport mechanism that will be used.
+- `suggested` (optional): This is an optional suggestion on how much cryptocurrency to send with each payment.
 
 ### Examples
 
