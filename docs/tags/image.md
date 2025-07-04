@@ -175,7 +175,7 @@ Multiple image tags in the feed allow apps to select from multiple aspect ratios
 />
 ```
 
-### Attribution
+### Credits
 
 * [Nathan Gathright](https://nathangathright.com/) - <small>Author</small>
 * [James Cridland](https://james.cridland.net/) - <small>Contributor</small>
