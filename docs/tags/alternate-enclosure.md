@@ -20,7 +20,7 @@ The node value must be one or more [`<podcast:source>`](source.md) elements that
 
 ### Attributes
 
-- `type` (**required**): Mime type of the media asset.
+- `type` **(required)**: Mime type of the media asset.
 - `length` (recommended): Length of the file in bytes.
 - `bitrate` (optional): Average encoding bitrate of the media asset, expressed in bits per second.
 - `height` (optional): Height of the media asset for video formats.
