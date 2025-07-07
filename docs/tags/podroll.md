@@ -26,7 +26,7 @@ The node value must be one or more [`<podcast:remoteItem>`](remote-item.md) elem
 </podcast:podroll>
 ```
 
-Above, the simplest way to use a podroll, using the [one mandatory value for the `remoteItem`](remoteItem.md).
+Above, the simplest way to use a podroll, using the [one mandatory value for the `remoteItem`](remote-item.md).
 
 ```xml
 <podcast:podroll>
