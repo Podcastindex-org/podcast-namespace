@@ -18,8 +18,8 @@ This is a free form string from the podcast creator to specify a title for the s
 
 ### Attributes
 
-- **startTime (required):** The time where the soundbite begins
-- **duration (required):** How long is the soundbite (recommended between 15 and 120 seconds)
+- `startTime` **(required)**: The time where the soundbite begins
+- `duration` **(required)**: How long is the soundbite (recommended between 15 and 120 seconds)
 
 ### Examples
 

@@ -29,12 +29,12 @@ define the actual location parameters.
 
 ### Attributes
 
-- **rel:** (recommended) The `rel` attribute can contain one of the following possible values:
+- `rel` (recommended): The `rel` attribute can contain one of the following possible values:
   - `"subject"` (default) - The location refers to what/where the content is about.
   - `"creator"` - The location refers to where the content was recorded or produced.
-- **geo:** (recommended) A latitude and longitude in geoURI form, following [RFC5870](https://datatracker.ietf.org/doc/html/rfc5870) (i.e. "geo:30.2672,97.7431").
-- **osm:** (recommended) The [OpenStreetMap](https://www.openstreetmap.org/#map=13/41.39239/2.14036) identifier of this place. Made by taking the first character of the [OSM object type](https://locationiq.com/glossary/osm-type) (Node, Way, Relation), followed by the ID. (i.e. "R113314")
-- **country:** (recommended) A two-letter code for the country, following [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+- `geo` (recommended): A latitude and longitude in geoURI form, following [RFC5870](https://datatracker.ietf.org/doc/html/rfc5870) (i.e. "geo:30.2672,97.7431").
+- `osm` (recommended): The [OpenStreetMap](https://www.openstreetmap.org/#map=13/41.39239/2.14036) identifier of this place. Made by taking the first character of the [OSM object type](https://locationiq.com/glossary/osm-type) (Node, Way, Relation), followed by the ID. (i.e. "R113314")
+- `country` (recommended): A two-letter code for the country, following [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 
 > [!NOTE]
 > While all elements are "recommended", **the location tag works best when all elements are populated.** The [implementation document](../examples/location/location.md) goes into more detail. An example location generator (entirely in JavaScript) is [over here](https://jamescridland.github.io/podcast-location-generator/).

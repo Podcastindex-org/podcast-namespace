@@ -18,11 +18,11 @@ Multiple
 
 ### Attributes
 
-- **protocol** (required) The [protocol](https://github.com/Podcastindex-org/podcast-namespace/blob/main/socialprotocols.txt) in use for interacting with the comment root post.
-- **uri** (required) The uri/url of root post comment.
-- **accountId** (recommended) The account id (on the commenting platform) of the account that created this root post.
-- **accountUrl** (optional) The public url (on the commenting platform) of the account that created this root post.
-- **priority** (optional) When multiple socialInteract tags are present, this integer gives order of priority. A lower number means higher priority.
+- `protocol` **(required)**: The [protocol](https://github.com/Podcastindex-org/podcast-namespace/blob/main/socialprotocols.txt) in use for interacting with the comment root post.
+- `uri` **(required)**: The uri/url of root post comment.
+- `accountId` (recommended): The account id (on the commenting platform) of the account that created this root post.
+- `accountUrl` (optional): The public url (on the commenting platform) of the account that created this root post.
+- `priority` (optional): When multiple socialInteract tags are present, this integer gives order of priority. A lower number means higher priority.
 
 Example (simple):
 
