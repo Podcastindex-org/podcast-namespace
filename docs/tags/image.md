@@ -41,8 +41,8 @@ Anyone may define a token and its requirements. For instance, an app might defin
 |-|-|-|
 | artwork | Recommended for representing the show/episode. Should contain your show name and key art. | [Apple’s show artwork](https://podcasters.apple.com/support/896-artwork-requirements#shows) |
 | social | Recommended for social preview images. Should contain a landscape version of your artwork. | [Meta’s OG:image](https://developers.facebook.com/docs/sharing/webmasters/images/) |
-| canvas | Recommended for immersive Now Playing screens. Should contain your artwork and expect to be overlaid with UI elements. | [Apple’s Full Page Show Art](https://podcasters.apple.com/support/866-promotional-artwork#show-tall)<br />[Spotify’s Canvas](https://support.spotify.com/us/artists/article/canvas-guidelines/) |
-| cover | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
+| canvas | Recommended for immersive Now Playing screens. Should contain your artwork and expect to be overlaid with UI elements. | [Apple’s Full Page Show Art](https://podcasters.apple.com/support/866-promotional-artwork#show-tall)<br/>[Spotify’s Canvas](https://support.spotify.com/us/artists/article/canvas-guidelines/) |
+| banner | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
 | publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/896-artwork-requirements#channels) |
 | circular | Recommended for times when an image is expected to be cropped to a full circle. This should be a "circle safe" image. |
 
