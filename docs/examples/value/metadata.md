@@ -54,6 +54,9 @@ encodeURIComponent({
   "split": 0.25, // the split as a decimal percentage
   "message": "Great episode!", // message (optional)
 
+  "app_name": "Fountain", // (recommended)
+  "app_version": "1.3.10", // (optional)
+
   "sender_id": "IIaS9X2JuH75yvrRcFoL", // (optional)
   "sender_name": "oscar@fountain.fm", // (optional)
 
