@@ -42,11 +42,11 @@ The `rss::payment` metadata spec uses a prefix in the payment description field,
 
 `rss::payment::boost https://fountain.fm/show/2JCkApiUwyBj2eOG7JJI?payment=DBBhBwUise1bcfoHRCC3 Great episode!`
 
-As well as displaying the episode content, the url (https://fountain.fm/show/2JCkApiUwyBj2eOG7JJI?payment=DBBhBwUise1bcfoHRCC3) will also return an `x-rss-payment` http header, that contains the full structured metadata for the payment as a JSON string:
+As well as displaying the episode content, the url (https://fountain.fm/show/2JCkApiUwyBj2eOG7JJI?payment=DBBhBwUise1bcfoHRCC3) will also return an `x-rss-payment` http header, that contains the full structured metadata for the payment as a URI encoded JSON string:
 
-```jsonc
-// `x-rss-payment` response header
-{
+```js
+// `x-rss-payment` response header encoded as a uri component
+encodeURIComponent({
   "id": "DBBhBwUise1bcfoHRCC3", // payment id (optional)
   "group": "EoL2Qp52RMOSiF1rmGGs", // payment group id (optional)
   
@@ -75,7 +75,7 @@ As well as displaying the episode content, the url (https://fountain.fm/show/2JC
   "remote_feed_guid": "",
   "remote_item_guid": "",
   "remote_publisher_guid": ""
-}
+})
 ```
  
 ---
