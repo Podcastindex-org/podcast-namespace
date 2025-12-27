@@ -45,7 +45,7 @@ define the actual location parameters.
 
 ```xml
 <podcast:location
- rel="subject"
+ rel="creator"
  geo="geo:30.2711286,-97.7436995"
  osm="R113314"
  country="US"
