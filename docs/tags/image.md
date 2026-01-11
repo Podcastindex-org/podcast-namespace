@@ -40,6 +40,7 @@ Anyone may define a token and its requirements. For instance, an app might defin
 | banner | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
 | publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/896-artwork-requirements#channels) |
 | circular | Recommended for times when an image is expected to be cropped to a full circle. This should be a "circle safe" image. |
+| poster | A static thumbnail image for video episodes.  Meant to be shown in the player before the video is played, and should thus be in the same aspect ratio as the video itself. | [YouTube's thumbnail recommendations](https://support.google.com/youtube/answer/72431?hl=en)
 
 ### Demo Tool
 In addition to the examples below, a [demo tool](https://nathangathright.github.io/podcastimage/) is provided to help get started with a few common image tag scenarios.  The tool is provided by Nathan Gathright. 
