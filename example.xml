@@ -15,7 +15,7 @@
         <image>
             <url>https://example.com/images/pci_avatar-massive.jpg</url>
             <title>Podcasting 2.0 Namespace Example</title>
-            <link>http://example.com/podcast</link>
+            <link>https://example.com/podcast</link>
         </image>
 
         <podcast:guid>y0ur-gu1d-g035-h3r3</podcast:guid>
@@ -31,7 +31,7 @@
         <podcast:location rel="creator" geo="geo:30.2672,97.7431" osm="R113314" country="US">Austin, TX</podcast:location>
         <podcast:medium>podcast</podcast:medium>
 
-        <itunes:author>john@example.com (John Doe)e</itunes:author>
+        <itunes:author>john@example.com (John Doe)</itunes:author>
         <itunes:explicit>false</itunes:explicit>
         <itunes:type>episodic</itunes:type>
         <itunes:category text="Technology"/>
