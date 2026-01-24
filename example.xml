@@ -44,10 +44,10 @@
         </itunes:owner>
         <itunes:image href="https://example.com/images/pci_avatar-massive.jpg"/>
 
-        <podcast:image href="https://example.com/images/ep3/pci_avatar-massive.png" alt="image description for accesibility and bots" purpose="artwork" aspect-ratio="1/1" width="3000" type="image/png"/>
-        <podcast:image href="https://example.com/images/ep3/pci_avatar-massive_1200x630.webp" alt="image description for accesibility and bots" purpose="social" aspect-ratio="1.9" width="1200" height="630" type="image/webp"/>
-        <podcast:image href="https://example.com/images/ep3/pci_avatar-massive_512x512.webp" alt="image description for accesibility and bots" purpose="icon" aspect-ratio="1/1" width="512" type="image/webp"/>
-        <podcast:image href="https://example.com/images/ep3/pci_avatar-massive_2560x1440.webp" alt="image description for accesibility and bots" purpose="banner" aspect-ratio="16/9" width="2560" height="1440" type="image/webp"/>
+        <podcast:image href="https://example.com/images/show/pci_avatar-massive.png" alt="image description for accesibility and bots" purpose="artwork" aspect-ratio="1/1" width="3000" type="image/png"/>
+        <podcast:image href="https://example.com/images/show/pci_avatar-massive_1200x630.webp" alt="image description for accesibility and bots" purpose="social" aspect-ratio="1.9" width="1200" height="630" type="image/webp"/>
+        <podcast:image href="https://example.com/images/show/pci_avatar-massive_512x512.webp" alt="image description for accesibility and bots" purpose="icon" aspect-ratio="1/1" width="512" type="image/webp"/>
+        <podcast:image href="https://example.com/images/show/pci_avatar-massive_2560x1440.webp" alt="image description for accesibility and bots" purpose="banner" aspect-ratio="16/9" width="2560" height="1440" type="image/webp"/>
    
         <podcast:value type="lightning" method="keysend" suggested="0.00000005000">
             <podcast:valueRecipient name="podcaster" type="node" address="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57" split="99" />
@@ -90,6 +90,7 @@
             <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
             <itunes:image href="https://example.com/ep0003/artMd.jpg"/>
+            
             <podcast:image href="https://example.com/images/ep3/pci_avatar-massive.png" alt="image description for accesibility and bots" purpose="artwork" aspect-ratio="1/1" width="3000" type="image/png"/>
             <podcast:image href="https://example.com/images/ep3/pci_avatar-massive_1200x630.webp" alt="image description for accesibility and bots" purpose="social" aspect-ratio="1.9" width="1200" height="630" type="image/webp"/>
             <itunes:explicit>false</itunes:explicit>
@@ -102,6 +103,7 @@
             <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
             <podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
             <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
+            <podcast:location rel="subject" geo="geo:33.5159981,-86.8146098" osm="R6930627" country="US" >Birmingham Civil Rights Museum</podcast:location>
             
             <enclosure url="https://example.com/file-03.mp3" length="43200000" type="audio/mpeg" />
 
@@ -150,10 +152,6 @@
             <pubDate>Thu, 08 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
             <itunes:image href="https://example.com/ep0002/artMd.jpg"/>
-            <podcast:images srcset="https://example.com/images/ep2/pci_avatar-massive.jpg 1500w,
-                                        https://example.com/images/ep2/pci_avatar-middle.jpg 600w,
-                                        https://example.com/images/ep2/pci_avatar-small.jpg 300w,
-                                        https://example.com/images/ep2/pci_avatar-tiny.jpg 150w" />
             <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>2</podcast:episode>
@@ -163,7 +161,9 @@
             <podcast:person href="https://en.wikipedia.org/wiki/Adam_Curry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
             <podcast:person role="guest" href="https://example.com/blog/daveajones/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>
             <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/marcusbrown">Marcus Brown</podcast:person>
-
+            <podcast:location rel="creator" geo="geo:51.5718706,-0.7769654" osm="R3727240" country="GB">Marlow</podcast:location>
+            <podcast:location rel="subject" geo="geo:-27.8611449,153.3162701" osm="R16317988" country="AU">Dreamworld</podcast:location>
+            
             <enclosure url="https://example.com/file-02.mp3" length="43113000" type="audio/mpeg" />
 
             <podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard">
@@ -201,10 +201,7 @@
             <pubDate>Wed, 07 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
             <itunes:image href="https://example.com/ep0001/artMd.jpg"/>
-            <podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
-                                        https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
-                                        https://example.com/images/ep1/pci_avatar-small.jpg 300w,
-                                        https://example.com/images/ep1/pci_avatar-tiny.jpg 150w" />
+
             <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>1</podcast:episode>
