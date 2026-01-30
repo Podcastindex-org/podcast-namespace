@@ -27,7 +27,7 @@ jobs:
             --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
             --remap 'https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track'
             --remap 'https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/aspect-ratio https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio'
-            './**/*.md' './**/*.xml' './**/*.json' '.**/*.html'
+            './**/*.md' './**/*.xml' './**/*.json' './**/*.html'
 
 
 #--base-url https://github.com/Podcastindex-org/podcast-namespace/blob/main/

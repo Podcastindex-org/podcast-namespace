@@ -12,3 +12,7 @@ https://feeds.buzzsprout.com/1844352.rss
 https:\/\/podcastindex\.org\/podcast\/4148683#.*
 # Pretty
 https://overpass-turbo.eu/s/*
+# Lynchee fragment limitations
+https:\/\/help\.apple\.com\/itc\/podcasts_connect\/#\/.*
+https:\/\/www\.openstreetmap\.org\/relation\/.*#map.*
+.*#fastfollow-podcast.*
