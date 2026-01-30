@@ -20,13 +20,15 @@ jobs:
         with:
           fail: false
           args: |
+            --base-url https://github.com/Podcastindex-org/podcast-namespace/blob/main
             --no-progress
             --exclude-all-private
             --include-verbatim --include-wikilinks --include-fragments
+            --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
+            --remap 'https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track'
+            --remap 'https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/aspect-ratio https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio'
             './**/*.md' './**/*.xml' './**/*.json' '.**/*.html'
 
-#            --base-url https://podcastindex.org
-#            --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
 #            --accept '100..=103,200..=299'
 #            --root-dir "$(pwd)"
 #            --suggest      # Suggest link replacements for broken links, using a web archive
