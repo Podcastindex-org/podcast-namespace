@@ -45,7 +45,7 @@ This is done by including the namespace and a colon before the name of the eleme
 
 This is uniquely different from this:
 ```xml
-<http://yearbook.com/namespace:person>Person in the Yearbook namespace</https://yearbook.com/namespace:person>
+<https://yearbook.com/namespace:person>Person in the Yearbook namespace</https://yearbook.com/namespace:person>
 ```
 
 But you can see that putting this namespace in front of each start tag and end tag will make the document long and hard to read. This is why the concept of namespace aliases was developed.
@@ -54,7 +54,7 @@ In the top of a document, you can specify the namespace and give it a (hopefully
 
 ```xml
 <doc xmlns:podcast="https://podcastindex.org/namespace/1.0"
-     xmlns:yearbook="http://yearbook.com/namespace">
+     xmlns:yearbook="https://yearbook.com/namespace">
      <podcast:person>Person in the Podcast namespace</podcast:person>
      <yearbook:person>Person in the Yearbook namespace</yearbook:person>
 ```
@@ -65,7 +65,7 @@ Note that the namespace alias is local to the document. The following snippet is
 
 ```xml
 <doc xmlns:p="https://podcastindex.org/namespace/1.0"
-     xmlns:y="http://yearbook.com/namespace">
+     xmlns:y="https://yearbook.com/namespace">
      <p:person>Person in the Podcast namespace</p:person>
      <y:person>Person in the Yearbook namespace</y:person>
 ```
@@ -74,7 +74,7 @@ You can also specify a namespace to be the default namespace. Any element or att
 
 ```xml
 <doc xmlns:p="https://podcastindex.org/namespace/1.0"
-     xmlns="http://yearbook.com/namespace">
+     xmlns="https://yearbook.com/namespace">
      <p:person>Person in the Podcast namespace</p:person>
      <person>Person in the Yearbook namespace</person>
 ```

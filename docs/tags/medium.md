@@ -84,7 +84,7 @@ Example use for a "music" playlist feed:
 
         <podcast:remoteItem
                 feedGuid="47081700-bd65-511f-b535-f545f3cd660c"
-                feedUrl="https://player.wavlake.com/feed/d1ed0ec9-21a8-4eda-b2c9-b17c8019a7e8"
+                feedUrl="https://wavlake.com/feed/music/d1ed0ec9-21a8-4eda-b2c9-b17c8019a7e8"
                 itemGuid="7b03666e-b323-499d-93a7-ca51ce627ffd"
                 medium="music"
         />
@@ -98,7 +98,7 @@ Example use for a "music" playlist feed:
 
        <podcast:remoteItem
                feedGuid="b40ffcf7-2c48-5cfe-8daa-b65d766b2c25"
-               feedUrl="https://www.wavlake.com/feed/92b04241-97f5-4ff7-be11-cf45f70812e7"
+               feedUrl="https://wavlake.com/feed/music/92b04241-97f5-4ff7-be11-cf45f70812e7"
                itemGuid="9a48aab8-6da6-4cc1-9951-5b049c333580"
                medium="music"
        />

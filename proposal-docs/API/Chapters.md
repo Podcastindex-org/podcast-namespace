@@ -88,4 +88,4 @@ authHeader = sha1(apiKey+apiSecret+unixTime)
 
 Discussion here:
 - https://github.com/Podcastindex-org/podcast-namespace/issues/209
-- https://podcastindex.social/web/statuses/105872943999299482
+- https://podcastindex.social/statuses/105872943999299482

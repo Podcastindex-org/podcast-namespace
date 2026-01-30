@@ -1,7 +1,7 @@
 # Web Monetization using `<podcast:value/>`
 
 To enable and promote Web Monetization (WM) in podcasting, necessary information for WM could be provided for a podcast by adding a `<podcast:value/>` tag to the RSS feed.
-  https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md
+  https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/value.md
 
 This `value` tag would have the following values for use with Web Monetization:
 ```xml
@@ -17,7 +17,7 @@ The `method` of `ILP` specifies the use of [Interledger  Protocol (ILP)](https:/
 
 Within the `podcast:value` tag we also need to designate recipients. In Web Monetization, payment info is discovered using the [Simple Payment Setup Protocol](https://interledger.org/rfcs/0009-simple-payment-setup-protocol) with which the [Open Payments](https://openpayments.dev/overview/getting-started/#web-monetization) protocol is designed to be [backwards compatible](https://openpayments.dev/resources/glossary/#payment-pointer).
 
-Both SPSP and Open Payments use a recipient address in the form of a [Payment Pointer](https://github.com/interledger/rfcs/blob/master/0026-payment-pointers/0026-payment-pointers.md) which will be provided in the `address` attribute, with the `type` of `paymentpointer`.
+Both SPSP and Open Payments use a recipient address in the form of a [Payment Pointer](https://github.com/interledger/rfcs/blob/main/0026-payment-pointers/0026-payment-pointers.md) which will be provided in the `address` attribute, with the `type` of `paymentpointer`.
 
 ```xml
 <podcast:value 
@@ -46,7 +46,7 @@ https://github.com/Podcastindex-org/podcast-namespace/issues/132
 https://github.com/WICG/webmonetization/issues/70
 
 ### Background WM (i.e. for podcast audio playing on a background tab)
-https://github.com/coilhq/web-monetization-projects/issues/387
+https://github.com/interledger/web-monetization-projects/issues/387
 https://github.com/WICG/webmonetization/issues/17
 
 ### PRX Player Implementation (in production)

@@ -48,10 +48,10 @@ Excerpt from https://feeds.metaebene.me/freakshow/mp3 feed page 2,
 parent `<channel>`:
 
 ```xml
-<atom:link rel="next" href="https://freakshow.fm/feed/mp3?paged=3" />
-<atom:link rel="prev" href="https://freakshow.fm/feed/mp3" />
-<atom:link rel="first" href="https://freakshow.fm/feed/mp3" />
-<atom:link rel="last" href="https://freakshow.fm/feed/mp3?paged=9" />
+<atom:link rel="next" href="https://feeds.metaebene.me/freakshow/mp3?paged=3" />
+<atom:link rel="prev" href="https://feeds.metaebene.me/freakshow/mp3" />
+<atom:link rel="first" href="https://feeds.metaebene.me/freakshow/mp3" />
+<atom:link rel="last" href="https://feeds.metaebene.me/freakshow/mp3?paged=9" />
 ```
 
 ## WebSub and Podping.cloud

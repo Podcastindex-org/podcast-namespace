@@ -42,7 +42,7 @@ Above, the simplest way to use a podroll, using the [one mandatory value for the
     />
     <podcast:remoteItem
         feedGuid="917393e3-1b1e-5cef-ace4-edaa54e1f810"
-        feedUrl="http://mp3s.nashownotes.com/pc20rss.xml"
+        feedUrl="https://feeds.podcastindex.org/pc20.xml"
         title="Podcasting 2.0"
     />
 </podcast:podroll>

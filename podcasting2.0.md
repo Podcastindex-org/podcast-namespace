@@ -82,7 +82,7 @@ Because of these issues, we've created a way to receive cryptocurrency payments 
 - [Podfriend](https://podfriend.com)
 - [CurioCaster](https://curiocaster.com)
 - [Podverse](https://podverse.fm)
-- [podStation](https://podstation.github.io)
+- [podStation](http://podstation.org/)
 - [Sphinx.chat](https://sphinx.chat)
 - [Castamatic](https://castamatic.com)
 - [Fountain.fm](https://fountain.fm)

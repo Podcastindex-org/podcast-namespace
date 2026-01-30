@@ -95,7 +95,7 @@ Value attributes are all optional, however if they are to be used, optional/requ
     startTime="1234.5"
     duration="42.25"
     title="Why the Podcast Namespace Matters"
-    url="https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3"
+    url="https://example.com/ashow/E001-anEpisode.mp3"
     name="A Soundbiter"
     type="node"
     address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
@@ -106,7 +106,7 @@ Value attributes are all optional, however if they are to be used, optional/requ
     startTime="134.5"
     duration="30.0"
     title="Why Soundbites Matter"
-    url="https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3"
+    url="https://example.com/ashow/E001-anEpisode.mp3"
     name="A Soundbiter again"
     type="node"
     address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
@@ -127,7 +127,7 @@ Value attributes are all optional, however if they are to be used, optional/requ
       "startTime" : 1234.5,
       "duration" : 42.25,
       "title" : "Why the Podcast Namespace Matters",
-      "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
+      "url" : "https://example.com/ashow/E001-anEpisode.mp3",
       {
         "name" : "A Soundbiter",
         "type" : "node",
@@ -140,7 +140,7 @@ Value attributes are all optional, however if they are to be used, optional/requ
       "startTime" : 134.5,
       "duration" : 30.0,
       "title" : "Why Soundbites Matter",
-      "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
+      "url" : "https://example.com/ashow/E001-anEpisode.mp3",
       {
         "name" : "A Soundbiter again",
         "type" : "node",
@@ -173,8 +173,8 @@ When submitting a Soundbite to the podcaster, it is necessary to include both th
   "startTime" : 134.5,
   "duration" : 30.0,
   "title" : "Why Soundbites Matter",
-  "url" : "https://somewhere.hostingplace.com/ashow/E001-anEpisode.mp3",
-  "feed" : "https://somewhere.hostingplace.com/ashow/feed.xml",
+  "url" : "https://example.com/ashow/E001-anEpisode.mp3",
+  "feed" : "https://example.com/ashow/feed.xml",
   "episode" : 10,
   {
     "name" : "A Soundbiter again",

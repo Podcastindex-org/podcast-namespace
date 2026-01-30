@@ -112,7 +112,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 8. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Person `<podcast:person>`
-1. [Castopod](https://podlibre.org/castopod-supports-the-person-tag/)
+1. [Castopod](https://blog.castopod.org/castopod-supports-the-person-tag/)
 2. [Podfriend](https://podcastindex.social/@martin/105466202975036473)
 3. [Podlove Podcast Publisher](https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199)
 4. [CastGarden](https://blurt.media/)

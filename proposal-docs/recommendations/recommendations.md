@@ -172,7 +172,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Podcasting 2.0",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://podcastindex.org/podcast/920666",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "motive": "audience exchange"
     },
     {
@@ -181,7 +181,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Episode 26: Manning Battlestations",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026"
     },
     {
@@ -190,7 +190,7 @@ Here is what a very basic recommendations file may look like:
       "title": "GO PODCASTING!!!",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "startTime": 4737.0,
       "duration": 5.0
@@ -233,7 +233,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Podcasting 2.0",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://podcastindex.org/podcast/920666",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "motive": "audience exchange",
       "relevance": 0.7
     },
@@ -245,7 +245,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Episode 26: Manning Battlestations",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "relevance": 0.5
     },
@@ -257,7 +257,7 @@ Here is what a very basic recommendations file may look like:
       "title": "GO PODCASTING!!!",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "startTime": 4737.0,
       "duration": 5.0,
