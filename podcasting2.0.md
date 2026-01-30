@@ -68,7 +68,7 @@ most of them. Make sure your entire podcast is served over HTTPS with a valid ce
 
 Another problem that can hamper your content under certain circumstances (like embedded pages in chapters) is CORS. If you serve content along with your podcast that
 requires cross-origin access, please be sure to enable the correct CORS policies on the domain the content is served from. You can find details
-[here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+[here](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS).
 
 Web-based podcast apps, PWA's (Progressive Web Apps) and Browser Extension based apps are critical to Podcasting 2.0, so the above changes are very important.
 

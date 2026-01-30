@@ -65,8 +65,8 @@
                 <podcast:source uri="https://example.com/pc20/livestream" />
             </podcast:alternateEnclosure>
             <enclosure url="https://example.com/pc20/livestream?format=.mp3" type="audio/mpeg" length="312" />
-            <podcast:contentLink href="https://youtube.com/pc20/livestream">YouTube!</podcast:contentLink>
-            <podcast:contentLink href="https://twitch.com/pc20/livestream">Twitch!</podcast:contentLink>
+            <podcast:contentLink href="https://www.youtube.com/pc20/livestream">YouTube!</podcast:contentLink>
+            <podcast:contentLink href="https://www.twitch.tv/pc20/livestream">Twitch!</podcast:contentLink>
             <podcast:chat server="irc.zeronode.net" protocol="irc" accountId="@jsmith" space="#myawesomepodcast" />
         </podcast:liveItem>
 

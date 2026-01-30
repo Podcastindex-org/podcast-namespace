@@ -52,7 +52,7 @@ Lastly, I propose optional information to verify integrity of downloaded media v
    - `lang` (optional) An [IETF language tag (BCP 47)](https://en.wikipedia.org/wiki/BCP_47) code identifying the language of this media.
    - `title` (optional) A human-readable string identifying the name of the media asset.  Should be limited to 32 characters for UX.
    - `rel` (optional) Provides a method of offering and/or grouping together different media elements.  If not set, or set to "default", the media will be grouped with the enclosure and assumed to be an alternative to the enclosure's encoding/transport.  This attribute can and should be the same for items with the same content encoded by different means.  Should be limited to 32 characters for UX.
-   - `codecs` (optional) A [RFC 6381](https://tools.ietf.org/html/rfc6381) string specifying the codecs available in this media.
+   - `codecs` (optional) A [RFC 6381](https://datatracker.ietf.org/doc/html/rfc6381) string specifying the codecs available in this media.
    - `default` (optional) Boolean specifying whether or not the given media is the same as the file from the _enclosure_ element and should be the preferred media element.  The primary reason to set this is to offer alternative transports for the enclosure.  If not set, this should be assumed to be _false_.
 
 <br><br>
@@ -79,7 +79,7 @@ Lastly, I propose optional information to verify integrity of downloaded media v
 
    podcast:alternateEnclosure (optional | multiple)
 
-   This element defines a method of verifying integrity the media given either an [SRI-compliant integrity string](https://www.w3.org/TR/SRI/) or a base64 encoded PGP signature.
+   This element defines a method of verifying integrity the media given either an [SRI-compliant integrity string](https://www.w3.org/TR/sri/) or a base64 encoded PGP signature.
 
    There may be one or more integrity elements in a media tag.
 
@@ -118,53 +118,53 @@ Example of content served via audio (mp3) and video in different resolutions (mp
     <podcast:source uri="https://best-podcast.com/file-0.mp3" />
     <podcast:source uri="ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y" />
     <podcast:source uri="https://best-podcast.com/file-0.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somerandom.onion/file-0.mp3" />
+    <podcast:source uri="https://examplerandom.onion/file-0.mp3" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="video/mp4" length="10562995" bitrate="681483.55" height="1080">
     <podcast:source uri="https://best-podcast.com/file-1080.mp4" />
     <podcast:source uri="ipfs://QmfQKJcp2xdByEt8mzWr1AJUhwvb9rdWPoacvdq2roDhgh" />
     <podcast:source uri="https://best-podcast.com/file-1080.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somrandom.onion/file-1080.mp4" />
+    <podcast:source uri="https://examplerandom.onion/file-1080.mp4" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720">
     <podcast:source uri="https://best-podcast.com/file-720.mp4" />
     <podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" />
     <podcast:source uri="https://best-podcast.com/file-720.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somrandom.onion/file-720.mp4" />
+    <podcast:source uri="https://examplerandom.onion/file-720.mp4" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="video/mp4" length="6081197" bitrate="392335.29" height="480">
     <podcast:source uri="https://best-podcast.com/file-480.mp4" />
     <podcast:source uri="ipfs://QmQHNcr88kHp2ieNQYcBRczM7XpMtjRSQcLek6CaJwd81m" />
     <podcast:source uri="https://best-podcast.com/file-480.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somrandom.onion/file-480.mp4" />
+    <podcast:source uri="https://examplerandom.onion/file-480.mp4" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="video/mp4" length="4086007" bitrate="327833.03" height="360">
     <podcast:source uri="https://best-podcast.com/file-360.mp4" />
     <podcast:source uri="ipfs://QmeK3EQMuV6cR766kuyG2QUUEJqUVfkJKGPNRceXzXC3ED" />
     <podcast:source uri="https://best-podcast.com/file-360.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somrandom.onion/file-360.mp4" />
+    <podcast:source uri="https://examplerandom.onion/file-360.mp4" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="video/mp4" length="2490970" bitrate="263613.35" height="240">
     <podcast:source uri="https://best-podcast.com/file-240.mp4" />
     <podcast:source uri="ipfs://QmdjB94TUMSQu1P8QvPnGnPjNLiWycjtraSaCsiVi4xUNi" />
     <podcast:source uri="https://best-podcast.com/file-240.torrent" contentType="application/x-bittorrent" />
-    <podcast:source uri="http://somrandom.onion/file-240.mp4" />
+    <podcast:source uri="https://examplerandom.onion/file-240.mp4" />
 </podcast:alternateEnclosure>
 <podcast:alternateEnclosure type="application/x-mpegURL" length="10562995">
     <podcast:source uri="https://best-podcast.com/master.m3u8" />
     <podcast:source uri="ipfs://exampleLinkThatDoesntWorkHLS" />
-    <podcast:source uri="http://somerandom.onion/master.m3u8" />
+    <podcast:source uri="https://examplerandom.onion/master.m3u8" />
 </podcast:alternateEnclosure>
 
 <podcast:alternateEnclosure type="application/dash+xml" length="10562995">
     <podcast:source uri="https://example.com/master.mpd" />
     <podcast:source uri="ipfs://exampleLinkThatDoesntWorkDASH" />
-    <podcast:source uri="http://somerandom.onion/master.mpd" />
+    <podcast:source uri="https://examplerandom.onion/master.mpd" />
 </podcast:alternateEnclosure>
 ```
 

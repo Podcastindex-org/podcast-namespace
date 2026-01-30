@@ -13,7 +13,7 @@ Multiple
 ### Attributes
 - href (required): The URL to the media you want to embed.
 - alt (recommended): A clear and concise accessibility focused text replacement for the image’s content.
-- aspect-ratio (recommended): A ratio value such as 1/1, 16/9, 4/1 following the equivalent [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio). This allows podcasters to provide multiple art directions for the same media.
+- aspect-ratio (recommended): A ratio value such as 1/1, 16/9, 4/1 following the equivalent [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio). This allows podcasters to provide multiple art directions for the same media.
 - width (recommended): The width of the asset in pixels.
 - height (optional): The height of the asset in pixels.
 - type (optional): Mime type of the media such as image/jpeg or video/mp4.
