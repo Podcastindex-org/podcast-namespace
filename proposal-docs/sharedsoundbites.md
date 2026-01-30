@@ -209,4 +209,4 @@ Sends API call to Soundbitten service.
 
 Discussion here:
 - https://github.com/Podcastindex-org/podcast-namespace/issues/205
-- https://podcastindex.social/web/statuses/105833620038854052
+- https://podcastindex.social/statuses/105833620038854052

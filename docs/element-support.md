@@ -134,14 +134,13 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 
 ## Value `<podcast:value>`
 1. [Castos](https://castos.com/earn-bitcoin-from-your-listeners/)
-2. [usocial](http://usocial.me/history#v0.1.1)
-3. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
-4. [Alby](https://getalby.com/)
-5. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
-6. [CastGarden](https://blurt.media/)
-7. [Podhome](https://www.podhome.fm/docs/use-value-4-value)
-8. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
-9. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+2. [RSS Blue](https://rssblue.com/help/podcast-metadata#lightning-node)
+3. [Alby](https://getalby.com/)
+4. [RSS.com](https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/)
+5. [CastGarden](https://blurt.media/)
+6. [Podhome](https://www.podhome.fm/docs/use-value-4-value)
+7. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
+8. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata)

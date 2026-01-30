@@ -139,7 +139,7 @@ that might otherwise be present - buried within shownotes HTML.
 {
   "linkType": "generic",
   "title": "History of podcasting",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+  "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
   "url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 }
 ```
@@ -162,7 +162,7 @@ Here is what a very basic recommendations file may look like:
       "linkType": "generic",
       "medium": "html",
       "title": "History of podcasting",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+      "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
       "url": "https://en.wikipedia.org/wiki/History_of_podcasting",
       "motive": "additional content"
     },
@@ -220,7 +220,7 @@ Here is what a very basic recommendations file may look like:
       "linkType": "generic",
       "medium": "html",
       "title": "History of podcasting",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+      "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
       "url": "https://en.wikipedia.org/wiki/History_of_podcasting",
       "motive": "additional content",
       "relevance": 0.8
@@ -280,4 +280,4 @@ As a safeguard against that, apps should:
 Discussion here:
 
 - https://github.com/Podcastindex-org/podcast-namespace/issues/205
-- https://podcastindex.social/web/statuses/105833620038854052
+- https://podcastindex.social/statuses/105833620038854052

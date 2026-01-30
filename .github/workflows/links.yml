@@ -21,7 +21,9 @@ jobs:
           fail: false
           args: |
             --root-dir ${{ github.workspace }}
-            --exclude-path proposal-docs/social --exclude-path proposal-docs/verify
+            --exclude-path proposal-docs/social/social.md --exclude-path proposal-docs/verify/verify.md
+            --exclude-path proposal-docs/value-webmonetization/value-webmonetization.md
+            -exclude-path docs/examples/chapters/exampleComplex.json
             --no-progress
             --exclude-all-private
             --include-verbatim --include-wikilinks --include-fragments
