@@ -15,7 +15,7 @@ The `podcast:value.type` defines the cryptocurrency or protocol layer, which in 
 
 The `method` of `ILP` specifies the use of [Interledger  Protocol (ILP)](https://interledger.org/rfcs/0027-interledger-protocol-4/) which is the protocol for payment providers in WM.
 
-Within the `podcast:value` tag we also need to designate recipients. In Web Monetization, payment info is discovered using the [Simple Payment Setup Protocol](https://interledger.org/rfcs/0009-simple-payment-setup-protocol) with which the [Open Payments](https://docs.openpayments.dev/web-monetization) protocol is designed to be [backwards compatible](https://docs.openpayments.dev/web-monetization#backwards-compatibility-with-spsp).
+Within the `podcast:value` tag we also need to designate recipients. In Web Monetization, payment info is discovered using the [Simple Payment Setup Protocol](https://interledger.org/rfcs/0009-simple-payment-setup-protocol) with which the [Open Payments](https://openpayments.dev/overview/getting-started/#web-monetization) protocol is designed to be [backwards compatible](https://openpayments.dev/resources/glossary/#payment-pointer).
 
 Both SPSP and Open Payments use a recipient address in the form of a [Payment Pointer](https://github.com/interledger/rfcs/blob/master/0026-payment-pointers/0026-payment-pointers.md) which will be provided in the `address` attribute, with the `type` of `paymentpointer`.
 
@@ -38,8 +38,8 @@ While payments in WM are streamed to a single payment pointer at a time, the WM 
 ------
 
 ### Current <podcast:value\>
-https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md
-https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/valueslugs.txt
+https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/value.md
+https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/examples/value/valueslugs.txt
 
 ### Web Monetization and Podcasting Discussion
 https://github.com/Podcastindex-org/podcast-namespace/issues/132

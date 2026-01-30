@@ -34,11 +34,11 @@ The purpose attribute gives podcasters the flexibility to indicate how specific 
 Anyone may define a token and its requirements. For instance, an app might define a token like `truefans/hero` to specify an image that fits their hero banner layout, providing guidelines for aspect ratios, resolution, safe areas, or text presence. A podcaster following these guidelines would include the `truefans/hero` token in the purpose attribute for any media following those guidelines. Here are some suggestions for generic tokens that multiple apps might adopt:
 | Token | Guidelines | Prior Art |
 |-|-|-|
-| artwork | Recommended for representing the show/episode. Should contain your show name and key art. | [Apple’s show artwork](https://podcasters.apple.com/support/896-artwork-requirements#shows) |
+| artwork | Recommended for representing the show/episode. Should contain your show name and key art. | [Apple’s show artwork](https://podcasters.apple.com/artwork-guide) |
 | social | Recommended for social preview images. Should contain a landscape version of your artwork. | [Meta’s OG:image](https://developers.facebook.com/docs/sharing/webmasters/images/) |
-| canvas | Recommended for immersive Now Playing screens. Should contain your artwork and expect to be overlaid with UI elements. | [Apple’s Full Page Show Art](https://podcasters.apple.com/support/866-promotional-artwork#show-tall)<br/>[Spotify’s Canvas](https://support.spotify.com/us/artists/article/canvas-guidelines/) |
+| canvas | Recommended for immersive Now Playing screens. Should contain your artwork and expect to be overlaid with UI elements. | [Apple’s Full Page Show Art](https://podcasters.apple.com/support/5515-full-page-show-art-template)<br/>[Spotify’s Canvas](https://support.spotify.com/us/artists/article/canvas-guidelines/) |
 | banner | Recommended for hero to complement your artwork | [YouTube’s channel banner](https://support.google.com/youtube/answer/12950272?hl=en) |
-| publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/896-artwork-requirements#channels) |
+| publisher | Recommended for publisher logos. Should be legible at small sizes. | [Apple’s Channel Icon](https://podcasters.apple.com/support/5518-channel-icon-template) |
 | circular | Recommended for times when an image is expected to be cropped to a full circle. This should be a "circle safe" image. |
 
 ### Demo Tool

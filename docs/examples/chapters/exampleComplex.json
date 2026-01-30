@@ -32,8 +32,8 @@
      {
       "startTime": 4200,
       "title": "Played song by artist",
-      "img": "https://i.discogs.com/R-249504-1334592212.jpeg?bucket=discogs-images&fit=contain&format=auto&height=600&quality=90&width=600&signature=wMI9I0mHkbVxkkryQrN1JkkzhwFsrereuom9Lmfa92w%3D",
-      "url": "https://www.discogs.com/Rick-Astley-Never-Gonna-Give-You-Up/master/96559",
+      "img": "https://i.discogs.com/-DPFA5hKT8i91jnjn4rLB1zSiuUBFTrGWspu1TpLV30/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0OTUw/NC0xMzM0NTkyMjEy/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/master/96559-Rick-Astley-Never-Gonna-Give-You-Up",
       "value": "<podcast:value type=\"lightning\" method=\"keysend\" suggested=\"0.00000005000\"><podcast:valueRecipient name=\"Performing Artist\" type=\"node\" address=\"03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4\" split=\"100\"/></podcast:value>"
     },  
     {

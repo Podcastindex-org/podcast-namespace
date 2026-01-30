@@ -55,7 +55,7 @@ Example use for a "music" feed:
 Example use for a "music" playlist feed:
 
 ```xml
-<rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Picking the Hits 2.0!</title>
         <description>All the hits played on the Podcasting 2.0 show.</description>

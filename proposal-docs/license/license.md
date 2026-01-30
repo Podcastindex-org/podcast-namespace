@@ -49,6 +49,6 @@ This matter is very complex so this specification only intends to scratch its su
    
    Discussion here:
    - (https://github.com/Podcastindex-org/podcast-namespace/issues/177)
-   - (https://podcastindex.social/web/statuses/105839486748529374)
+   - (https://podcastindex.social/statuses/105839486748529374)
    - (https://spdx.org/licenses/)
    
