@@ -3,9 +3,12 @@ https.*example.*
 https://domain.tld/*
 # Namespaces
 http://www.itunes.com/dtds/podcast-1.0.dtd
+http://yearbook.com/namespace/*
 # Redirects to https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md
 https://podcastindex.org/namespace/1.0
 # Feeds redirects to preserve
 https://feeds.buzzsprout.com/1844352.rss
 # Item Guid
 https:\/\/podcastindex\.org\/podcast\/4148683#.*
+# Pretty
+https://overpass-turbo.eu/s/*

@@ -20,7 +20,7 @@ jobs:
         with:
           fail: false
           args: |
-            --base-url https://github.com/Podcastindex-org/podcast-namespace/blob/main
+            --root-dir ${{ github.workspace }}
             --no-progress
             --exclude-all-private
             --include-verbatim --include-wikilinks --include-fragments
@@ -29,6 +29,8 @@ jobs:
             --remap 'https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/aspect-ratio https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio'
             './**/*.md' './**/*.xml' './**/*.json' '.**/*.html'
 
+
+#--base-url https://github.com/Podcastindex-org/podcast-namespace/blob/main/
 #            --accept '100..=103,200..=299'
 #            --root-dir "$(pwd)"
 #            --suggest      # Suggest link replacements for broken links, using a web archive
