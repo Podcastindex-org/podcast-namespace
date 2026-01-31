@@ -90,13 +90,6 @@ Example use for a "music" playlist feed:
         />
 
        <podcast:remoteItem
-               feedGuid="483dde8e-7e94-59a7-8eb0-2b0dc64a87bd"
-               feedUrl="https://player.wavlake.com/feed/1dd1bbd8-1084-4fdc-9788-dddaa62fbc6a"
-               itemGuid="8501fb64-a6a3-475a-8b10-9c746f0fe579"
-               medium="music"
-       />
-
-       <podcast:remoteItem
                feedGuid="b40ffcf7-2c48-5cfe-8daa-b65d766b2c25"
                feedUrl="https://wavlake.com/feed/music/92b04241-97f5-4ff7-be11-cf45f70812e7"
                itemGuid="9a48aab8-6da6-4cc1-9951-5b049c333580"
