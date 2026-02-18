@@ -139,7 +139,7 @@ that might otherwise be present - buried within shownotes HTML.
 {
   "linkType": "generic",
   "title": "History of podcasting",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+  "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
   "url": "https://en.wikipedia.org/wiki/History_of_podcasting"
 }
 ```
@@ -162,7 +162,7 @@ Here is what a very basic recommendations file may look like:
       "linkType": "generic",
       "medium": "html",
       "title": "History of podcasting",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+      "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
       "url": "https://en.wikipedia.org/wiki/History_of_podcasting",
       "motive": "additional content"
     },
@@ -172,7 +172,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Podcasting 2.0",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://podcastindex.org/podcast/920666",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "motive": "audience exchange"
     },
     {
@@ -181,7 +181,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Episode 26: Manning Battlestations",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026"
     },
     {
@@ -190,7 +190,7 @@ Here is what a very basic recommendations file may look like:
       "title": "GO PODCASTING!!!",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "startTime": 4737.0,
       "duration": 5.0
@@ -220,7 +220,7 @@ Here is what a very basic recommendations file may look like:
       "linkType": "generic",
       "medium": "html",
       "title": "History of podcasting",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
+      "image": "https://example.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/440px-Podcasts_%28iOS%29.svg.png",
       "url": "https://en.wikipedia.org/wiki/History_of_podcasting",
       "motive": "additional content",
       "relevance": 0.8
@@ -233,7 +233,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Podcasting 2.0",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://podcastindex.org/podcast/920666",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "motive": "audience exchange",
       "relevance": 0.7
     },
@@ -245,7 +245,7 @@ Here is what a very basic recommendations file may look like:
       "title": "Episode 26: Manning Battlestations",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "relevance": 0.5
     },
@@ -257,7 +257,7 @@ Here is what a very basic recommendations file may look like:
       "title": "GO PODCASTING!!!",
       "image": "https://noagendaassets.com/enc/1601061118.678_pciavatar.jpg",
       "url": "https://mp3s.nashownotes.com/PC20-26-2021-02-26-Final.mp3",
-      "feed": "http://mp3s.nashownotes.com/pc20rss.xml",
+      "feed": "https://feeds.podcastindex.org/pc20.xml",
       "guid": "PC2026",
       "startTime": 4737.0,
       "duration": 5.0,
@@ -280,4 +280,4 @@ As a safeguard against that, apps should:
 Discussion here:
 
 - https://github.com/Podcastindex-org/podcast-namespace/issues/205
-- https://podcastindex.social/web/statuses/105833620038854052
+- https://podcastindex.social/statuses/105833620038854052

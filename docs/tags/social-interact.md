@@ -18,7 +18,7 @@ Multiple
 
 ### Attributes
 
-- **protocol** (required) The [protocol](https://github.com/Podcastindex-org/podcast-namespace/blob/main/socialprotocols.txt) in use for interacting with the comment root post.
+- **protocol** (required) The [protocol](/socialprotocols.txt) in use for interacting with the comment root post.
 - **uri** (required) The uri/url of root post comment.
 - **accountId** (recommended) The account id (on the commenting platform) of the account that created this root post.
 - **accountUrl** (optional) The public url (on the commenting platform) of the account that created this root post.
@@ -29,7 +29,7 @@ Example (simple):
 ```xml
 <podcast:socialInteract
         protocol="activitypub"
-        uri="https://podcastindex.social/web/@dave/108013847520053258"
+        uri="https://podcastindex.social/@dave/105079274766075912"
         accountId="@dave"
 />
 ```
@@ -40,9 +40,9 @@ Example (complex):
 <podcast:socialInteract
         priority="1"
         protocol="activitypub"
-        uri="https://podcastindex.social/web/@dave/108013847520053258"
+        uri="https://podcastindex.social/@dave/105079274766075912"
         accountId="@dave"
-        accountUrl="https://podcastindex.social/web/@dave"
+        accountUrl="https://podcastindex.social/@dave"
 />
 <podcast:socialInteract
         priority="2"

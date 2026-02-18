@@ -1,0 +1,49 @@
+name: Links
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 07 * * 6"
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+#    permissions:
+#      issues: write                # required for peter-evans/create-issue-from-file
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0  # for v2.7.0
+        with:
+          fail: false
+          args: |
+            --root-dir ${{ github.workspace }}
+            --exclude-path proposal-docs/social/social.md --exclude-path proposal-docs/verify/verify.md
+            --exclude-path proposal-docs/value-webmonetization/value-webmonetization.md
+            --exclude-path docs/examples/chapters/exampleComplex.json
+            --no-progress
+            --exclude-all-private
+            --include-verbatim --include-wikilinks --include-fragments
+            --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
+            --remap 'https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track'
+            --remap 'https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/aspect-ratio https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio'
+            './**/*.md' './**/*.xml' './**/*.json' './**/*.html'
+
+
+#--base-url https://github.com/Podcastindex-org/podcast-namespace/blob/main/
+#            --accept '100..=103,200..=299'
+#            --root-dir "$(pwd)"
+#            --suggest      # Suggest link replacements for broken links, using a web archive
+#            --user-agent "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0"
+# https://lychee.cli.rs/guides/cli/
+
+#      - name: Create Issue From File
+#        if: steps.lychee.outputs.exit_code != 0
+#        uses: peter-evans/create-issue-from-file@v5
+#        with:
+#          title: Link Checker Report
+#          content-filepath: ./lychee/out.md
+#          labels: report, automated issue

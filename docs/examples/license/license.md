@@ -43,11 +43,11 @@ This matter is very complex so this specification only intends to scratch its su
 
   Examples:
 
-  - `<podcast:license url="http://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
-  - `<podcast:license url="http://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
-  - `<podcast:license url="http://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
+  - `<podcast:license url="https://creativecommons.org/licenses/by-nd/4.0/">(CC BY-ND 4.0)</podcast:license>`
+  - `<podcast:license url="https://creativecommons.org/licenses/by-nc-nd/4.0/">(CC BY-NC-ND 4.0)</podcast:license>`
+  - `<podcast:license url="https://domain.tld/license.txt">© My Company 2021 - All Rights Reserved</podcast:license>`
 
   Discussion here:
 
   - (https://github.com/Podcastindex-org/podcast-namespace/issues/177)
-  - (https://podcastindex.social/web/statuses/105839486748529374)
+  - (https://podcastindex.social/statuses/105839486748529374)

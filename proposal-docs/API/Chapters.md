@@ -8,7 +8,7 @@ This version is a first draft. It will be updated. It may move somewhere else.
 ## Purpose
 The PodcastIndex namespace allows all podcast platforms (hosting, index, players…) to speak the same language and interact together.  
 These interactions are limited to communications through the RSS feeds.  
-This document describes a new type of interaction between actors who use a same PodcastIndex namespace tag: [Podcast:Chapters](https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md).  
+This document describes a new type of interaction between actors who use a same PodcastIndex namespace tag: [Podcast:Chapters](/docs/examples/chapters/jsonChapters.md).  
 It was initiated by [David Norman](https://podcastindex.social/@hypercatcher) for [Hypercatcher](https://hypercatcher.com/) and [Benjamin Bellamy](https://podcastindex.social/@benjaminbellamy) for [Castopod](https://castopod.org/) so that HyperCatcher and Castopod are able to interact together and create a seamless experience for podcasters.
 
 We hope this will open a path to more collaborations between platforms which use the PodcastIndex namespace.  
@@ -16,7 +16,7 @@ We hope this will open a path to more collaborations between platforms which use
 
 Note that the purpose of this specification is **not** to define “**how**” to manage the chapter service but “**who**” manages the chapter service, so that **any** podcaster is able to choose **any** provider among the ones able to provide the chapter service.  
 Then that provider is free to use IPFS, centralised https or whatever makes sense to him — and to his users.
-This spec is **not** an extension of the [Podcast:Chapters](https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md) tag, it sits next to it.
+This spec is **not** an extension of the [Podcast:Chapters](/docs/examples/chapters/jsonChapters.md) tag, it sits next to it.
 
 ## Example
 To help making things clear, let's take an example:
@@ -88,4 +88,4 @@ authHeader = sha1(apiKey+apiSecret+unixTime)
 
 Discussion here:
 - https://github.com/Podcastindex-org/podcast-namespace/issues/209
-- https://podcastindex.social/web/statuses/105872943999299482
+- https://podcastindex.social/statuses/105872943999299482
