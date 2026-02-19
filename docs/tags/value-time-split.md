@@ -34,7 +34,7 @@ A single [`<podcast:remoteItem>`](remote-item.md) element OR one or more [`<podc
 ### Example (Remote Item)
 
 ```xml
-<rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0">
    <channel>
       <title>Metal Showcase</title>
       <description>A great playlist of my favorite metal tracks.</description>
@@ -65,7 +65,7 @@ A single [`<podcast:remoteItem>`](remote-item.md) element OR one or more [`<podc
 ### Example (Locally Specified)
 
 ```xml
-<rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0">
    <channel>
       <title>Cool Pod</title>
       <description>This is a cool pod</description>

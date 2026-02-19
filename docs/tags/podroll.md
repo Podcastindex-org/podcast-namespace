@@ -26,23 +26,23 @@ The node value must be one or more [`<podcast:remoteItem>`](remote-item.md) elem
 </podcast:podroll>
 ```
 
-Above, the simplest way to use a podroll, using the [one mandatory value for the `remoteItem`](remoteItem.md).
+Above, the simplest way to use a podroll, using the [one mandatory value for the `remoteItem`](remote-item.md).
 
 ```xml
 <podcast:podroll>
     <podcast:remoteItem
         feedGuid="29cdca4a-32d8-56ba-b48b-09a011c5daa9"
-        feedUrl="https://feeds.buzzsprout.com/231452.rss"
+        feedUrl="https://rss.buzzsprout.com/231452.rss"
         title="Buzzcast"
     />
     <podcast:remoteItem
         feedGuid="396d9ae0-da7e-5557-b894-b606231fa3ea"
-        feedUrl="https://feeds.buzzsprout.com/1538779.rss"
+        feedUrl="https://rss.buzzsprout.com/1538779.rss"
         title="Podnews Weekly Review"
     />
     <podcast:remoteItem
         feedGuid="917393e3-1b1e-5cef-ace4-edaa54e1f810"
-        feedUrl="http://mp3s.nashownotes.com/pc20rss.xml"
+        feedUrl="https://feeds.podcastindex.org/pc20.xml"
         title="Podcasting 2.0"
     />
 </podcast:podroll>
