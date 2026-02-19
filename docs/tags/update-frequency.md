@@ -18,9 +18,9 @@ The node value is a free-form string, which might be displayed alongside other i
 
 ### Attributes
 
-- **complete (optional):** Boolean specifying if the podcast has no intention to release further episodes. If not set, this should be assumed to be false.
-- **dtstart (optional):** The `date` or `datetime` the recurrence rule begins as an [ISO8601-fornmatted](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) string. If the `rrule` contains a value for `COUNT`, then this attribute is required. If the `rrule` contains a value for `UNTIL`, then the value of this attribute must be formatted to the same date/datetime standard.
-- **rrule (recommended):** A recurrence rule as defined in [iCalendar RFC 5545 Section 3.3.10](https://www.rfc-editor.org/rfc/rfc5545#section-3.3.10).
+- `complete` (optional): Boolean specifying if the podcast has no intention to release further episodes. If not set, this should be assumed to be false.
+- `dtstart` (optional): The `date` or `datetime` the recurrence rule begins as an [ISO8601-fornmatted](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) string. If the `rrule` contains a value for `COUNT`, then this attribute is required. If the `rrule` contains a value for `UNTIL`, then the value of this attribute must be formatted to the same date/datetime standard.
+- `rrule` (recommended): A recurrence rule as defined in [iCalendar RFC 5545 Section 3.3.10](https://www.rfc-editor.org/rfc/rfc5545#section-3.3.10).
 
 ### Examples
 
