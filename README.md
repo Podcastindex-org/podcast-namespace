@@ -199,7 +199,7 @@ The following tags have been formally adopted into the namespace.  They are full
 located [here](docs/1.0.md).  Please see that file for full implementation details.
 
 - **\<podcast:medium>** <br>
-- **\<podcast:images>** <br>
+- **\<podcast:images>** - DEPRECATED<br>
 - **\<podcast:liveItem>** <br>
 
 <br>

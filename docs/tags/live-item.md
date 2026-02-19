@@ -47,11 +47,6 @@ A complete example:
     <link>https://example.com/podcast/live</link>
     <guid isPermaLink="true">https://example.com/live</guid>
     <author>John Doe (john@example.com)</author>
-    <podcast:images srcset="https://example.com/images/live/pci_avatar-massive.jpg 1500w,
-        https://example.com/images/live/pci_avatar-middle.jpg 600w,
-        https://example.com/images/live/pci_avatar-small.jpg 300w,
-        https://example.com/images/live/pci_avatar-tiny.jpg 150w"
-    />
     <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f"
                     img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
     <podcast:person role="guest" href="https://github.com/daveajones/"

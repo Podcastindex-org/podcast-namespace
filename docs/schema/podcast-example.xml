@@ -3,7 +3,6 @@
 	<podcast:episode>1</podcast:episode>
 	<podcast:chapters url="https://example.com/ep1_chapters.json" type="application/json"/>
 	<podcast:funding url="https://example.com/donate">Support the show</podcast:funding>
-	<podcast:images srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w, https://example.com/images/ep1/pci_avatar-middle.jpg 600w, https://example.com/images/ep1/pci_avatar-small.jpg 300w, https://example.com/images/ep1/pci_avatar-tiny.jpg 150w" />
 	<podcast:location geo="geo:30.2672,97.7431" osm="R113314">Austin, TX</podcast:location>
 	<podcast:location geo="12345">12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678</podcast:location>
 	<podcast:locked owner="podcastowner@example.com">yes</podcast:locked>
