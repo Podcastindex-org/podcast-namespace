@@ -55,7 +55,7 @@ Example use for a "music" feed:
 Example use for a "music" playlist feed:
 
 ```xml
-<rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Picking the Hits 2.0!</title>
         <description>All the hits played on the Podcasting 2.0 show.</description>
@@ -84,21 +84,14 @@ Example use for a "music" playlist feed:
 
         <podcast:remoteItem
                 feedGuid="47081700-bd65-511f-b535-f545f3cd660c"
-                feedUrl="https://player.wavlake.com/feed/d1ed0ec9-21a8-4eda-b2c9-b17c8019a7e8"
+                feedUrl="https://wavlake.com/feed/music/d1ed0ec9-21a8-4eda-b2c9-b17c8019a7e8"
                 itemGuid="7b03666e-b323-499d-93a7-ca51ce627ffd"
                 medium="music"
         />
 
        <podcast:remoteItem
-               feedGuid="483dde8e-7e94-59a7-8eb0-2b0dc64a87bd"
-               feedUrl="https://player.wavlake.com/feed/1dd1bbd8-1084-4fdc-9788-dddaa62fbc6a"
-               itemGuid="8501fb64-a6a3-475a-8b10-9c746f0fe579"
-               medium="music"
-       />
-
-       <podcast:remoteItem
                feedGuid="b40ffcf7-2c48-5cfe-8daa-b65d766b2c25"
-               feedUrl="https://www.wavlake.com/feed/92b04241-97f5-4ff7-be11-cf45f70812e7"
+               feedUrl="https://wavlake.com/feed/music/92b04241-97f5-4ff7-be11-cf45f70812e7"
                itemGuid="9a48aab8-6da6-4cc1-9951-5b049c333580"
                medium="music"
        />

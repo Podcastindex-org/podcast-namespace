@@ -7,7 +7,7 @@
 	<podcast:location geo="12345">12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678</podcast:location>
 	<podcast:locked owner="podcastowner@example.com">yes</podcast:locked>
 	<podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith">Becky Smith</podcast:person>
-	<podcast:person href="https://curry.com" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
+	<podcast:person href="http://blog.curry.com/" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
 	<podcast:person href="https://en.wikipedia.org/wiki/Adam_Curry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
 	<podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
 	<podcast:person role="guest" href="https://example.com/blog/daveajones/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>

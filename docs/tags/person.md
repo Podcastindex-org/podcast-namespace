@@ -65,7 +65,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 ```xml
 <podcast:person
         role="guest"
-        href="https://www.wikipedia/alicebrown"
+        href="https://example.wikipedia/alicebrown"
         img="http://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
 ```
@@ -74,7 +74,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 <podcast:person
         group="writing"
         role="guest"
-        href="https://www.wikipedia/alicebrown"
+        href="https://example.wikipedia/alicebrown"
         img="http://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
 ```
