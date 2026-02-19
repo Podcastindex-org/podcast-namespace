@@ -161,6 +161,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 ## Alternate Enclosure `<podcast:alternateEnclosure>`
 1. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 2. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+3. [RSS.com](https://changelog.rss.com/v26-2-1-331741)
 
 ## Content Link `<podcast:contentLink>`
 1. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
