@@ -159,7 +159,7 @@
             <podcast:soundbite startTime="45.4" duration="56.0" />
             <podcast:transcript url="https://example.com/ep2/transcript.txt" type="text/plain" />
             <podcast:person href="https://en.wikipedia.org/wiki/Adam_Curry" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
-            <podcast:person role="guest" href="https://example.com/blog/daveajones/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+            <podcast:person role="guest" href="https://example.com/blog/daveajones/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
             <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/marcusbrown">Marcus Brown</podcast:person>
             <podcast:location rel="creator" geo="geo:51.5718706,-0.7769654" osm="R3727240" country="GB">Marlow</podcast:location>
             <podcast:location rel="subject" geo="geo:-27.8611449,153.3162701" osm="R16317988" country="AU">Dreamworld</podcast:location>
@@ -209,7 +209,7 @@
             <podcast:soundbite startTime="29.32" duration="34.0" />
             <podcast:transcript url="https://example.com/ep1/transcript.txt" type="text/plain" />
             <podcast:person href="http://blog.curry.com/" img="http://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
-            <podcast:person role="guest" href="https://www.imdb.com/name/nm0427852888/" img="http://example.com/images/davejones.jpg">Dave Jones</podcast:person>
+            <podcast:person role="guest" href="https://www.imdb.com/name/nm0427852888/" img="https://example.com/images/davejones.jpg">Dave Jones</podcast:person>
             <podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/jebickmorton">Jebick Morton</podcast:person>
             
             <enclosure url="https://example.com/file-01.mp3" length="43111403" type="audio/mpeg" />
