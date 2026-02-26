@@ -95,5 +95,5 @@ A single [`<podcast:remoteItem>`](remote-item.md) element OR one or more [`<podc
 </rss>
 ```
 
-(Humans: on the Podcast Index App list, this tag/feature is called [Wallet Switching](https://podcastindex.org/apps?elements=Wallet+Switching)).
+(Humans: on the Podcast Index App list, this tag/feature is called [Wallet Switching (VTS)](https://podcastindex.org/apps?elements=Wallet+Switching+%28VTS%29).
 
