@@ -36,7 +36,7 @@ This document outlines a simple spec for sharing RSS payment metadata that will 
 
 ### Spec:
 
-The `rss::payment` metadata spec uses a prefix in the payment description field, combined with http headers in a linked url, to deliver full payment metadata to services that care about it, whilst giving receiving users on any wallet an easily readable description for the payment:
+The `rss::payment` metadata spec uses a prefix in the payment comment field, combined with http headers in a linked url, to deliver full payment metadata to services that care about it, whilst giving receiving users on any wallet an easily readable description for the payment:
 
 `rss::payment::{action} {url} {truncated message}`
 
@@ -66,9 +66,12 @@ encodeURIComponent({
   "value_msat": 25000, // the amount in millisatoshis
   "value_msat_total": 100000, // the total amount for all splits in millisatoshis
   "value_usd": 0.025797, // the amount in usd (optional)
+
   "timestamp": "2025-11-05T15:09:10.174Z", // ISO 8601 timestamp
   "position": 120, // episode position in seconds (optional)
 
+  // rss content identifiers - optional but strongly recommended
+  "feed_medium": "", // from <podcast:medium> tag
   "feed_guid": "",
   "feed_title": "",
   "item_guid": "",
@@ -86,7 +89,7 @@ encodeURIComponent({
 ### Implementation:
 
 - **for apps:**
-  - add `rss::payment::{action} {url} {truncated message}` to the BOLT11 description field
+  - add `rss::payment::{action} {url} {truncated message}` to the payment comment field
   - add the `x-rss-payment` response header to the url
 - **for receiving wallets that care about rss payment metadata:**
   - look for payments with description fields that start with `rss::payment` and contain a url
