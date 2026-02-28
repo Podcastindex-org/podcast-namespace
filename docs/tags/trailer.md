@@ -20,11 +20,11 @@ The node value is a string, which is the title of the trailer. It is required. P
 
 ### Attributes
 
-- **url:** (required) This is a url that points to the audio or video file to be played. This attribute is a string.
-- **pubdate:** (required) The date the trailer was published. This attribute is an RFC2822 formatted date string.
-- **length:** (recommended) The length of the file in bytes. This attribute is a number.
-- **type:** (recommended) The mime type of the file. This attribute is a string.
-- **season:** (optional) If this attribute is present it specifies that this trailer is for a particular season number. This attribute is a number.
+- `url` **(required)**: This is a url that points to the audio or video file to be played. This attribute is a string.
+- `pubdate` **(required)**: The date the trailer was published. This attribute is an RFC2822 formatted date string.
+- `length` (recommended): The length of the file in bytes. This attribute is a number.
+- `type` (recommended): The mime type of the file. This attribute is a string.
+- `season` (optional): If this attribute is present it specifies that this trailer is for a particular season number. This attribute is a number.
 
 If the `season` attribute is present, it must be a number that matches the format of the [`<podcast:season>`](season.md) tag. So, for a podcast that has 3 published seasons, a new `<podcast:trailer season="4">` tag can be put in the channel to later be matched up with a `<podcast:season>4<podcast:season>` tag when it is published within a new `<item>`.
 

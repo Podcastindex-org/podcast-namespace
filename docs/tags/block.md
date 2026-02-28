@@ -22,7 +22,7 @@ Multiple
 
 ### Attributes
 
-- **id** (optional) A single entry from the [service slug list](/serviceslugs.txt).
+- `id` (optional): A single entry from the [service slug list](/serviceslugs.txt).
 
 ### Node value
 

@@ -26,10 +26,10 @@ A single [`<podcast:remoteItem>`](remote-item.md) element OR one or more [`<podc
 
 ### Attributes
 
-- `startTime` (required) - The time, in seconds, to stop using the currently active value recipient information and start using the value recipient information contained in this element.
-- `duration` (required) - How many seconds the playback app should use this element's value recipient information before switching back to the value recipient information of the parent feed.
-- `remoteStartTime` (optional) - The time in the remote item where the value split begins. Allows the timestamp to be set correctly in value metadata. If not defined, defaults to 0.
-- `remotePercentage` (optional) - The percentage of the payment the remote recipients will receive if a [`<podcast:remoteItem>`](remote-item.md) is present. If not defined, defaults to 100. If the value is less than 0, 0 is assumed. If the value is greater than 100, 100 is assumed.
+- `startTime` **(required)**: The time, in seconds, to stop using the currently active value recipient information and start using the value recipient information contained in this element.
+- `duration` **(required)**: How many seconds the playback app should use this element's value recipient information before switching back to the value recipient information of the parent feed.
+- `remoteStartTime` (optional): The time in the remote item where the value split begins. Allows the timestamp to be set correctly in value metadata. If not defined, defaults to 0.
+- `remotePercentage` (optional): The percentage of the payment the remote recipients will receive if a [`<podcast:remoteItem>`](remote-item.md) is present. If not defined, defaults to 100. If the value is less than 0, 0 is assumed. If the value is greater than 100, 100 is assumed.
 
 ### Example (Remote Item)
 
