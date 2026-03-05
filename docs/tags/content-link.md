@@ -20,7 +20,7 @@ The node value is a free-form string meant to explain to the user where this con
 
 ### Attributes
 
-- **href** (required) A string that is the uri pointing to content outside of the application.
+- `href` **(required)**: A string that is the uri pointing to content outside of the application.
 
 ### Examples
 

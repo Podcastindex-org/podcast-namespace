@@ -20,13 +20,13 @@ Multiple
 
 ### Attributes
 
-- **name** (recommended) A free-form string that designates who or what this recipient is.
-- **customKey** (optional) The name of a custom record key to send along with the payment.
-- **customValue** (optional) A custom value to pass along with the payment. This is considered the value that belongs to the `customKey`.
-- **type** (required) A slug that represents the type of receiving address that will receive the payment.
-- **address** (required) This denotes the receiving address of the payee.
-- **split** (required) The number of shares of the payment this recipient will receive.
-- **fee** (optional) If this attribute is not specified, it is assumed to be false.
+- `type` **(required)**: A slug that represents the type of receiving address that will receive the payment.
+- `address` **(required)**: This denotes the receiving address of the payee.
+- `split` **(required)**: The number of shares of the payment this recipient will receive.
+- `name` (recommended): A free-form string that designates who or what this recipient is.
+- `customKey` (optional): The name of a custom record key to send along with the payment.
+- `customValue` (optional): A custom value to pass along with the payment. This is considered the value that belongs to the `customKey`.
+- `fee` (optional) If this attribute is not specified, it is assumed to be false.
 
 ### Examples
 

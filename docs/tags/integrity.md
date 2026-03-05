@@ -14,8 +14,8 @@ Single
 
 ### Attributes
 
-- **type:** (required) Type of integrity, either "sri" or "pgp-signature".
-- **value:** (required) Value of the sri string or base64 encoded pgp signature.
+- `type` **(required)**: Type of integrity, either "sri" or "pgp-signature".
+- `value` **(required)**: Value of the sri string or base64 encoded pgp signature.
 
 ### Examples
 

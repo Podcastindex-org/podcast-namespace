@@ -14,7 +14,7 @@ Multiple
 
 ### Attributes
 
-- **purpose** (optional) A service specific string that will be used to denote what purpose this tag serves. This could be something like "example.com" if it's a third party hosting platform needing to insert this data, or something like "verify", "release" or any other free form bit of info that is useful to the end consumer that needs it. The free form nature of this tag requires that this attribute is also free formed. This value should not exceed `128 characters`.
+- `purpose` (optional): A service specific string that will be used to denote what purpose this tag serves. This could be something like "example.com" if it's a third party hosting platform needing to insert this data, or something like "verify", "release" or any other free form bit of info that is useful to the end consumer that needs it. The free form nature of this tag requires that this attribute is also free formed. This value should not exceed `128 characters`.
 
 ### Purposes
 

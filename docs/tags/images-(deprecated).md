@@ -16,7 +16,7 @@ Single
 
 ### Attributes
 
-- **srcset** (required) A string that denotes each image url followed by a space and the pixel width, with each one separated by a comma. See the example for a clear view of the syntax.
+- `srcset` **(required)**: A string that denotes each image url followed by a space and the pixel width, with each one separated by a comma. See the example for a clear view of the syntax.
 
 ### Examples
 
