@@ -90,7 +90,6 @@
             <pubDate>Fri, 09 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
             <itunes:image href="https://example.com/ep0003/artMd.jpg"/>
-            
             <podcast:image href="https://example.com/images/ep3/pci_avatar-massive.png" alt="image description for accesibility and bots" purpose="artwork" aspect-ratio="1/1" width="3000" type="image/png"/>
             <podcast:image href="https://example.com/images/ep3/pci_avatar-massive_1200x630.webp" alt="image description for accesibility and bots" purpose="social" aspect-ratio="1.9" width="1200" height="630" type="image/webp"/>
             <itunes:explicit>false</itunes:explicit>
@@ -201,7 +200,6 @@
             <pubDate>Wed, 07 Oct 2020 04:30:38 GMT</pubDate>
             <author>John Doe (john@example.com)</author>
             <itunes:image href="https://example.com/ep0001/artMd.jpg"/>
-
             <itunes:explicit>false</itunes:explicit>
             <podcast:season name="Podcasting 2.0">1</podcast:season>
             <podcast:episode>1</podcast:episode>
