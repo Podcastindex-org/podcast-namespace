@@ -22,6 +22,8 @@ The following are a list of strings known to be in common use. This list is in n
 
 - `verify` - The node value is expected to contain a string that is given by a third party platform to a podcaster in order to prove that they are the owner of the feed and are in control of it. This is meant to replace the need for emails to exist in feeds. See example section below.
 - `applepodcastsverify` - Same as above but [used by Apple](https://help.apple.com/itc/podcasts_connect/#/itcb54353390:~:text=podcast%3Atxt%20purpose%3D%E2%80%9C-,applepodcastsverify,-%E2%80%9D%3E).
+- `ai-content` - The node value is expected to contain a boolean (`true` or `false`) indicating whether AI-generated content was used in the production of the podcast or episode. This works exactly like `itunes:explicit`. When used at the `<item>` level, it applies to that specific episode. When used at the `<channel>` level, it applies to the podcast as a whole. Some prefer to automatically set the `<channel>` level value to true when at least one `<item>` in the feed contains a true value for the same signal. For guidance on when to set this value to `true` or `false`, see the [AI Disclosure Framework and interactive tool](https://shouldidisclose.ai).
+
 
 ### Node value
 
@@ -44,3 +46,8 @@ This is a free form string. Please do not exceed `4000 characters` for the node 
 ```xml
 <podcast:txt purpose="release">2022-10-26T04:45:30.742Z</podcast:txt>
 ```
+
+```xml
+<podcast:txt purpose="ai-content">true</podcast:txt>
+```
+

@@ -8,7 +8,7 @@ The tag has many use cases and is one of the more complex ones.
 
 > [!IMPORTANT]
 > You are **highly encouraged** to read the
-> full [implementation document](../examples/location/location.md)
+> full [implementation document](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/examples/location/location.md)
 > before starting to code for it. This document includes rationale and example code.
 
 ### Parent
@@ -37,7 +37,7 @@ define the actual location parameters.
 - `country` (recommended): A two-letter code for the country, following [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 
 > [!NOTE]
-> While all elements are "recommended", **the location tag works best when all elements are populated.** The [implementation document](../examples/location/location.md) goes into more detail. An example location generator (entirely in JavaScript) is [over here](https://jamescridland.github.io/podcast-location-generator/).
+> While all elements are "recommended", **the location tag works best when all elements are populated.** The [implementation document](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/examples/location/location.md) goes into more detail. An example location generator (entirely in JavaScript) is [over here](https://jamescridland.github.io/podcast-location-generator/).
 
 ### Examples
 

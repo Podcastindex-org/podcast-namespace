@@ -50,7 +50,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 ```xml
 <podcast:person
         href="https://example.com/johnsmith/blog"
-        img="http://example.com/images/johnsmith.jpg"
+        img="https://example.com/images/johnsmith.jpg"
 >John Smith</podcast:person>
 ```
 
@@ -58,7 +58,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 <podcast:person
         role="guest"
         href="https://www.imdb.com/name/nm0427852888/"
-        img="http://example.com/images/janedoe.jpg"
+        img="https://example.com/images/janedoe.jpg"
 >Jane Doe</podcast:person>
 ```
 
@@ -66,7 +66,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 <podcast:person
         role="guest"
         href="https://example.wikipedia/alicebrown"
-        img="http://example.com/images/alicebrown.jpg"
+        img="https://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
 ```
 
@@ -75,7 +75,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
         group="writing"
         role="guest"
         href="https://example.wikipedia/alicebrown"
-        img="http://example.com/images/alicebrown.jpg"
+        img="https://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
 ```
 
