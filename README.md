@@ -116,7 +116,7 @@ functionality of the tag.
 ### Goal #3 - Keep Exisiting Conventions
 
 Reinventing the wheel helps nobody.  When at all possible, existing conventions should be maintained.  For example, 
-it would make sense to turn **\<podcast:explicit>** into a unary element, where it's existence is taken as a "yes" 
+it would make sense to turn `<podcast:explicit>` into a unary element, where it's existence is taken as a "yes" 
 and it's absence as a "no".  But, that has never been the standard.  And, given as how this namespace will probably 
 sit alongside at least one other namespace, it makes sense to keep existing conventions in place.
 
@@ -144,115 +144,61 @@ to adoption, development and contribution.
 
 ## Element List
 
-### <u>Phase 1</u>
-
-<br>
-
 The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
 located [here](docs/1.0.md).  Please see that file for full implementation details.
 
-- **\<podcast:locked>** <br>
-- **\<podcast:transcript>** <br>
-- **\<podcast:funding>** <br>
-- **\<podcast:chapters>** <br>
-- **\<podcast:soundbite>** <br>
+### Phase 1
 
-<br>
+- `<podcast:locked>` <br>
+- `<podcast:transcript>` <br>
+- `<podcast:funding>` <br>
+- `<podcast:chapters>` <br>
+- `<podcast:soundbite>` <br>
 
-### <u>Phase 2</u>
+### Phase 2
 
-<br>
+- `<podcast:person>` <br>
+- `<podcast:location>` <br>
+- `<podcast:season>` <br>
+- `<podcast:episode>` <br>
 
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
-located [here](docs/1.0.md).  Please see that file for full implementation details.
+### Phase 3
 
-- **\<podcast:person>** <br>
-- **\<podcast:location>** <br>
-- **\<podcast:season>** <br>
-- **\<podcast:episode>** <br>
+- `<podcast:trailer>` <br>
+- `<podcast:license>` <br>
+- `<podcast:alternateEnclosure>` <br>
+  - `<podcast:source>` <br>
+  - `<podcast:integrity>` <br>
+- `<podcast:guid>` <br>
 
-<br>
+### Phase 4
 
+- `<podcast:medium>` <br>
+- `<podcast:images>` - DEPRECATED<br>
+- `<podcast:liveItem>` <br>
 
-### <u>Phase 3</u>
+### Phase 5
 
-<br>
+- `<podcast:socialInteract>` <br>
+- `<podcast:block>` <br>
 
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
-located [here](docs/1.0.md).  Please see that file for full implementation details.
+### Phase 6
 
-- **\<podcast:trailer>** <br>
-- **\<podcast:license>** <br>
-- **\<podcast:alternateEnclosure>** <br>
-  - **\<podcast:source>** <br>
-  - **\<podcast:integrity>** <br>
-- **\<podcast:guid>** <br>
+- `<podcast:txt>` <br>
+- `<podcast:remoteItem>` <br>
+- `<podcast:podroll>` <br>
+- `<podcast:updateFrequency>` <br>
+- `<podcast:podping>` <br>
+- `<podcast:valueTimeSplit>` <br>
 
-<br>
+### Phase 7<
 
+- `<podcast:publisher>` <br>
+- `<podcast:chat>` <br>
 
-## <u>Phase 4</u>
+### Phase 8
 
-<br>
-
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
-located [here](docs/1.0.md).  Please see that file for full implementation details.
-
-- **\<podcast:medium>** <br>
-- **\<podcast:images>** - DEPRECATED<br>
-- **\<podcast:liveItem>** <br>
-
-<br>
-
-
-## <u>Phase 5</u>
-
-<br>
-
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
-located [here](docs/1.0.md).  Please see that file for full implementation details.
-
-- **\<podcast:socialInteract>** <br>
-- **\<podcast:block>** <br>
-
-<br>
-
-## <u>Phase 6</u>
-
-<br>
-
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document 
-located [here](docs/1.0.md).  Please see that file for full implementation details.
-
-- **\<podcast:txt>** <br>
-- **\<podcast:remoteItem>** <br>
-- **\<podcast:podroll>** <br>
-- **\<podcast:updateFrequency>** <br>
-- **\<podcast:podping>** <br>
-- **\<podcast:valueTimeSplit>** <br>
-
-<br>
-
-## <u>Phase 7</u>
-
-<br>
-
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document
-located [here](docs/1.0.md).  Please see that file for full implementation details.
-
-- **\<podcast:publisher>** <br>
-- **\<podcast:chat>** <br>
-
-<br>
-
-## <u>Phase 8</u>
-
-<br>
-
-The following tags have been formally adopted into the namespace.  They are fully documented in the XMLNS document
-located [here](docs/1.0.md).  Please see that file for full implementation details.
-
-- **\<podcast:image>** <br>
+- `<podcast:image>` <br>
 
 <br>
 
