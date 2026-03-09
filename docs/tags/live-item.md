@@ -47,11 +47,6 @@ A complete example:
     <link>https://example.com/podcast/live</link>
     <guid isPermaLink="true">https://example.com/live</guid>
     <author>John Doe (john@example.com)</author>
-    <podcast:images srcset="https://example.com/images/live/pci_avatar-massive.jpg 1500w,
-        https://example.com/images/live/pci_avatar-middle.jpg 600w,
-        https://example.com/images/live/pci_avatar-small.jpg 300w,
-        https://example.com/images/live/pci_avatar-tiny.jpg 150w"
-    />
     <podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f"
                     img="https://example.com/images/adamcurry.jpg">Adam Curry</podcast:person>
     <podcast:person role="guest" href="https://github.com/daveajones/"
@@ -62,8 +57,8 @@ A complete example:
         <podcast:source uri="https://example.com/pc20/livestream" />
     </podcast:alternateEnclosure>
     <enclosure url="https://example.com/pc20/livestream?format=.mp3" type="audio/mpeg" length="312" />
-    <podcast:contentLink href="https://youtube.com/pc20/livestream">YouTube!</podcast:contentLink>
-    <podcast:contentLink href="https://twitch.com/pc20/livestream">Twitch!</podcast:contentLink>
+    <podcast:contentLink href="https://www.youtube.com/pc20/livestream">YouTube!</podcast:contentLink>
+    <podcast:contentLink href="https://www.twitch.tv/pc20/livestream">Twitch!</podcast:contentLink>
     <podcast:contentLink href="https://example.com/html/livestream">Listen Live!</podcast:contentLink>
 </podcast:liveItem>
 ```

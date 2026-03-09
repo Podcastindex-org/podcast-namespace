@@ -45,7 +45,7 @@ This feed also makes use of the [`<podcast:person>`](../../tags/person.md) tag t
 publishing entity.
 
 ```xml
-<rss xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0">
     <channel>
         <title>AgileSet Media</title>
         <link>https://agilesetmedia.com</link>
@@ -84,7 +84,7 @@ The following example snippet shows a podcast feed produced by "AgileSet Media" 
 example above.
 
 ```xml
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md" version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0">
     <channel>
         <title><![CDATA[It's A Mood]]></title>
         <description>A value4value happenstance music show.</description>

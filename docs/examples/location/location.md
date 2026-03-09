@@ -69,7 +69,7 @@ The specification defaults to "subject" for legacy reasons, but we would suggest
 
 #### `geo` **recommended**
 
-A geo URI, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+A geo URI, conformant to [RFC 5870](https://datatracker.ietf.org/doc/html/rfc5870).
 
 Examples:
 

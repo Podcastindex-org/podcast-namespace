@@ -157,7 +157,7 @@ request to the `return URL` computed from the `consumer` and `return_path`.
 
 The GET request will contain only one parameter: `token`.
 
-This parameter will be a JSON Web Token ([JWT](https://jwt.io/)), and will include the following data :
+This parameter will be a JSON Web Token ([JWT](https://www.jwt.io/)), and will include the following data :
 
 ```typescript
 type QuickClaimResponse =
@@ -173,7 +173,7 @@ type QuickClaimResponse =
 ```
 
 Using JWT lets us ensure the hosting provider wrote the response. It also allow us to define, or not, an expiration
-date and such. ([More info on JWT](https://jwt.io/))
+date and such. ([More info on JWT](https://www.jwt.io/))
 
 The JWT must use an asymmetric signing algorithm (ES256 for example). The response is signed by the hosting provider
 private key, and it can be verified using the `pub` attribute of the tag (put there by the same hosting provider).
@@ -446,7 +446,7 @@ authenticating the **CREATOR** decision.
 eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJndWlkIjoiZWFkNGMyMzYtYmY1OC01OGM2LWEyYzYtYTZiMjhkMTI4Y2I2IiwiYWNjZXB0ZWQiOnRydWV9.eOXYFi9uUSUAKWcI8GdJ15RIhjoCvR0l9TUCPsqhsTYqaGFTwbH6zXzYqIqhxmtSotvL8ZLumP64LRFBjHX5Mw
 ```
 
-Decode/Encode online with : https://jwt.io/
+Decode/Encode online with : https://www.jwt.io/
 
 #### Key Details
 

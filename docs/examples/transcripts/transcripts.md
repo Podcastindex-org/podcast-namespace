@@ -2,7 +2,7 @@
 
 This is the initial spec for the podcast transcript format. There are four possible formats detailed below.
 
-Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+Some transcript implementations are done in-browser. [CORS headers](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS)
 are required to make these files available from other websites. [A CORS tester is available here](https://cors-test.codehappy.dev/),
 to ensure that transcripts are available within browser-based players.
 
@@ -12,7 +12,7 @@ The examples given below are just for convenience. In production you should ensu
 
 ## WebVTT
 
-The [Web Video Text Tracks Format (WebVTT)](https://www.w3.org/TR/webvtt1/) is designed for use in HTML on the web. You can use the [<track> element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track) in your own web-based players to make closed-captions appear on a web-page.
+The [Web Video Text Tracks Format (WebVTT)](https://www.w3.org/TR/webvtt1/) is designed for use in HTML on the web. You can use the [<track> element](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) in your own web-based players to make closed-captions appear on a web-page.
 
 A VTT file contains medium-fidelity timestamps. It differs from the SRT format (below) because you can optionally add speaker names, including them in a voice span tag `<v>` at the beginning of each caption when they change, as in the snippet below. Apple Podcasts supports these speaker names, and will ingest them into its transcript tool.
 

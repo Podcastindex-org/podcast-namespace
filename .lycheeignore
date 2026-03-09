@@ -1,0 +1,24 @@
+# HTTPS links examples
+https.*example.*
+https://domain.tld/*
+# Namespaces
+http://www.itunes.com/dtds/podcast-1.0.dtd
+http://purl.org/rss/1.0/modules/content/
+https:\/\/yearbook\.com\/namespace.*
+http://blogs.law.harvard.edu/tech/rss
+# Redirects to https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md
+https://podcastindex.org/namespace/1.0
+# Feeds redirects to preserve
+https://feeds.buzzsprout.com/1844352.rss
+# Item Guid
+https:\/\/podcastindex\.org\/podcast\/4148683#.*
+# Pretty
+https://overpass-turbo.eu/s/*
+# Lynchee fragment limitations
+https://podcastindex-org.github.io/docs-api/#auth
+https:\/\/www\.openstreetmap\.org\/.*#map.*
+.*#fastfollow-podcast.*
+# Apple reference
+https:\/\/help\.apple\.com\/itc\/podcasts_connect\/#\/.*
+http.*mypodcast.com.*
+http://www.mediacompany.com/podcast

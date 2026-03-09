@@ -47,7 +47,7 @@ There is only one required attribute:
 - `url` (optional - string) The url of a web page or supporting document that's related to the topic of this chapter.
 - `toc` (optional - boolean) If this property is present and set to false, this chapter should not display visibly to the user in either the table of contents or as a jump-to point in the user interface. It should be considered a "silent" chapter marker for the purpose of meta-data only. If this property is set to `true` or not present at all, this should be considered a normal chapter for display to the user. The name "toc" is short for "table of contents".
 - `endTime` (optional - float) The end time of the chapter, expressed in seconds with float precision for fractions of a second.
-- `location` (optional - object) This object defines an optional location that is tied to this chapter. It follows the structure of the [location](https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md) tag in the XML namespace.
+- `location` (optional - object) This object defines an optional location that is tied to this chapter. It follows the structure of the [location](/docs/tags/location.md) tag in the XML namespace.
 
 ## The Location Object:
 
@@ -66,7 +66,7 @@ would allow apps to show a map with markers within the UI as the tour progresses
 There are two required attributes:
 
 - `name` (required - string) A human readable place name.
-- `geo` (required - string) A simple latitude,longitude given in geoURI format, conformant to [RFC 5870](https://tools.ietf.org/html/rfc5870).
+- `geo` (required - string) A simple latitude,longitude given in geoURI format, conformant to [RFC 5870](https://datatracker.ietf.org/doc/html/rfc5870).
 
 #### Optional Attributes:
 

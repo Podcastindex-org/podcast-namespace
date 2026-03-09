@@ -448,7 +448,7 @@ and guest.
 ### TLV Records and Extensions
 
 Lightning payments are performed using lightning messages as specified
-in [BOLT #1: Base Protocol](https://github.com/lightningnetwork/lightning-rfc/blob/master/01-messaging.md).
+in [BOLT #1: Base Protocol](https://github.com/lightning/bolts/blob/master/01-messaging.md).
 
 One part of the message is the `extension`, a TLV (Type-Length-Value) stream. Podcast specific data can be added to
 transactions using the key **7629169** with the value described in [bLIP 10](blip-0010.md)

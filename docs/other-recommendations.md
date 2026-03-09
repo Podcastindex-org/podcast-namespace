@@ -32,13 +32,13 @@ The [original RSS specification](https://cyber.harvard.edu/rss/rss.html#hrelemen
 
 > A channel may contain any number of `<item>`s. An item may represent a "story" -- much like a story in a newspaper or magazine; if so its description is a synopsis of the story, and the link points to the full story. An item may also be complete in itself, if so, the description contains the text (entity-encoded HTML is allowed; see examples) …
 
-There also exists `<content:encoded>` for dedicated HTML episode notes [[rssboard.org]](https://www.rssboard.org/rss-profile#namespace-elements-content-encoded), but more and more publishers switch to only having `<description>`.
+There also exists `<content:encoded>` for dedicated HTML episode notes [(rssboard.org)](https://www.rssboard.org/rss-profile#namespace-elements-content-encoded), but more and more publishers switch to only having `<description>`.
 
 When your description contains HTML, we recommend to wrap it into `<![CDATA[` and `]]>`. See https://podnews.net/article/html-episode-notes-in-podcast-rss and https://podnews.net/article/how-podcast-show-notes-display for more information about supported HTML tags in different clients. Typical are `<p>`, `<br/>`, `<a href=""> </a>`, `<ul>` and `<li>`.
 
 ## Feed Paging and Archiving (RFC5005)
 
-To be able to put more metadata into RSS feeds, while keeping the full archive of all old episodes becomes a challange for some podcasters and podcast clients. A typical workaround in the industry is to only render the full metadata of the newest episodes, where there is already a proper solution since 2007: [RFC5005](https://tools.ietf.org/html/rfc5005)
+To be able to put more metadata into RSS feeds, while keeping the full archive of all old episodes becomes a challange for some podcasters and podcast clients. A typical workaround in the industry is to only render the full metadata of the newest episodes, where there is already a proper solution since 2007: [RFC5005](https://datatracker.ietf.org/doc/html/rfc5005)
 
 There are already a few players implementing RFC5005 for a while, but . Adoption from clients is sporadic. A new/different standard wouldn't help though because I'd say RFC5005 does all that's required. We need to be louder about the existence of the standard and ask for it's implementation from all sides.
 
@@ -48,10 +48,10 @@ Excerpt from https://feeds.metaebene.me/freakshow/mp3 feed page 2,
 parent `<channel>`:
 
 ```xml
-<atom:link rel="next" href="https://freakshow.fm/feed/mp3?paged=3" />
-<atom:link rel="prev" href="https://freakshow.fm/feed/mp3" />
-<atom:link rel="first" href="https://freakshow.fm/feed/mp3" />
-<atom:link rel="last" href="https://freakshow.fm/feed/mp3?paged=9" />
+<atom:link rel="next" href="https://feeds.metaebene.me/freakshow/mp3?paged=3" />
+<atom:link rel="prev" href="https://feeds.metaebene.me/freakshow/mp3" />
+<atom:link rel="first" href="https://feeds.metaebene.me/freakshow/mp3" />
+<atom:link rel="last" href="https://feeds.metaebene.me/freakshow/mp3?paged=9" />
 ```
 
 ## WebSub and Podping.cloud
