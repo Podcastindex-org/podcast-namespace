@@ -16,8 +16,8 @@ Single
 
 ### Attributes
 
-- **url (required):** The URL where the chapters file is located.
-- **type (required):** Mime type of file - JSON prefered, 'application/json+chapters'.
+- `url` **(required)**: The URL where the chapters file is located.
+- `type` **(required)**: Mime type of file - JSON prefered, 'application/json+chapters'.
 
 ### Examples
 
