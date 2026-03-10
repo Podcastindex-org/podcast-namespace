@@ -71,3 +71,9 @@ The node value must be one or more [`<podcast:source>`](source.md) elements that
     <podcast:source uri="https://example.onion/file-1080.mp4" />
 </podcast:alternateEnclosure>
 ```
+
+```xml
+<podcast:alternateEnclosure type="application/x-mpegURL" length="0">
+    <podcast:source uri="https://example.com/master.m3u8" />
+</podcast:alternateEnclosure>
+```
