@@ -149,56 +149,56 @@ located [here](docs/1.0.md).  Please see that file for full implementation detai
 
 ### Phase 1
 
-- `<podcast:locked>` <br>
-- `<podcast:transcript>` <br>
-- `<podcast:funding>` <br>
-- `<podcast:chapters>` <br>
-- `<podcast:soundbite>` <br>
+- `<podcast:locked>`
+- `<podcast:transcript>`
+- `<podcast:funding>`
+- `<podcast:chapters>`
+- `<podcast:soundbite>`
 
 ### Phase 2
 
-- `<podcast:person>` <br>
-- `<podcast:location>` <br>
-- `<podcast:season>` <br>
-- `<podcast:episode>` <br>
+- `<podcast:person>`
+- `<podcast:location>`
+- `<podcast:season>`
+- `<podcast:episode>`
 
 ### Phase 3
 
-- `<podcast:trailer>` <br>
-- `<podcast:license>` <br>
-- `<podcast:alternateEnclosure>` <br>
-  - `<podcast:source>` <br>
-  - `<podcast:integrity>` <br>
-- `<podcast:guid>` <br>
+- `<podcast:trailer>`
+- `<podcast:license>`
+- `<podcast:alternateEnclosure>`
+  - `<podcast:source>`
+  - `<podcast:integrity>`
+- `<podcast:guid>`
 
 ### Phase 4
 
-- `<podcast:medium>` <br>
-- `<podcast:images>` - DEPRECATED<br>
-- `<podcast:liveItem>` <br>
+- `<podcast:medium>`
+- `<podcast:images>` - DEPRECATED
+- `<podcast:liveItem>`
 
 ### Phase 5
 
-- `<podcast:socialInteract>` <br>
-- `<podcast:block>` <br>
+- `<podcast:socialInteract>`
+- `<podcast:block>`
 
 ### Phase 6
 
-- `<podcast:txt>` <br>
-- `<podcast:remoteItem>` <br>
-- `<podcast:podroll>` <br>
-- `<podcast:updateFrequency>` <br>
-- `<podcast:podping>` <br>
-- `<podcast:valueTimeSplit>` <br>
+- `<podcast:txt>`
+- `<podcast:remoteItem>`
+- `<podcast:podroll>`
+- `<podcast:updateFrequency>`
+- `<podcast:podping>`
+- `<podcast:valueTimeSplit>`
 
-### Phase 7<
+### Phase 7
 
-- `<podcast:publisher>` <br>
-- `<podcast:chat>` <br>
+- `<podcast:publisher>`
+- `<podcast:chat>`
 
 ### Phase 8
 
-- `<podcast:image>` <br>
+- `<podcast:image>`
 
 <br>
 
