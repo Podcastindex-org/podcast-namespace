@@ -1,4 +1,4 @@
-## Transcript File Format Details
+# Transcript File Format Details
 
 This is the initial spec for the podcast transcript format. There are four possible formats detailed below.
 
@@ -10,7 +10,9 @@ to ensure that transcripts are available within browser-based players.
 
 The examples given below are just for convenience. In production you should ensure you are conforming to the actual spec for each format as defined in its own documentation.
 
-## WebVTT
+## Recomended
+
+### WebVTT
 
 The [Web Video Text Tracks Format (WebVTT)](https://www.w3.org/TR/webvtt1/) is designed for use in HTML on the web. You can use the [<track> element](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) in your own web-based players to make closed-captions appear on a web-page.
 
@@ -70,8 +72,11 @@ document.getElementById('vttplayer').textTracks[0].addEventListener('cuechange',
 });
 </script>
 ```
+<br/>
 
-## SRT
+## In use
+
+### SRT
 
 The SRT format was designed for video captions but provides a suitable solution for podcast transcripts. The SRT format contains medium-fidelity timestamps and are a
 popular export option from transcription services. An SRT file can be generated programmatically from a VTT file (and vice-versa).
@@ -100,24 +105,14 @@ And if so, what should you
 3
 00:00:06,090 --> 00:00:11,610
 include in one? Welcome to
-Podcasting Q&A, where you learn
+Podcasting Q&A.
 
 4
-00:00:11,610 --> 00:00:15,750
-the best tips and strategies to
-launch, grow and monetize your
-
-5
-00:00:15,750 --> 00:00:18,630
-podcast. This week's question
-comes from Gillian.
-
-6
 00:00:19,080 --> 00:00:21,450
 Gillian: Hi Buzzsprout, Gillian
 here from breaking through
 
-7
+5
 00:00:21,450 --> 00:00:25,350
 careers podcast. My question is,
 do we need a podcast trailer?
@@ -125,7 +120,7 @@ do we need a podcast trailer?
 
 Example file: [example.srt](example.srt)
 
-## JSON
+### JSON
 
 The JSON representation is a flexible format that accomodates various degrees of fidelity in a concise way. At the most precise, it enables word-by-word highlighting. This format for podcast transcripts should adhere to the following specifications.
 
@@ -180,7 +175,7 @@ The JSON representation is a flexible format that accomodates various degrees of
 
 Example file: [example.json](example.json)
 
-## HTML
+### HTML
 
 The HTML transcript format provides a solution when a transcript is available but no or limited timecode data is available. HTML transcript files are considered low-fidelity and are designed to serve as an accessibility aid and provide searchable episode content. The HTML format used for podcast transcripts should adhere to the following specifications.
 
