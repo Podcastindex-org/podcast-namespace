@@ -26,6 +26,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 19. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
 20. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 21. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+22. [Nuotit](https://x.com/Nuotitapp/status/1994446664656933207)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/help/223-lock-tag)
@@ -90,6 +91,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 16. [Pinepods](https://www.pinepods.online/docs/Features/Chapters)
 17. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 18. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+19. [Nuotit](https://x.com/Nuotitapp/status/1983119259405521052)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
