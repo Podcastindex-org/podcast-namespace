@@ -38,9 +38,9 @@ When your description contains HTML, we recommend to wrap it into `<![CDATA[` an
 
 ## Feed Paging and Archiving (RFC5005)
 
-To be able to put more metadata into RSS feeds, while keeping the full archive of all old episodes becomes a challange for some podcasters and podcast clients. A typical workaround in the industry is to only render the full metadata of the newest episodes, where there is already a proper solution since 2007: [RFC5005](https://datatracker.ietf.org/doc/html/rfc5005)
+Putting detailed episode metadata into RSS feeds while keeping the full archive of all old episodes, becomes a challenge for some podcasters and podcast clients. A typical workaround in the industry is to only render the full metadata of the newest episodes, even though there has been a proper solution since 2007: [RFC5005](https://datatracker.ietf.org/doc/html/rfc5005)
 
-There are already a few players implementing RFC5005 for a while, but . Adoption from clients is sporadic. A new/different standard wouldn't help though because I'd say RFC5005 does all that's required. We need to be louder about the existence of the standard and ask for it's implementation from all sides.
+There are already a few podcast clients implementing RFC5005 for a while, but adoption from clients in general is sporadic. A new/different standard wouldn't help though because RFC5005 does all that's required. We need to be louder about the existence of the standard and ask for it's implementation from all sides.
 
 #### Examples
 
