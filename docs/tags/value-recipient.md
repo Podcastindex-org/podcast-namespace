@@ -65,7 +65,7 @@ Multiple
 Lightning Address recipients can be used in place of, or mixed with, `node` recipients in the same value block:
 
 ```xml
-<podcast:value type="lightning" method="keysend" suggested="0.00000005000">
+<podcast:value type="lightning" method="lnaddress" suggested="0.00000005000">
   <podcast:valueRecipient
       name="Alice (Podcaster)"
       type="lnaddress"
