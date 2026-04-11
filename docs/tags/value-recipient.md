@@ -1,5 +1,4 @@
 # Value Recipient
-
 `<podcast:valueRecipient>`
 
 The `valueRecipient` tag designates various destinations for payments to be sent to during consumption of the enclosed media. Each recipient is considered to receive a "split" of the total payment according to the number of shares given in the `split` attribute.
@@ -20,13 +19,16 @@ Multiple
 
 ### Attributes
 
-- `type` **(required)**: A slug that represents the type of receiving address that will receive the payment.
-- `address` **(required)**: This denotes the receiving address of the payee.
-- `split` **(required)**: The number of shares of the payment this recipient will receive.
-- `name` (recommended): A free-form string that designates who or what this recipient is.
-- `customKey` (optional): The name of a custom record key to send along with the payment.
-- `customValue` (optional): A custom value to pass along with the payment. This is considered the value that belongs to the `customKey`.
-- `fee` (optional) If this attribute is not specified, it is assumed to be false.
+* `type` **(required)**: A slug that represents the type of receiving address that will receive the payment.
+  Known values:
+  - `node` — a Lightning Network node public key. The `address` attribute should contain the hex-encoded pubkey.
+  - `lnaddress` — a Lightning Address (e.g. `user@wallet.com`). The `address` attribute should contain the Lightning Address. Apps should resolve the pubkey and custom record data by calling `https://<domain>/.well-known/keysend/<username>` before sending payment. Results should be cached to minimize network requests.
+* `address` **(required)**: This denotes the receiving address of the payee.
+* `split` **(required)**: The number of shares of the payment this recipient will receive.
+* `name` (recommended): A free-form string that designates who or what this recipient is.
+* `customKey` (optional): The name of a custom record key to send along with the payment.
+* `customValue` (optional): A custom value to pass along with the payment. This is considered the value that belongs to the `customKey`.
+* `fee` (optional) If this attribute is not specified, it is assumed to be false.
 
 ### Examples
 
@@ -42,6 +44,38 @@ Multiple
       name="Bob (Podcaster)"
       type="node"
       address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
+      split="40"
+  />
+  <podcast:valueRecipient
+      name="Carol (Producer)"
+      type="node"
+      address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
+      split="15"
+  />
+  <podcast:valueRecipient
+      name="Hosting Provider"
+      type="node"
+      address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
+      split="5"
+      fee="true"
+  />
+</podcast:value>
+```
+
+Lightning Address recipients can be used in place of, or mixed with, `node` recipients in the same value block:
+
+```xml
+<podcast:value type="lightning" method="keysend" suggested="0.00000005000">
+  <podcast:valueRecipient
+      name="Alice (Podcaster)"
+      type="lnaddress"
+      address="alice@getalby.com"
+      split="40"
+  />
+  <podcast:valueRecipient
+      name="Bob (Podcaster)"
+      type="lnaddress"
+      address="bob@fountain.fm"
       split="40"
   />
   <podcast:valueRecipient
