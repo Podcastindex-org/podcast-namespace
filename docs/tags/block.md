@@ -52,3 +52,11 @@ The node value must be "yes" or "no".
 <podcast:block id="google">no</podcast:block>
 <podcast:block id="amazon">no</podcast:block>
 ```
+
+### Credits
+
+* [Giovanni Olivera](https://github.com/pofmagicfingers) - <small>Author</small>
+* [Benjamin Bellamy](https://benjaminbellamy.fr/) - <small>Contributor</small>
+* [James Cridland](https://github.com/jamescridland) - <small>Contributor</small>
+* [Daniel J. Lewis](https://github.com/theDanielJLewis) - <small>Contributor</small>
+* [Christopher Harabaruk](https://github.com/charabaruk) - <small>Contributor</small>
