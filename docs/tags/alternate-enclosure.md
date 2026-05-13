@@ -77,3 +77,12 @@ The node value must be one or more [`<podcast:source>`](source.md) elements that
     <podcast:source uri="https://example.com/master.m3u8" />
 </podcast:alternateEnclosure>
 ```
+
+### Credits
+
+* [Alecks Gates](https://github.com/agates) - <small>Author</small>
+* [James Cridland](https://james.cridland.net/) - <small>Contributor</small>
+* [Justin Jackson](https://github.com/mijustin) - <small>Contributor</small>
+* [Andi Hubel](https://github.com/saerdnaer) - <small>Contributor</small>
+* [Tom Barrasso](https://github.com/tombarr) - <small>Contributor</small>
+* [Douglas Kastle](https://github.com/douglaskastle) - <small>Contributor</small>
