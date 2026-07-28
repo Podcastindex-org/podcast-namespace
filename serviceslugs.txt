@@ -53,6 +53,7 @@ spreaker
 tiktok
 transistor
 twitter
+vibral
 whooshkaa
 youtube
 zencast
