@@ -38,6 +38,12 @@ The `<podcast:location>` tag is therefore complex and has a number of attributes
 
 An [example location generator](https://jamescridland.github.io/podcast-location-generator/) is available. It's entirely written in JavaScript and uses open APIs. You are welcome to use the code in yur project.
 
+### Examples of it working
+
+* Podcast Radar has a view of "[podcasts near me](https://radar.rss.io/)" and a [full podcast globe](https://radar.rss.io/#globe).
+
+* [The Podcast Index datasets](https://podcastindex.org/datasets) include a JSON feed of all podcasts with location tags. It's consumed by Podcast Radar, above, but can also be consumed by your product.
+
 ### Structure
 
 ```xml
