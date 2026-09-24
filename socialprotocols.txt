@@ -6,3 +6,8 @@ atproto
 hive
 matrix
 nostr
+instagram
+tiktok
+threads
+facebook
+youtube
