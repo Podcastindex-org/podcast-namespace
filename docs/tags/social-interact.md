@@ -2,7 +2,11 @@
 
 `<podcast:socialInteract>`
 
-The `socialInteract` tag allows a podcaster to attach the url of a "root post" of a comment thread to an episode, or to the podcast as a whole. This "root post" is treated as the canonical location of where the comments and discussion around the episode or podcast will take place. This can be thought of as the "official" social media comment space for the episode or podcast. If a protocol such as "activitypub" is used, or some other protocol that allows programmatic API access, these comments can be directly pulled into the app, and replies can be posted back to the thread from the app itself.
+The `socialInteract` tag allows podcasters to associate social media information with an individual episode or the podcast as a whole. When the specified protocol supports programmatic API access, such as ActivityPub, podcast apps can retrieve comments directly and allow listeners to post replies back to the original discussion.
+
+At the `<item>` level, the tag links an episode to the URL of a “root post” where discussion about that episode takes place. This root post serves as the canonical or official social media thread for comments and conversation related to the episode.
+
+At the `<channel>` level, the tag can similarly link to a root post for discussion about the podcast as a whole. It can also be used more broadly to identify the podcast’s general social media account or accounts when there is no specific discussion thread.
 
 If multiple `socialInteract` tags are given for an `<item>` or the `<channel>`, the `priority` attribute is strongly recommended to give the app an indication as to which comments to display first.
 
@@ -18,7 +22,7 @@ Multiple
 
 ### Attributes
 
-- `protocol` **(required)**: The [protocol](/socialprotocols.txt) in use for interacting with the comment root post.
+- `protocol` **(required)**: The [protocol](/socialprotocols.txt) in use for interacting with the comment root post. If the platform has no interactive protocol (e.g. Instagram, TikTok), use the platform's name as the `protocol` value.
 - `uri` **(required)**: The uri/url of root post comment.
 - `accountId` (recommended): The account id (on the commenting platform) of the account that created this root post.
 - `accountUrl` (optional): The public url (on the commenting platform) of the account that created this root post.
