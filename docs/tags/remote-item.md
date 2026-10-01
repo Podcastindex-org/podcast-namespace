@@ -4,7 +4,7 @@
 
 This element provides a way to "point" to another feed or an `<item>` in another feed in order to obtain some sort of data that the other feed or feed item has. This allows a podcast app to know where to go and fetch the data being requested. What data is being requested is determined by the parent item. For instance, if the parent item is a [`<podcast:podroll>`](podroll.md) element, then the remote feed's `<channel>` metadata is needed.
 
-Using the `feedGuid` attribute is the preferred way to address a remote feed since, but there are times when an app may not have access to a list of resolvable [`<podcast:guid>`](guid.md)'s. In that case, it can be beneficial to include the `feedUrl` attribute for those cases as a fallback. If both are present and the app is capable the `feedGuid` should be resolved and used.
+Using the `feedGuid` attribute is the preferred way to address a remote feed, but there are times when an app may not have access to a list of resolvable [`<podcast:guid>`](guid.md)'s. In that case, it can be beneficial to include the `feedUrl` attribute as a fallback. If both are present and the app is capable the `feedGuid` should be resolved and used.
 
 ### Parent
 
