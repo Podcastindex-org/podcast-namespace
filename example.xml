@@ -18,7 +18,7 @@
             <link>https://example.com/podcast</link>
         </image>
 
-        <podcast:guid>y0ur-gu1d-g035-h3r3</podcast:guid>
+        <podcast:guid>95ba3425-022d-5359-9326-eb77d8bcb15a</podcast:guid>
 
         <podcast:license url="https://example.org/mypodcastlicense/full.pdf">my-podcast-license-v1</podcast:license>
 
