@@ -36,12 +36,13 @@ This is the full name or alias of the person. This value cannot be blank. Please
 
 ### Attributes
 
-- `role` (optional): Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed.
+- `role` (optional, **soft-deprecated in favor of `roles`**): Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If `role` is missing then "host" is assumed. Retained for backward compatibility with parsers that don't yet support `roles`; new implementations should prefer `roles`.
+- `roles` (optional, **recommended**): A comma-separated list of roles the person serves, for when a person has more than one role. List them in order of importance, the first value is the person's primary role. Each value should be a reference to an official role within the Podcast Taxonomy Project list. A parser that doesn't support `roles` will assume "host" per the existing default, or fall back to `role` if present. Podcasters and podcast hosting platforms are encouraged to migrate to `roles` going forward.
 - `group` (optional): This should be a reference to an official group within the Podcast Taxonomy Project list. If `group` is not present, then "cast" is assumed.
 - `img` (optional): This is the url of a picture or avatar of the person.
 - `href` (optional): The url to a relevant resource of information about the person, such as a homepage or third-party profile platform. Please see the [example feed](https://github.com/Podcastindex-org/podcast-namespace/blob/main/example.xml) for possible choices of what to use here.
 
-The `role` and `group` attributes are case-insensitive. So, "Host" is the same as "host", and "Cover Art Designer" is the same as "cover art designer".
+The `role`, `roles`, and `group` attributes are case-insensitive. So, "Host" is the same as "host", and "Cover Art Designer" is the same as "cover art designer".
 
 The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-namespace/blob/main/taxonomy.json) as a json file.
 
@@ -56,7 +57,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 
 ```xml
 <podcast:person
-        role="guest"
+        roles="Guest"
         href="https://www.imdb.com/name/nm0427852888/"
         img="https://example.com/images/janedoe.jpg"
 >Jane Doe</podcast:person>
@@ -64,7 +65,7 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 
 ```xml
 <podcast:person
-        role="guest"
+        roles="Guest"
         href="https://example.wikipedia/alicebrown"
         img="https://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
@@ -72,8 +73,8 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 
 ```xml
 <podcast:person
-        group="writing"
-        role="guest"
+        group="Writing"
+        roles="Guest"
         href="https://example.wikipedia/alicebrown"
         img="https://example.com/images/alicebrown.jpg"
 >Alice Brown</podcast:person>
@@ -82,7 +83,30 @@ The full taxonomy list is [here](https://github.com/Podcastindex-org/podcast-nam
 ```xml
 <podcast:person
         group="visuals"
-        role="Cover Art Designer"
+        roles="Cover Art Designer"
         href="https://example.com/artist/beckysmith"
 >Becky Smith</podcast:person>
+```
+
+```xml
+<podcast:person
+        roles="Host,Editor"
+        href="https://example.com/johnsmith"
+>John Smith</podcast:person>
+```
+
+```xml
+<podcast:person
+        role="Host"
+        roles="Host,Editor"
+        href="https://example.com/johnsmith"
+>John Smith</podcast:person>
+```
+
+```xml
+<podcast:person
+        role="Guest"
+        href="https://www.imdb.com/name/nm0427852888/"
+        img="https://example.com/images/janedoe.jpg"
+>Jane Doe</podcast:person>
 ```
