@@ -27,6 +27,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 20. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 21. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 22. [Nuotit](https://x.com/Nuotitapp/status/1994446664656933207)
+23. [Sovereigncast](https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md)
 
 ## Locked `<podcast:locked>`
 1. [Buzzsprout](https://www.buzzsprout.com/help/223-lock-tag)
@@ -92,6 +93,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 17. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 18. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
 19. [Nuotit](https://x.com/Nuotitapp/status/1983119259405521052)
+20. [Sovereigncast](https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md)
 
 ## Soundbites `<podcast:soundbite>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -121,6 +123,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [Podhome](https://www.podhome.fm/docs/people)
 6. [Pinepods](https://www.pinepods.online/docs/Features/Person)
 7. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+8. [Sovereigncast](https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
@@ -143,6 +146,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 6. [Podhome](https://www.podhome.fm/docs/use-value-4-value)
 7. [blubrry](https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/)
 8. [PowerPress Wordpress Plugin](https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/)
+9. [Sovereigncast](https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md)
 
 ## Medium `<podcast:medium>`
 1. [RSS Blue](https://rssblue.com/help/podcast-metadata)
