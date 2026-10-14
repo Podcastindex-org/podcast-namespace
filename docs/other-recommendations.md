@@ -54,6 +54,52 @@ parent `<channel>`:
 <atom:link rel="last" href="https://feeds.metaebene.me/freakshow/mp3?paged=9" />
 ```
 
+## HTTP Conditional Requests (Last-Modified / ETag)
+
+Requested in [issue #90](https://github.com/Podcastindex-org/podcast-namespace/issues/90).
+
+Podcast apps and aggregators typically re-fetch a feed's full RSS/XML body on every poll, even when nothing in the feed has changed. At the scale of an aggregator like Podcast Index (polling millions of feeds on a regular schedule), that adds up to a lot of wasted bandwidth for hosts and publishers, and it limits how often any one feed can affordably be checked.
+
+HTTP has had a solution for this since the 1990s: conditional requests. We recommend podcast hosts and feed publishers support both of the following response headers on feed requests:
+
+- `Last-Modified`, an [RFC 9110](https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.2) timestamp of when the feed content last actually changed
+- `ETag`, an opaque token (commonly a hash of the feed body) that changes whenever the feed content changes
+
+And honor the corresponding request headers on the next fetch:
+
+- `If-Modified-Since`, the client sends back the `Last-Modified` value it saw last time
+- `If-None-Match`, the client sends back the `ETag` value it saw last time
+
+If a client sends both (some do, for compatibility with older servers), honor `If-None-Match` and ignore `If-Modified-Since` per [RFC 9110 §13.1.3](https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.3); the ETag comparison is the more accurate check of the two.
+
+If nothing has changed since the last fetch, the server should respond `304 Not Modified` and re-send the `ETag` (and `Last-Modified`, if used) so the client's cached copy stays valid; a 304 response can't carry a body. If the feed did change, respond `200 OK` with the full body and updated headers, as normal.
+
+#### Examples
+
+```
+# First poll
+GET /feed.xml HTTP/1.1
+Host: example.com
+
+HTTP/1.1 200 OK
+Last-Modified: Wed, 21 Oct 2026 07:28:00 GMT
+ETag: "33a64df551"
+
+# Next poll
+GET /feed.xml HTTP/1.1
+Host: example.com
+If-Modified-Since: Wed, 21 Oct 2026 07:28:00 GMT
+If-None-Match: "33a64df551"
+
+HTTP/1.1 304 Not Modified
+ETag: "33a64df551"
+```
+
+A couple of practical notes:
+
+- Only update `Last-Modified`/`ETag` when the feed content itself changes, not every time the feed happens to be regenerated or re-cached. A publishing tool that bumps `Last-Modified` on every cache refresh defeats the purpose, since clients will never see a match and will keep re-downloading the full feed anyway.
+- Most CDNs and podcast hosting platforms already handle conditional requests correctly if configured, but it's worth confirming the feature is actually enabled and passed through rather than assuming it's on, since some caching or proxy layers strip these headers by default.
+
 ## WebSub and Podping.cloud
 
 TBD
