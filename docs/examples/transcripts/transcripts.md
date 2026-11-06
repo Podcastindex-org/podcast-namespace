@@ -10,7 +10,7 @@ to ensure that transcripts are available within browser-based players.
 
 The examples given below are just for convenience. In production you should ensure you are conforming to the actual spec for each format as defined in its own documentation.
 
-## Recomended
+## Recommended
 
 ### WebVTT
 The [Web Video Text Tracks Format (WebVTT)](https://www.w3.org/TR/webvtt1/) is designed for use in HTML on the web. You can use the [<track> element](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) in your own web-based players to make closed-captions appear on a web-page.
