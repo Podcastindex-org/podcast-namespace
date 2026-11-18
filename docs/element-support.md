@@ -121,6 +121,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
 5. [Podhome](https://www.podhome.fm/docs/people)
 6. [Pinepods](https://www.pinepods.online/docs/Features/Person)
 7. [PodToo](https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags)
+8. [Wolf Paw TV](https://wolfpawtv.com/podcasting20.html#person)
 
 ## GUID `<podcast:guid>`
 1. [Buzzsprout](https://www.buzzsprout.com)
