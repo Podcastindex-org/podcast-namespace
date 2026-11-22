@@ -50,6 +50,7 @@ slack
 soundcloud
 spotify
 spreaker
+stablekraft
 tiktok
 transistor
 twitter
