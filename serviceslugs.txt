@@ -22,6 +22,7 @@ libsyn
 mastodon
 megafono
 megaphone
+musicindex
 omnystudio
 overcast
 paypal
